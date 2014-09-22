@@ -1,11 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\Hao\_Dots\DotDotDot\Assets\Scripts\MenuManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game.cs">
     <Files>
-      <File FileName="..\Hao\_Dots\DotDotDot\Assets\Scripts\MenuManager.cs" Line="216" Column="25" />
-      <File FileName="..\Hao\_Dots\DotDotDot\Assets\Scripts\Menus\HighScore.cs" Line="389" Column="61" />
-      <File FileName="..\Hao\_Dots\DotDotDot\Assets\Scripts\Menus\Locale.cs" Line="31" Column="30" />
-      <File FileName="..\Hao\_Dots\DotDotDot\Assets\Scripts\Menus\Settings.cs" Line="164" Column="1" />
+      <File FileName="Assets\Scripts\Game.cs" Line="74" Column="28" />
+      <File FileName="Assets\Scripts\Card.cs" Line="24" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

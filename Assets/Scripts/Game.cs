@@ -8,8 +8,8 @@ public class Game:MonoBehaviour {
 	public int cardCountX = 4;
 	public int cardCountY = 4;
 
-	public int maxTrys = 10;
-	public int tryCount = 0;
+	public int maxFails = 10;
+	public int failCount = 0;
 
 	private Card[,] cardGrid = null;
 	private Card flippedCard = null;
@@ -22,7 +22,7 @@ public class Game:MonoBehaviour {
 
 	void SetupNewGame() {
 		isFlipAnimating = false;
-		tryCount = 0;
+		failCount = 0;
 		flippedCard = null;
 
 		ClearCards();
@@ -123,16 +123,17 @@ public class Game:MonoBehaviour {
 			else {
 				card.isFlipped = false;
 				flippedCard.isFlipped = false;
+				failCount++;
 			}
 			flippedCard = null;
-			tryCount++;
-			Debug.Log("Try "+tryCount+"/"+maxTrys);
+
+			Debug.Log("Try "+failCount+"/"+maxFails);
 			Debug.Log("MatchedCards "+GetMatchedCards().Length+"/"+GetAllCards().Length);
 			if (GetMatchedCards().Length == GetAllCards().Length) {
 				GameWin();
 			}
 			else {
-				if (tryCount >= maxTrys) {
+				if (failCount >= maxFails) {
 					GameOver();
 				}
 			}
@@ -144,10 +145,12 @@ public class Game:MonoBehaviour {
 	}
 
 	void GameWin() {
+		Debug.Log("You Win!");
 		SetupNewGame();
 	}
 
 	void GameOver() {
+		Debug.Log("You Lose!");
 		SetupNewGame();
 	}
 
