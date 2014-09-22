@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Hao\_Dots\DotDotDot\Assets\Scripts\MenuManager.cs">
+    <Files>
+      <File FileName="..\Hao\_Dots\DotDotDot\Assets\Scripts\MenuManager.cs" Line="216" Column="25" />
+      <File FileName="..\Hao\_Dots\DotDotDot\Assets\Scripts\Menus\HighScore.cs" Line="389" Column="61" />
+      <File FileName="..\Hao\_Dots\DotDotDot\Assets\Scripts\Menus\Locale.cs" Line="31" Column="30" />
+      <File FileName="..\Hao\_Dots\DotDotDot\Assets\Scripts\Menus\Settings.cs" Line="164" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
