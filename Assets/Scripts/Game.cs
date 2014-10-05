@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Game:MonoBehaviour {
+	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
 	public int cardCountX = 4;
 	public int cardCountY = 4;
@@ -28,7 +29,7 @@ public class Game:MonoBehaviour {
 		ClearCards();
 		cardGrid = new Card[cardCountX, cardCountY];
 		
-		Card[] cardPrefabs = GetCardPrefabs();
+		CardDef[] cardDefs = GetCardDefs();
 		
 		List<Vector2> availableCardSlots = new List<Vector2>();
 		
@@ -43,9 +44,9 @@ public class Game:MonoBehaviour {
 				
 			}
 		}
-		
+		Debug.Log(cardDefs.Length);
 		while(availableCardSlots.Count > 0) {
-			Card cardPrefab = cardPrefabs[Random.Range(0, cardPrefabs.Length)];
+			CardDef carddef = cardDefs[Random.Range(0, cardDefs.Length)];
 			
 			int slot0Index = Random.Range(0, availableCardSlots.Count);
 			Vector2 slot0 = availableCardSlots[slot0Index];
@@ -55,8 +56,8 @@ public class Game:MonoBehaviour {
 			Vector2 slot1 = availableCardSlots[slot1Index];
 			availableCardSlots.RemoveAt(slot1Index);
 			
-			Card card0 = CreateCardInstance(cardPrefab);
-			Card card1 = CreateCardInstance(cardPrefab);
+			Card card0 = CreateCardInstance(carddef);
+			Card card1 = CreateCardInstance(carddef);
 			
 			card0.tilePositionX = (int)slot0.x;
 			card0.tilePositionY = (int)slot0.y;
@@ -115,7 +116,7 @@ public class Game:MonoBehaviour {
 		yield return new WaitForSeconds(1);
 
 		if (flippedCard) {
-			if (flippedCard.prefab == card.prefab) {
+			if (flippedCard.cardDef == card.cardDef) {
 				//Its a match
 				flippedCard.isMatched = true;
 				card.isMatched = true;
@@ -192,14 +193,26 @@ public class Game:MonoBehaviour {
 		return pos;
 	}
 
-	Card CreateCardInstance(Card cardPrefab) {
+	Card CreateCardInstance(CardDef cardDef) {
 		Card card = (Card)Instantiate(cardPrefab);
-		card.name = cardPrefab.name;
-		card.prefab = cardPrefab;
+		card.name = cardDef.name;
+		card.cardDef = cardDef;
+
+		GameObject meshObject = (GameObject)Instantiate(cardDef.meshPrefab);
+		meshObject.transform.parent = card.transform.Find("AnimalPivot");
+		meshObject.transform.localPosition = Vector3.zero;
+		meshObject.transform.localRotation = Quaternion.identity;
+		meshObject.transform.localScale = Vector3.one;
+
+		Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
+		foreach (Renderer r in renderers) {
+			r.sharedMaterial = cardDef.material;
+		}
+
 		return card;
 	}
 
-	Card[] GetCardPrefabs() {
-		return Resources.LoadAll<Card>("Cards");
+	CardDef[] GetCardDefs() {
+		return Resources.LoadAll<CardDef>("Prefabs/CardDefs");
 	}
 }

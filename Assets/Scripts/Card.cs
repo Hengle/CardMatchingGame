@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Card:MonoBehaviour {
-	public Card prefab;
+	public CardDef cardDef;
 	public int tilePositionX = -1;
 	public int tilePositionY = -1;
 
@@ -23,11 +23,11 @@ public class Card:MonoBehaviour {
 
 			if (_isFlipped) {
 				//transform.eulerAngles = new Vector3(0, 0, 0);
-				LeanTween.rotate(gameObject, new Vector3(0, 0, 0), 0.25f);
+				LeanTween.rotate(gameObject, new Vector3(0, 180, 0), 0.25f);
 			}
 			else {
 				//transform.eulerAngles = new Vector3(0, 180, 0);
-				LeanTween.rotate(gameObject, new Vector3(0, 180, 0), 0.25f);
+				LeanTween.rotate(gameObject, new Vector3(0, 0, 0), 0.25f);
 			}
 		}
 	}
