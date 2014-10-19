@@ -39,7 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e7330b607e8ac4b81ea2257a8763a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshPrefab: {fileID: 100000, guid: c8ce6ec7641586344b0413bb35e4af41, type: 3}
+  meshPrefab: {fileID: 100064, guid: e6c99510a2a383a458b90c9636f11f07, type: 3}
+  animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
   material: {fileID: 2100000, guid: 4057778a59c5a36479a3b3daf1e1622f, type: 2}
 --- !u!1001 &100100000
 Prefab:

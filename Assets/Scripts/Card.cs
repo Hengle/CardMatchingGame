@@ -20,7 +20,32 @@ public class Card:MonoBehaviour {
 			//	return;
 			//}
 			_isFlipped = value;
+			
+			if (_isFlipped) {
+				//transform.eulerAngles = new Vector3(0, 0, 0);
+				LeanTween.rotate(gameObject, new Vector3(0, 180, 0), 0.25f);
+			}
+			else {
+				//transform.eulerAngles = new Vector3(0, 180, 0);
+				LeanTween.rotate(gameObject, new Vector3(0, 0, 0), 0.25f);
+			}
+		}
+	}
 
+	private Animator _animator;
+	public Animator animator {
+		get {
+			if (!_animator) {
+				_animator = transform.Find("AnimalPivot").GetChild(0).GetComponent<Animator>();
+			}
+			return _animator;
+		}
+		set {
+			//if (value == _isFlipped) {
+			//	return;
+			//}
+			_isFlipped = value;
+			
 			if (_isFlipped) {
 				//transform.eulerAngles = new Vector3(0, 0, 0);
 				LeanTween.rotate(gameObject, new Vector3(0, 180, 0), 0.25f);

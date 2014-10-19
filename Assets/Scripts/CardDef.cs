@@ -5,5 +5,6 @@ using System.Linq;
 
 public class CardDef:MonoBehaviour {
 	public GameObject meshPrefab;
+	public RuntimeAnimatorController animatorController;
 	public Material material;
 }

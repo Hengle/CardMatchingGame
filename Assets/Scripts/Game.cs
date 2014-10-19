@@ -204,6 +204,9 @@ public class Game:MonoBehaviour {
 		meshObject.transform.localRotation = Quaternion.identity;
 		meshObject.transform.localScale = Vector3.one;
 
+		card.animator.runtimeAnimatorController = cardDef.animatorController;
+		card.animator.applyRootMotion = false;
+
 		Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
 		foreach (Renderer r in renderers) {
 			r.sharedMaterial = cardDef.material;
