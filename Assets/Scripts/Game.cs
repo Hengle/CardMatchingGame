@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Game:MonoBehaviour {
+	public GameUIManager uiManger;
+
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
 	public int cardCountX = 4;
@@ -28,6 +30,8 @@ public class Game:MonoBehaviour {
 
 		ClearCards();
 		cardGrid = new Card[cardCountX, cardCountY];
+
+		uiManger.failedTrysCounter.text = (maxFails-failCount).ToString();
 		
 		CardDef[] cardDefs = GetCardDefs();
 		
@@ -104,9 +108,7 @@ public class Game:MonoBehaviour {
 			return;
 		}
 
-
 		StartCoroutine(FlipCard(card));
-
 	}
 
 	IEnumerator FlipCard(Card card) {
@@ -128,14 +130,15 @@ public class Game:MonoBehaviour {
 			}
 			flippedCard = null;
 
-			Debug.Log("Try "+failCount+"/"+maxFails);
+			uiManger.failedTrysCounter.text = (maxFails-failCount).ToString();
+
 			Debug.Log("MatchedCards "+GetMatchedCards().Length+"/"+GetAllCards().Length);
 			if (GetMatchedCards().Length == GetAllCards().Length) {
-				GameWin();
+				StartCoroutine(GameWin());
 			}
 			else {
 				if (failCount >= maxFails) {
-					GameOver();
+					StartCoroutine(GameOver());
 				}
 			}
 		}
@@ -145,13 +148,31 @@ public class Game:MonoBehaviour {
 		isFlipAnimating = false;
 	}
 
-	void GameWin() {
+	IEnumerator GameWin() {
 		Debug.Log("You Win!");
+
+		Card[] cards = GetAllCards();
+
+		for (int i = 0; i < cards.Length; i++) {
+			cards[i].isFlipped = false;
+		}
+
+		yield return new WaitForSeconds(1);
+
 		SetupNewGame();
 	}
 
-	void GameOver() {
+	IEnumerator GameOver() {
 		Debug.Log("You Lose!");
+
+		Card[] cards = GetAllCards();
+		
+		for (int i = 0; i < cards.Length; i++) {
+			cards[i].isFlipped = false;
+		}
+		
+		yield return new WaitForSeconds(1);
+
 		SetupNewGame();
 	}
 
