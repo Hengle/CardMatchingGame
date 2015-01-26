@@ -8,7 +8,19 @@ public class Card:MonoBehaviour {
 	public int tilePositionX = -1;
 	public int tilePositionY = -1;
 
-	public bool isMatched {get; set;}
+	public bool _isMatched;
+	public bool isMatched {
+		get {
+			return _isMatched;
+		}
+		set {
+			_isMatched = value;
+
+			if (_isMatched) {
+				AnimateDance();
+			}
+		}
+	}
 
 	private bool _isFlipped;
 	public bool isFlipped {
@@ -16,17 +28,12 @@ public class Card:MonoBehaviour {
 			return _isFlipped;
 		}
 		set {
-			//if (value == _isFlipped) {
-			//	return;
-			//}
 			_isFlipped = value;
 			
 			if (_isFlipped) {
-				//transform.eulerAngles = new Vector3(0, 0, 0);
 				LeanTween.rotate(gameObject, new Vector3(0, 180, 0), 0.25f);
 			}
 			else {
-				//transform.eulerAngles = new Vector3(0, 180, 0);
 				LeanTween.rotate(gameObject, new Vector3(0, 0, 0), 0.25f);
 			}
 		}
@@ -41,21 +48,32 @@ public class Card:MonoBehaviour {
 			return _animator;
 		}
 		set {
-			//if (value == _isFlipped) {
-			//	return;
-			//}
 			_isFlipped = value;
 			
 			if (_isFlipped) {
-				//transform.eulerAngles = new Vector3(0, 0, 0);
 				LeanTween.rotate(gameObject, new Vector3(0, 180, 0), 0.25f);
 			}
 			else {
-				//transform.eulerAngles = new Vector3(0, 180, 0);
 				LeanTween.rotate(gameObject, new Vector3(0, 0, 0), 0.25f);
 			}
 		}
 	}
+
+	//public void AnimateIdle() {
+	//	DisableAnimatorStates();
+	//	animator.SetBool("Idle", true);
+	//}
+
+	public void AnimateDance() {
+		animator.SetTrigger("Dance");
+		//DisableAnimatorStates();
+		//animator.SetBool("Idle", true);
+	}
+
+	//private void DisableAnimatorStates() {
+	//	animator.SetBool("Idle", false);
+	//	animator.SetBool("Dance", false);
+	//}
 
 	void Awake() {
 		isFlipped = false;
