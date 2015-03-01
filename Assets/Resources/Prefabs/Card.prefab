@@ -42,6 +42,7 @@ GameObject:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400000}
   - 65: {fileID: 6500000}
+  - 111: {fileID: 11100000}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -126,6 +127,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &11100000
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 33fa9972c4b53d745a546113f3e83a0b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 33fa9972c4b53d745a546113f3e83a0b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,6 +156,7 @@ MonoBehaviour:
   cardDef: {fileID: 0}
   tilePositionX: -1
   tilePositionY: -1
+  _isMatched: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

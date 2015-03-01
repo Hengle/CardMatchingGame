@@ -115,6 +115,8 @@ public class Game:MonoBehaviour {
 		isFlipAnimating = true;
 		card.isFlipped = true;
 
+		card.AnimateZoom();
+
 		yield return new WaitForSeconds(1);
 
 		if (flippedCard) {

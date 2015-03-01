@@ -47,16 +47,21 @@ public class Card:MonoBehaviour {
 			}
 			return _animator;
 		}
-		set {
-			_isFlipped = value;
-			
-			if (_isFlipped) {
-				LeanTween.rotate(gameObject, new Vector3(0, 180, 0), 0.25f);
+	}
+
+	private Animation _scaleAnimation;
+	public Animation scaleAnimation {
+		get {
+			if (!_scaleAnimation) {
+				_scaleAnimation = gameObject.GetComponent<Animation>();
 			}
-			else {
-				LeanTween.rotate(gameObject, new Vector3(0, 0, 0), 0.25f);
-			}
+			return _scaleAnimation;
 		}
+	}
+
+	public void AnimateZoom()
+	{
+		//scaleAnimation.Play();
 	}
 
 	//public void AnimateIdle() {
