@@ -9,11 +9,11 @@ FBXHeaderExtension:  {
 	CreationTimeStamp:  {
 		Version: 1000
 		Year: 2015
-		Month: 02
-		Day: 07
-		Hour: 00
-		Minute: 48
-		Second: 11
+		Month: 04
+		Day: 04
+		Hour: 15
+		Minute: 23
+		Second: 21
 		Millisecond: 0
 	}
 	Creator: "FBX SDK/FBX Plugins build 20070228"
@@ -21,7 +21,7 @@ FBXHeaderExtension:  {
 		FlagPLE: 0
 	}
 }
-CreationTime: "2015-02-07 00:48:11:000"
+CreationTime: "2015-04-04 15:23:21:000"
 Creator: "Blender version 2.73 (sub 0)"
 
 ; Object definitions
@@ -249,6 +249,13 @@ Objects:  {
 			         -0.000000,-1.000000,-0.000000,-0.000000,-1.000000,-0.000000,0.000001,-1.000000,-0.000000,0.000001,-1.000000,-0.000000,
 			         0.000001,-1.000000,-0.000000,0.000000,-1.000000,-0.000000,0.000000,-1.000000,-0.000000,0.000000,-1.000000,-0.000000
 		}
+		LayerElementSmoothing: 0 {
+			Version: 102
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Smoothing: 1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0
+		}
 		LayerElementUV: 0 {
 			Version: 101
 			Name: "UVChannel_1"
@@ -279,6 +286,10 @@ Objects:  {
 			Version: 100
 			LayerElement:  {
 				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementSmoothing"
 				TypedIndex: 0
 			}
 			LayerElement:  {
@@ -404,12 +415,12 @@ Objects:  {
 		          14.506043,-1.490313,-17.490767,20.211788,-1.490314,-12.413368,14.506043,-1.490314,-12.413368,20.592693,-1.490315,-8.688587,
 		          14.125136,-1.490315,-8.688587,21.672539,-1.490316,-5.059673,13.045295,-1.490316,-5.059672,22.623909,-1.490318,-1.430759,
 		          22.311619,-1.490319,2.892881,12.406216,-1.490319,2.892881,12.093925,-1.490317,-1.430759,20.126301,-1.490320,5.229928,
-		          14.591534,-1.490320,5.229929,20.211788,-1.490311,-24.723812,14.506043,-1.490311,-24.723812,35.444569,-1.402253,-16.585213,
-		          33.270012,-1.402267,16.182405,30.373592,-1.402254,-17.565292,27.788807,-1.402260,-1.960257,32.761417,-1.402261,-0.999186,
-		          26.095470,-1.402264,5.819951,31.943943,-1.402263,6.950298,33.722565,-1.402265,11.481149,22.384369,-1.402267,14.179470,
-		          23.140728,-1.402266,9.534114,30.983036,-1.402268,17.767031,23.986362,-1.402268,16.479658,34.135250,-1.402257,-8.975143,
-		          29.113457,-1.402258,-9.945717,28.451130,-1.402259,-5.952987,32.352680,-1.402262,2.975556,26.942139,-1.402262,1.929848,
-		          33.448334,-1.402259,-4.987164,34.789909,-1.402256,-12.780178,29.743523,-1.402255,-13.755505
+		          14.591534,-1.490320,5.229929,20.211788,-1.490311,-24.723812,14.506043,-1.490311,-24.723812,35.444569,2.000008,-16.585213,
+		          33.270012,1.999995,16.182405,30.373592,2.000007,-17.565292,27.788807,2.000001,-1.960257,32.761417,2.000000,-0.999186,
+		          26.095470,1.999998,5.819951,31.943943,1.999999,6.950298,33.722565,1.999997,11.481149,22.384369,1.999994,14.179470,
+		          23.140728,1.999996,9.534114,30.983036,1.999993,17.767031,23.986362,1.999993,16.479658,34.135250,2.000004,-8.975143,
+		          29.113457,2.000003,-9.945717,28.451130,2.000002,-5.952987,32.352680,2.000000,2.975556,26.942139,2.000000,1.929848,
+		          33.448334,2.000002,-4.987164,34.789909,2.000005,-12.780178,29.743523,2.000006,-13.755505
 		PolygonVertexIndex: 5,20,-22,21,6,-6,8,22,-24,23,4,-9,3,19,-2,1,2,-4,27,28,-12,11,10,-28,9,2,-2,1,14,-10,15,17,
 		                    -19,18,16,-16,5,6,-19,18,17,-6,8,4,-20,19,3,-9,20,7,-1,0,21,-21,15,16,-24,23,22,-16,24,9,-15,14,
 		                    13,-25,29,12,-27,26,25,-30,25,26,-29,28,27,-26,29,24,-14,13,12,-30,13,14,-33,32,31,-14,12,13,-32,31,30,-13,
@@ -529,6 +540,15 @@ Objects:  {
 			         0.000000,-1.000000,-0.000000,0.000000,-1.000000,-0.000000,0.000000,-1.000000,-0.000001,0.000000,-1.000000,-0.000000,
 			         0.000000,-1.000000,-0.000001,0.000000,-1.000000,-0.000001,0.000000,-1.000000,-0.000001,0.000000,-1.000000,-0.000001
 		}
+		LayerElementSmoothing: 0 {
+			Version: 102
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Smoothing: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,
+			           0,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,
+			           1,1,1,1
+		}
 		LayerElementUV: 0 {
 			Version: 101
 			Name: "UVChannel_1"
@@ -586,6 +606,10 @@ Objects:  {
 			Version: 100
 			LayerElement:  {
 				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementSmoothing"
 				TypedIndex: 0
 			}
 			LayerElement:  {
@@ -4837,145 +4861,145 @@ Relations:  {
 	}
 	Deformer: "Deformer::Skin Mesh_Body", "Skin" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Pelvis", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Pelvis", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Spine", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Pelvis", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Spine", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Shoulder", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Spine", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Shoulder", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Neck", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Shoulder", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Neck", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Head", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Neck", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Head", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ShoulderL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Head", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ShoulderL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_FrontLegL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ShoulderL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_FrontLegL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ForearmL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_FrontLegL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ForearmL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_KneeL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ForearmL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_KneeL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_AnkleL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_KneeL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_AnkleL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_HoofL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_AnkleL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_HoofL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ShoulderR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_HoofL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ShoulderR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_FrontLegR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ShoulderR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_FrontLegR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ForearmR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_FrontLegR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ForearmR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_KneeR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ForearmR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_KneeR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_AnkleR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_KneeR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_AnkleR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_HoofR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_AnkleR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_HoofR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_PelvisL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_HoofR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_PelvisL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackLegL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_PelvisL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackLegL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TibiaL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackLegL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TibiaL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackKneeL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TibiaL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackKneeL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackAnkleL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackKneeL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackAnkleL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackHoofL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackAnkleL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackHoofL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_PelvisR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackHoofL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_PelvisR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackLegR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_PelvisR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackLegR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TibiaR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackLegR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TibiaR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackKneeR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TibiaR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackKneeR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackAnkleR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackKneeR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackAnkleR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackHoofR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackAnkleR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackHoofR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_PelvisTail", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackHoofR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_PelvisTail", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Tail", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_PelvisTail", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Tail", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TailA", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Tail", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TailA", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TailB", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TailA", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TailB", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TailC", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TailB", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TailC", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Smile", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TailC", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Smile", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Smile", "Cluster" {
 	}
 	GroupSelection: "GroupSelection::HeadGroup", "Default" {
 	}
@@ -4995,146 +5019,146 @@ Connections:  {
 	Connect: "OO", "Video::T_Addax_tga_001", "Texture::T_Addax_tga_001"
 	Connect: "OO", "Deformer::Skin Mesh_Face", "Model::Mesh_Face"
 	Connect: "OO", "Deformer::Skin Mesh_Body", "Model::Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Pelvis", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Pelvis", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Spine", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Pelvis", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Spine", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Shoulder", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Spine", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Shoulder", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Neck", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Shoulder", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Neck", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Head", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Neck", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Head", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ShoulderL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Head", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ShoulderL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_FrontLegL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ShoulderL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_FrontLegL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ForearmL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_FrontLegL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ForearmL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_KneeL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ForearmL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_KneeL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_AnkleL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_KneeL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_AnkleL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_HoofL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_AnkleL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_HoofL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ShoulderR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_HoofL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ShoulderR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_FrontLegR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ShoulderR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_FrontLegR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ForearmR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_FrontLegR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ForearmR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_KneeR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ForearmR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_KneeR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_AnkleR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_KneeR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_AnkleR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_HoofR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_AnkleR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_HoofR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_PelvisL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_HoofR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_PelvisL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackLegL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_PelvisL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackLegL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TibiaL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackLegL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TibiaL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackKneeL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TibiaL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackKneeL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackKneeL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackHoofL", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackHoofL", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_PelvisR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackHoofL", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_PelvisR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackLegR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_PelvisR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackLegR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TibiaR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackLegR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TibiaR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackKneeR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TibiaR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackKneeR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackKneeR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackHoofR", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackHoofR", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_PelvisTail", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackHoofR", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_PelvisTail", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Tail", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_PelvisTail", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Tail", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TailA", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Tail", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TailA", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TailB", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TailA", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TailB", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TailC", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TailB", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TailC", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Smile", "Deformer::Skin Mesh_Face"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TailC", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Smile", "Deformer::Skin Mesh_Body"
-	Connect: "OO", "Model::Bone_Pelvis", "SubDeformer::Cluster Mesh_Face Bone_Pelvis"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Smile", "Deformer::Skin Mesh_Face"
 	Connect: "OO", "Model::Bone_Pelvis", "SubDeformer::Cluster Mesh_Body Bone_Pelvis"
-	Connect: "OO", "Model::Bone_Spine", "SubDeformer::Cluster Mesh_Face Bone_Spine"
+	Connect: "OO", "Model::Bone_Pelvis", "SubDeformer::Cluster Mesh_Face Bone_Pelvis"
 	Connect: "OO", "Model::Bone_Spine", "SubDeformer::Cluster Mesh_Body Bone_Spine"
-	Connect: "OO", "Model::Bone_Shoulder", "SubDeformer::Cluster Mesh_Face Bone_Shoulder"
+	Connect: "OO", "Model::Bone_Spine", "SubDeformer::Cluster Mesh_Face Bone_Spine"
 	Connect: "OO", "Model::Bone_Shoulder", "SubDeformer::Cluster Mesh_Body Bone_Shoulder"
-	Connect: "OO", "Model::Bone_Neck", "SubDeformer::Cluster Mesh_Face Bone_Neck"
+	Connect: "OO", "Model::Bone_Shoulder", "SubDeformer::Cluster Mesh_Face Bone_Shoulder"
 	Connect: "OO", "Model::Bone_Neck", "SubDeformer::Cluster Mesh_Body Bone_Neck"
-	Connect: "OO", "Model::Bone_Head", "SubDeformer::Cluster Mesh_Face Bone_Head"
+	Connect: "OO", "Model::Bone_Neck", "SubDeformer::Cluster Mesh_Face Bone_Neck"
 	Connect: "OO", "Model::Bone_Head", "SubDeformer::Cluster Mesh_Body Bone_Head"
-	Connect: "OO", "Model::Bone_ShoulderL", "SubDeformer::Cluster Mesh_Face Bone_ShoulderL"
+	Connect: "OO", "Model::Bone_Head", "SubDeformer::Cluster Mesh_Face Bone_Head"
 	Connect: "OO", "Model::Bone_ShoulderL", "SubDeformer::Cluster Mesh_Body Bone_ShoulderL"
-	Connect: "OO", "Model::Bone_FrontLegL", "SubDeformer::Cluster Mesh_Face Bone_FrontLegL"
+	Connect: "OO", "Model::Bone_ShoulderL", "SubDeformer::Cluster Mesh_Face Bone_ShoulderL"
 	Connect: "OO", "Model::Bone_FrontLegL", "SubDeformer::Cluster Mesh_Body Bone_FrontLegL"
-	Connect: "OO", "Model::Bone_ForearmL", "SubDeformer::Cluster Mesh_Face Bone_ForearmL"
+	Connect: "OO", "Model::Bone_FrontLegL", "SubDeformer::Cluster Mesh_Face Bone_FrontLegL"
 	Connect: "OO", "Model::Bone_ForearmL", "SubDeformer::Cluster Mesh_Body Bone_ForearmL"
-	Connect: "OO", "Model::Bone_KneeL", "SubDeformer::Cluster Mesh_Face Bone_KneeL"
+	Connect: "OO", "Model::Bone_ForearmL", "SubDeformer::Cluster Mesh_Face Bone_ForearmL"
 	Connect: "OO", "Model::Bone_KneeL", "SubDeformer::Cluster Mesh_Body Bone_KneeL"
-	Connect: "OO", "Model::Bone_AnkleL", "SubDeformer::Cluster Mesh_Face Bone_AnkleL"
+	Connect: "OO", "Model::Bone_KneeL", "SubDeformer::Cluster Mesh_Face Bone_KneeL"
 	Connect: "OO", "Model::Bone_AnkleL", "SubDeformer::Cluster Mesh_Body Bone_AnkleL"
-	Connect: "OO", "Model::Bone_HoofL", "SubDeformer::Cluster Mesh_Face Bone_HoofL"
+	Connect: "OO", "Model::Bone_AnkleL", "SubDeformer::Cluster Mesh_Face Bone_AnkleL"
 	Connect: "OO", "Model::Bone_HoofL", "SubDeformer::Cluster Mesh_Body Bone_HoofL"
-	Connect: "OO", "Model::Bone_ShoulderR", "SubDeformer::Cluster Mesh_Face Bone_ShoulderR"
+	Connect: "OO", "Model::Bone_HoofL", "SubDeformer::Cluster Mesh_Face Bone_HoofL"
 	Connect: "OO", "Model::Bone_ShoulderR", "SubDeformer::Cluster Mesh_Body Bone_ShoulderR"
-	Connect: "OO", "Model::Bone_FrontLegR", "SubDeformer::Cluster Mesh_Face Bone_FrontLegR"
+	Connect: "OO", "Model::Bone_ShoulderR", "SubDeformer::Cluster Mesh_Face Bone_ShoulderR"
 	Connect: "OO", "Model::Bone_FrontLegR", "SubDeformer::Cluster Mesh_Body Bone_FrontLegR"
-	Connect: "OO", "Model::Bone_ForearmR", "SubDeformer::Cluster Mesh_Face Bone_ForearmR"
+	Connect: "OO", "Model::Bone_FrontLegR", "SubDeformer::Cluster Mesh_Face Bone_FrontLegR"
 	Connect: "OO", "Model::Bone_ForearmR", "SubDeformer::Cluster Mesh_Body Bone_ForearmR"
-	Connect: "OO", "Model::Bone_KneeR", "SubDeformer::Cluster Mesh_Face Bone_KneeR"
+	Connect: "OO", "Model::Bone_ForearmR", "SubDeformer::Cluster Mesh_Face Bone_ForearmR"
 	Connect: "OO", "Model::Bone_KneeR", "SubDeformer::Cluster Mesh_Body Bone_KneeR"
-	Connect: "OO", "Model::Bone_AnkleR", "SubDeformer::Cluster Mesh_Face Bone_AnkleR"
+	Connect: "OO", "Model::Bone_KneeR", "SubDeformer::Cluster Mesh_Face Bone_KneeR"
 	Connect: "OO", "Model::Bone_AnkleR", "SubDeformer::Cluster Mesh_Body Bone_AnkleR"
-	Connect: "OO", "Model::Bone_HoofR", "SubDeformer::Cluster Mesh_Face Bone_HoofR"
+	Connect: "OO", "Model::Bone_AnkleR", "SubDeformer::Cluster Mesh_Face Bone_AnkleR"
 	Connect: "OO", "Model::Bone_HoofR", "SubDeformer::Cluster Mesh_Body Bone_HoofR"
-	Connect: "OO", "Model::Bone_PelvisL", "SubDeformer::Cluster Mesh_Face Bone_PelvisL"
+	Connect: "OO", "Model::Bone_HoofR", "SubDeformer::Cluster Mesh_Face Bone_HoofR"
 	Connect: "OO", "Model::Bone_PelvisL", "SubDeformer::Cluster Mesh_Body Bone_PelvisL"
-	Connect: "OO", "Model::Bone_BackLegL", "SubDeformer::Cluster Mesh_Face Bone_BackLegL"
+	Connect: "OO", "Model::Bone_PelvisL", "SubDeformer::Cluster Mesh_Face Bone_PelvisL"
 	Connect: "OO", "Model::Bone_BackLegL", "SubDeformer::Cluster Mesh_Body Bone_BackLegL"
-	Connect: "OO", "Model::Bone_TibiaL", "SubDeformer::Cluster Mesh_Face Bone_TibiaL"
+	Connect: "OO", "Model::Bone_BackLegL", "SubDeformer::Cluster Mesh_Face Bone_BackLegL"
 	Connect: "OO", "Model::Bone_TibiaL", "SubDeformer::Cluster Mesh_Body Bone_TibiaL"
-	Connect: "OO", "Model::Bone_BackKneeL", "SubDeformer::Cluster Mesh_Face Bone_BackKneeL"
+	Connect: "OO", "Model::Bone_TibiaL", "SubDeformer::Cluster Mesh_Face Bone_TibiaL"
 	Connect: "OO", "Model::Bone_BackKneeL", "SubDeformer::Cluster Mesh_Body Bone_BackKneeL"
-	Connect: "OO", "Model::Bone_BackAnkleL", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleL"
+	Connect: "OO", "Model::Bone_BackKneeL", "SubDeformer::Cluster Mesh_Face Bone_BackKneeL"
 	Connect: "OO", "Model::Bone_BackAnkleL", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleL"
-	Connect: "OO", "Model::Bone_BackHoofL", "SubDeformer::Cluster Mesh_Face Bone_BackHoofL"
+	Connect: "OO", "Model::Bone_BackAnkleL", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleL"
 	Connect: "OO", "Model::Bone_BackHoofL", "SubDeformer::Cluster Mesh_Body Bone_BackHoofL"
-	Connect: "OO", "Model::Bone_PelvisR", "SubDeformer::Cluster Mesh_Face Bone_PelvisR"
+	Connect: "OO", "Model::Bone_BackHoofL", "SubDeformer::Cluster Mesh_Face Bone_BackHoofL"
 	Connect: "OO", "Model::Bone_PelvisR", "SubDeformer::Cluster Mesh_Body Bone_PelvisR"
-	Connect: "OO", "Model::Bone_BackLegR", "SubDeformer::Cluster Mesh_Face Bone_BackLegR"
+	Connect: "OO", "Model::Bone_PelvisR", "SubDeformer::Cluster Mesh_Face Bone_PelvisR"
 	Connect: "OO", "Model::Bone_BackLegR", "SubDeformer::Cluster Mesh_Body Bone_BackLegR"
-	Connect: "OO", "Model::Bone_TibiaR", "SubDeformer::Cluster Mesh_Face Bone_TibiaR"
+	Connect: "OO", "Model::Bone_BackLegR", "SubDeformer::Cluster Mesh_Face Bone_BackLegR"
 	Connect: "OO", "Model::Bone_TibiaR", "SubDeformer::Cluster Mesh_Body Bone_TibiaR"
-	Connect: "OO", "Model::Bone_BackKneeR", "SubDeformer::Cluster Mesh_Face Bone_BackKneeR"
+	Connect: "OO", "Model::Bone_TibiaR", "SubDeformer::Cluster Mesh_Face Bone_TibiaR"
 	Connect: "OO", "Model::Bone_BackKneeR", "SubDeformer::Cluster Mesh_Body Bone_BackKneeR"
-	Connect: "OO", "Model::Bone_BackAnkleR", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleR"
+	Connect: "OO", "Model::Bone_BackKneeR", "SubDeformer::Cluster Mesh_Face Bone_BackKneeR"
 	Connect: "OO", "Model::Bone_BackAnkleR", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleR"
-	Connect: "OO", "Model::Bone_BackHoofR", "SubDeformer::Cluster Mesh_Face Bone_BackHoofR"
+	Connect: "OO", "Model::Bone_BackAnkleR", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleR"
 	Connect: "OO", "Model::Bone_BackHoofR", "SubDeformer::Cluster Mesh_Body Bone_BackHoofR"
-	Connect: "OO", "Model::Bone_PelvisTail", "SubDeformer::Cluster Mesh_Face Bone_PelvisTail"
+	Connect: "OO", "Model::Bone_BackHoofR", "SubDeformer::Cluster Mesh_Face Bone_BackHoofR"
 	Connect: "OO", "Model::Bone_PelvisTail", "SubDeformer::Cluster Mesh_Body Bone_PelvisTail"
-	Connect: "OO", "Model::Bone_Tail", "SubDeformer::Cluster Mesh_Face Bone_Tail"
+	Connect: "OO", "Model::Bone_PelvisTail", "SubDeformer::Cluster Mesh_Face Bone_PelvisTail"
 	Connect: "OO", "Model::Bone_Tail", "SubDeformer::Cluster Mesh_Body Bone_Tail"
-	Connect: "OO", "Model::Bone_TailA", "SubDeformer::Cluster Mesh_Face Bone_TailA"
+	Connect: "OO", "Model::Bone_Tail", "SubDeformer::Cluster Mesh_Face Bone_Tail"
 	Connect: "OO", "Model::Bone_TailA", "SubDeformer::Cluster Mesh_Body Bone_TailA"
-	Connect: "OO", "Model::Bone_TailB", "SubDeformer::Cluster Mesh_Face Bone_TailB"
+	Connect: "OO", "Model::Bone_TailA", "SubDeformer::Cluster Mesh_Face Bone_TailA"
 	Connect: "OO", "Model::Bone_TailB", "SubDeformer::Cluster Mesh_Body Bone_TailB"
-	Connect: "OO", "Model::Bone_TailC", "SubDeformer::Cluster Mesh_Face Bone_TailC"
+	Connect: "OO", "Model::Bone_TailB", "SubDeformer::Cluster Mesh_Face Bone_TailB"
 	Connect: "OO", "Model::Bone_TailC", "SubDeformer::Cluster Mesh_Body Bone_TailC"
-	Connect: "OO", "Model::Bone_Smile", "SubDeformer::Cluster Mesh_Face Bone_Smile"
+	Connect: "OO", "Model::Bone_TailC", "SubDeformer::Cluster Mesh_Face Bone_TailC"
 	Connect: "OO", "Model::Bone_Smile", "SubDeformer::Cluster Mesh_Body Bone_Smile"
+	Connect: "OO", "Model::Bone_Smile", "SubDeformer::Cluster Mesh_Face Bone_Smile"
 	Connect: "OO", "Model::Bone_Pelvis", "Model::Mesh_AntelopeA"
 	Connect: "OO", "Model::Bone_Spine", "Model::Bone_Pelvis"
 	Connect: "OO", "Model::Bone_Shoulder", "Model::Bone_Spine"
@@ -5176,3111 +5200,7 @@ Connections:  {
 ;----------------------------------------------------
 
 Takes:  {
-	Current: "Default Take"
-	Take: "Default Take" {
-		FileName: "Default_Take.tak"
-		LocalTime: 123163088000,123163088000
-		ReferenceTime: 123163088000,123163088000
-
-		;Models animation
-		;----------------------------------------------------
-		Model: "Model::Bone_Pelvis" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: -0.978634953498840
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.978634953498840,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000000037437292
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000037437292,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -2.993423700332642
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-2.993423700332642,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 89.999982013781349
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,89.999982013781349,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -179.999991348319355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-179.999991348319355,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000000001220
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000000001220,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_Spine" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 11.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,11.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000904361798
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000904361798,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000000000011
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000000000011,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 90.000016164727199
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,90.000016164727199,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000004274197314
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000004274197314,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.316154488960200
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.316154488960200,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_Shoulder" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 17.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,17.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000001283464371
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001283464371,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000283122063
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000283122063,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 0.000003774948547
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000003774948547,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -26.565054304958871
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-26.565054304958871,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000297137851
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000297137851,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999821186066
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999821186066,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_Neck" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 11.180339813232422
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,11.180339813232422,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000844092085
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000844092085,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000001311302185
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001311302185,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -0.000002950239776
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000002950239776,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 2.121097744384664
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,2.121097744384664,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000001205710317
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000001205710317,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_Head" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 12.083046913146973
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,12.083046913146973,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000912244843
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000912244843,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000000000004
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000000000004,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 90.000002504348856
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,90.000002504348856,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 98.498561001773382
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,98.498561001773382,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000007228587994
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000007228587994,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999821186066
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999821186066,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999821186066
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999821186066,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_ShoulderL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 17.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,17.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000001283464371
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001283464371,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000283122063
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000283122063,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 5.492582425309310
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,5.492582425309310,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 116.670668609348894
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,116.670668609348894,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -85.088795962793256
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-85.088795962793256,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_FrontLegL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 4.472136020660400
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,4.472136020660400,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000001523643732
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001523643732,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000298023224
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000298023224,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 179.931443569809204
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,179.931443569809204,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -26.564970635141538
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-26.564970635141538,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.153240416670893
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.153240416670893,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999523162842
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999523162842,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999761581421
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999761581421,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_ForearmL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 10.000001907348633
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,10.000001907348633,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000481833467
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000481833467,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000095931910
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000095931910,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -179.999991348319355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-179.999991348319355,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000104414379
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000104414379,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.221851793569885
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.221851793569885,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_KneeL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 9.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,9.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000002041802873
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000002041802873,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000014210229
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000014210229,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 0.000006663772778
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000006663772778,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000727085029
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000727085029,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -2.631148097070157
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-2.631148097070157,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_AnkleL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 6.999995708465576
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,6.999995708465576,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000667555241
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000667555241,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000004940659
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000004940659,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 0.000000277125266
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000277125266,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000016820406
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000016820406,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.309196145954177
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.309196145954177,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999821186066
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999821186066,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999821186066
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999821186066,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_HoofL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 3.999998331069946
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,3.999998331069946,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000000299851166
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000299851166,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000022811975
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000022811975,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -0.000000892206349
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000892206349,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000363698158
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000363698158,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 2.210167466586322
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,2.210167466586322,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999821186066
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999821186066,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999821186066
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999821186066,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_ShoulderR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 17.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,17.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000001283464371
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001283464371,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000283122063
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000283122063,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -25.244619936499099
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-25.244619936499099,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 36.604274667798869
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,36.604274667798869,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -158.198587593181941
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-158.198587593181941,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000119209290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000119209290,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000119209290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000119209290,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000238418579
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000238418579,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_FrontLegR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 6.708205223083496
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,6.708205223083496,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000001072883606
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001072883606,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000953674316
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000953674316,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 150.262536155042170
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,150.262536155042170,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 46.628905746571746
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,46.628905746571746,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 30.036289629843179
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,30.036289629843179,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000119209290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000119209290,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_ForearmR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 9.999999046325684
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,9.999999046325684,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000002669277819
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000002669277819,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000086956504
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000086956504,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 179.999991348319355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,179.999991348319355,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000001478424815
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001478424815,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.221852860786943
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.221852860786943,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_KneeR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 9.000000953674316
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,9.000000953674316,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000002055434379
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000002055434379,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000060028299
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000060028299,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 0.000005444676856
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000005444676856,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000002383029119
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000002383029119,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -2.631146602966276
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-2.631146602966276,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_AnkleR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 7.000000953674316
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,7.000000953674316,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000662615491
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000662615491,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000008508437
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000008508437,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 0.000000248497730
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000248497730,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000638725607
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000638725607,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.309195398902236
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.309195398902236,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000238418579
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000238418579,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000238418579
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000238418579,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_HoofR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 3.999997615814209
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,3.999997615814209,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000000106857456
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000106857456,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000055337068
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000055337068,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -0.000002914782647
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000002914782647,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000002472225918
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000002472225918,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 2.210168320359968
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,2.210168320359968,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999821186066
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999821186066,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999821186066
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999821186066,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_PelvisL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 0.418708026409149
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.418708026409149,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.119965136051178
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.119965136051178,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 3.548052310943604
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,3.548052310943604,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 166.029863929453853
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,166.029863929453853,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -13.802020241692457
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-13.802020241692457,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 75.948083570172557
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,75.948083570172557,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000238418579
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000238418579,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000119209290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000119209290,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_BackLegL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 4.242640018463135
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,4.242640018463135,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000357627869
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000357627869,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -162.228931958238917
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-162.228931958238917,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -8.088947784031227
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-8.088947784031227,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -21.297462152890862
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-21.297462152890862,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_TibiaL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 10.000000953674316
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,10.000000953674316,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000654661562
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000654661562,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000223983079
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000223983079,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -179.999977687941026
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-179.999977687941026,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000000285303363
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000285303363,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.974994448509600
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.974994448509600,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_BackKneeL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 9.000001907348633
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,9.000001907348633,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000986037776
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000986037776,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000345928129
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000345928129,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 0.000005107634545
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000005107634545,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000088483133
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000088483133,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.909166480419091
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.909166480419091,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_BackAnkleL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 6.999997615814209
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,6.999997615814209,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000302097760
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000302097760,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000990694389
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000990694389,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -0.000003023642296
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000003023642296,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000000801350675
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000801350675,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.410486890849968
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.410486890849968,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000119209290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000119209290,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000119209290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000119209290,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000119209290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000119209290,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_BackHoofL" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 3.999994516372681
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,3.999994516372681,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000000051280949
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000051280949,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000471263775
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000471263775,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 0.000005525141123
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000005525141123,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000008506469524
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000008506469524,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.326434903089029
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.326434903089029,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000119209290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000119209290,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_PelvisR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 0.412909448146820
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.412909448146820,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.117585942149162
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.117585942149162,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.206715866923332
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.206715866923332,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 46.698542940254512
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,46.698542940254512,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 150.880217482442191
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,150.880217482442191,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -37.960108199179473
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-37.960108199179473,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_BackLegR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 6.403124332427979
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,6.403124332427979,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000715255737
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000715255737,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000357627869
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000357627869,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 152.865289021298508
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,152.865289021298508,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 45.415990508478870
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,45.415990508478870,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 17.392641296852894
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,17.392641296852894,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999642372131
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999642372131,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999761581421
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999761581421,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_TibiaR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 10.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,10.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000353902578
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000353902578,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000362217634
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000362217634,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -179.999977687941026
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-179.999977687941026,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000691000287
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000691000287,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.974995942613482
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.974995942613482,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_BackKneeR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 9.000003814697266
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,9.000003814697266,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000001020729542
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001020729542,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000126951392
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000126951392,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -0.000002514506227
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000002514506227,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000079025283
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000079025283,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.909166160253974
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.909166160253974,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_BackAnkleR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 6.999998092651367
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,6.999998092651367,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000329688191
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000329688191,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000021728766
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000021728766,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -0.000000640218432
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000640218432,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000000508137171
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000508137171,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.410490946274788
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.410490946274788,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000119209290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000119209290,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_BackHoofR" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 4.000005722045898
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,4.000005722045898,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000800937414
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000800937414,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000310538098
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000310538098,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 0.000001436919849
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001436919849,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000001851443525
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001851443525,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -1.326438851792143
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-1.326438851792143,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_PelvisTail" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: -0.163612633943558
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.163612633943558,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.147516667842865
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.147516667842865,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000036030951
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000036030951,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -60.255129725633019
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-60.255129725633019,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000005345915798
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000005345915798,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -150.255118569603525
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-150.255118569603525,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999701976776
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999701976776,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_Tail" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 8.062258720397949
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,8.062258720397949,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000541829593
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000541829593,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000065040879
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000065040879,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -2.948066313237355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-2.948066313237355,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 60.211723873457650
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,60.211723873457650,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -93.395931578539290
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-93.395931578539290,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999761581421
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999761581421,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_TailA" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 4.242640972137451
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,4.242640972137451,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000000119209169
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000119209169,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000000000059
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000000000059,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -89.999988843970513
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-89.999988843970513,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000005208227602
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000005208227602,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -22.657965826116456
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-22.657965826116456,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 0.999999761581421
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999761581421,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999761581421
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999761581421,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_TailB" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 5.099017620086670
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,5.099017620086670,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000384965460
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000384965460,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000001132488137
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000001132488137,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -0.000006361897123
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000006361897123,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 6.489437435613838
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,6.489437435613838,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000205596169
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000205596169,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_TailC" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 6.082761764526367
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,6.082761764526367,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.000000459235935
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000459235935,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000178814005
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000178814005,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -0.000009723132144
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000009723132144,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.526667875023189
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.526667875023189,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: -0.000000264084025
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000264084025,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.999999880790710
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999880790710,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Bone_Smile" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: -39.112552642822266
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-39.112552642822266,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -2.777623653411865
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-2.777623653411865,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.932745933532715
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.932745933532715,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: 90.000002504348856
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,90.000002504348856,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -89.999995674159678
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-89.999995674159678,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 0.999999940395355
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.999999940395355,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-		Model: "Model::Mesh_AntelopeA" {
-			Version: 1.1
-			Channel: "Transform" {
-				Channel: "T" {
-					Channel: "X" {
-						Default: 20.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,20.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 10.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,10.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 1
-				}
-				Channel: "R" {
-					Channel: "X" {
-						Default: -90.000002504348856
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-90.000002504348856,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: -0.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,-0.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 0.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,0.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 2
-				}
-				Channel: "S" {
-					Channel: "X" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,1,0
-					}
-					Channel: "Z" {
-						Default: 1.000000000000000
-						KeyVer: 4005
-						KeyCount: 1
-						Key: 
-							0,1.000000000000000,L
-						Color: 0,0,1
-					}
-					LayerType: 3
-				}
-			}
-		}
-	}
+	Current: "ArmatureAction"
 	Take: "ArmatureAction" {
 		FileName: "ArmatureAction.tak"
 		LocalTime: -1924423249,194366748250
@@ -12870,8 +9790,8 @@ Takes:  {
 						Key: 
 							0,0.222376227378845,L,
 							123163088000,0.222376227378845,L,
-							125087511250,-2.777623653411865,L,
-							196291171500,-2.777623414993286,L
+							125087511250,-1.777623653411865,L,
+							196291171500,-1.777623534202576,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -12952,7 +9872,7 @@ Takes:  {
 							177046939000,25.090599060058594,L,
 							178971362250,19.680858612060547,L,
 							180895785500,9.475755691528320,L,
-							182820208750,-2.515419960021973,L,
+							182820208750,-2.515419006347656,L,
 							184744632000,-11.399600982666016,L,
 							186669055250,-15.051888465881348,L,
 							188593478500,-13.183465003967285,L,
