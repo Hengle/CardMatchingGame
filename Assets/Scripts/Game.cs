@@ -6,51 +6,46 @@ using System.Linq;
 public class Game:MonoBehaviour {
 	public GameUIManager uiManger;
 
+	public Level testLevel;
+
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
-	public int cardCountX = 4;
-	public int cardCountY = 4;
 
 	public int maxFails = 10;
 	public int failCount = 0;
 
+	public Level currentLevel {get; private set;}
+
 	private Card[,] cardGrid = null;
 	private Card flippedCard = null;
 
-	private bool isFlipAnimating = false;
-
 	void Start() {
-		SetupNewGame();
+		SetupNewGame(testLevel);
 	}
 
-	void SetupNewGame() {
-		isFlipAnimating = false;
+	void SetupNewGame(Level level) {
+		currentLevel = level;
 		failCount = 0;
 		flippedCard = null;
 
 		ClearCards();
-		cardGrid = new Card[cardCountX, cardCountY];
+		cardGrid = new Card[currentLevel.cardCountX, currentLevel.cardCountY];
 
 		uiManger.failedTrysCounter.text = (maxFails-failCount).ToString();
 		
-		CardDef[] cardDefs = GetCardDefs();
+		//CardDef[] cardDefs = GetCardDefs();
 		
 		List<Vector2> availableCardSlots = new List<Vector2>();
 		
-		for (int x = 0; x < cardCountX; x++) {
-			for (int y = 0; y < cardCountY; y++) {
+		for (int x = 0; x < currentLevel.cardCountX; x++) {
+			for (int y = 0; y < currentLevel.cardCountY; y++) {
 				availableCardSlots.Add(new Vector2(x, y));
 			}
 		}
-		
-		for (int x = 0; x < cardCountX; x++) {
-			for (int y = 0; y < cardCountY; y++) {
-				
-			}
-		}
-		Debug.Log(cardDefs.Length);
+
+		//Debug.Log(cardDefs.Length);
 		while(availableCardSlots.Count > 0) {
-			CardDef carddef = cardDefs[Random.Range(0, cardDefs.Length)];
+			CardDef carddef = currentLevel.cardDefs[Random.Range(0, currentLevel.cardDefs.Count)];
 			
 			int slot0Index = Random.Range(0, availableCardSlots.Count);
 			Vector2 slot0 = availableCardSlots[slot0Index];
@@ -112,7 +107,6 @@ public class Game:MonoBehaviour {
 	}
 
 	IEnumerator FlipCard(Card card) {
-		isFlipAnimating = true;
 		card.isFlipped = true;
 
 		card.AnimateZoom();
@@ -147,7 +141,6 @@ public class Game:MonoBehaviour {
 		else {
 			flippedCard = card;
 		}
-		isFlipAnimating = false;
 	}
 
 	IEnumerator GameWin() {
@@ -161,7 +154,7 @@ public class Game:MonoBehaviour {
 
 		yield return new WaitForSeconds(1);
 
-		SetupNewGame();
+		SetupNewGame(testLevel);
 	}
 
 	IEnumerator GameOver() {
@@ -175,7 +168,7 @@ public class Game:MonoBehaviour {
 		
 		yield return new WaitForSeconds(1);
 
-		SetupNewGame();
+		SetupNewGame(testLevel);
 	}
 
 	void ClearCards() {
@@ -199,20 +192,28 @@ public class Game:MonoBehaviour {
 		if (cardGrid == null) {
 			return allCards.ToArray();
 		}
-		for (int x = 0; x < cardCountX; x++) {
-			for (int y = 0; y < cardCountY; y++) {
+		for (int x = 0; x < currentLevel.cardCountX; x++) {
+			for (int y = 0; y < currentLevel.cardCountY; y++) {
 				allCards.Add(cardGrid[x,y]);
 			}
 		}
 		return allCards.ToArray();
 	}
 
+	float GetCardScaler() {
+		float scaler = 1.0f/Mathf.Max(currentLevel.cardCountX/4.0f, currentLevel.cardCountY/4.0f);
+		return scaler;
+	}
+
 	Vector3 GetCardGridPosition(int x, int y) {
-		float totalWidth = cardCountX*cardSpacing-cardSpacing;
-		float totalHeight = cardCountY*cardSpacing-cardSpacing;
+		float scaler = GetCardScaler();
+		float totalWidth = currentLevel.cardCountX*cardSpacing-cardSpacing;
+		float totalHeight = currentLevel.cardCountY*cardSpacing-cardSpacing;
 		Vector3 pos = new Vector3(x,y,0)*cardSpacing;
-		pos.x -= totalWidth/2;
-		pos.y -= totalHeight/2;
+		pos.x -= totalWidth/2.0f;
+		pos.y -= totalHeight/2.0f;
+		pos *= scaler;
+
 		return pos;
 	}
 
@@ -220,6 +221,8 @@ public class Game:MonoBehaviour {
 		Card card = (Card)Instantiate(cardPrefab);
 		card.name = cardDef.name;
 		card.cardDef = cardDef;
+
+		card.transform.localScale = Vector3.one*GetCardScaler();
 
 		GameObject meshObject = (GameObject)Instantiate(cardDef.meshPrefab);
 		meshObject.transform.parent = card.transform.Find("AnimalPivot");
@@ -238,7 +241,7 @@ public class Game:MonoBehaviour {
 		return card;
 	}
 
-	CardDef[] GetCardDefs() {
-		return Resources.LoadAll<CardDef>("Prefabs/CardDefs");
-	}
+	//CardDef[] GetCardDefs() {
+	//	return Resources.LoadAll<CardDef>("Prefabs/CardDefs");
+	//}
 }

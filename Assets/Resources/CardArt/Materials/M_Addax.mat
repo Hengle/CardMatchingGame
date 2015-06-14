@@ -32,6 +32,10 @@ Material:
         first:
           name: _Cutoff
         second: .410714328
+      data:
+        first:
+          name: PixelSnap
+        second: 0
     m_Colors:
       data:
         first:
