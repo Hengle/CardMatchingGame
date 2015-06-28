@@ -4057,6 +4057,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 256517ea16b164545a33bc51558b5711, type: 2}
   m_RootGameObject: {fileID: 1922962355}
@@ -6440,7 +6444,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1288418026}
   m_Layer: 0
-  m_Name: Background_A
+  m_Name: Background_Serengeti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9295,6 +9299,10 @@ Prefab:
     - target: {fileID: 100062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
+      propertyPath: m_Name
+      value: Background_Serengeti
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
