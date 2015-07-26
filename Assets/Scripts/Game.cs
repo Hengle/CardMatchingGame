@@ -11,7 +11,8 @@ public class Game:MonoBehaviour {
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
 
-	public int maxFails = 10;
+	public int score;
+
 	public int failCount = 0;
 
 	public Level currentLevel {get; private set;}
@@ -25,16 +26,15 @@ public class Game:MonoBehaviour {
 
 	void SetupNewGame(Level level) {
 		currentLevel = level;
+		score = 0;
 		failCount = 0;
 		flippedCard = null;
 
 		ClearCards();
 		cardGrid = new Card[currentLevel.cardCountX, currentLevel.cardCountY];
 
-		uiManger.failedTrysCounter.text = (maxFails-failCount).ToString();
-		
-		//CardDef[] cardDefs = GetCardDefs();
-		
+		uiManger.scoreText.text = score.ToString();
+
 		List<Vector2> availableCardSlots = new List<Vector2>();
 		
 		for (int x = 0; x < currentLevel.cardCountX; x++) {
@@ -43,9 +43,9 @@ public class Game:MonoBehaviour {
 			}
 		}
 
-		//Debug.Log(cardDefs.Length);
+		int counter = 0;
 		while(availableCardSlots.Count > 0) {
-			CardDef carddef = currentLevel.cardDefs[Random.Range(0, currentLevel.cardDefs.Count)];
+			CardDef carddef = currentLevel.cardDefs[counter%currentLevel.cardDefs.Count];
 			
 			int slot0Index = Random.Range(0, availableCardSlots.Count);
 			Vector2 slot0 = availableCardSlots[slot0Index];
@@ -72,6 +72,8 @@ public class Game:MonoBehaviour {
 			
 			card0.isFlipped = false;
 			card1.isFlipped = false;
+
+			counter += 1;
 		}
 
 	}
@@ -118,6 +120,7 @@ public class Game:MonoBehaviour {
 				//Its a match
 				flippedCard.isMatched = true;
 				card.isMatched = true;
+				score += 1;
 			}
 			else {
 				card.isFlipped = false;
@@ -126,16 +129,11 @@ public class Game:MonoBehaviour {
 			}
 			flippedCard = null;
 
-			uiManger.failedTrysCounter.text = (maxFails-failCount).ToString();
+			uiManger.scoreText.text = score.ToString();
 
-			Debug.Log("MatchedCards "+GetMatchedCards().Length+"/"+GetAllCards().Length);
+			//Debug.Log("MatchedCards "+GetMatchedCards().Length+"/"+GetAllCards().Length);
 			if (GetMatchedCards().Length == GetAllCards().Length) {
 				StartCoroutine(GameWin());
-			}
-			else {
-				if (failCount >= maxFails) {
-					StartCoroutine(GameOver());
-				}
 			}
 		}
 		else {
