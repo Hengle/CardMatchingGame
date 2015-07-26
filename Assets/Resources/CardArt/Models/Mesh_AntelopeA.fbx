@@ -9,11 +9,11 @@ FBXHeaderExtension:  {
 	CreationTimeStamp:  {
 		Version: 1000
 		Year: 2015
-		Month: 05
-		Day: 30
-		Hour: 16
-		Minute: 56
-		Second: 02
+		Month: 07
+		Day: 24
+		Hour: 18
+		Minute: 20
+		Second: 06
 		Millisecond: 0
 	}
 	Creator: "FBX SDK/FBX Plugins build 20070228"
@@ -21,7 +21,7 @@ FBXHeaderExtension:  {
 		FlagPLE: 0
 	}
 }
-CreationTime: "2015-05-30 16:56:02:000"
+CreationTime: "2015-07-24 18:20:06:000"
 Creator: "Blender version 2.73 (sub 0)"
 
 ; Object definitions
@@ -4829,145 +4829,145 @@ Relations:  {
 	}
 	Deformer: "Deformer::Skin Mesh_Body", "Skin" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Pelvis", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Pelvis", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Spine", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Pelvis", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Spine", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Shoulder", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Spine", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Shoulder", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Neck", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Shoulder", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Neck", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Head", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Neck", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Head", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ShoulderL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Head", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ShoulderL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_FrontLegL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ShoulderL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_FrontLegL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ForearmL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_FrontLegL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ForearmL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_KneeL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ForearmL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_KneeL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_AnkleL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_KneeL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_AnkleL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_HoofL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_AnkleL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_HoofL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ShoulderR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_HoofL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ShoulderR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_FrontLegR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ShoulderR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_FrontLegR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ForearmR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_FrontLegR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_ForearmR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_KneeR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_ForearmR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_KneeR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_AnkleR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_KneeR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_AnkleR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_HoofR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_AnkleR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_HoofR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_PelvisL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_HoofR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_PelvisL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackLegL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_PelvisL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackLegL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TibiaL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackLegL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TibiaL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackKneeL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TibiaL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackKneeL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackAnkleL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackKneeL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackAnkleL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackHoofL", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackAnkleL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackHoofL", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_PelvisR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackHoofL", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_PelvisR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackLegR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_PelvisR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackLegR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TibiaR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackLegR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TibiaR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackKneeR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TibiaR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackKneeR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackAnkleR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackKneeR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackAnkleR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackHoofR", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackAnkleR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_BackHoofR", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_PelvisTail", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_BackHoofR", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_PelvisTail", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Tail", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_PelvisTail", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Tail", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TailA", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Tail", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TailA", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TailB", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TailA", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TailB", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TailC", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TailB", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_TailC", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Smile", "Cluster" {
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_TailC", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster Mesh_Face Bone_Smile", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster Mesh_Body Bone_Smile", "Cluster" {
 	}
 	GroupSelection: "GroupSelection::HeadGroup", "Default" {
 	}
@@ -4987,146 +4987,146 @@ Connections:  {
 	Connect: "OO", "Video::T_Addax_tga_001", "Texture::T_Addax_tga_001"
 	Connect: "OO", "Deformer::Skin Mesh_Face", "Model::Mesh_Face"
 	Connect: "OO", "Deformer::Skin Mesh_Body", "Model::Mesh_Body"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Pelvis", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Pelvis", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Spine", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Pelvis", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Spine", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Shoulder", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Spine", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Shoulder", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Neck", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Shoulder", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Neck", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Head", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Neck", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Head", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ShoulderL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Head", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ShoulderL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_FrontLegL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ShoulderL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_FrontLegL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ForearmL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_FrontLegL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ForearmL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_KneeL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ForearmL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_KneeL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_AnkleL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_KneeL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_AnkleL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_HoofL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_AnkleL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_HoofL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ShoulderR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_HoofL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ShoulderR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_FrontLegR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ShoulderR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_FrontLegR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ForearmR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_FrontLegR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_ForearmR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_KneeR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_ForearmR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_KneeR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_AnkleR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_KneeR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_AnkleR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_HoofR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_AnkleR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_HoofR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_PelvisL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_HoofR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_PelvisL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackLegL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_PelvisL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackLegL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TibiaL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackLegL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TibiaL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackKneeL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TibiaL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackKneeL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackKneeL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackHoofL", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackHoofL", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_PelvisR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackHoofL", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_PelvisR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackLegR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_PelvisR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackLegR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TibiaR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackLegR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TibiaR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackKneeR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TibiaR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackKneeR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackKneeR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackHoofR", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_BackHoofR", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_PelvisTail", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_BackHoofR", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_PelvisTail", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Tail", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_PelvisTail", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Tail", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TailA", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Tail", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TailA", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TailB", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TailA", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TailB", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TailC", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TailB", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_TailC", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Smile", "Deformer::Skin Mesh_Body"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_TailC", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "SubDeformer::Cluster Mesh_Face Bone_Smile", "Deformer::Skin Mesh_Face"
-	Connect: "OO", "Model::Bone_Pelvis", "SubDeformer::Cluster Mesh_Body Bone_Pelvis"
+	Connect: "OO", "SubDeformer::Cluster Mesh_Body Bone_Smile", "Deformer::Skin Mesh_Body"
 	Connect: "OO", "Model::Bone_Pelvis", "SubDeformer::Cluster Mesh_Face Bone_Pelvis"
-	Connect: "OO", "Model::Bone_Spine", "SubDeformer::Cluster Mesh_Body Bone_Spine"
+	Connect: "OO", "Model::Bone_Pelvis", "SubDeformer::Cluster Mesh_Body Bone_Pelvis"
 	Connect: "OO", "Model::Bone_Spine", "SubDeformer::Cluster Mesh_Face Bone_Spine"
-	Connect: "OO", "Model::Bone_Shoulder", "SubDeformer::Cluster Mesh_Body Bone_Shoulder"
+	Connect: "OO", "Model::Bone_Spine", "SubDeformer::Cluster Mesh_Body Bone_Spine"
 	Connect: "OO", "Model::Bone_Shoulder", "SubDeformer::Cluster Mesh_Face Bone_Shoulder"
-	Connect: "OO", "Model::Bone_Neck", "SubDeformer::Cluster Mesh_Body Bone_Neck"
+	Connect: "OO", "Model::Bone_Shoulder", "SubDeformer::Cluster Mesh_Body Bone_Shoulder"
 	Connect: "OO", "Model::Bone_Neck", "SubDeformer::Cluster Mesh_Face Bone_Neck"
-	Connect: "OO", "Model::Bone_Head", "SubDeformer::Cluster Mesh_Body Bone_Head"
+	Connect: "OO", "Model::Bone_Neck", "SubDeformer::Cluster Mesh_Body Bone_Neck"
 	Connect: "OO", "Model::Bone_Head", "SubDeformer::Cluster Mesh_Face Bone_Head"
-	Connect: "OO", "Model::Bone_ShoulderL", "SubDeformer::Cluster Mesh_Body Bone_ShoulderL"
+	Connect: "OO", "Model::Bone_Head", "SubDeformer::Cluster Mesh_Body Bone_Head"
 	Connect: "OO", "Model::Bone_ShoulderL", "SubDeformer::Cluster Mesh_Face Bone_ShoulderL"
-	Connect: "OO", "Model::Bone_FrontLegL", "SubDeformer::Cluster Mesh_Body Bone_FrontLegL"
+	Connect: "OO", "Model::Bone_ShoulderL", "SubDeformer::Cluster Mesh_Body Bone_ShoulderL"
 	Connect: "OO", "Model::Bone_FrontLegL", "SubDeformer::Cluster Mesh_Face Bone_FrontLegL"
-	Connect: "OO", "Model::Bone_ForearmL", "SubDeformer::Cluster Mesh_Body Bone_ForearmL"
+	Connect: "OO", "Model::Bone_FrontLegL", "SubDeformer::Cluster Mesh_Body Bone_FrontLegL"
 	Connect: "OO", "Model::Bone_ForearmL", "SubDeformer::Cluster Mesh_Face Bone_ForearmL"
-	Connect: "OO", "Model::Bone_KneeL", "SubDeformer::Cluster Mesh_Body Bone_KneeL"
+	Connect: "OO", "Model::Bone_ForearmL", "SubDeformer::Cluster Mesh_Body Bone_ForearmL"
 	Connect: "OO", "Model::Bone_KneeL", "SubDeformer::Cluster Mesh_Face Bone_KneeL"
-	Connect: "OO", "Model::Bone_AnkleL", "SubDeformer::Cluster Mesh_Body Bone_AnkleL"
+	Connect: "OO", "Model::Bone_KneeL", "SubDeformer::Cluster Mesh_Body Bone_KneeL"
 	Connect: "OO", "Model::Bone_AnkleL", "SubDeformer::Cluster Mesh_Face Bone_AnkleL"
-	Connect: "OO", "Model::Bone_HoofL", "SubDeformer::Cluster Mesh_Body Bone_HoofL"
+	Connect: "OO", "Model::Bone_AnkleL", "SubDeformer::Cluster Mesh_Body Bone_AnkleL"
 	Connect: "OO", "Model::Bone_HoofL", "SubDeformer::Cluster Mesh_Face Bone_HoofL"
-	Connect: "OO", "Model::Bone_ShoulderR", "SubDeformer::Cluster Mesh_Body Bone_ShoulderR"
+	Connect: "OO", "Model::Bone_HoofL", "SubDeformer::Cluster Mesh_Body Bone_HoofL"
 	Connect: "OO", "Model::Bone_ShoulderR", "SubDeformer::Cluster Mesh_Face Bone_ShoulderR"
-	Connect: "OO", "Model::Bone_FrontLegR", "SubDeformer::Cluster Mesh_Body Bone_FrontLegR"
+	Connect: "OO", "Model::Bone_ShoulderR", "SubDeformer::Cluster Mesh_Body Bone_ShoulderR"
 	Connect: "OO", "Model::Bone_FrontLegR", "SubDeformer::Cluster Mesh_Face Bone_FrontLegR"
-	Connect: "OO", "Model::Bone_ForearmR", "SubDeformer::Cluster Mesh_Body Bone_ForearmR"
+	Connect: "OO", "Model::Bone_FrontLegR", "SubDeformer::Cluster Mesh_Body Bone_FrontLegR"
 	Connect: "OO", "Model::Bone_ForearmR", "SubDeformer::Cluster Mesh_Face Bone_ForearmR"
-	Connect: "OO", "Model::Bone_KneeR", "SubDeformer::Cluster Mesh_Body Bone_KneeR"
+	Connect: "OO", "Model::Bone_ForearmR", "SubDeformer::Cluster Mesh_Body Bone_ForearmR"
 	Connect: "OO", "Model::Bone_KneeR", "SubDeformer::Cluster Mesh_Face Bone_KneeR"
-	Connect: "OO", "Model::Bone_AnkleR", "SubDeformer::Cluster Mesh_Body Bone_AnkleR"
+	Connect: "OO", "Model::Bone_KneeR", "SubDeformer::Cluster Mesh_Body Bone_KneeR"
 	Connect: "OO", "Model::Bone_AnkleR", "SubDeformer::Cluster Mesh_Face Bone_AnkleR"
-	Connect: "OO", "Model::Bone_HoofR", "SubDeformer::Cluster Mesh_Body Bone_HoofR"
+	Connect: "OO", "Model::Bone_AnkleR", "SubDeformer::Cluster Mesh_Body Bone_AnkleR"
 	Connect: "OO", "Model::Bone_HoofR", "SubDeformer::Cluster Mesh_Face Bone_HoofR"
-	Connect: "OO", "Model::Bone_PelvisL", "SubDeformer::Cluster Mesh_Body Bone_PelvisL"
+	Connect: "OO", "Model::Bone_HoofR", "SubDeformer::Cluster Mesh_Body Bone_HoofR"
 	Connect: "OO", "Model::Bone_PelvisL", "SubDeformer::Cluster Mesh_Face Bone_PelvisL"
-	Connect: "OO", "Model::Bone_BackLegL", "SubDeformer::Cluster Mesh_Body Bone_BackLegL"
+	Connect: "OO", "Model::Bone_PelvisL", "SubDeformer::Cluster Mesh_Body Bone_PelvisL"
 	Connect: "OO", "Model::Bone_BackLegL", "SubDeformer::Cluster Mesh_Face Bone_BackLegL"
-	Connect: "OO", "Model::Bone_TibiaL", "SubDeformer::Cluster Mesh_Body Bone_TibiaL"
+	Connect: "OO", "Model::Bone_BackLegL", "SubDeformer::Cluster Mesh_Body Bone_BackLegL"
 	Connect: "OO", "Model::Bone_TibiaL", "SubDeformer::Cluster Mesh_Face Bone_TibiaL"
-	Connect: "OO", "Model::Bone_BackKneeL", "SubDeformer::Cluster Mesh_Body Bone_BackKneeL"
+	Connect: "OO", "Model::Bone_TibiaL", "SubDeformer::Cluster Mesh_Body Bone_TibiaL"
 	Connect: "OO", "Model::Bone_BackKneeL", "SubDeformer::Cluster Mesh_Face Bone_BackKneeL"
-	Connect: "OO", "Model::Bone_BackAnkleL", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleL"
+	Connect: "OO", "Model::Bone_BackKneeL", "SubDeformer::Cluster Mesh_Body Bone_BackKneeL"
 	Connect: "OO", "Model::Bone_BackAnkleL", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleL"
-	Connect: "OO", "Model::Bone_BackHoofL", "SubDeformer::Cluster Mesh_Body Bone_BackHoofL"
+	Connect: "OO", "Model::Bone_BackAnkleL", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleL"
 	Connect: "OO", "Model::Bone_BackHoofL", "SubDeformer::Cluster Mesh_Face Bone_BackHoofL"
-	Connect: "OO", "Model::Bone_PelvisR", "SubDeformer::Cluster Mesh_Body Bone_PelvisR"
+	Connect: "OO", "Model::Bone_BackHoofL", "SubDeformer::Cluster Mesh_Body Bone_BackHoofL"
 	Connect: "OO", "Model::Bone_PelvisR", "SubDeformer::Cluster Mesh_Face Bone_PelvisR"
-	Connect: "OO", "Model::Bone_BackLegR", "SubDeformer::Cluster Mesh_Body Bone_BackLegR"
+	Connect: "OO", "Model::Bone_PelvisR", "SubDeformer::Cluster Mesh_Body Bone_PelvisR"
 	Connect: "OO", "Model::Bone_BackLegR", "SubDeformer::Cluster Mesh_Face Bone_BackLegR"
-	Connect: "OO", "Model::Bone_TibiaR", "SubDeformer::Cluster Mesh_Body Bone_TibiaR"
+	Connect: "OO", "Model::Bone_BackLegR", "SubDeformer::Cluster Mesh_Body Bone_BackLegR"
 	Connect: "OO", "Model::Bone_TibiaR", "SubDeformer::Cluster Mesh_Face Bone_TibiaR"
-	Connect: "OO", "Model::Bone_BackKneeR", "SubDeformer::Cluster Mesh_Body Bone_BackKneeR"
+	Connect: "OO", "Model::Bone_TibiaR", "SubDeformer::Cluster Mesh_Body Bone_TibiaR"
 	Connect: "OO", "Model::Bone_BackKneeR", "SubDeformer::Cluster Mesh_Face Bone_BackKneeR"
-	Connect: "OO", "Model::Bone_BackAnkleR", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleR"
+	Connect: "OO", "Model::Bone_BackKneeR", "SubDeformer::Cluster Mesh_Body Bone_BackKneeR"
 	Connect: "OO", "Model::Bone_BackAnkleR", "SubDeformer::Cluster Mesh_Face Bone_BackAnkleR"
-	Connect: "OO", "Model::Bone_BackHoofR", "SubDeformer::Cluster Mesh_Body Bone_BackHoofR"
+	Connect: "OO", "Model::Bone_BackAnkleR", "SubDeformer::Cluster Mesh_Body Bone_BackAnkleR"
 	Connect: "OO", "Model::Bone_BackHoofR", "SubDeformer::Cluster Mesh_Face Bone_BackHoofR"
-	Connect: "OO", "Model::Bone_PelvisTail", "SubDeformer::Cluster Mesh_Body Bone_PelvisTail"
+	Connect: "OO", "Model::Bone_BackHoofR", "SubDeformer::Cluster Mesh_Body Bone_BackHoofR"
 	Connect: "OO", "Model::Bone_PelvisTail", "SubDeformer::Cluster Mesh_Face Bone_PelvisTail"
-	Connect: "OO", "Model::Bone_Tail", "SubDeformer::Cluster Mesh_Body Bone_Tail"
+	Connect: "OO", "Model::Bone_PelvisTail", "SubDeformer::Cluster Mesh_Body Bone_PelvisTail"
 	Connect: "OO", "Model::Bone_Tail", "SubDeformer::Cluster Mesh_Face Bone_Tail"
-	Connect: "OO", "Model::Bone_TailA", "SubDeformer::Cluster Mesh_Body Bone_TailA"
+	Connect: "OO", "Model::Bone_Tail", "SubDeformer::Cluster Mesh_Body Bone_Tail"
 	Connect: "OO", "Model::Bone_TailA", "SubDeformer::Cluster Mesh_Face Bone_TailA"
-	Connect: "OO", "Model::Bone_TailB", "SubDeformer::Cluster Mesh_Body Bone_TailB"
+	Connect: "OO", "Model::Bone_TailA", "SubDeformer::Cluster Mesh_Body Bone_TailA"
 	Connect: "OO", "Model::Bone_TailB", "SubDeformer::Cluster Mesh_Face Bone_TailB"
-	Connect: "OO", "Model::Bone_TailC", "SubDeformer::Cluster Mesh_Body Bone_TailC"
+	Connect: "OO", "Model::Bone_TailB", "SubDeformer::Cluster Mesh_Body Bone_TailB"
 	Connect: "OO", "Model::Bone_TailC", "SubDeformer::Cluster Mesh_Face Bone_TailC"
-	Connect: "OO", "Model::Bone_Smile", "SubDeformer::Cluster Mesh_Body Bone_Smile"
+	Connect: "OO", "Model::Bone_TailC", "SubDeformer::Cluster Mesh_Body Bone_TailC"
 	Connect: "OO", "Model::Bone_Smile", "SubDeformer::Cluster Mesh_Face Bone_Smile"
+	Connect: "OO", "Model::Bone_Smile", "SubDeformer::Cluster Mesh_Body Bone_Smile"
 	Connect: "OO", "Model::Bone_Pelvis", "Model::Mesh_AntelopeA"
 	Connect: "OO", "Model::Bone_Spine", "Model::Bone_Pelvis"
 	Connect: "OO", "Model::Bone_Shoulder", "Model::Bone_Spine"
@@ -12067,12 +12067,12 @@ Takes:  {
 							152029436750,105.394367799132539,L,
 							153953860000,104.387024179583833,L,
 							173198092500,104.387024179583833,L,
-							175122515750,104.240817150210745,L,
-							177046939000,108.325201971980803,L,
-							178971362250,120.551882624068043,L,
-							180895785500,134.905088032722347,L,
-							182820208750,146.793209868030857,L,
-							184744632000,151.828329701508665,L,
+							175122515750,105.285945376247923,L,
+							177046939000,113.078214502169956,L,
+							178971362250,128.607762901006339,L,
+							180895785500,142.962334347494647,L,
+							182820208750,149.970996360509758,L,
+							184744632000,152.370892608416995,L,
 							186669055250,152.865289021298508,L,
 							202064441250,152.865289021298508,L,
 							203988864500,150.643114295594728,L,
@@ -12108,12 +12108,12 @@ Takes:  {
 							152029436750,20.671809994729426,L,
 							153953860000,15.763455057152308,L,
 							173198092500,15.763455057152308,L,
-							175122515750,22.997205954264871,L,
-							177046939000,41.155345824987720,L,
-							178971362250,53.236430749632589,L,
-							180895785500,55.415144981647636,L,
-							182820208750,51.864717028431727,L,
-							184744632000,47.213945599928351,L,
+							175122515750,21.870127411018714,L,
+							177046939000,36.910294463371685,L,
+							178971362250,45.865116427541587,L,
+							180895785500,45.541894800544121,L,
+							182820208750,44.258215387555431,L,
+							184744632000,45.274301649241742,L,
 							186669055250,45.415993923573453,L,
 							202064441250,45.415993923573453,L,
 							203988864500,44.255186198658528,L,
@@ -12150,12 +12150,12 @@ Takes:  {
 							152029436750,-65.110123810319493,L,
 							153953860000,-70.401348416915710,L,
 							173198092500,-70.401348416915710,L,
-							175122515750,-65.452357268871651,L,
-							177046939000,-49.702279137208798,L,
-							178971362250,-28.826973901442891,L,
-							180895785500,-9.060765028385816,L,
-							182820208750,7.499836284155657,L,
-							184744632000,15.469545186977912,L,
+							175122515750,-63.293942359069860,L,
+							177046939000,-41.163262014235755,L,
+							178971362250,-15.364642019063130,L,
+							180895785500,4.227258718828178,L,
+							182820208750,13.793561906179054,L,
+							184744632000,16.940300066238400,L,
 							186669055250,17.392637881758308,L,
 							202064441250,17.392637881758308,L,
 							203988864500,14.382465939058585,L,
@@ -12269,7 +12269,7 @@ Takes:  {
 							177046939000,-176.779133682934429,L,
 							178971362250,-176.028345628989371,L,
 							180895785500,-176.508234720073773,L,
-							182820208750,-177.796148850347890,L,
+							182820208750,-177.796135189969533,L,
 							184744632000,-179.127270757311408,L,
 							186669055250,-179.646488077636690,L,
 							205913287750,-179.646488077636690,L,
@@ -12313,12 +12313,12 @@ Takes:  {
 							152029436750,-0.023813597948507,L,
 							153953860000,0.000000797077740,L,
 							173198092500,0.000000797077740,L,
-							175122515750,-0.539476995424834,L,
+							175122515750,-0.539477102146540,L,
 							177046939000,-2.270176014530087,L,
-							178971362250,-3.288027880116850,L,
-							180895785500,-2.851969820483645,L,
-							182820208750,-1.757100528372517,L,
-							184744632000,-0.731449760692375,L,
+							178971362250,-3.288026386012969,L,
+							180895785500,-2.851970033927056,L,
+							182820208750,-1.757100208207400,L,
+							184744632000,-0.731449653970669,L,
 							186669055250,-0.358344940989278,L,
 							205913287750,-0.358344754226293,L,
 							207837711000,-0.348104299628476,L,
@@ -12361,12 +12361,12 @@ Takes:  {
 							152029436750,0.602313882015215,L,
 							153953860000,-1.974997009830539,L,
 							173198092500,-1.974997009830539,L,
-							175122515750,6.837244755415551,L,
-							177046939000,26.027100068192976,L,
+							175122515750,6.837242620981435,L,
+							177046939000,26.027105190834853,L,
 							178971362250,34.912993470806498,L,
-							180895785500,33.858101489350808,L,
+							180895785500,33.858104904445398,L,
 							182820208750,31.091564101892384,L,
-							184744632000,28.317856723352751,L,
+							184744632000,28.317858430900042,L,
 							186669055250,27.256488015016608,L,
 							205913287750,27.256488015016608,L,
 							207837711000,26.876871223589720,L,
@@ -12476,12 +12476,12 @@ Takes:  {
 							152029436750,-0.071018192565895,L,
 							153953860000,-0.000002561320939,L,
 							173198092500,-0.000002561320939,L,
-							175122515750,-0.035998518690607,L,
-							177046939000,-0.145361366576472,L,
-							178971362250,-0.318653804587892,L,
-							180895785500,-0.521164884734086,L,
-							182820208750,-0.700964758796800,L,
-							184744632000,-0.817795998323347,L,
+							175122515750,-0.035998425309115,L,
+							177046939000,-0.145361406597112,L,
+							178971362250,-0.318653697866187,L,
+							180895785500,-0.521165204899203,L,
+							182820208750,-0.700964438631683,L,
+							184744632000,-0.817795944962494,L,
 							186669055250,-0.856864947180028,L,
 							205913287750,-0.856864787097469,L,
 							207837711000,-1.033560126739006,L,
@@ -12522,12 +12522,12 @@ Takes:  {
 							152029436750,-0.030392874383059,L,
 							153953860000,-0.000000065033539,L,
 							173198092500,-0.000000065033539,L,
-							175122515750,-0.015926480360139,L,
-							177046939000,-0.057877222097820,L,
-							178971362250,-0.105997732409702,L,
-							180895785500,-0.136035503656987,L,
-							182820208750,-0.140285722270153,L,
-							184744632000,-0.131883549054418,L,
+							175122515750,-0.015926507040566,L,
+							177046939000,-0.057877662324856,L,
+							178971362250,-0.105997092079467,L,
+							180895785500,-0.136034049573745,L,
+							182820208750,-0.140285335403970,L,
+							184744632000,-0.131883415652286,L,
 							186669055250,-0.127090330402236,L,
 							205913287750,-0.127090543845648,L,
 							207837711000,-0.175011537928572,L,
@@ -12568,11 +12568,11 @@ Takes:  {
 							152029436750,1.934187483313418,L,
 							153953860000,-0.909164879593504,L,
 							173198092500,-0.909164879593504,L,
-							175122515750,0.539597751034926,L,
-							177046939000,4.851796702381260,L,
+							175122515750,0.539600845964394,L,
+							177046939000,4.851798836815376,L,
 							178971362250,11.475129324502428,L,
-							180895785500,19.016009922927925,L,
-							182820208750,25.639524398835743,L,
+							180895785500,19.016011630475219,L,
+							182820208750,25.639526106383038,L,
 							184744632000,29.951926548309885,L,
 							186669055250,31.400773595807589,L,
 							205913287750,31.400777010902175,L,
@@ -12682,11 +12682,11 @@ Takes:  {
 							152029436750,0.054660059591456,L,
 							153953860000,-0.000000613649757,L,
 							173198092500,-0.000000613649757,L,
-							175122515750,0.027959861282610,L,
-							177046939000,0.109668372119197,L,
-							178971362250,0.228662753900224,L,
-							180895785500,0.350187640727459,L,
-							182820208750,0.440930172306386,L,
+							175122515750,0.027959699532524,L,
+							177046939000,0.109668632253355,L,
+							178971362250,0.228662887302357,L,
+							180895785500,0.350187907531723,L,
+							182820208750,0.440930465791077,L,
 							184744632000,0.490656670867504,L,
 							186669055250,0.505593120643537,L,
 							205913287750,0.505593013921832,L,
@@ -12730,12 +12730,12 @@ Takes:  {
 							152029436750,-0.017493768650817,L,
 							153953860000,-0.000000541946162,L,
 							173198092500,-0.000000541946162,L,
-							175122515750,-0.008439686729080,L,
-							177046939000,-0.039364411234190,L,
-							178971362250,-0.103283545967632,L,
-							180895785500,-0.198292251054740,L,
-							182820208750,-0.298350080104280,L,
-							184744632000,-0.370183206285627,L,
+							175122515750,-0.008439525812758,L,
+							177046939000,-0.039363797584382,L,
+							178971362250,-0.103282858946651,L,
+							180895785500,-0.198293638436915,L,
+							182820208750,-0.298349786619589,L,
+							184744632000,-0.370183339687760,L,
 							186669055250,-0.395281376721038,L,
 							205913287750,-0.395281296679759,L,
 							207837711000,-0.133284178061305,L,
@@ -12777,12 +12777,12 @@ Takes:  {
 							152029436750,2.463919452979098,L,
 							153953860000,-1.410489132005790,L,
 							173198092500,-1.410489132005790,L,
-							175122515750,0.560889371668529,L,
-							177046939000,6.460190565587885,L,
+							175122515750,0.560886543543326,L,
+							177046939000,6.460192273135178,L,
 							178971362250,15.586612921804470,L,
-							180895785500,26.012319538829090,L,
+							180895785500,26.012322953923675,L,
 							182820208750,35.138498996443317,L,
-							184744632000,41.037552382561849,L,
+							184744632000,41.037555797656431,L,
 							186669055250,43.008826939294735,L,
 							205913287750,43.008826939294735,L,
 							207837711000,31.881919441699274,L,
@@ -12940,11 +12940,11 @@ Takes:  {
 							152029436750,-5.755229665878957,L,
 							153953860000,-1.326438745070438,L,
 							173198092500,-1.326438745070438,L,
-							175122515750,-3.577752124990504,L,
-							177046939000,-10.339648794803519,L,
+							175122515750,-3.577751271216857,L,
+							177046939000,-10.339645379708935,L,
 							178971362250,-20.852917583213930,L,
-							180895785500,-32.891482872728240,L,
-							182820208750,-43.404738854533953,L,
+							180895785500,-32.891486287822822,L,
+							182820208750,-43.404735439439371,L,
 							184744632000,-50.166653453593547,L,
 							186669055250,-52.417958936107382,L,
 							205913287750,-52.417955521012800,L,
