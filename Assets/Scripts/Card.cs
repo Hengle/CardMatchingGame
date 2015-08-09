@@ -5,22 +5,12 @@ using System.Linq;
 
 public class Card:MonoBehaviour {
 	public CardDef cardDef;
+	public Transform animalPivot;
 	public int tilePositionX = -1;
 	public int tilePositionY = -1;
 
 	public bool _isMatched;
-	public bool isMatched {
-		get {
-			return _isMatched;
-		}
-		set {
-			_isMatched = value;
-
-			if (_isMatched) {
-				AnimateDance();
-			}
-		}
-	}
+	public bool isMatched { get; private set; }
 
 	private bool _isFlipped;
 	public bool isFlipped {
@@ -59,26 +49,28 @@ public class Card:MonoBehaviour {
 		}
 	}
 
-	public void AnimateZoom()
+	public void OnMatch(Card other)
 	{
-		//scaleAnimation.Play();
+		isMatched = true;
+		AnimateDance();
+		LeanTween.scale(gameObject, Vector3.one*1.25f, 0.25f).setLoopPingPong().setLoopCount(2).setEase(LeanTweenType.easeOutCubic);
+
+		StartCoroutine(AnimateAway());
 	}
 
-	//public void AnimateIdle() {
-	//	DisableAnimatorStates();
-	//	animator.SetBool("Idle", true);
-	//}
+	private IEnumerator AnimateAway()
+	{
+		yield return new WaitForSeconds(2);
+		LeanTween.moveLocalX(animalPivot.gameObject, animalPivot.localPosition.x+10, 3);
+		LeanTween.moveLocalZ(animalPivot.gameObject, animalPivot.localPosition.z+0.25f, 0.25f);
+		yield return new WaitForSeconds(3);
+		Destroy(animalPivot.gameObject);
+	}
 
 	public void AnimateDance() {
 		animator.SetTrigger("Dance");
-		//DisableAnimatorStates();
-		//animator.SetBool("Idle", true);
 	}
-
-	//private void DisableAnimatorStates() {
-	//	animator.SetBool("Idle", false);
-	//	animator.SetBool("Dance", false);
-	//}
+	
 
 	void Awake() {
 		isFlipped = false;

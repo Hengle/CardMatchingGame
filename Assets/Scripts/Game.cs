@@ -11,7 +11,14 @@ public class Game:MonoBehaviour {
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
 
-	public int score;
+	public int rawScore;
+	public int score
+	{
+		get
+		{
+			return (rawScore/(failCount+1));
+        }
+	}
 
 	public int failCount = 0;
 
@@ -26,14 +33,14 @@ public class Game:MonoBehaviour {
 
 	void SetupNewGame(Level level) {
 		currentLevel = level;
-		score = 0;
+		rawScore = 0;
 		failCount = 0;
 		flippedCard = null;
 
 		ClearCards();
 		cardGrid = new Card[currentLevel.cardCountX, currentLevel.cardCountY];
 
-		uiManger.scoreText.text = score.ToString();
+		uiManger.scoreText.text = rawScore.ToString();
 
 		List<Vector2> availableCardSlots = new List<Vector2>();
 		
@@ -110,17 +117,15 @@ public class Game:MonoBehaviour {
 
 	IEnumerator FlipCard(Card card) {
 		card.isFlipped = true;
-
-		card.AnimateZoom();
-
-		yield return new WaitForSeconds(1);
+		
+		yield return new WaitForSeconds(0.35f);
 
 		if (flippedCard) {
 			if (flippedCard.cardDef == card.cardDef) {
-				//Its a match
-				flippedCard.isMatched = true;
-				card.isMatched = true;
-				score += 1;
+				rawScore += 100;
+
+				card.OnMatch(flippedCard);
+				flippedCard.OnMatch(card);
 			}
 			else {
 				card.isFlipped = false;
@@ -130,8 +135,7 @@ public class Game:MonoBehaviour {
 			flippedCard = null;
 
 			uiManger.scoreText.text = score.ToString();
-
-			//Debug.Log("MatchedCards "+GetMatchedCards().Length+"/"+GetAllCards().Length);
+			
 			if (GetMatchedCards().Length == GetAllCards().Length) {
 				StartCoroutine(GameWin());
 			}
@@ -144,27 +148,13 @@ public class Game:MonoBehaviour {
 	IEnumerator GameWin() {
 		Debug.Log("You Win!");
 
+		yield return new WaitForSeconds(5);
+
 		Card[] cards = GetAllCards();
 
 		for (int i = 0; i < cards.Length; i++) {
 			cards[i].isFlipped = false;
 		}
-
-		yield return new WaitForSeconds(1);
-
-		SetupNewGame(testLevel);
-	}
-
-	IEnumerator GameOver() {
-		Debug.Log("You Lose!");
-
-		Card[] cards = GetAllCards();
-		
-		for (int i = 0; i < cards.Length; i++) {
-			cards[i].isFlipped = false;
-		}
-		
-		yield return new WaitForSeconds(1);
 
 		SetupNewGame(testLevel);
 	}
