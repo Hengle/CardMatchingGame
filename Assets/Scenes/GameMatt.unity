@@ -132,8 +132,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 154444, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 465160, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.14999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 465160, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5.13999987
+      objectReference: {fileID: 0}
+    - target: {fileID: 465160, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.76999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 9555050, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 89419d746ffe6984799ab07ad07c1348, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
   m_IsPrefabParent: 0
@@ -484,7 +500,6 @@ MonoBehaviour:
   testLevel: {fileID: 11400000, guid: 766d14efe420bd548aacf1bc62f2f568, type: 2}
   cardPrefab: {fileID: 11400000, guid: 69ffc6bf72417094ebffe7ce5c9e93c0, type: 2}
   cardSpacing: 1.25
-  rawScore: 0
   failCount: 0
 --- !u!4 &1186209384
 Transform:

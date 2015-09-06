@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 638d7c901a067cf4789280ecf67ce0fe
-timeCreated: 1439866334
-=======
-guid: 1e5b5ef8726817441b744859da166a85
-timeCreated: 1440364638
->>>>>>> origin/master
+timeCreated: 1441575554
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -15,102 +10,107 @@ ModelImporter:
     100004: Bone_BackAnkleL
     100006: Bone_BackAnkleR
     100008: Bone_BackHoofL
-    100010: Bone_BackHoofR
-    100012: Bone_BackKneeL
-    100014: Bone_BackKneeR
-    100016: Bone_BackLegL
-    100018: Bone_BackLegR
-    100020: Bone_ForearmL
-    100022: Bone_ForearmR
-    100024: Bone_FrontLegL
-    100026: Bone_FrontLegR
-    100028: Bone_Head
-    100030: Bone_HoofL
-    100032: Bone_HoofR
-    100034: Bone_KneeL
-    100036: Bone_KneeR
-    100038: Bone_Neck
-    100040: Bone_Pelvis
-    100042: Bone_PelvisL
-    100044: Bone_PelvisR
-    100046: Bone_PelvisTail
-    100048: Bone_Shoulder
-    100050: Bone_ShoulderL
-    100052: Bone_ShoulderR
-    100054: Bone_Smile
-    100056: Bone_Spine
-    100058: Bone_Tail
-    100060: Bone_TailA
-    100062: Bone_TailB
-    100064: Bone_TailC
-    100066: Bone_TibiaL
-    100068: Bone_TibiaR
-    100070: Mesh_Body
-    100072: Mesh_Face
-    100074: //RootNode
-    100076: Mesh_Hyena
+    100010: Bone_BackHoofL_end
+    100012: Bone_BackHoofR
+    100014: Bone_BackHoofR_end
+    100016: Bone_BackKneeL
+    100018: Bone_BackKneeR
+    100020: Bone_BackLegL
+    100022: Bone_BackLegR
+    100024: Bone_ForearmL
+    100026: Bone_ForearmR
+    100028: Bone_FrontLegL
+    100030: Bone_FrontLegR
+    100032: Bone_Head
+    100034: Bone_Head_end
+    100036: Bone_HoofL
+    100038: Bone_HoofL_end
+    100040: Bone_HoofR
+    100042: Bone_HoofR_end
+    100044: Bone_KneeL
+    100046: Bone_KneeR
+    100048: Bone_Neck
+    100050: Bone_Pelvis
+    100052: Bone_PelvisL
+    100054: Bone_PelvisR
+    100056: Bone_PelvisTail
+    100058: Bone_Shoulder
+    100060: Bone_ShoulderL
+    100062: Bone_ShoulderR
+    100064: Bone_Smile
+    100066: Bone_Smile_end
+    100068: Bone_Spine
+    100070: Bone_Tail
+    100072: Bone_TailA
+    100074: Bone_TailB
+    100076: Bone_TailC
+    100078: Bone_TailC_end
+    100080: Bone_TibiaL
+    100082: Bone_TibiaR
+    100084: Mesh_Body
+    100086: Mesh_Face
+    100088: Mesh_Hyena
+    100090: //RootNode
     400000: Bone_AnkleL
     400002: Bone_AnkleR
     400004: Bone_BackAnkleL
     400006: Bone_BackAnkleR
     400008: Bone_BackHoofL
-    400010: Bone_BackHoofR
-    400012: Bone_BackKneeL
-    400014: Bone_BackKneeR
-    400016: Bone_BackLegL
-    400018: Bone_BackLegR
-    400020: Bone_ForearmL
-    400022: Bone_ForearmR
-    400024: Bone_FrontLegL
-    400026: Bone_FrontLegR
-    400028: Bone_Head
-    400030: Bone_HoofL
-    400032: Bone_HoofR
-    400034: Bone_KneeL
-    400036: Bone_KneeR
-    400038: Bone_Neck
-    400040: Bone_Pelvis
-    400042: Bone_PelvisL
-    400044: Bone_PelvisR
-    400046: Bone_PelvisTail
-    400048: Bone_Shoulder
-    400050: Bone_ShoulderL
-    400052: Bone_ShoulderR
-    400054: Bone_Smile
-    400056: Bone_Spine
-    400058: Bone_Tail
-    400060: Bone_TailA
-    400062: Bone_TailB
-    400064: Bone_TailC
-    400066: Bone_TibiaL
-    400068: Bone_TibiaR
-    400070: Mesh_Body
-    400072: Mesh_Face
-    400074: //RootNode
-    400076: Mesh_Hyena
+    400010: Bone_BackHoofL_end
+    400012: Bone_BackHoofR
+    400014: Bone_BackHoofR_end
+    400016: Bone_BackKneeL
+    400018: Bone_BackKneeR
+    400020: Bone_BackLegL
+    400022: Bone_BackLegR
+    400024: Bone_ForearmL
+    400026: Bone_ForearmR
+    400028: Bone_FrontLegL
+    400030: Bone_FrontLegR
+    400032: Bone_Head
+    400034: Bone_Head_end
+    400036: Bone_HoofL
+    400038: Bone_HoofL_end
+    400040: Bone_HoofR
+    400042: Bone_HoofR_end
+    400044: Bone_KneeL
+    400046: Bone_KneeR
+    400048: Bone_Neck
+    400050: Bone_Pelvis
+    400052: Bone_PelvisL
+    400054: Bone_PelvisR
+    400056: Bone_PelvisTail
+    400058: Bone_Shoulder
+    400060: Bone_ShoulderL
+    400062: Bone_ShoulderR
+    400064: Bone_Smile
+    400066: Bone_Smile_end
+    400068: Bone_Spine
+    400070: Bone_Tail
+    400072: Bone_TailA
+    400074: Bone_TailB
+    400076: Bone_TailC
+    400078: Bone_TailC_end
+    400080: Bone_TibiaL
+    400082: Bone_TibiaR
+    400084: Mesh_Body
+    400086: Mesh_Face
+    400088: //RootNode
+    400090: Mesh_Hyena
+    2300000: Mesh_Face
+    3300000: Mesh_Face
     4300000: Mesh_Face
     4300002: Mesh_Body
-    7400000: Default Take
-<<<<<<< HEAD
-    7400002: LaughAnimation
-    7400004: HyenaIdleAnimation
-    7400006: HyenaLaughAnimation
-=======
-    7400002: Mesh_AntelopeAAction
->>>>>>> origin/master
+    7400000: Mesh_Hyena|Mesh_AntelopeAAction
+    7400002: IdleHyena
+    7400004: LaughHyena
     9500000: //RootNode
     13700000: Mesh_Body
     13700002: Mesh_Face
   materials:
-<<<<<<< HEAD
     importMaterials: 0
-    materialName: 1
-    materialSearch: 2
-=======
-    importMaterials: 1
     materialName: 0
     materialSearch: 1
->>>>>>> origin/master
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -120,20 +120,15 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-<<<<<<< HEAD
-    animationCompression: 0
-=======
     animationCompression: 1
->>>>>>> origin/master
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
-      name: HyenaIdleAnimation
+      name: IdleHyena
       takeName: Mesh_AntelopeAAction
       firstFrame: 50
       lastFrame: 60
@@ -142,7 +137,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -237,7 +232,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: HyenaLaughAnimation
+      name: LaughHyena
       takeName: Mesh_AntelopeAAction
       firstFrame: 0
       lastFrame: 50
@@ -340,9 +335,6 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-=======
-    clipAnimations: []
->>>>>>> origin/master
     isReadable: 1
   meshes:
     lODScreenPercentages: []
