@@ -46,15 +46,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882, type: 2}
   cardCountX: 4
   cardCountY: 4
+  targetScore: 120
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: targetScore
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

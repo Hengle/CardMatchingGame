@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Game:MonoBehaviour {
 	public GameUIManager uiManger;
@@ -11,7 +12,19 @@ public class Game:MonoBehaviour {
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
 
-	public int rawScore;
+	private int _rawScore;
+	public int rawScore
+	{
+		get
+		{
+			return _rawScore;
+		}
+		set
+		{
+			_rawScore = value;
+			uiManger.scoreText.text = score.ToString();
+		}
+	}
 	public int score
 	{
 		get
@@ -39,9 +52,7 @@ public class Game:MonoBehaviour {
 
 		ClearCards();
 		cardGrid = new Card[currentLevel.cardCountX, currentLevel.cardCountY];
-
-		uiManger.scoreText.text = rawScore.ToString();
-
+		
 		List<Vector2> availableCardSlots = new List<Vector2>();
 		
 		for (int x = 0; x < currentLevel.cardCountX; x++) {
@@ -82,7 +93,6 @@ public class Game:MonoBehaviour {
 
 			counter += 1;
 		}
-
 	}
 
 	void Update() {
@@ -133,11 +143,9 @@ public class Game:MonoBehaviour {
 				failCount++;
 			}
 			flippedCard = null;
-
-			uiManger.scoreText.text = score.ToString();
 			
 			if (GetMatchedCards().Length == GetAllCards().Length) {
-				StartCoroutine(GameWin());
+				StartCoroutine(EndGame());
 			}
 		}
 		else {
@@ -145,8 +153,18 @@ public class Game:MonoBehaviour {
 		}
 	}
 
-	IEnumerator GameWin() {
-		Debug.Log("You Win!");
+	IEnumerator EndGame() {
+		bool didWin = score >= currentLevel.targetScore;
+		//Debug.Log("You Win!");
+
+		CanvasGroup endGameGroup = Instantiate(Resources.Load<CanvasGroup>("UI/EndGameUI"));
+		endGameGroup.transform.SetParent(uiManger.canvas.transform, false);
+
+		Text endGameText = endGameGroup.transform.Find("Text").gameObject.GetComponent<Text>();
+		endGameText.text = "You\n"+(didWin?"Win":"Lose");
+
+		endGameGroup.alpha = 0;
+		LeanTween.value(endGameGroup.gameObject, (v) => { endGameGroup.alpha = v; }, 0.0f, 1.0f, 0.5f).setEase(LeanTweenType.easeOutCubic);
 
 		yield return new WaitForSeconds(5);
 
@@ -156,8 +174,16 @@ public class Game:MonoBehaviour {
 			cards[i].isFlipped = false;
 		}
 
+		LeanTween.value(endGameGroup.gameObject, (v) => { endGameGroup.alpha = v; }, 1.0f, 0.0f, 0.5f).setEase(LeanTweenType.easeOutCubic);
+
+		yield return new WaitForSeconds(0.5f);
+
+		Destroy(endGameGroup.gameObject);
+
 		SetupNewGame(testLevel);
 	}
+
+
 
 	void ClearCards() {
 		foreach (Card card in GetAllCards()) {

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 638d7c901a067cf4789280ecf67ce0fe
 timeCreated: 1439866334
+=======
+guid: 1e5b5ef8726817441b744859da166a85
+timeCreated: 1440364638
+>>>>>>> origin/master
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -86,16 +91,26 @@ ModelImporter:
     4300000: Mesh_Face
     4300002: Mesh_Body
     7400000: Default Take
+<<<<<<< HEAD
     7400002: LaughAnimation
     7400004: HyenaIdleAnimation
     7400006: HyenaLaughAnimation
+=======
+    7400002: Mesh_AntelopeAAction
+>>>>>>> origin/master
     9500000: //RootNode
     13700000: Mesh_Body
     13700002: Mesh_Face
   materials:
+<<<<<<< HEAD
     importMaterials: 0
     materialName: 1
     materialSearch: 2
+=======
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+>>>>>>> origin/master
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -105,12 +120,17 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+<<<<<<< HEAD
     animationCompression: 0
+=======
+    animationCompression: 1
+>>>>>>> origin/master
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: HyenaIdleAnimation
@@ -320,6 +340,9 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+=======
+    clipAnimations: []
+>>>>>>> origin/master
     isReadable: 1
   meshes:
     lODScreenPercentages: []
