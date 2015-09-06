@@ -578,6 +578,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &195788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 408552}
+  m_Layer: 0
+  m_Name: HyenaLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &403196
 Transform:
   m_ObjectHideFlags: 1
@@ -590,6 +605,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 437504}
   m_RootOrder: 21
+--- !u!4 &408552
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195788}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.13000011, y: -3.27999997, z: 5.30000019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 437504}
+  m_RootOrder: 35
 --- !u!4 &412560
 Transform:
   m_ObjectHideFlags: 1
@@ -743,6 +770,7 @@ Transform:
   - {fileID: 455208}
   - {fileID: 436656}
   - {fileID: 440184}
+  - {fileID: 408552}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &440184
