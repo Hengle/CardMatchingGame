@@ -8,4 +8,5 @@ public class Level:MonoBehaviour {
 	public int cardCountX = 4;
 	public int cardCountY = 4;
 	public int targetScore = 100;
+	public Background background;
 }

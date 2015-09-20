@@ -46,7 +46,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d38594f9699678d46a9b093604a5df35, type: 2}
   cardCountX: 4
   cardCountY: 4
-  targetScore: 120
+  targetScore: 100
+  background: {fileID: 11481976, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -56,8 +57,13 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: targetScore
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 11481976, guid: 51db49a87aa06114da1ff46d38a13c30,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

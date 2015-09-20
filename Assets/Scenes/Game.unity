@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -206,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowActivationOnStandalone: 0
+  m_ForceModuleActive: 0
 --- !u!114 &386959976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +222,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: .5
-  m_AllowActivationOnMobileDevice: 0
+  m_ForceModuleActive: 0
 --- !u!114 &386959977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,94 +249,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!1001 &693052559
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .129999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .209999993
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.42999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 256517ea16b164545a33bc51558b5711, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &725653550
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 437504, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .129999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 437504, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .209999993
-      objectReference: {fileID: 0}
-    - target: {fileID: 437504, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.42999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 437504, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: .0523359627
-      objectReference: {fileID: 0}
-    - target: {fileID: 437504, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437504, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437504, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .99862957
-      objectReference: {fileID: 0}
-    - target: {fileID: 437504, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &910036632 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 5d28e0d436459cb498230040677ba67b, type: 3}
@@ -406,6 +316,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 80
@@ -473,10 +389,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiManger: {fileID: 1186209385}
-  testLevel: {fileID: 11400000, guid: 766d14efe420bd548aacf1bc62f2f568, type: 2}
+  currentBackground: {fileID: 0}
+  testLevels:
+  - {fileID: 11400000, guid: 766d14efe420bd548aacf1bc62f2f568, type: 2}
+  - {fileID: 11400000, guid: 37a7628caed2d964e8c307f009fba6de, type: 2}
+  - {fileID: 11400000, guid: 45a1528e32094844e9068c4ace1f21e4, type: 2}
   cardPrefab: {fileID: 11400000, guid: 69ffc6bf72417094ebffe7ce5c9e93c0, type: 2}
   cardSpacing: 1.25
-  failCount: 0
 --- !u!4 &1186209384
 Transform:
   m_ObjectHideFlags: 0
@@ -517,6 +436,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 1
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -708,6 +628,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
+  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -788,6 +709,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 16
@@ -807,56 +734,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1807358402}
---- !u!1001 &1952552781
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .129999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 400062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .209999993
-      objectReference: {fileID: 0}
-    - target: {fileID: 400062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.42999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 400062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: .0523359627
-      objectReference: {fileID: 0}
-    - target: {fileID: 400062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .99862957
-      objectReference: {fileID: 0}
-    - target: {fileID: 400062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 100062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100062, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-      propertyPath: m_Name
-      value: Background_Serengeti
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1952934130
 Prefab:
   m_ObjectHideFlags: 0

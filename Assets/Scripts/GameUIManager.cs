@@ -7,5 +7,4 @@ using UnityEngine.UI;
 public class GameUIManager:MonoBehaviour {
 	public Canvas canvas;
 	public Text scoreText;
-
 }

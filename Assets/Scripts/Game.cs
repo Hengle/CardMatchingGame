@@ -4,10 +4,23 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UI;
 
-public class Game:MonoBehaviour {
+public class Game:MonoBehaviour
+{
+	static private Game _current;
+	static public Game current
+	{
+		get
+		{
+			return _current ?? (_current = FindObjectOfType<Game>());
+		}
+	}
+
 	public GameUIManager uiManger;
 
-	public Level testLevel;
+	public Background currentBackground;
+
+	public Level[] testLevels;
+	private Level testLevel;
 
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
@@ -33,7 +46,19 @@ public class Game:MonoBehaviour {
         }
 	}
 
-	public int failCount = 0;
+	private int _failCount = 0;
+	public int failCount
+	{
+		get
+		{
+			return _failCount;
+		}
+		set
+		{
+			_failCount = value;
+			uiManger.scoreText.text = score.ToString();
+		}
+	}
 
 	public Level currentLevel {get; private set;}
 
@@ -41,6 +66,7 @@ public class Game:MonoBehaviour {
 	private Card flippedCard = null;
 
 	void Start() {
+		testLevel = testLevels[0];
 		SetupNewGame(testLevel);
 	}
 
@@ -49,6 +75,14 @@ public class Game:MonoBehaviour {
 		rawScore = 0;
 		failCount = 0;
 		flippedCard = null;
+
+		if (currentBackground)
+		{
+			Destroy(currentBackground.gameObject);
+		}
+
+		currentBackground = Instantiate(level.background);
+		currentBackground.transform.SetParent(transform, false);
 
 		ClearCards();
 		cardGrid = new Card[currentLevel.cardCountX, currentLevel.cardCountY];
@@ -141,6 +175,7 @@ public class Game:MonoBehaviour {
 				card.isFlipped = false;
 				flippedCard.isFlipped = false;
 				failCount++;
+				currentBackground.hyena.Laugh();
 			}
 			flippedCard = null;
 			
@@ -180,11 +215,14 @@ public class Game:MonoBehaviour {
 
 		Destroy(endGameGroup.gameObject);
 
+		if (didWin)
+		{
+			testLevel = testLevels[(System.Array.IndexOf(testLevels, testLevel)+1)%testLevels.Length];
+        }
+
 		SetupNewGame(testLevel);
 	}
-
-
-
+	
 	void ClearCards() {
 		foreach (Card card in GetAllCards()) {
 			Destroy(card.gameObject);
