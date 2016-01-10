@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: e23d89f89acf902469327c9ec2a38032
+timeCreated: 1452469623
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Burundi
+    100004: Djibouti
+    100006: Erittrea
+    100008: Ethiopia
+    100010: Kenya
+    100012: Madagascar
+    100014: Malawi
+    100016: Mozambique
+    100018: Rwanda
+    100020: Somalia
+    100022: SouthSudan
+    100024: Tanzania
+    100026: Uganda
+    100028: Zambia
+    100030: Zimbabwe
+    400000: //RootNode
+    400002: Burundi
+    400004: Djibouti
+    400006: Erittrea
+    400008: Ethiopia
+    400010: Kenya
+    400012: Madagascar
+    400014: Malawi
+    400016: Mozambique
+    400018: Rwanda
+    400020: Somalia
+    400022: SouthSudan
+    400024: Tanzania
+    400026: Uganda
+    400028: Zambia
+    400030: Zimbabwe
+    2300000: Burundi
+    2300002: Djibouti
+    2300004: Erittrea
+    2300006: Ethiopia
+    2300008: Kenya
+    2300010: Madagascar
+    2300012: Malawi
+    2300014: Mozambique
+    2300016: Rwanda
+    2300018: Somalia
+    2300020: SouthSudan
+    2300022: Tanzania
+    2300024: Uganda
+    2300026: Zambia
+    2300028: Zimbabwe
+    3300000: Burundi
+    3300002: Djibouti
+    3300004: Erittrea
+    3300006: Ethiopia
+    3300008: Kenya
+    3300010: Madagascar
+    3300012: Malawi
+    3300014: Mozambique
+    3300016: Rwanda
+    3300018: Somalia
+    3300020: SouthSudan
+    3300022: Tanzania
+    3300024: Uganda
+    3300026: Zambia
+    3300028: Zimbabwe
+    4300000: SouthSudan
+    4300002: Ethiopia
+    4300004: Somalia
+    4300006: Tanzania
+    4300008: Burundi
+    4300010: Madagascar
+    4300012: Uganda
+    4300014: Erittrea
+    4300016: Djibouti
+    4300018: Malawi
+    4300020: Mozambique
+    4300022: Kenya
+    4300024: Zimbabwe
+    4300026: Zambia
+    4300028: Rwanda
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
