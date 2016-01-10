@@ -7,7 +7,7 @@ public class LevelSelect:MonoBehaviour
 
 	public Canvas levelOverlayCanvas;
 	public LevelOverlay levelOverlayTemplate;
-	private LevelOverlay levelOverlay;
+	public LevelOverlay levelOverlay { get; private set; }
 
 	void Start()
 	{

@@ -18,6 +18,11 @@ public class MapRegion:MonoBehaviour
 
 	void OnMouseDown()
 	{
+		if (levelSelect.levelOverlay)
+		{
+			return;
+		}
+
 		levelSelect.OnClickRegion(this);
 	}
 }
