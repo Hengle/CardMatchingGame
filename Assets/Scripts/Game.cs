@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Game:MonoBehaviour
 {
@@ -18,9 +19,6 @@ public class Game:MonoBehaviour
 	public GameUIManager uiManger;
 
 	public Background currentBackground;
-
-	public Level[] testLevels;
-	private Level testLevel;
 
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
@@ -60,15 +58,16 @@ public class Game:MonoBehaviour
 		}
 	}
 
+	public Level levelTemplate;
 	public Level currentLevel {get; private set;}
 
 	private Card[,] cardGrid = null;
 	private Card flippedCard = null;
 
 	void Start() {
-		testLevel = testLevels[0];
-		SetupNewGame(testLevel);
-	}
+		levelTemplate = LevelSelect.currentlySelectedLevelTemplate;
+		SetupNewGame(levelTemplate);
+    }
 
 	void SetupNewGame(Level level) {
 		currentLevel = level;
@@ -196,7 +195,7 @@ public class Game:MonoBehaviour
 		endGameGroup.transform.SetParent(uiManger.canvas.transform, false);
 
 		Text endGameText = endGameGroup.transform.Find("Text").gameObject.GetComponent<Text>();
-		endGameText.text = "You\n"+(didWin?"Win":"Lose");
+		endGameText.text = "You\n"+(didWin ? "Win" : "Lose");
 
 		endGameGroup.alpha = 0;
 		LeanTween.value(endGameGroup.gameObject, (v) => { endGameGroup.alpha = v; }, 0.0f, 1.0f, 0.5f).setEase(LeanTweenType.easeOutCubic);
@@ -217,10 +216,14 @@ public class Game:MonoBehaviour
 
 		if (didWin)
 		{
-			testLevel = testLevels[(System.Array.IndexOf(testLevels, testLevel)+1)%testLevels.Length];
-        }
-
-		SetupNewGame(testLevel);
+			SceneManager.LoadScene("LevelSelect");
+			//SetupNewGame(testLevel);
+			//testLevel = testLevels[(System.Array.IndexOf(testLevels, testLevel)+1)%testLevels.Length];
+		}
+		else
+		{
+			SetupNewGame(levelTemplate);
+		}
 	}
 	
 	void ClearCards() {
