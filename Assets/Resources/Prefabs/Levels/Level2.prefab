@@ -40,12 +40,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardDefs:
-  - {fileID: 11400000, guid: 29bc27cdd00d49347b7265fd8a492257, type: 2}
-  - {fileID: 11400000, guid: f3dd8b790ce77984e9fee9ce28c1cb59, type: 2}
-  - {fileID: 11400000, guid: 34ba72d1b8cf2824093b2345ac9edf22, type: 2}
-  - {fileID: 11400000, guid: d38594f9699678d46a9b093604a5df35, type: 2}
-  cardCountX: 4
-  cardCountY: 4
+  - {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
+  - {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882, type: 2}
+  - {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3, type: 2}
+  - {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
+  cardCountX: 3
+  cardCountY: 2
   targetScore: 100
   background: {fileID: 11481976, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
 --- !u!1001 &100100000
@@ -63,6 +63,34 @@ Prefab:
       propertyPath: background
       value: 
       objectReference: {fileID: 11481976, guid: 51db49a87aa06114da1ff46d38a13c30,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: cardCountY
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cardCountX
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
