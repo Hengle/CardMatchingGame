@@ -7,9 +7,21 @@ public class LevelOverlay:MonoBehaviour
 	public LevelOverlayItem levelOverlayItemTemplate;
 	public Transform itemParent;
 	public Button backgroundButton;
+	public Text titleText;
 
-	[HideInInspector]
-	public MapRegion mapRegion;
+	private MapRegion _mapRegion;
+	public MapRegion mapRegion
+	{
+		get
+		{
+			return _mapRegion;
+		}
+		set
+		{
+			_mapRegion = value;
+			titleText.text = _mapRegion.regionName;
+        }
+	}
 	
 	void Start()
 	{
@@ -19,7 +31,12 @@ public class LevelOverlay:MonoBehaviour
 		}
 
 		backgroundButton.onClick.AddListener(OnClickBackgroundButton);
-    }
+
+		transform.localScale = Vector3.zero;
+		LeanTween.scale(gameObject, Vector3.one, 0.25f).setEase(LeanTweenType.easeOutCubic);
+
+		mapRegion.OnLevelOverlayOpened(this);
+	}
 
 	void OnClickBackgroundButton()
 	{
@@ -31,5 +48,13 @@ public class LevelOverlay:MonoBehaviour
 		LevelOverlayItem levelOverlayItem = Instantiate(levelOverlayItemTemplate);
 		levelOverlayItem.transform.SetParent(itemParent, false);
 		levelOverlayItem.level = level;
+	}
+
+	void OnDestroy()
+	{
+		if (mapRegion)
+		{
+			mapRegion.OnLevelOverlayClosed(this);
+		}
 	}
 }

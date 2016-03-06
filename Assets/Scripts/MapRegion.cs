@@ -5,6 +5,7 @@ using System.Linq;
 
 public class MapRegion:MonoBehaviour
 {
+	public string regionName = "Region";
 	public List<Level> levels = new List<Level>();
 
 	private LevelSelect _levelSelect;
@@ -16,13 +17,13 @@ public class MapRegion:MonoBehaviour
 		}
 	}
 
-	void OnMouseDown()
+	public void OnLevelOverlayOpened(LevelOverlay levelOverlay)
 	{
-		if (levelSelect.levelOverlay)
-		{
-			return;
-		}
+		LeanTween.moveLocalZ(gameObject, -0.03f, 1.0f).setEase(LeanTweenType.easeOutElastic);
+	}
 
-		levelSelect.OnClickRegion(this);
+	public void OnLevelOverlayClosed(LevelOverlay levelOverlay)
+	{
+		LeanTween.moveLocalZ(gameObject, 0.0f, 1.0f).setEase(LeanTweenType.easeOutElastic);
 	}
 }

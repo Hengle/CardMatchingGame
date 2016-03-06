@@ -14,10 +14,36 @@ public class LevelSelect:MonoBehaviour
 		currentlySelectedLevelTemplate = null;
     }
 
+	void Update()
+	{
+		if (!levelOverlay && Input.GetMouseButtonDown(0))
+		{
+			MapRegion region = TryClickRegion(Input.mousePosition);
+			if (region)
+			{
+				OnClickRegion(region);
+			}
+        }
+	}
+
+	MapRegion TryClickRegion(Vector2 screenPoint)
+	{
+		MapRegion region = null;
+
+		Ray ray = Camera.main.ScreenPointToRay(screenPoint);
+		RaycastHit hit;
+		if (Physics.Raycast(ray, out hit))
+		{
+			region = hit.collider.gameObject.GetComponentInParent<MapRegion>();
+		}
+
+		return region;
+	}
+
 	public void OnClickRegion(MapRegion region)
 	{
 		CreateLevelOverlay(region);
-    }
+	}
 
 	private void CreateLevelOverlay(MapRegion mapRegion)
 	{
