@@ -8,6 +8,8 @@ public class MapRegion:MonoBehaviour
 	public string regionName = "Region";
 	public List<Level> levels = new List<Level>();
 
+	private LTDescr lastTween;
+
 	private LevelSelect _levelSelect;
 	public LevelSelect levelSelect
 	{
@@ -17,13 +19,23 @@ public class MapRegion:MonoBehaviour
 		}
 	}
 
+	private void StopLastTween()
+	{
+		if (lastTween != null)
+		{
+			lastTween.cancel();
+		}
+	}
+
 	public void OnLevelOverlayOpened(LevelOverlay levelOverlay)
 	{
-		LeanTween.moveLocalZ(gameObject, -0.03f, 1.0f).setEase(LeanTweenType.easeOutElastic);
-	}
+		StopLastTween();
+		lastTween = LeanTween.moveLocalZ(gameObject, -0.03f, 1.0f).setEase(LeanTweenType.easeOutElastic);
+    }
 
 	public void OnLevelOverlayClosed(LevelOverlay levelOverlay)
 	{
-		LeanTween.moveLocalZ(gameObject, 0.0f, 1.0f).setEase(LeanTweenType.easeOutElastic);
+		StopLastTween();
+		lastTween = LeanTween.moveLocalZ(gameObject, 0.0f, 1.0f).setEase(LeanTweenType.easeOutElastic);
 	}
 }

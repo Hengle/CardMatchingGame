@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelOverlayItem:MonoBehaviour
 {
+	public Text text;
+
 	private Button _button;
 	public Button button
 	{
@@ -33,6 +35,20 @@ public class LevelOverlayItem:MonoBehaviour
 		set
 		{
 			_level = value;
+		}
+	}
+
+	private int _number;
+	public int number
+	{
+		get
+		{
+			return _number;
+        }
+		set
+		{
+			_number = value;
+			text.text = _number.ToString();
 		}
 	}
 

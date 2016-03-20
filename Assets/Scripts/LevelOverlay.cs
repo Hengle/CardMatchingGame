@@ -25,9 +25,9 @@ public class LevelOverlay:MonoBehaviour
 	
 	void Start()
 	{
-		foreach (var level in mapRegion.levels)
+		for (int i = 0; i < mapRegion.levels.Count; i++)
 		{
-			AddLevelItem(level);
+			AddLevelItem(mapRegion.levels[i], i+1);
 		}
 
 		backgroundButton.onClick.AddListener(OnClickBackgroundButton);
@@ -43,11 +43,14 @@ public class LevelOverlay:MonoBehaviour
 		Destroy(gameObject);
 	}
 
-	void AddLevelItem(Level level)
+	void AddLevelItem(Level level, int number)
 	{
 		LevelOverlayItem levelOverlayItem = Instantiate(levelOverlayItemTemplate);
 		levelOverlayItem.transform.SetParent(itemParent, false);
 		levelOverlayItem.level = level;
+		levelOverlayItem.number = number;
+		levelOverlayItem.transform.localScale = Vector3.zero;
+		LeanTween.scale(levelOverlayItem.gameObject, Vector3.one, 1.0f).setEase(LeanTweenType.easeOutElastic).setDelay(number*0.1f);
 	}
 
 	void OnDestroy()
