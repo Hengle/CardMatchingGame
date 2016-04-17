@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_Card
-  m_Shader: {fileID: 4800000, guid: 94bce660451de5e4ea1546ef3bef6cf7, type: 3}
+  m_Shader: {fileID: 4800000, guid: cd958f063f7a2c043b9c3421f08cf0a2, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 1
   m_CustomRenderQueue: 2000
@@ -32,11 +32,15 @@ Material:
     m_Floats:
       data:
         first:
-          name: _InvFade
-        second: 1
+          name: _RotationSpeed
+        second: 4
       data:
         first:
           name: _Emission
+        second: 1
+      data:
+        first:
+          name: _InvFade
         second: 1
       data:
         first:
@@ -66,10 +70,6 @@ Material:
         first:
           name: _UseUIAlphaClip
         second: 0
-      data:
-        first:
-          name: _RotationSpeed
-        second: 4
     m_Colors:
       data:
         first:

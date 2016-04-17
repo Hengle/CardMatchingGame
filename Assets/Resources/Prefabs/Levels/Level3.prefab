@@ -47,7 +47,7 @@ MonoBehaviour:
   cardCountX: 4
   cardCountY: 3
   targetScore: 100
-  background: {fileID: 11474136, guid: 06354a528386f3b4baf295ccde1c8700, type: 2}
+  background: {fileID: 11466310, guid: 256517ea16b164545a33bc51558b5711, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
