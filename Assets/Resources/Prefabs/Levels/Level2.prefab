@@ -40,10 +40,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardDefs:
-  - {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
-  - {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
-  - {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
-  - {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
+  - {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3, type: 2}
+  - {fileID: 11400000, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 2}
+  - {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882, type: 2}
   cardCountX: 3
   cardCountY: 2
   targetScore: 100
@@ -55,6 +54,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: targetScore
       value: 100
@@ -75,12 +78,12 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: cardDefs.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921,
+      objectReference: {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3,
         type: 2}
     - target: {fileID: 0}
       propertyPath: cardDefs.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921,
+      objectReference: {fileID: 11400000, guid: 14a56e7c9f90ff144b68bf258e388f42,
         type: 2}
     - target: {fileID: 0}
       propertyPath: cardDefs.Array.data[3]
@@ -90,7 +93,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: cardDefs.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921,
+      objectReference: {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
