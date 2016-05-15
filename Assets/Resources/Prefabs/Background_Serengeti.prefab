@@ -536,6 +536,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &179226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 471698}
+  - 95: {fileID: 9593682}
+  m_Layer: 0
+  m_Name: HyenaLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &191574
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +578,7 @@ GameObject:
   - 4: {fileID: 458044}
   - 95: {fileID: 9534248}
   m_Layer: 0
-  m_Name: HyenaLocation
+  m_Name: SausageFruitLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -923,6 +939,7 @@ Transform:
   - {fileID: 400000}
   - {fileID: 400004}
   - {fileID: 400012}
+  - {fileID: 471698}
   - {fileID: 458044}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -993,11 +1010,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.18, y: -2.162626, z: 1.8868828}
+  m_LocalPosition: {x: -4.1800003, y: -1.023, z: 1.89}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400062}
-  m_RootOrder: 33
+  m_RootOrder: 34
 --- !u!4 &460312
 Transform:
   m_ObjectHideFlags: 1
@@ -1010,6 +1027,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400062}
   m_RootOrder: 10
+--- !u!4 &471698
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.18, y: -2.162626, z: 1.8868828}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400062}
+  m_RootOrder: 33
 --- !u!4 &499174
 Transform:
   m_ObjectHideFlags: 1
@@ -1303,6 +1332,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9593682
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179226}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 638d7c901a067cf4789280ecf67ce0fe, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 1
@@ -1380,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f08d61cda5197459f0f6552d2248d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hyenaLocation: {fileID: 458044}
+  hyenaLocation: {fileID: 471698}
   hyenaPrefab: {fileID: 11416322, guid: 63336594a6657004cb4ed08bbb23d6b7, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
@@ -1978,8 +2024,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cc5a783f771edb24ab6e2f12376f59e0, type: 3}
-  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 67c51426043096b4c8be27c149ad227a, type: 3}
+  m_Color: {r: 0.31617647, g: 0.31617647, b: 0.31617647, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &21265724
