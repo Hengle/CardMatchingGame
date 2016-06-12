@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dirt_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 4: {fileID: 400006}
   - 33: {fileID: 3300002}
   - 23: {fileID: 2300002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dirt_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 212: {fileID: 21200002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400010}
   - 212: {fileID: 21200004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400016}
   - 212: {fileID: 21200008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400018}
   - 212: {fileID: 21200010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400020}
   - 212: {fileID: 21200012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400022}
   - 212: {fileID: 21200014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400024}
   - 212: {fileID: 21200016}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400026}
   - 212: {fileID: 21200018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400030}
   - 212: {fileID: 21200022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - 4: {fileID: 400032}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dirt_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400036}
   - 212: {fileID: 21200026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400038}
   - 212: {fileID: 21200028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400040}
   - 212: {fileID: 21200030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - 4: {fileID: 400042}
   - 33: {fileID: 3300006}
   - 23: {fileID: 2300006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dirt_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - 4: {fileID: 400044}
   - 33: {fileID: 3300008}
   - 23: {fileID: 2300008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dirt_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400046}
   - 212: {fileID: 21200032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400048}
   - 212: {fileID: 21200034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400050}
   - 212: {fileID: 21200036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   - 4: {fileID: 400054}
   - 33: {fileID: 3300010}
   - 23: {fileID: 2300010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sky_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   - 4: {fileID: 400058}
   - 33: {fileID: 3300012}
   - 23: {fileID: 2300012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dirt_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400060}
   - 212: {fileID: 21200042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400062}
   - 114: {fileID: 11481976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background_Serengeti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400064}
   - 212: {fileID: 21200044}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   - 4: {fileID: 400066}
   - 33: {fileID: 3300014}
   - 23: {fileID: 2300014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dirt_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 460312}
   - 212: {fileID: 21239324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tree_Acacia (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413820}
   - 212: {fileID: 21264798}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tree_Acacia (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 417000}
   - 212: {fileID: 21285322}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tree_Acacia (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 499174}
   - 212: {fileID: 21265724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tree_Acacia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 471698}
   - 95: {fileID: 9593682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HyenaLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 440454}
   - 212: {fileID: 21270568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tree_Acacia (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 458044}
   - 95: {fileID: 9534248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SausageFruitLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +615,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: -1.8406262, z: 1.8658828}
+  m_LocalPosition: {x: 0.19, y: -1.84, z: 1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400062}
@@ -663,7 +663,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.029999994, y: -0.14062613, z: 0.055882793}
+  m_LocalPosition: {x: 0.029999994, y: -0.14, z: 0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400062}
@@ -1376,7 +1376,7 @@ Light:
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4294967295
   m_Lightmapping: 2
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -1409,7 +1409,7 @@ Light:
   m_RenderMode: 2
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967241
+    m_Bits: 4294967295
   m_Lightmapping: 4
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -2128,6 +2128,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.x
       value: -4.17999983
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 1.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
