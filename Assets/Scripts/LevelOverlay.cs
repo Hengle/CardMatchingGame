@@ -32,8 +32,8 @@ public class LevelOverlay:MonoBehaviour
 
 		backgroundButton.onClick.AddListener(OnClickBackgroundButton);
 
-		transform.localScale = Vector3.zero;
-		LeanTween.scale(gameObject, Vector3.one, 0.25f).setEase(LeanTweenType.easeOutCubic);
+		//transform.localScale = Vector3.zero;
+		//LeanTween.scale(gameObject, Vector3.one, 0.25f).setEase(LeanTweenType.easeOutCubic);
 
 		mapRegion.OnLevelOverlayOpened(this);
 	}
@@ -49,8 +49,8 @@ public class LevelOverlay:MonoBehaviour
 		levelOverlayItem.transform.SetParent(itemParent, false);
 		levelOverlayItem.level = level;
 		levelOverlayItem.number = number;
-		levelOverlayItem.transform.localScale = Vector3.zero;
-		LeanTween.scale(levelOverlayItem.gameObject, Vector3.one, 1.0f).setEase(LeanTweenType.easeOutElastic).setDelay(number*0.1f);
+		//levelOverlayItem.transform.localScale = Vector3.zero;
+		//LeanTween.scale(levelOverlayItem.gameObject, Vector3.one, 1.0f).setEase(LeanTweenType.easeOutElastic).setDelay(number*0.1f);
 	}
 
 	void OnDestroy()

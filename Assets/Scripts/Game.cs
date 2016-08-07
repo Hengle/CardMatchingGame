@@ -63,6 +63,7 @@ public class Game:MonoBehaviour
 
 	private Card[,] cardGrid = null;
 	private Card flippedCard = null;
+	private bool gameIsStarted = false;
 
 	void Start() {
 		levelTemplate = LevelSelect.currentlySelectedLevelTemplate;
@@ -74,6 +75,7 @@ public class Game:MonoBehaviour
 		rawScore = 0;
 		failCount = 0;
 		flippedCard = null;
+		gameIsStarted = false;
 
 		if (currentBackground)
 		{
@@ -121,11 +123,48 @@ public class Game:MonoBehaviour
 			cardGrid[card0.tilePositionX, card0.tilePositionY] = card0;
 			cardGrid[card1.tilePositionX, card1.tilePositionY] = card1;
 			
-			card0.isFlipped = false;
-			card1.isFlipped = false;
+			card0.isFlipped = true;
+			card1.isFlipped = true;
 
 			counter += 1;
 		}
+
+		StartCoroutine(CardShuffle());
+	}
+
+	IEnumerator CardShuffle()
+	{
+		yield return new WaitForSeconds(3);
+
+		Card[] cards = GetAllCards();
+
+		foreach (var card in cards)
+		{
+			card.isFlipped = false;
+		}
+
+		int shuffleCount = cards.Length/2;
+		for (int i = 0; i < shuffleCount; i++)
+		{
+			int card0Index = Random.Range(0, cards.Length);
+			int card1Index = card0Index;
+			while (card1Index == card0Index)
+			{
+				card1Index = Random.Range(0, cards.Length);
+			}
+			Card card0 = cards[card0Index];
+			Card card1 = cards[card1Index];
+
+			Vector3 card0Position = card0.transform.position;
+			Vector3 card1Position = card1.transform.position;
+
+			card0.MoveTo(card1Position, 0.5f);
+			card1.MoveTo(card0Position, 0.5f);
+
+			yield return new WaitForSeconds(0.75f);
+		}
+
+		gameIsStarted = true;
 	}
 
 	void Update() {
@@ -198,9 +237,14 @@ public class Game:MonoBehaviour
 		endGameText.text = "You\n"+(didWin ? "Win" : "Lose");
 
 		endGameGroup.alpha = 0;
-		LeanTween.value(endGameGroup.gameObject, (v) => { endGameGroup.alpha = v; }, 0.0f, 1.0f, 0.5f).setEase(LeanTweenType.easeOutCubic);
-
-		yield return new WaitForSeconds(5);
+		
+		//LeanTween.value(endGameGroup.gameObject, (v) => { endGameGroup.alpha = v; }, 0.0f, 1.0f, 0.5f).setEase(LeanTweenType.easeOutCubic);
+		while (endGameGroup.alpha < 1)
+		{
+			endGameGroup.alpha += Time.deltaTime*2;
+			yield return 0;
+		}
+		endGameGroup.alpha = 1;
 
 		Card[] cards = GetAllCards();
 
@@ -208,9 +252,14 @@ public class Game:MonoBehaviour
 			cards[i].isFlipped = false;
 		}
 
-		LeanTween.value(endGameGroup.gameObject, (v) => { endGameGroup.alpha = v; }, 1.0f, 0.0f, 0.5f).setEase(LeanTweenType.easeOutCubic);
-
-		yield return new WaitForSeconds(0.5f);
+		//LeanTween.value(endGameGroup.gameObject, (v) => { endGameGroup.alpha = v; }, 1.0f, 0.0f, 0.5f).setEase(LeanTweenType.easeOutCubic);
+		endGameGroup.alpha = 0;
+		while (endGameGroup.alpha > 0)
+		{
+			endGameGroup.alpha -= Time.deltaTime*2;
+			yield return 0;
+		}
+		endGameGroup.alpha = 0;
 
 		Destroy(endGameGroup.gameObject);
 
@@ -280,13 +329,13 @@ public class Game:MonoBehaviour
 		card.transform.localScale = Vector3.one*GetCardScaler();
 
 		GameObject meshObject = (GameObject)Instantiate(cardDef.meshPrefab);
-		meshObject.transform.parent = card.transform.Find("AnimalPivot");
+		meshObject.transform.parent = card.transform.Find("RotationPivot/AnimalPivot");
 		meshObject.transform.localPosition = Vector3.zero;
 		meshObject.transform.localRotation = Quaternion.identity;
 		meshObject.transform.localScale = Vector3.one;
 
-		card.animator.runtimeAnimatorController = cardDef.animatorController;
-		card.animator.applyRootMotion = false;
+		card.animalAnimator.runtimeAnimatorController = cardDef.animatorController;
+		card.animalAnimator.applyRootMotion = false;
 
 		Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
 		foreach (Renderer r in renderers) {

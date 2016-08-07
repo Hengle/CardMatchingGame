@@ -21,21 +21,30 @@ public class Card:MonoBehaviour {
 			_isFlipped = value;
 			
 			if (_isFlipped) {
-				LeanTween.rotate(gameObject, new Vector3(0, 180, 0), 0.25f);
+				animator.CrossFade("FlipToFront", 0.5f);
 			}
 			else {
-				LeanTween.rotate(gameObject, new Vector3(0, 0, 0), 0.25f);
+				animator.CrossFade("FlipToBack", 0.5f);
 			}
 		}
 	}
 
 	private Animator _animator;
-	public Animator animator {
+	public Animator animator
+	{
+		get
+		{
+			return _animator ? _animator : _animator = gameObject.GetComponent<Animator>();
+		}
+	}
+
+	private Animator _animalAnimator;
+	public Animator animalAnimator {
 		get {
-			if (!_animator) {
-				_animator = transform.Find("AnimalPivot").GetChild(0).GetComponent<Animator>();
+			if (!_animalAnimator) {
+				_animalAnimator = transform.Find("RotationPivot/AnimalPivot").GetChild(0).GetComponent<Animator>();
 			}
-			return _animator;
+			return _animalAnimator;
 		}
 	}
 
@@ -53,22 +62,47 @@ public class Card:MonoBehaviour {
 	{
 		isMatched = true;
 		AnimateDance();
-		LeanTween.scale(gameObject, Vector3.one*1.25f, 0.25f).setLoopPingPong().setLoopCount(2).setEase(LeanTweenType.easeOutCubic);
-
+		//LeanTween.scale(gameObject, Vector3.one*1.25f, 0.25f).setLoopPingPong().setLoopCount(2).setEase(LeanTweenType.easeOutCubic);
+		animator.CrossFade("Match", 0.5f);
+		
 		StartCoroutine(AnimateAway());
+	}
+
+	public void MoveTo(Vector3 position, float time)
+	{
+		StartCoroutine(MoveToAsync(position, time));
+	}
+
+	private IEnumerator MoveToAsync(Vector3 position, float time)
+	{
+		Vector3 originalPosition = transform.position;
+		float counter = 0;
+		while (counter < time)
+		{
+			counter += Time.deltaTime;
+			float ratio = counter/time;
+			transform.position = Vector3.Lerp(originalPosition, position, Mathf.SmoothStep(0, 1, ratio));
+			yield return 0;
+		}
 	}
 
 	private IEnumerator AnimateAway()
 	{
 		yield return new WaitForSeconds(2);
-		LeanTween.moveLocalX(animalPivot.gameObject, animalPivot.localPosition.x+10, 3);
-		LeanTween.moveLocalZ(animalPivot.gameObject, animalPivot.localPosition.z+0.25f, 0.25f);
-		yield return new WaitForSeconds(3);
+		float counter = 0;
+		while (counter < 3)
+		{
+			counter += Time.deltaTime;
+			float ratio = counter/3;
+			animalPivot.transform.localPosition = new Vector3(Mathf.Lerp(0, 10, ratio), 0, Mathf.Lerp(0, 0.225f, ratio*5));
+			yield return 0;
+		}
+
 		Destroy(animalPivot.gameObject);
 	}
 
 	public void AnimateDance() {
-		animator.SetTrigger("Dance");
+		animalAnimator.SetTrigger("Dance");
 	}
 	
 
