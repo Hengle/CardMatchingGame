@@ -23,8 +23,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .114096642, y: .173158318, z: .168201864}
+  m_LocalPosition: {x: 0.11409664, y: 0.17315832, z: 0.16820186}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -39,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e7330b607e8ac4b81ea2257a8763a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshPrefab: {fileID: 100064, guid: e6c99510a2a383a458b90c9636f11f07, type: 3}
+  meshPrefab: {fileID: 1000013202871714, guid: ecf7cd63d432edc4582b72d174fd3564, type: 2}
   animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
   material: {fileID: 2100000, guid: 70ebfc34d12b9594095a202e74d317e9, type: 2}
 --- !u!1001 &100100000
@@ -53,4 +54,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
