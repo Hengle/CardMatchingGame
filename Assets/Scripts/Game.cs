@@ -22,28 +22,7 @@ public class Game:MonoBehaviour
 
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
-
-	private int _rawScore;
-	public int rawScore
-	{
-		get
-		{
-			return _rawScore;
-		}
-		set
-		{
-			_rawScore = value;
-			uiManger.scoreText.text = score.ToString();
-		}
-	}
-	public int score
-	{
-		get
-		{
-			return (rawScore/(failCount+1));
-        }
-	}
-
+	
 	private int _failCount = 0;
 	public int failCount
 	{
@@ -54,25 +33,26 @@ public class Game:MonoBehaviour
 		set
 		{
 			_failCount = value;
-			uiManger.scoreText.text = score.ToString();
+			uiManger.UpdateFailCounter();
 		}
 	}
-
-	public Level levelTemplate;
+	
 	public Level currentLevel {get; private set;}
 
 	private Card[,] cardGrid = null;
 	private Card flippedCard = null;
 	private bool gameIsStarted = false;
 
-	void Start() {
-		levelTemplate = LevelSelect.currentlySelectedLevelTemplate;
-		SetupNewGame(levelTemplate);
+	void Awake() {
+		currentLevel = LevelSelect.currentlySelectedLevelTemplate;
     }
 
-	void SetupNewGame(Level level) {
-		currentLevel = level;
-		rawScore = 0;
+	void Start()
+	{
+		SetupNewGame();
+	}
+
+	void SetupNewGame() {
 		failCount = 0;
 		flippedCard = null;
 		gameIsStarted = false;
@@ -82,7 +62,7 @@ public class Game:MonoBehaviour
 			Destroy(currentBackground.gameObject);
 		}
 
-		currentBackground = Instantiate(level.background);
+		currentBackground = Instantiate(currentLevel.background);
 		currentBackground.transform.SetParent(transform, false);
 
 		ClearCards();
@@ -143,6 +123,8 @@ public class Game:MonoBehaviour
 			card.isFlipped = false;
 		}
 
+		yield return new WaitForSeconds(1.0f);
+
 		int shuffleCount = cards.Length/2;
 		for (int i = 0; i < shuffleCount; i++)
 		{
@@ -168,7 +150,7 @@ public class Game:MonoBehaviour
 	}
 
 	void Update() {
-		if (Input.GetMouseButtonDown(0)) {
+		if (gameIsStarted && Input.GetMouseButtonDown(0)) {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit)) {
@@ -204,8 +186,6 @@ public class Game:MonoBehaviour
 
 		if (flippedCard) {
 			if (flippedCard.cardDef == card.cardDef) {
-				rawScore += 100;
-
 				card.OnMatch(flippedCard);
 				flippedCard.OnMatch(card);
 			}
@@ -213,6 +193,10 @@ public class Game:MonoBehaviour
 				card.isFlipped = false;
 				flippedCard.isFlipped = false;
 				failCount++;
+				if (failCount > currentLevel.maxFailCount)
+				{
+					StartCoroutine(EndGame());
+				}
 				currentBackground.hyena.Laugh();
 			}
 			flippedCard = null;
@@ -227,7 +211,7 @@ public class Game:MonoBehaviour
 	}
 
 	IEnumerator EndGame() {
-		bool didWin = score >= currentLevel.targetScore;
+		bool didWin = !(failCount > currentLevel.maxFailCount);
 		//Debug.Log("You Win!");
 
 		CanvasGroup endGameGroup = Instantiate(Resources.Load<CanvasGroup>("UI/EndGameUI"));
@@ -246,6 +230,13 @@ public class Game:MonoBehaviour
 		}
 		endGameGroup.alpha = 1;
 
+		yield return new WaitForSeconds(2.0f);
+
+		if (!didWin)
+		{
+			SetupNewGame();
+		}
+
 		Card[] cards = GetAllCards();
 
 		for (int i = 0; i < cards.Length; i++) {
@@ -260,18 +251,12 @@ public class Game:MonoBehaviour
 			yield return 0;
 		}
 		endGameGroup.alpha = 0;
-
+		
 		Destroy(endGameGroup.gameObject);
-
+		
 		if (didWin)
 		{
 			SceneManager.LoadScene("LevelSelect");
-			//SetupNewGame(testLevel);
-			//testLevel = testLevels[(System.Array.IndexOf(testLevels, testLevel)+1)%testLevels.Length];
-		}
-		else
-		{
-			SetupNewGame(levelTemplate);
 		}
 	}
 	

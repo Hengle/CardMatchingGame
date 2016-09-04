@@ -25,6 +25,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,7 +47,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
   cardCountX: 4
   cardCountY: 3
-  targetScore: 100
+  maxFailCount: 3
   background: {fileID: 11466310, guid: 256517ea16b164545a33bc51558b5711, type: 2}
 --- !u!1001 &100100000
 Prefab:
