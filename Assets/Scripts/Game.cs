@@ -188,6 +188,7 @@ public class Game:MonoBehaviour
 			if (flippedCard.cardDef == card.cardDef) {
 				card.OnMatch(flippedCard);
 				flippedCard.OnMatch(card);
+				currentBackground.hyena.SausageFall();
 			}
 			else {
 				card.isFlipped = false;
