@@ -1,0 +1,86 @@
+-----------------------------------------------------------------------------------------
+Predators:
+-----------------------------------------------------------------------------------------
+spotted hyena	-eastern,western,central,southern
+lioness		-eastern,western,central,northern,southern
+
+-----------------------------------------------------------------------------------------
+Prey:
+-----------------------------------------------------------------------------------------
+@Western Roan 	- western
+Northern Roan 	- central
+@topi 		-eastern,western,central,northern,southern
+@Blue Wildebeest 	-central, southern, eastern
+@bongo Western	- western,central,eastern
+@addax 		-western,central,northern
+@blesbok 		-southern
+@bohor reedbuck	-eastern,western,central,northern
+@cokes hartebeest	-eastern
+eland common	-?
+eland east		-eastern
+eland cape	-southern
+@eland living stone	-eastern,central,southern
+@gemsbok	-southern
+@gerenuk N	-eastern
+gerenuk S		-eastern
+@grants gazelle N	-eastern
+grants gazelle S	-eastern
+impala blackfaced	-southern
+@impala E		-eastern
+@kudu abyssinian	-eastern,northern
+kudu lesser	-eastern
+kudu S		-eastern,central,southern
+kudu E		-eastern
+lechwe black	-eastern,central
+lechwe kafue	-eastern
+lechwe red		-central
+@lechwe nile	-eastern,northern
+@nyala		-eastern
+oribi haggard	-eastern
+@oribi		-eastern,western,central,northern,southern
+@puku		-eastern,central
+sable E		-eastern
+@sable Giant	-central
+@springbok(all)	-southern
+@Thomsons Gazelle	-eastern
+Waterbuck E	-eastern,central,northern
+Waterbuck Angola	-eastern,central,southern
+Waterbuck Crawshay	-eastern,central
+@Waterbuck SingSing-western,central
+Waterbuck Uganda	-eastern,northern
+
+center:17
+north:9
+east:30
+west:7
+south:10
+
+@Western Roan 	- western
+@topi 		-eastern,western,central,northern,southern
+@Blue Wildebeest 	-central, southern, eastern
+@bongo Western	- western,central,eastern
+@addax 		-western,central,northern
+@blesbok 		-southern
+@bohor reedbuck	-eastern,western,central,northern
+@cokes hartebeest	-eastern
+@eland living stone	-eastern,central,southern
+@gemsbok	-southern
+@gerenuk N	-eastern
+@grants gazelle N	-eastern
+@impala E		-eastern
+@kudu abyssinian	-eastern,northern
+@lechwe nile	-eastern,northern
+@nyala		-eastern
+@oribi		-eastern,western,central,northern,southern
+@puku		-eastern,central
+@sable Giant	-central
+@springbok(all)	-southern
+@Thomsons Gazelle	-eastern
+@WaterbuckSingSing-western,central
+
+
+center:10
+north:6
+east:15
+west:6
+south:7

@@ -42,11 +42,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDefs:
   - {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3, type: 2}
-  - {fileID: 11400000, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 2}
+  - {fileID: 11400000, guid: db7f060f3f0d1e946a2e68790382c828, type: 2}
   - {fileID: 11400000, guid: cba3ed27fd89b6a4482d4ebcc43f09bc, type: 2}
   cardCountX: 3
   cardCountY: 2
-  targetScore: 100
+  maxFailCount: 3
   background: {fileID: 11481976, guid: 51db49a87aa06114da1ff46d38a13c30, type: 2}
 --- !u!1001 &100100000
 Prefab:

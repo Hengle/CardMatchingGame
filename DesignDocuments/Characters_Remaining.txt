@@ -1,0 +1,32 @@
+predators:
+lioness		-Done
+hyena		-may be add getting back up, shaking the pain off
+
+Finished: 7 antelopes
+
+kudu		-Done
+roan		-Done
+wildebeest		-Done
+topi		-Done
+addax 		-Done
+blesbok 		-Done
+bohor reedbuck	-Done
+
+
+Unfinished: 15 antelopes
+
+bongo Western	 
+cokes hartebeest	
+eland living stone	
+gemsbok	-southern
+gerenuk N	-eastern
+grants gazelle N	
+impala E			
+lechwe nile	
+nyala		
+oribi		
+puku		
+sable Giant	
+springbok(all)	
+Thomsons Gazelle	
+WaterbuckSingSing
