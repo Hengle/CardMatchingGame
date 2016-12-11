@@ -15,20 +15,17 @@ Material:
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 11ea082b5e7a2d04092d6647efb514d2, type: 3}
-          m_Scale: {x: 32, y: 1}
-          m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 947d480d20dc52c4780e56dffd4af3bb, type: 3}
+        m_Scale: {x: 32, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-      data:
-        first:
-          name: _Cutoff
-        second: .5
+    - first:
+        name: _Cutoff
+      second: 0.5
     m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: .669117689, g: .254753292, b: .245999143, a: 1}
+    - first:
+        name: _Color
+      second: {r: 0.6691177, g: 0.2547533, b: 0.24599914, a: 1}

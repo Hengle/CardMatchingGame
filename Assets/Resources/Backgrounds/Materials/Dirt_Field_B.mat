@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Cloud_A
-  m_Shader: {fileID: 10750, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Dirt_Field_B
+  m_Shader: {fileID: 51, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -18,14 +18,14 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: e419fbd3ffebbaf429dd5aa3c50b6efa, type: 3}
-        m_Scale: {x: 4, y: 1}
+        m_Texture: {fileID: 2800000, guid: 1802c5a7a1bb89c4db84c7cd8c4e7e3e, type: 3}
+        m_Scale: {x: 8, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
         name: _Cutoff
-      second: 0.4107143
+      second: 0.5
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.49264705, g: 0.49264705, b: 0.49264705, a: 1}
