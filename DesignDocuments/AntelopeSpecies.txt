@@ -62,7 +62,7 @@ south:10
 @addax 		-western,central,northern
 @blesbok 		-southern
 @bohor reedbuck	-eastern,western,central,northern
-@cokes hartebeest	-eastern
+@red hartebeest	-southern
 @eland living stone	-eastern,central,southern
 @gemsbok	-southern
 @gerenuk N	-eastern
@@ -81,6 +81,6 @@ south:10
 
 center:10
 north:6
-east:15
+east:14
 west:6
-south:7
+south:8
