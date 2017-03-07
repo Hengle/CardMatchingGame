@@ -27,7 +27,7 @@ Material:
       second: 0
     - first:
         name: _Cutoff
-      second: 0.23214285
+      second: 0.9
     m_Colors:
     - first:
         name: _Color

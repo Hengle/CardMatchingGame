@@ -5,10 +5,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -25,10 +25,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41,8 +41,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardDefs:
-  - {fileID: 11400000, guid: f29e283c34cdbaa49bead7f68321bd51, type: 2}
-  - {fileID: 11400000, guid: 18b11c50f3b5643408dbc969966bc721, type: 2}
+  - {fileID: 11400000, guid: db7f060f3f0d1e946a2e68790382c828, type: 2}
+  - {fileID: 11400000, guid: d1a7a5466d0c9be4e887d6eb8be94cbf, type: 2}
   cardCountX: 2
   cardCountY: 2
   maxFailCount: 3
