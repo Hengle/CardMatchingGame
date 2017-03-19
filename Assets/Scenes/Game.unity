@@ -541,10 +541,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732a852ec267d3546b61243faf39ee74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testLevel: {fileID: 11400000, guid: 45a1528e32094844e9068c4ace1f21e4, type: 2}
   uiManger: {fileID: 1186209385}
   currentBackground: {fileID: 0}
   cardPrefab: {fileID: 11400000, guid: 69ffc6bf72417094ebffe7ce5c9e93c0, type: 2}
   cardSpacing: 1.25
+  cardScaling: 1.5
 --- !u!4 &1186209384
 Transform:
   m_ObjectHideFlags: 0

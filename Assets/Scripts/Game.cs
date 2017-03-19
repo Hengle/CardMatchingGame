@@ -16,13 +16,16 @@ public class Game:MonoBehaviour
 		}
 	}
 
+	public Level testLevel;
+
 	public GameUIManager uiManger;
 
 	public Background currentBackground;
 
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
-	
+	public float cardScaling = 1.0f;
+
 	private int _failCount = 0;
 	public int failCount
 	{
@@ -36,7 +39,7 @@ public class Game:MonoBehaviour
 			uiManger.UpdateFailCounter();
 		}
 	}
-	
+
 	public Level currentLevel {get; private set;}
 
 	private Card[,] cardGrid = null;
@@ -44,7 +47,11 @@ public class Game:MonoBehaviour
 	private bool gameIsStarted = false;
 
 	void Awake() {
-		currentLevel = LevelSelect.currentlySelectedLevelTemplate;
+		currentLevel = testLevel;
+		if (LevelSelect.currentlySelectedLevelTemplate)
+		{
+			currentLevel = LevelSelect.currentlySelectedLevelTemplate;
+		}
     }
 
 	void Start()
@@ -292,6 +299,7 @@ public class Game:MonoBehaviour
 
 	float GetCardScaler() {
 		float scaler = 1.0f/Mathf.Max(currentLevel.cardCountX/4.0f, currentLevel.cardCountY/4.0f);
+		scaler *= cardScaling;
 		return scaler;
 	}
 
