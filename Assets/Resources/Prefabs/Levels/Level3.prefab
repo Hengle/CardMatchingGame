@@ -42,12 +42,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDefs:
   - {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882, type: 2}
-  - {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3, type: 2}
   - {fileID: 11400000, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 2}
+  - {fileID: 11400000, guid: 8703d1cfcebe44444aa936e324c6a4de, type: 2}
   - {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
   cardCountX: 4
-  cardCountY: 3
-  maxFailCount: 3
+  cardCountY: 2
+  maxFailCount: 12
   background: {fileID: 114000010712801142, guid: 9c1c9d5fec9e3f4479d96c480a41a239,
     type: 2}
 --- !u!1001 &100100000

@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: 1c3efbd061940a0498cd9c3d29ecd07c
+timeCreated: 1489544735
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: CardPaper_A
+    100002: CardPaper_E
+    100004: CardPaper_EE
+    100006: CardPaper_L
+    100008: CardPaper_N
+    100010: CardPaper_O
+    100012: CardPaper_P
+    100014: CardPaper_T
+    100016: mesh_jumper_body
+    100018: //RootNode
+    100020: mesh_text_a
+    100022: mesh_text_e
+    100024: mesh_text_ee
+    100026: mesh_text_l
+    100028: mesh_text_n
+    100030: mesh_text_o
+    100032: mesh_text_p
+    100034: mesh_text_t
+    100036: mesh_text_matching
+    100038: mesh_text_up
+    400000: CardPaper_A
+    400002: CardPaper_E
+    400004: CardPaper_EE
+    400006: CardPaper_L
+    400008: CardPaper_N
+    400010: CardPaper_O
+    400012: CardPaper_P
+    400014: CardPaper_T
+    400016: mesh_jumper_body
+    400018: //RootNode
+    400020: mesh_text_a
+    400022: mesh_text_e
+    400024: mesh_text_ee
+    400026: mesh_text_l
+    400028: mesh_text_n
+    400030: mesh_text_o
+    400032: mesh_text_p
+    400034: mesh_text_t
+    400036: mesh_text_matching
+    400038: mesh_text_up
+    2300000: CardPaper_A
+    2300002: CardPaper_E
+    2300004: CardPaper_EE
+    2300006: CardPaper_L
+    2300008: CardPaper_N
+    2300010: CardPaper_O
+    2300012: CardPaper_P
+    2300014: CardPaper_T
+    2300016: mesh_jumper_body
+    2300018: mesh_text_a
+    2300020: mesh_text_e
+    2300022: mesh_text_ee
+    2300024: mesh_text_l
+    2300026: mesh_text_n
+    2300028: mesh_text_o
+    2300030: mesh_text_p
+    2300032: mesh_text_t
+    2300034: mesh_text_matching
+    2300036: mesh_text_up
+    3300000: CardPaper_A
+    3300002: CardPaper_E
+    3300004: CardPaper_EE
+    3300006: CardPaper_L
+    3300008: CardPaper_N
+    3300010: CardPaper_O
+    3300012: CardPaper_P
+    3300014: CardPaper_T
+    3300016: mesh_jumper_body
+    3300018: mesh_text_a
+    3300020: mesh_text_e
+    3300022: mesh_text_ee
+    3300024: mesh_text_l
+    3300026: mesh_text_n
+    3300028: mesh_text_o
+    3300030: mesh_text_p
+    3300032: mesh_text_t
+    3300034: mesh_text_matching
+    3300036: mesh_text_up
+    4300000: CardPaper_E
+    4300002: mesh_text_e
+    4300004: mesh_jumper_body
+    4300006: CardPaper_L
+    4300008: mesh_text_l
+    4300010: CardPaper_T
+    4300012: mesh_text_t
+    4300014: CardPaper_N
+    4300016: mesh_text_n
+    4300018: CardPaper_A
+    4300020: mesh_text_a
+    4300022: CardPaper_EE
+    4300024: mesh_text_ee
+    4300026: CardPaper_O
+    4300028: mesh_text_o
+    4300030: CardPaper_P
+    4300032: mesh_text_p
+    4300034: mesh_text_matching
+    4300036: mesh_text_up
+    7400000: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
+    7400002: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
+    7400004: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
+    7400006: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.003
+    7400008: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.004
+    7400010: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.005
+    7400012: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.006
+    7400014: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPaper_Me
+    7400016: CardPaper_E|CardPaper|CardPaper|TextAction|CardPaper|TextAction
+    7400018: CardPaper_L|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
+    7400020: CardPaper_L|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
+    7400022: CardPaper_L|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
+    7400024: CardPaper_L|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.003
+    7400026: CardPaper_L|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.004
+    7400028: CardPaper_L|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.005
+    7400030: CardPaper_L|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.006
+    7400032: CardPaper_L|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPaper_Me
+    7400034: CardPaper_L|CardPaper|CardPaper|TextAction|CardPaper|TextAction
+    7400036: CardPaper_T|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
+    7400038: CardPaper_T|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
+    7400040: CardPaper_T|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
+    7400042: CardPaper_T|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.003
+    7400044: CardPaper_T|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.004
+    7400046: CardPaper_T|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.005
+    7400048: CardPaper_T|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.006
+    7400050: CardPaper_T|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPaper_Me
+    7400052: CardPaper_T|CardPaper|CardPaper|TextAction|CardPaper|TextAction
+    7400054: CardPaper_N|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
+    7400056: CardPaper_N|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
+    7400058: CardPaper_N|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
+    7400060: CardPaper_N|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.003
+    7400062: CardPaper_N|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.004
+    7400064: CardPaper_N|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.005
+    7400066: CardPaper_N|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.006
+    7400068: CardPaper_N|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPaper_Me
+    7400070: CardPaper_N|CardPaper|CardPaper|TextAction|CardPaper|TextAction
+    7400072: CardPaper_A|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
+    7400074: CardPaper_A|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
+    7400076: CardPaper_A|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
+    7400078: CardPaper_A|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.003
+    7400080: CardPaper_A|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.004
+    7400082: CardPaper_A|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.005
+    7400084: CardPaper_A|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.006
+    7400086: CardPaper_A|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPaper_Me
+    7400088: CardPaper_A|CardPaper|CardPaper|TextAction|CardPaper|TextAction
+    7400090: CardPaper_EE|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
+    7400092: CardPaper_EE|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
+    7400094: CardPaper_EE|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
+    7400096: CardPaper_EE|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.003
+    7400098: CardPaper_EE|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.004
+    7400100: CardPaper_EE|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.005
+    7400102: CardPaper_EE|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.006
+    7400104: CardPaper_EE|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPaper_Me
+    7400106: CardPaper_EE|CardPaper|CardPaper|TextAction|CardPaper|TextAction
+    7400108: CardPaper_O|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
+    7400110: CardPaper_O|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
+    7400112: CardPaper_O|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
+    7400114: CardPaper_O|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.003
+    7400116: CardPaper_O|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.004
+    7400118: CardPaper_O|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.005
+    7400120: CardPaper_O|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.006
+    7400122: CardPaper_O|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPaper_Me
+    7400124: CardPaper_O|CardPaper|CardPaper|TextAction|CardPaper|TextAction
+    7400126: CardPaper_P|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
+    7400128: CardPaper_P|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
+    7400130: CardPaper_P|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
+    7400132: CardPaper_P|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.003
+    7400134: CardPaper_P|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.004
+    7400136: CardPaper_P|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.005
+    7400138: CardPaper_P|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.006
+    7400140: CardPaper_P|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPaper_Me
+    7400142: CardPaper_P|CardPaper|CardPaper|TextAction|CardPaper|TextAction
+    7400144: FlyIn
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: FlyIn
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CardPaper_A
+        weight: 1
+      - path: CardPaper_A/mesh_text_a
+        weight: 1
+      - path: CardPaper_E
+        weight: 1
+      - path: CardPaper_E/mesh_text_e
+        weight: 1
+      - path: CardPaper_EE
+        weight: 1
+      - path: CardPaper_EE/mesh_text_ee
+        weight: 1
+      - path: CardPaper_L
+        weight: 1
+      - path: CardPaper_L/mesh_text_l
+        weight: 1
+      - path: CardPaper_N
+        weight: 1
+      - path: CardPaper_N/mesh_text_n
+        weight: 1
+      - path: CardPaper_O
+        weight: 1
+      - path: CardPaper_O/mesh_text_o
+        weight: 1
+      - path: CardPaper_P
+        weight: 1
+      - path: CardPaper_P/mesh_text_p
+        weight: 1
+      - path: CardPaper_T
+        weight: 1
+      - path: CardPaper_T/mesh_text_t
+        weight: 1
+      - path: mesh_text_matching
+        weight: 1
+      - path: mesh_text_up
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
