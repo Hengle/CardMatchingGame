@@ -12,6 +12,7 @@ public class InfoCardManager : MonoBehaviour
 
     private int currentPlace = 0;
     private bool isFlipping = false;
+    private bool isEnd = false;
 
     private void Awake()
     {
@@ -39,15 +40,16 @@ public class InfoCardManager : MonoBehaviour
             {
                 if(hit.collider.gameObject.name == goLeftArrow.name)
                 {
-                    currentPlace -= goUnlocked.Length;
-
-                    if (currentPlace < 0)
-                        currentPlace =- 16;
-
+                    currentPlace -= 16;
                     Arrow("Left");
                 }
                 else if(hit.collider.gameObject.name == goRightArrow.name)
                 {
+                    if (isEnd)
+                    {
+                        currentPlace = 0;
+                        isEnd = false;
+                    }
                     Arrow("Right");
                 }
             }
@@ -56,6 +58,7 @@ public class InfoCardManager : MonoBehaviour
 
     private void Arrow(string direction)
     {
+        Debug.Log(direction);
         isFlipping = true;
         Flip(false);
         FillSlots();
@@ -70,14 +73,18 @@ public class InfoCardManager : MonoBehaviour
             if (ic.meshObject != null)
                 GameObject.Destroy(ic.meshObject);
 
+            if (currentPlace > goUnlocked.Length)
+            {
+                isEnd = true;
+                continue;
+            }
+
+            if (currentPlace < 0)
+                currentPlace = goUnlocked.Length - 8;
+
             ic.goUnlocked = goUnlocked[currentPlace];
 
             slot.name = currentPlace.ToString();
-
-            currentPlace++;
-
-            if (currentPlace >= goUnlocked.Length)
-                currentPlace = 0;
 
             GameObject meshObject = (GameObject)Instantiate(ic.goUnlocked.meshPrefab);
             ic.meshObject = meshObject;
@@ -96,6 +103,8 @@ public class InfoCardManager : MonoBehaviour
             {
                 StartCoroutine(CardFlip(slot.GetComponent<Animator>(), true));
             }
+
+            currentPlace++;
         }
         isFlipping = false;
     }
@@ -138,6 +147,7 @@ public class InfoCardManager : MonoBehaviour
         foreach (GameObject slot in goSlots)
         {
             currentPlace = 0;
+            isEnd = false;
             Animator animator = slot.GetComponent<Animator>();
             animator.Play("New State", 0, 0);
         }

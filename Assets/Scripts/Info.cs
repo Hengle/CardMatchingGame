@@ -6,6 +6,7 @@ public class Info : MonoBehaviour
 {
     public Transform infoPage;
     public Transform startPoint;
+    public bool factSheet = false;
 
     void Update()
     {
@@ -40,7 +41,15 @@ public class Info : MonoBehaviour
 
     private void LoadInfo(Transform infoPage, Transform startPoint)
     {
-        infoPage.gameObject.SetActive(true);
-        startPoint.gameObject.SetActive(false);
+        if (!factSheet)
+        {
+            infoPage.gameObject.SetActive(true);
+            startPoint.gameObject.SetActive(false);
+        }
+        else
+        {
+            factSheet = false;
+
+        }
     }
 }
