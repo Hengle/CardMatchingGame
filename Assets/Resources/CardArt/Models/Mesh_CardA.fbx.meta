@@ -11,27 +11,32 @@ ModelImporter:
     100006: CardPaper
     100008: CardQuestionSymbol
     100010: //RootNode
+    100012: Plane
     400000: CardBeadsA
     400002: CardBeadsB
     400004: CardBeadsC
     400006: CardPaper
     400008: CardQuestionSymbol
     400010: //RootNode
+    400012: Plane
     2300000: CardBeadsA
     2300002: CardBeadsB
     2300004: CardBeadsC
     2300006: CardPaper
     2300008: CardQuestionSymbol
+    2300010: Plane
     3300000: CardBeadsA
     3300002: CardBeadsB
     3300004: CardBeadsC
     3300006: CardPaper
     3300008: CardQuestionSymbol
+    3300010: Plane
     4300000: CardBeadsC
     4300002: CardBeadsB
     4300004: CardQuestionSymbol
     4300006: CardPaper
     4300008: CardBeadsA
+    4300010: Plane
     7400000: Bounce
     9500000: //RootNode
     11100000: //RootNode

@@ -71,6 +71,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
+        name: PixelSnap
+      second: 0
+    - first:
         name: _BumpScale
       second: 1
     - first:
@@ -92,6 +95,9 @@ Material:
         name: _GlossyReflections
       second: 1
     - first:
+        name: _Illum
+      second: 0.8
+    - first:
         name: _Metallic
       second: 0
     - first:
@@ -103,6 +109,12 @@ Material:
     - first:
         name: _Parallax
       second: 0.02
+    - first:
+        name: _ScrollXSpeed
+      second: 0
+    - first:
+        name: _ScrollYSpeed
+      second: 0
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -121,7 +133,10 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.8, g: 0.8, b: 0.8, a: 0.0636}
+      second: {r: 1, g: 1, b: 1, a: 0.0636}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _MainTint
+      second: {r: 1, g: 1, b: 1, a: 1}
