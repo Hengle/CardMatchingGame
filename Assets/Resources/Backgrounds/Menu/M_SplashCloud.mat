@@ -49,7 +49,7 @@ Material:
         name: _MainTex
       second:
         m_Texture: {fileID: 2800000, guid: 3aa856e4aa8303e48b273e8845b15239, type: 3}
-        m_Scale: {x: 0.5, y: 1}
+        m_Scale: {x: 1, y: 2}
         m_Offset: {x: 0.5, y: 0}
     - first:
         name: _MetallicGlossMap
@@ -93,7 +93,7 @@ Material:
       second: 1
     - first:
         name: _Illum
-      second: 0.8
+      second: 0.9
     - first:
         name: _Metallic
       second: 0
@@ -114,7 +114,7 @@ Material:
       second: 0.2
     - first:
         name: _ScrollYSpeed
-      second: -0.7
+      second: -0.8
     - first:
         name: _SmoothnessTextureChannel
       second: 0
