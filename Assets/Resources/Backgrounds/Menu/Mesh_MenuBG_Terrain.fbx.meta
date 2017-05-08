@@ -6,10 +6,19 @@ ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Mesh_MenuBG_Clouds
+    100004: Mesh_MenuBG_Terrain
     400000: //RootNode
+    400002: Mesh_MenuBG_Clouds
+    400004: Mesh_MenuBG_Terrain
     2300000: //RootNode
+    2300002: Mesh_MenuBG_Clouds
+    2300004: Mesh_MenuBG_Terrain
     3300000: //RootNode
+    3300002: Mesh_MenuBG_Clouds
+    3300004: Mesh_MenuBG_Terrain
     4300000: Mesh_MenuBG_Terrain
+    4300002: Mesh_MenuBG_Clouds
   materials:
     importMaterials: 1
     materialName: 0
