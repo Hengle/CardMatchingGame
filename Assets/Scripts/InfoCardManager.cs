@@ -9,6 +9,8 @@ public class InfoCardManager : MonoBehaviour
 
     public CardDef[] goUnlocked;
     public GameObject[] goSlots;
+    public GameObject goBackground;
+    public GameObject goBackButton;
 
     private int currentPlace = 0;
     private bool isFlipping = false;
@@ -54,6 +56,33 @@ public class InfoCardManager : MonoBehaviour
                 }
             }
         }
+
+        if(!goBackButton.GetComponent<Info>().factSheet)
+        {
+            foreach (GameObject slot in goSlots)
+            {
+                slot.SetActive(true);
+            }
+            goBackground.SetActive(false);
+        }
+    }
+
+    public void ShowFactSheet(InfoCards animal)
+    {
+        goBackButton.GetComponent<Info>().factSheet = true;
+        foreach(GameObject slot in goSlots)
+        {
+            slot.SetActive(false);
+        }
+        goBackground.SetActive(true);
+        var animalSlot = goBackground.transform.FindChild("animal");
+
+        if (animalSlot.FindChild("RotationPivot/AnimalPivot").childCount > 0)
+            Destroy(animalSlot.FindChild("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
+
+        Fill(animalSlot.gameObject, animal);
+        animalSlot.GetComponent<Animator>().Play("FlipToFront");
+        //Flip(animalSlot.GetComponent<Animator>(), true);
     }
 
     private void Arrow(string direction)
@@ -73,7 +102,7 @@ public class InfoCardManager : MonoBehaviour
             if (ic.meshObject != null)
                 GameObject.Destroy(ic.meshObject);
 
-            if (currentPlace > goUnlocked.Length)
+            if (currentPlace >= goUnlocked.Length)
             {
                 isEnd = true;
                 continue;
@@ -84,20 +113,7 @@ public class InfoCardManager : MonoBehaviour
 
             ic.goUnlocked = goUnlocked[currentPlace];
 
-            slot.name = currentPlace.ToString();
-
-            GameObject meshObject = (GameObject)Instantiate(ic.goUnlocked.meshPrefab);
-            ic.meshObject = meshObject;
-            meshObject.transform.parent = slot.transform.Find("RotationPivot/AnimalPivot");
-            meshObject.transform.localPosition = Vector3.zero;
-            meshObject.transform.localRotation = Quaternion.identity;
-            meshObject.transform.localScale = Vector3.one;
-
-            Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
-            foreach (Renderer r in renderers)
-            {
-                r.sharedMaterial = ic.goUnlocked.material;
-            }
+            Fill(slot, ic);
 
             if (!PlayerPrefs.HasKey(ic.goUnlocked.ToString()))
             {
@@ -107,6 +123,24 @@ public class InfoCardManager : MonoBehaviour
             currentPlace++;
         }
         isFlipping = false;
+    }
+
+    private void Fill(GameObject slot, InfoCards ic)
+    {
+        //slot.name = ic.goUnlocked.ToString();
+
+        GameObject meshObject = (GameObject)Instantiate(ic.goUnlocked.meshPrefab);
+        ic.meshObject = meshObject;
+        meshObject.transform.parent = slot.transform.Find("RotationPivot/AnimalPivot");
+        meshObject.transform.localPosition = Vector3.zero;
+        meshObject.transform.localRotation = Quaternion.identity;
+        meshObject.transform.localScale = Vector3.one;
+
+        Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
+        foreach (Renderer r in renderers)
+        {
+            r.sharedMaterial = ic.goUnlocked.material;
+        }
     }
 
     private IEnumerator CardFlip(Animator animator, bool isFlipped)

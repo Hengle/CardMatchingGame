@@ -49,7 +49,6 @@ public class Info : MonoBehaviour
         else
         {
             factSheet = false;
-
         }
     }
 }

@@ -40,8 +40,6 @@ public class InfoCards : MonoBehaviour
 
     public void OnClickRegion(InfoCards region)
     {
-        backButton.GetComponent<Info>().factSheet = true;
-        cards.SetActive(false);
-        background.SetActive(true);
+        gameObject.transform.parent.GetComponent<InfoCardManager>().ShowFactSheet(region);
     }
 }
