@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InfoCardManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class InfoCardManager : MonoBehaviour
     public GameObject[] goSlots;
     public GameObject goBackground;
     public GameObject goBackButton;
+
+    public Text tAntelopeName;
 
     private int currentPlace = 0;
     private bool isFlipping = false;
@@ -75,6 +78,9 @@ public class InfoCardManager : MonoBehaviour
             slot.SetActive(false);
         }
         goBackground.SetActive(true);
+
+        tAntelopeName.text = animal.goUnlocked.ToString();
+
         var animalSlot = goBackground.transform.FindChild("animal");
 
         if (animalSlot.FindChild("RotationPivot/AnimalPivot").childCount > 0)
