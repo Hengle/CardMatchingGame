@@ -96,6 +96,14 @@ ModelImporter:
     100176: mesh_text_o
     100178: mesh_text_p
     100180: mesh_text_t
+    100182: CardPaper_A
+    100184: CardPaper_E
+    100186: CardPaper_EE
+    100188: CardPaper_L
+    100190: CardPaper_N
+    100192: CardPaper_O
+    100194: CardPaper_P
+    100196: CardPaper_T
     400000: mesh_dorcasgazelle
     400002: mesh_hyena
     400004: mesh_jumper
@@ -187,6 +195,14 @@ ModelImporter:
     400176: mesh_text_o
     400178: mesh_text_p
     400180: mesh_text_t
+    400182: CardPaper_A
+    400184: CardPaper_E
+    400186: CardPaper_EE
+    400188: CardPaper_L
+    400190: CardPaper_N
+    400192: CardPaper_O
+    400194: CardPaper_P
+    400196: CardPaper_T
     2300000: mesh_dorcasgazelle
     2300002: mesh_hyena
     2300004: mesh_jumper
@@ -276,6 +292,14 @@ ModelImporter:
     2300172: mesh_text_o
     2300174: mesh_text_p
     2300176: mesh_text_t
+    2300178: CardPaper_A
+    2300180: CardPaper_E
+    2300182: CardPaper_EE
+    2300184: CardPaper_L
+    2300186: CardPaper_N
+    2300188: CardPaper_O
+    2300190: CardPaper_P
+    2300192: CardPaper_T
     3300000: mesh_dorcasgazelle
     3300002: mesh_hyena
     3300004: mesh_jumper
@@ -365,6 +389,14 @@ ModelImporter:
     3300172: mesh_text_o
     3300174: mesh_text_p
     3300176: mesh_text_t
+    3300178: CardPaper_A
+    3300180: CardPaper_E
+    3300182: CardPaper_EE
+    3300184: CardPaper_L
+    3300186: CardPaper_N
+    3300188: CardPaper_O
+    3300190: CardPaper_P
+    3300192: CardPaper_T
     4300000: Plane_008
     4300002: Plane_007
     4300004: Plane_006
@@ -453,6 +485,14 @@ ModelImporter:
     4300170: mesh_text_n
     4300172: mesh_cards_a
     4300174: mesh_text_a
+    4300176: CardPaper_E
+    4300178: CardPaper_L
+    4300180: CardPaper_T
+    4300182: CardPaper_N
+    4300184: CardPaper_A
+    4300186: CardPaper_EE
+    4300188: CardPaper_O
+    4300190: CardPaper_P
     7400000: FlyIn
     9500000: //RootNode
     11100000: //RootNode

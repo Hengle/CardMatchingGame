@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_SkyA
-  m_Shader: {fileID: 4800000, guid: 4cee56b0ba06d4a41be8789dd3ee6cd7, type: 3}
+  m_Shader: {fileID: 4800000, guid: b7dfe88e6c8d3f04e8f56a261772a1c7, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -93,7 +93,7 @@ Material:
       second: 1
     - first:
         name: _Illum
-      second: 0.5
+      second: 0.8
     - first:
         name: _Metallic
       second: 0

@@ -25,6 +25,15 @@ ModelImporter:
     100034: mesh_text_t
     100036: mesh_text_matching
     100038: mesh_text_up
+    100040: CardPaper_A_001
+    100042: CardPaper_E_001
+    100044: CardPaper_Highlight
+    100046: CardPaper_L_001
+    100048: CardPaper_N_001
+    100050: CardPaper_O_001
+    100052: CardPaper_P_001
+    100054: CardPaper_T_001
+    100056: CardPaper_EE_001
     400000: CardPaper_A
     400002: CardPaper_E
     400004: CardPaper_EE
@@ -45,6 +54,15 @@ ModelImporter:
     400034: mesh_text_t
     400036: mesh_text_matching
     400038: mesh_text_up
+    400040: CardPaper_A_001
+    400042: CardPaper_E_001
+    400044: CardPaper_Highlight
+    400046: CardPaper_L_001
+    400048: CardPaper_N_001
+    400050: CardPaper_O_001
+    400052: CardPaper_P_001
+    400054: CardPaper_T_001
+    400056: CardPaper_EE_001
     2300000: CardPaper_A
     2300002: CardPaper_E
     2300004: CardPaper_EE
@@ -64,6 +82,15 @@ ModelImporter:
     2300032: mesh_text_t
     2300034: mesh_text_matching
     2300036: mesh_text_up
+    2300038: CardPaper_A_001
+    2300040: CardPaper_E_001
+    2300042: CardPaper_Highlight
+    2300044: CardPaper_L_001
+    2300046: CardPaper_N_001
+    2300048: CardPaper_O_001
+    2300050: CardPaper_P_001
+    2300052: CardPaper_T_001
+    2300054: CardPaper_EE_001
     3300000: CardPaper_A
     3300002: CardPaper_E
     3300004: CardPaper_EE
@@ -83,6 +110,15 @@ ModelImporter:
     3300032: mesh_text_t
     3300034: mesh_text_matching
     3300036: mesh_text_up
+    3300038: CardPaper_A_001
+    3300040: CardPaper_E_001
+    3300042: CardPaper_Highlight
+    3300044: CardPaper_L_001
+    3300046: CardPaper_N_001
+    3300048: CardPaper_O_001
+    3300050: CardPaper_P_001
+    3300052: CardPaper_T_001
+    3300054: CardPaper_EE_001
     4300000: CardPaper_E
     4300002: mesh_text_e
     4300004: mesh_jumper_body
@@ -102,6 +138,15 @@ ModelImporter:
     4300032: mesh_text_p
     4300034: mesh_text_matching
     4300036: mesh_text_up
+    4300038: CardPaper_Highlight
+    4300040: CardPaper_P_001
+    4300042: CardPaper_O_001
+    4300044: CardPaper_A_001
+    4300046: CardPaper_N_001
+    4300048: CardPaper_T_001
+    4300050: CardPaper_L_001
+    4300052: CardPaper_E_001
+    4300054: CardPaper_EE_001
     7400000: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
     7400002: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
     7400004: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
