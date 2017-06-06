@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M_Thomsons_Gazelle
+  m_Name: M_ThomsonsGazelle
   m_Shader: {fileID: 4800000, guid: 938558f303573a348815b41667cdbaf6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -18,7 +18,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: b638e0401e73f664388a269b600f838b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1d57cbd3c33120643850e83cbfe3cf0b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
