@@ -34,7 +34,7 @@ public class PrefabLightmapData : MonoBehaviour
 			int index = -1;
 			for(int j = 0; j < lightmaps.Length; j++)
 			{
-				if(lightmaps[j].lightmapLight.GetHashCode() == m_Lightmaps[i].GetHashCode())
+				if(lightmaps[j].lightmapColor.GetHashCode() == m_Lightmaps[i].GetHashCode())
 				{
 					index = j;
 					break;
@@ -44,7 +44,7 @@ public class PrefabLightmapData : MonoBehaviour
 			if(index == -1)
 			{
 				LightmapData newLMD = new LightmapData();
-				newLMD.lightmapLight = m_Lightmaps[i];
+				newLMD.lightmapColor = m_Lightmaps[i];
 				combinedLightmaps.Add(newLMD);
 			}
 			else{
@@ -112,7 +112,7 @@ public class PrefabLightmapData : MonoBehaviour
 				info.renderer = renderer;
 				info.lightmapOffsetScale = renderer.lightmapScaleOffset;
 
-				Texture2D lightmap = LightmapSettings.lightmaps[renderer.lightmapIndex].lightmapLight;
+				Texture2D lightmap = LightmapSettings.lightmaps[renderer.lightmapIndex].lightmapColor;
 
 				info.lightmapIndex = lightmaps.IndexOf(lightmap);
 				if (info.lightmapIndex == -1)

@@ -75,10 +75,10 @@ public class InfoCardManager : MonoBehaviour
             slot.SetActive(false);
         }
         goBackground.SetActive(true);
-        var animalSlot = goBackground.transform.FindChild("animal");
+        var animalSlot = goBackground.transform.Find("animal");
 
-        if (animalSlot.FindChild("RotationPivot/AnimalPivot").childCount > 0)
-            Destroy(animalSlot.FindChild("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
+        if (animalSlot.Find("RotationPivot/AnimalPivot").childCount > 0)
+            Destroy(animalSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
 
         Fill(animalSlot.gameObject, animal);
         animalSlot.GetComponent<Animator>().Play("FlipToFront");
