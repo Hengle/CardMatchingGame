@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.IO;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InfoCardManager : MonoBehaviour
 {
@@ -11,6 +15,11 @@ public class InfoCardManager : MonoBehaviour
     public GameObject[] goSlots;
     public GameObject goBackground;
     public GameObject goBackButton;
+
+    public Text animalNameText;
+    public Text animalDescriptionText;
+    public RawImage animalMap;
+    public Text animalPercentage;
 
     private int currentPlace = 0;
     private bool isFlipping = false;
@@ -75,14 +84,39 @@ public class InfoCardManager : MonoBehaviour
             slot.SetActive(false);
         }
         goBackground.SetActive(true);
+
         var animalSlot = goBackground.transform.Find("animal");
 
         if (animalSlot.Find("RotationPivot/AnimalPivot").childCount > 0)
             Destroy(animalSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
 
+        FillFactSheet(animal.goUnlocked.name);
         Fill(animalSlot.gameObject, animal);
         animalSlot.GetComponent<Animator>().Play("FlipToFront");
         //Flip(animalSlot.GetComponent<Animator>(), true);
+    }
+
+    private void FillFactSheet(string animalName)
+    {
+        string name = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.displayName).First();
+
+        if (name == "")
+            name = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.name).First();
+
+        string description = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.description).First();
+        string image = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.map).First();
+        float maxCount = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.maxCount).First();
+
+        animalNameText.text = name;
+        animalDescriptionText.text = description;
+
+        char seperator = Path.DirectorySeparatorChar;
+        string path = "Map" + seperator + "InfoMaps" + seperator +"Textures" + seperator + "T_Map_BohorReedbuck";
+        animalMap.texture = (Texture)Resources.Load(path);
+
+        //@TODO need to hook up the unlock counter 
+        int counter = 1;
+        animalPercentage.text = "Unlocked: 1/" + maxCount + " Percentage: " + (counter / maxCount) * 100 + "%";
     }
 
     private void Arrow(string direction)
@@ -118,7 +152,7 @@ public class InfoCardManager : MonoBehaviour
             if (!PlayerPrefs.HasKey(ic.goUnlocked.ToString()))
             {
                 StartCoroutine(CardFlip(slot.GetComponent<Animator>(), true));
-            }
+                }
 
             currentPlace++;
         }
