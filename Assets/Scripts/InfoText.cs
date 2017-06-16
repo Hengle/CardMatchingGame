@@ -10,7 +10,7 @@ static class InfoText {
         animalDescript = new animalDescription[]
         {
             new animalDescription { name = "Addax", description = "", map = "T_Map_BohorReedbuck", maxCount = 1},
-            new animalDescription { name = "Addax_F", description = "", map = "", maxCount = 2},
+            new animalDescription { name = "Addax_F", displayName = "Addax (Female)", description = "", map = "T_Map_BohorReedbuck", maxCount = 2},
             new animalDescription { name = "AdersDuiker", description = "", map = "", maxCount = 3},
             new animalDescription { name = "Blesbok", description = "", map = "", maxCount = 4},
             new animalDescription { name = "Blesbok_F", description = "", map = "", maxCount = 1},
@@ -80,11 +80,11 @@ public class animalDescription
     {
         get
         {
-            return m_name;
+            return m_displayName;
         }
         set
         {
-            m_name = value;
+            m_displayName = value;
         }
     }
 
