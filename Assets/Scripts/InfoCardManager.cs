@@ -98,20 +98,28 @@ public class InfoCardManager : MonoBehaviour
 
     private void FillFactSheet(string animalName)
     {
+        // Name to display
         string name = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.displayName).First();
 
         if (name == "")
             name = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.name).First();
 
+        // Description to display
         string description = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.description).First();
+
+        // String of map name
         string image = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.map).First();
+
+        // Max number of each animal in game
         float maxCount = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.maxCount).First();
 
+        // Sets name and description
         animalNameText.text = name;
         animalDescriptionText.text = description;
 
+        // Creates path to texture
         char seperator = Path.DirectorySeparatorChar;
-        string path = "Map" + seperator + "InfoMaps" + seperator +"Textures" + seperator + "T_Map_BohorReedbuck";
+        string path = "Map" + seperator + "InfoMaps" + seperator +"Textures" + seperator + image;
         animalMap.texture = (Texture)Resources.Load(path);
 
         //@TODO need to hook up the unlock counter 
