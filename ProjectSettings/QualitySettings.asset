@@ -34,5 +34,11 @@ QualitySettings:
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
     Android: 0
+    Samsung TV: 0
     Standalone: 0
+    Tizen: 0
     Web: 0
+    WebGL: 0
+    Windows Store Apps: 0
+    iPhone: 0
+    tvOS: 0

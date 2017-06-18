@@ -9,52 +9,52 @@ static class InfoText {
     public static animalDescription[] getDescriptions() {
         animalDescript = new animalDescription[]
         {
-            new animalDescription { name = "Addax", description = "", map = "T_Map_BohorReedbuck", maxCount = 1},
-            new animalDescription { name = "Addax_F", displayName = "Addax (Female)", description = "", map = "T_Map_BohorReedbuck", maxCount = 2},
-            new animalDescription { name = "AdersDuiker", description = "", map = "", maxCount = 3},
-            new animalDescription { name = "Blesbok", description = "", map = "", maxCount = 4},
-            new animalDescription { name = "Blesbok_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "BlueWildebeest", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "BlueWildebeest_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "BohorReedbuck", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "BohorReedbuck_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Bongo", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Bongo_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Cokes_hartebeest", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Common_Eland", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "CuviersGazelle", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "CuviersGazelle_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "DamaGazelle", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "DamaGazelle_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "DorcasGazelle", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "DorcasGazelle_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "GiantEland", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "GiantEland_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "GreaterKudu", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "GreaterKudu_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "HuntersAntelope", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Impala", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Impala_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Klipspringer", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Klipspringer_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Lechwe", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Lioness", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Nyala", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Oribi", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Oribi_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Puku", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Puku_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "RedFrontedGazelle", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "RedHartebeest", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Roan", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Roan_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Sable", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Suni", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Suni_F", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "ThornsonsGazelle", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Topi", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "Waterbuck", description = "", map = "", maxCount = 1},
-            new animalDescription { name = "ZebraDuuiker", description = "", map = "", maxCount = 1},
+            new animalDescription { name = "Addax", gender = "InfoGenderMale", conservation = "",  map = "T_Map_BohorReedbuck", maxCount = 1},
+            new animalDescription { name = "Addax_F", gender = "InfoGenderFemale", conservation = "",  map = "T_Map_BohorReedbuck", maxCount = 2},
+            new animalDescription { name = "AdersDuiker", displayName = "Aders Duiker", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 3},
+            new animalDescription { name = "Blesbok", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 4},
+            new animalDescription { name = "Blesbok_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "BlueWildebeest", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "BlueWildebeest_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "BohorReedbuck", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "BohorReedbuck_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Bongo", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Bongo_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Cokes_hartebeest", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Common_Eland", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "CuviersGazelle", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "CuviersGazelle_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "DamaGazelle", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "DamaGazelle_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "DorcasGazelle", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "DorcasGazelle_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "GiantEland", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "GiantEland_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "GreaterKudu", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "GreaterKudu_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "HuntersAntelope", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Impala", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Impala_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Klipspringer", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Klipspringer_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Lechwe", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Lioness", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Nyala", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Oribi", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Oribi_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Puku", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Puku_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "RedFrontedGazelle", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "RedHartebeest", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Roan", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Roan_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Sable", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Suni", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Suni_F", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "ThornsonsGazelle", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Topi", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "Waterbuck", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
+            new animalDescription { name = "ZebraDuuiker", gender = "InfoGenderMale", conservation = "",  map = "", maxCount = 1},
         };
 
         return animalDescript;
@@ -88,16 +88,29 @@ public class animalDescription
         }
     }
 
-    private string m_description = "";
-    public string description
+    private string m_gender = "";
+    public string gender
     {
         get
         {
-            return m_description;
+            return m_gender;
         }
         set
         {
-            m_description = value;
+            m_gender = value;
+        }
+    }
+
+    private string m_conservation = "";
+    public string conservation
+    {
+        get
+        {
+            return m_conservation;
+        }
+        set
+        {
+            m_conservation = value;
         }
     }
 

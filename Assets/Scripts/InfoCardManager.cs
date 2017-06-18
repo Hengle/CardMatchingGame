@@ -17,7 +17,8 @@ public class InfoCardManager : MonoBehaviour
     public GameObject goBackButton;
 
     public Text animalNameText;
-    public Text animalDescriptionText;
+    public RawImage animalGender;
+    public Text animalConservationText;
     public RawImage animalMap;
     public Text animalPercentage;
 
@@ -73,6 +74,8 @@ public class InfoCardManager : MonoBehaviour
                 slot.SetActive(true);
             }
             goBackground.SetActive(false);
+            goLeftArrow.SetActive(true);
+            goRightArrow.SetActive(true);
         }
     }
 
@@ -84,6 +87,8 @@ public class InfoCardManager : MonoBehaviour
             slot.SetActive(false);
         }
         goBackground.SetActive(true);
+        goLeftArrow.SetActive(false);
+        goRightArrow.SetActive(false);
 
         var animalSlot = goBackground.transform.Find("animal");
 
@@ -104,8 +109,10 @@ public class InfoCardManager : MonoBehaviour
         if (name == "")
             name = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.name).First();
 
+        string gender = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.gender).First();
+
         // Description to display
-        string description = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.description).First();
+        string conservation = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.conservation).First();
 
         // String of map name
         string image = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.map).First();
@@ -113,12 +120,20 @@ public class InfoCardManager : MonoBehaviour
         // Max number of each animal in game
         float maxCount = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.maxCount).First();
 
-        // Sets name and description
+        // Sets name
         animalNameText.text = name;
-        animalDescriptionText.text = description;
+
+        // Seperator / in linux/mac and \ in windows
+        char seperator = Path.DirectorySeparatorChar;
+
+        // Sets gender
+        string GenderPath = "UI" + seperator + "Gender" + seperator + gender;
+        animalGender.texture = (Texture)Resources.Load(GenderPath);
+
+        // Sets consrvation
+        animalConservationText.text = conservation;
 
         // Creates path to texture
-        char seperator = Path.DirectorySeparatorChar;
         string path = "Map" + seperator + "InfoMaps" + seperator +"Textures" + seperator + image;
         animalMap.texture = (Texture)Resources.Load(path);
 
