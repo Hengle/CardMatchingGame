@@ -34,6 +34,14 @@ ModelImporter:
     100052: CardPaper_P_001
     100054: CardPaper_T_001
     100056: CardPaper_EE_001
+    100058: CardPaper_A_Shine
+    100060: CardPaper_E_Shine
+    100062: CardPaper_EE_Shine
+    100064: CardPaper_L_Shine
+    100066: CardPaper_N_Shine
+    100068: CardPaper_O_Shine
+    100070: CardPaper_P_Shine
+    100072: CardPaper_T_Shine
     400000: CardPaper_A
     400002: CardPaper_E
     400004: CardPaper_EE
@@ -63,6 +71,14 @@ ModelImporter:
     400052: CardPaper_P_001
     400054: CardPaper_T_001
     400056: CardPaper_EE_001
+    400058: CardPaper_A_Shine
+    400060: CardPaper_E_Shine
+    400062: CardPaper_EE_Shine
+    400064: CardPaper_L_Shine
+    400066: CardPaper_N_Shine
+    400068: CardPaper_O_Shine
+    400070: CardPaper_P_Shine
+    400072: CardPaper_T_Shine
     2300000: CardPaper_A
     2300002: CardPaper_E
     2300004: CardPaper_EE
@@ -91,6 +107,14 @@ ModelImporter:
     2300050: CardPaper_P_001
     2300052: CardPaper_T_001
     2300054: CardPaper_EE_001
+    2300056: CardPaper_A_Shine
+    2300058: CardPaper_E_Shine
+    2300060: CardPaper_EE_Shine
+    2300062: CardPaper_L_Shine
+    2300064: CardPaper_N_Shine
+    2300066: CardPaper_O_Shine
+    2300068: CardPaper_P_Shine
+    2300070: CardPaper_T_Shine
     3300000: CardPaper_A
     3300002: CardPaper_E
     3300004: CardPaper_EE
@@ -119,6 +143,14 @@ ModelImporter:
     3300050: CardPaper_P_001
     3300052: CardPaper_T_001
     3300054: CardPaper_EE_001
+    3300056: CardPaper_A_Shine
+    3300058: CardPaper_E_Shine
+    3300060: CardPaper_EE_Shine
+    3300062: CardPaper_L_Shine
+    3300064: CardPaper_N_Shine
+    3300066: CardPaper_O_Shine
+    3300068: CardPaper_P_Shine
+    3300070: CardPaper_T_Shine
     4300000: CardPaper_E
     4300002: mesh_text_e
     4300004: mesh_jumper_body
@@ -147,6 +179,14 @@ ModelImporter:
     4300050: CardPaper_L_001
     4300052: CardPaper_E_001
     4300054: CardPaper_EE_001
+    4300056: CardPaper_EE_Shine
+    4300058: CardPaper_P_Shine
+    4300060: CardPaper_O_Shine
+    4300062: CardPaper_L_Shine
+    4300064: CardPaper_E_Shine
+    4300066: CardPaper_T_Shine
+    4300068: CardPaper_N_Shine
+    4300070: CardPaper_A_Shine
     7400000: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.000
     7400002: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.001
     7400004: CardPaper_E|CardPaper|CardPaper|CardPaper_MeshAction|CardPaper|CardPape.002
@@ -232,6 +272,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
