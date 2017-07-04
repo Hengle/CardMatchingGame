@@ -28,6 +28,7 @@ ModelImporter:
     2300008: Sudan
     2300010: Tunisia
     2300012: WesternSahara
+    2300014: //RootNode
     3300000: Algeria
     3300002: Egypt
     3300004: Libya
@@ -35,6 +36,7 @@ ModelImporter:
     3300008: Sudan
     3300010: Tunisia
     3300012: WesternSahara
+    3300014: //RootNode
     4300000: Tunisia
     4300002: Morocco
     4300004: Egypt
@@ -42,6 +44,7 @@ ModelImporter:
     4300008: Libya
     4300010: WesternSahara
     4300012: Algeria
+    4300014: Mesh_NorthernAfrica
   materials:
     importMaterials: 1
     materialName: 0
@@ -49,9 +52,11 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -88,6 +93,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -98,7 +104,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1

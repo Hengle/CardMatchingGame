@@ -52,6 +52,7 @@ ModelImporter:
     2300024: Uganda
     2300026: Zambia
     2300028: Zimbabwe
+    2300030: //RootNode
     3300000: Burundi
     3300002: Djibouti
     3300004: Erittrea
@@ -67,6 +68,7 @@ ModelImporter:
     3300024: Uganda
     3300026: Zambia
     3300028: Zimbabwe
+    3300030: //RootNode
     4300000: SouthSudan
     4300002: Ethiopia
     4300004: Somalia
@@ -82,6 +84,7 @@ ModelImporter:
     4300024: Zimbabwe
     4300026: Zambia
     4300028: Rwanda
+    4300030: Mesh_EasternAfrica
   materials:
     importMaterials: 1
     materialName: 0
@@ -89,9 +92,11 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -128,6 +133,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -138,7 +144,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
