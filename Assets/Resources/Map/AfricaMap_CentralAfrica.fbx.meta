@@ -51,7 +51,7 @@ ModelImporter:
     4300014: Cameroon
     4300016: Mesh_CentralAfrica
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using KeenTween;
 
 public class LevelSelect:MonoBehaviour
 {
@@ -9,10 +10,28 @@ public class LevelSelect:MonoBehaviour
 	public LevelOverlay levelOverlayTemplate;
 	public LevelOverlay levelOverlay { get; private set; }
 
-	void Start()
+	private Vector3 targetScale;
+
+	private void Awake()
+	{
+		targetScale = transform.localScale;
+	}
+
+	private void OnEnable()
 	{
 		currentlySelectedLevelTemplate = null;
-    }
+		transform.localScale = Vector3.zero;
+
+		new Tween(null, 0, 1, 1.0f, new CurveCubic(TweenCurveMode.Out), t =>
+		{
+			if (!this)
+			{
+				return;
+			}
+
+			transform.localScale = targetScale*t.currentValue;
+		});
+	}
 
 	void Update()
 	{

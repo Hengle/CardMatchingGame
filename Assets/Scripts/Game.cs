@@ -146,11 +146,12 @@ public class Game:MonoBehaviour
 
 			Vector3 card0Position = card0.transform.position;
 			Vector3 card1Position = card1.transform.position;
+			Vector3 center = (card0Position+card1Position)/2;
 
-			card0.MoveTo(card1Position, 0.5f);
-			card1.MoveTo(card0Position, 0.5f);
+			card0.MoveTo(card1Position, center, 0.75f);
+			card1.MoveTo(card0Position, center, 0.75f);
 
-			yield return new WaitForSeconds(0.75f);
+			yield return new WaitForSeconds(1.0f);
 		}
 
 		gameIsStarted = true;

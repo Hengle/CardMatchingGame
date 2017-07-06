@@ -2,10 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using KeenTween;
 
 public class MapRegion:MonoBehaviour
 {
 	public string regionName = "Region";
+	public float popupScale = 5;
+	public Color selectionColor = Color.white;
 	public List<Level> levels = new List<Level>();
 
     public AudioClip acSelectAudio;
@@ -21,26 +24,52 @@ public class MapRegion:MonoBehaviour
 		}
 	}
 
-	private Animator _animator;
-	public Animator animator
+	private float popupValue = 0;
+	private MeshRenderer meshRenderer;
+	private Color originalMaterialColor;
+	Tween tween;
+
+	private void Start()
 	{
-		get
-		{
-			return _animator ? _animator : _animator = gameObject.GetComponent<Animator>();
-		}
+		meshRenderer = gameObject.GetComponentInChildren<MeshRenderer>();
+		originalMaterialColor = meshRenderer.material.color;
 	}
 
 	public void OnLevelOverlayOpened(LevelOverlay levelOverlay)
 	{
         asSelectSource.clip = acSelectAudio;
         asSelectSource.Play();
-		animator.CrossFade("MapRegionLift", 0.5f);
+
+		if (tween != null && !tween.isDone)
+		{
+			tween.Cancel();
+		}
+		tween = new Tween(null, popupValue, 1, 1.0f, new CurveElastic(TweenCurveMode.Out), UpdateTween);
 	}
 
 	public void OnLevelOverlayClosed(LevelOverlay levelOverlay)
 	{
         asSelectSource.clip = acDeselectAudio;
         asSelectSource.Play();
-		animator.CrossFade("MapRegionLower", 0.5f);
+
+		if (tween != null && !tween.isDone)
+		{
+			tween.Cancel();
+		}
+		tween = new Tween(null, popupValue, 0, 1.0f, new CurveBounce(TweenCurveMode.Out), UpdateTween);
+	}
+
+	private void UpdateTween(Tween t)
+	{
+		if (!this)
+		{
+			return;
+		}
+		popupValue = t.currentValue;
+		Vector3 scale = transform.localScale;
+		scale.y = popupValue*popupScale+1;
+		transform.localScale = scale;
+
+		meshRenderer.material.color = Color.Lerp(originalMaterialColor, selectionColor, t.currentValue);
 	}
 }

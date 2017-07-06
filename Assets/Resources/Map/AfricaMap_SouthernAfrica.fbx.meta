@@ -36,7 +36,7 @@ ModelImporter:
     4300008: Botswana
     4300010: Mesh_SouthernAfrica
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

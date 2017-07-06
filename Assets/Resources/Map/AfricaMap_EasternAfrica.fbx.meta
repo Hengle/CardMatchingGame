@@ -86,7 +86,7 @@ ModelImporter:
     4300028: Rwanda
     4300030: Mesh_EasternAfrica
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

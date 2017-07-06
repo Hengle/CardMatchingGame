@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using KeenTween;
 
 public class Card:MonoBehaviour {
 	public CardDef cardDef;
@@ -68,12 +69,29 @@ public class Card:MonoBehaviour {
 		StartCoroutine(AnimateAway());
 	}
 
-	public void MoveTo(Vector3 position, float time)
+	public void MoveTo(Vector3 position, Vector3 pivot, float time)
 	{
-		StartCoroutine(MoveToAsync(position, time));
+		Vector3 originalPosition = transform.position;
+		Tween tween = new Tween(null, 0, 1, time, new CurveSinusoidal(TweenCurveMode.InOut), t =>
+		{
+			if (!this)
+			{
+				return;
+			}
+			Quaternion rot = Quaternion.AngleAxis(t.currentValue*180, Vector3.forward);
+
+			Vector3 toOriginalPosition = originalPosition-pivot;
+			
+			transform.position = pivot+rot*toOriginalPosition;
+			transform.position -= Vector3.forward*Mathf.PingPong(t.currentValue, 0.5f)*5;
+		});
+		tween.onFinish += t =>
+		{
+			transform.position = position;
+		};
 	}
 
-	private IEnumerator MoveToAsync(Vector3 position, float time)
+	private IEnumerator MoveToAsync(Vector3 position, Vector3 pivot, float time)
 	{
 		Vector3 originalPosition = transform.position;
 		float counter = 0;
