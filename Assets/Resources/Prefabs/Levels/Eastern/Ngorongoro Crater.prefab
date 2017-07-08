@@ -46,8 +46,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d1a7a5466d0c9be4e887d6eb8be94cbf, type: 2}
   - {fileID: 11400000, guid: 9282a182e080b914aa0c8127285391da, type: 2}
   - {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3, type: 2}
-  cardCountX: 5
-  cardCountY: 4
+  cardCountX: 3
+  cardCountY: 2
   maxFailCount: 24
   background: {fileID: 114269455696899728, guid: e2c15cc12766b4a44b90ffeefe689a01,
     type: 2}
