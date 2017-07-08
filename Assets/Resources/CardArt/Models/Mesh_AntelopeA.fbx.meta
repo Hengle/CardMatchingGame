@@ -113,8 +113,10 @@ ModelImporter:
     400106: Mesh_Face
     2300000: Mesh_Smile
     2300002: Mesh_Face
+    2300004: //RootNode
     3300000: Mesh_Smile
     3300002: Mesh_Face
+    3300004: //RootNode
     4300000: Mesh_Body
     4300002: Mesh_Eye
     4300004: Mesh_Smile
@@ -130,9 +132,10 @@ ModelImporter:
     7400008: DanceAnimation
     7400010: DanceAnimation
     7400012: RunAnimation
-    7400014: LionessIdle_Animation
+    7400014: WalkAnimation
     7400016: LionessPounce_Animation
     7400018: LionessChase_Animation
+    7400020: WalkAnimation
     9500000: //RootNode
     13700000: Mesh_Body
     13700002: Mesh_Eye
@@ -152,6 +155,8 @@ ModelImporter:
     resampleCurves: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -260,11 +265,7 @@ ModelImporter:
         weight: 1
       - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR/Bone_KneeR/Bone_AnkleR/Bone_HoofR
         weight: 1
-      - path: Mesh_AntelopeA/Bone_Smile
-        weight: 1
       - path: Mesh_Body
-        weight: 1
-      - path: Mesh_Face
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -510,222 +511,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: LionessIdle_Animation
+      name: WalkAnimation
       takeName: ArmatureAction
-      firstFrame: 220
-      lastFrame: 250
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Mesh_AntelopeA
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL/Bone_TibiaL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL/Bone_TibiaL/Bone_BackKneeL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL/Bone_TibiaL/Bone_BackKneeL/Bone_BackAnkleL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL/Bone_TibiaL/Bone_BackKneeL/Bone_BackAnkleL/Bone_BackHoofL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR/Bone_TibiaR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR/Bone_TibiaR/Bone_BackKneeR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR/Bone_TibiaR/Bone_BackKneeR/Bone_BackAnkleR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR/Bone_TibiaR/Bone_BackKneeR/Bone_BackAnkleR/Bone_BackHoofR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail/Bone_Tail
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail/Bone_Tail/Bone_TailA
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail/Bone_Tail/Bone_TailA/Bone_TailB
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail/Bone_Tail/Bone_TailA/Bone_TailB/Bone_TailC
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_Shoulder
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_Shoulder/Bone_Neck
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_Shoulder/Bone_Neck/Bone_Head
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL/Bone_ForearmL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL/Bone_ForearmL/Bone_KneeL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL/Bone_ForearmL/Bone_KneeL/Bone_AnkleL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL/Bone_ForearmL/Bone_KneeL/Bone_AnkleL/Bone_HoofL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR/Bone_KneeR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR/Bone_KneeR/Bone_AnkleR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR/Bone_KneeR/Bone_AnkleR/Bone_HoofR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Smile
-        weight: 1
-      - path: Mesh_Body
-        weight: 1
-      - path: Mesh_Face
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: LionessPounce_Animation
-      takeName: ArmatureAction
-      firstFrame: 220
-      lastFrame: 257
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Mesh_AntelopeA
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL/Bone_TibiaL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL/Bone_TibiaL/Bone_BackKneeL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL/Bone_TibiaL/Bone_BackKneeL/Bone_BackAnkleL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisL/Bone_BackLegL/Bone_TibiaL/Bone_BackKneeL/Bone_BackAnkleL/Bone_BackHoofL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR/Bone_TibiaR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR/Bone_TibiaR/Bone_BackKneeR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR/Bone_TibiaR/Bone_BackKneeR/Bone_BackAnkleR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisR/Bone_BackLegR/Bone_TibiaR/Bone_BackKneeR/Bone_BackAnkleR/Bone_BackHoofR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail/Bone_Tail
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail/Bone_Tail/Bone_TailA
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail/Bone_Tail/Bone_TailA/Bone_TailB
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_PelvisTail/Bone_Tail/Bone_TailA/Bone_TailB/Bone_TailC
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_Shoulder
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_Shoulder/Bone_Neck
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_Shoulder/Bone_Neck/Bone_Head
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL/Bone_ForearmL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL/Bone_ForearmL/Bone_KneeL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL/Bone_ForearmL/Bone_KneeL/Bone_AnkleL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderL/Bone_FrontLegL/Bone_ForearmL/Bone_KneeL/Bone_AnkleL/Bone_HoofL
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR/Bone_KneeR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR/Bone_KneeR/Bone_AnkleR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR/Bone_KneeR/Bone_AnkleR/Bone_HoofR
-        weight: 1
-      - path: Mesh_AntelopeA/Bone_Smile
-        weight: 1
-      - path: Mesh_Body
-        weight: 1
-      - path: Mesh_Face
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: LionessChase_Animation
-      takeName: ArmatureAction
-      firstFrame: 257
-      lastFrame: 275
+      firstFrame: 193
+      lastFrame: 280
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -733,7 +522,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -818,13 +607,9 @@ ModelImporter:
         weight: 1
       - path: Mesh_AntelopeA/Bone_Pelvis/Bone_Spine/Bone_ShoulderR/Bone_FrontLegR/Bone_ForearmR/Bone_KneeR/Bone_AnkleR/Bone_HoofR
         weight: 1
-      - path: Mesh_AntelopeA/Bone_Smile
-        weight: 1
       - path: Mesh_Body
         weight: 1
-      - path: Mesh_Face
-        weight: 1
-      maskType: 0
+      maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     isReadable: 1
