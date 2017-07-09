@@ -7,4 +7,5 @@ public class CardDef:MonoBehaviour {
 	public GameObject meshPrefab;
 	public RuntimeAnimatorController animatorController;
 	public Material material;
+	public float animalScaler = 1;
 }

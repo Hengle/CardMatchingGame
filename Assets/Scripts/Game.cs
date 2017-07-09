@@ -317,17 +317,17 @@ public class Game:MonoBehaviour
 	}
 
 	Card CreateCardInstance(CardDef cardDef) {
-		Card card = (Card)Instantiate(cardPrefab);
+		Card card = Instantiate(cardPrefab);
 		card.name = cardDef.name;
 		card.cardDef = cardDef;
 
 		card.transform.localScale = Vector3.one*GetCardScaler();
 
-		GameObject meshObject = (GameObject)Instantiate(cardDef.meshPrefab);
+		GameObject meshObject = Instantiate(cardDef.meshPrefab);
 		meshObject.transform.parent = card.transform.Find("RotationPivot/AnimalPivot");
 		meshObject.transform.localPosition = Vector3.zero;
 		meshObject.transform.localRotation = Quaternion.identity;
-		meshObject.transform.localScale = Vector3.one;
+		meshObject.transform.localScale = Vector3.one*cardDef.animalScaler;
 
 		card.animalAnimator.runtimeAnimatorController = cardDef.animatorController;
 		card.animalAnimator.applyRootMotion = false;
@@ -339,8 +339,4 @@ public class Game:MonoBehaviour
 
 		return card;
 	}
-
-	//CardDef[] GetCardDefs() {
-	//	return Resources.LoadAll<CardDef>("Prefabs/CardDefs");
-	//}
 }

@@ -63,7 +63,6 @@ public class Card:MonoBehaviour {
 	{
 		isMatched = true;
 		AnimateDance();
-		//LeanTween.scale(gameObject, Vector3.one*1.25f, 0.25f).setLoopPingPong().setLoopCount(2).setEase(LeanTweenType.easeOutCubic);
 		animator.CrossFade("Match", 0.5f);
 		
 		StartCoroutine(AnimateAway());
@@ -89,19 +88,6 @@ public class Card:MonoBehaviour {
 		{
 			transform.position = position;
 		};
-	}
-
-	private IEnumerator MoveToAsync(Vector3 position, Vector3 pivot, float time)
-	{
-		Vector3 originalPosition = transform.position;
-		float counter = 0;
-		while (counter < time)
-		{
-			counter += Time.deltaTime;
-			float ratio = counter/time;
-			transform.position = Vector3.Lerp(originalPosition, position, Mathf.SmoothStep(0, 1, ratio));
-			yield return 0;
-		}
 	}
 
 	private IEnumerator AnimateAway()
