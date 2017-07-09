@@ -16,12 +16,14 @@ public class Game:MonoBehaviour
 		}
 	}
 
+	//This difficulty stuff should probably exist somewhere else?
+	//Im not sure what the UI for this is going to be.
+	public enum Difficulty { Easy, Medium, Hard };
+	public Difficulty difficulty = Difficulty.Medium;
+
 	public Level testLevel;
-
 	public GameUIManager uiManger;
-
 	public Background currentBackground;
-
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
 	public float cardScaling = 1.0f;
@@ -133,6 +135,12 @@ public class Game:MonoBehaviour
 		yield return new WaitForSeconds(1.0f);
 
 		int shuffleCount = cards.Length/2;
+
+		if (difficulty <= Difficulty.Easy)
+		{
+			shuffleCount = 0;
+		}
+
 		for (int i = 0; i < shuffleCount; i++)
 		{
 			int card0Index = Random.Range(0, cards.Length);
@@ -231,7 +239,6 @@ public class Game:MonoBehaviour
 
 		endGameGroup.alpha = 0;
 		
-		//LeanTween.value(endGameGroup.gameObject, (v) => { endGameGroup.alpha = v; }, 0.0f, 1.0f, 0.5f).setEase(LeanTweenType.easeOutCubic);
 		while (endGameGroup.alpha < 1)
 		{
 			endGameGroup.alpha += Time.deltaTime*2;
