@@ -445,7 +445,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c907515aae36af441a0f8426ac6162ea, type: 2}
+  - {fileID: 2100000, guid: 0cd8ee4df5d38f3438af09959509eb79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -485,7 +485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &562941787
 Transform:
   m_ObjectHideFlags: 0
@@ -612,7 +612,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c907515aae36af441a0f8426ac6162ea, type: 2}
+  - {fileID: 2100000, guid: 0cd8ee4df5d38f3438af09959509eb79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -815,7 +815,6 @@ GameObject:
   m_Component:
   - component: {fileID: 10102134}
   - component: {fileID: 947800423}
-  - component: {fileID: 947800499}
   m_Layer: 0
   m_Name: AfricaMap_EasternAfrica
   m_TagString: Untagged
@@ -835,6 +834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Eastern Africa
+  popupScale: 5
+  selectionColor: {r: 0.034482718, g: 1, b: 0, a: 0.503}
   levels:
   - {fileID: 11400000, guid: 2eda5d8e95eeede409963d58ea1c0718, type: 2}
   - {fileID: 11400000, guid: e0787dcf9e7d5bc4a9d4f97ae2a592d9, type: 2}
@@ -847,23 +848,6 @@ MonoBehaviour:
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
   asSelectSource: {fileID: 2068553034}
---- !u!95 &947800499
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 947800422}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 16dbfa40fbefe0e41b05c1d0129815cd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &969998719
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +906,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c907515aae36af441a0f8426ac6162ea, type: 2}
+  - {fileID: 2100000, guid: 0cd8ee4df5d38f3438af09959509eb79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1052,8 +1036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267e2a5b942275143beb6ed7301a0e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSelectTransform: {fileID: 562941787}
   splashScreenTransform: {fileID: 1562367964}
+  levelSelectTransform: {fileID: 562941787}
   infoTransform: {fileID: 328485462}
 --- !u!4 &1322848402
 Transform:
@@ -1136,7 +1120,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c907515aae36af441a0f8426ac6162ea, type: 2}
+  - {fileID: 2100000, guid: 0cd8ee4df5d38f3438af09959509eb79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1357,6 +1341,22 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -1.35
       objectReference: {fileID: 0}
+    - target: {fileID: 1261529979331456, guid: b641b01d919a7254cb3de34e91692115, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815409910970354, guid: b641b01d919a7254cb3de34e91692115, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467924793466182, guid: b641b01d919a7254cb3de34e91692115, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -3.186558
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467924793466182, guid: b641b01d919a7254cb3de34e91692115, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b641b01d919a7254cb3de34e91692115, type: 2}
   m_IsPrefabParent: 0
@@ -1434,7 +1434,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1686399027}
   - component: {fileID: 1683820064}
-  - component: {fileID: 1683820140}
   m_Layer: 0
   m_Name: AfricaMap_WesternAfrica
   m_TagString: Untagged
@@ -1454,6 +1453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Western Africa
+  popupScale: 5
+  selectionColor: {r: 0.034482718, g: 1, b: 0, a: 0.503}
   levels:
   - {fileID: 11400000, guid: dc6ef901ee83dc24387c9ddf87502e17, type: 2}
   - {fileID: 11400000, guid: dcc4e6ed0032aa44fa3612a4f3ec7856, type: 2}
@@ -1462,23 +1463,6 @@ MonoBehaviour:
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
   asSelectSource: {fileID: 2068553034}
---- !u!95 &1683820140
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1683820063}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 16dbfa40fbefe0e41b05c1d0129815cd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1686399027
 Transform:
   m_ObjectHideFlags: 0
@@ -1591,7 +1575,6 @@ GameObject:
   m_Component:
   - component: {fileID: 291391601}
   - component: {fileID: 1772069703}
-  - component: {fileID: 1772069729}
   m_Layer: 0
   m_Name: AfricaMap_SouthernAfrica
   m_TagString: Untagged
@@ -1611,6 +1594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Southern Africa
+  popupScale: 5
+  selectionColor: {r: 0.034482718, g: 1, b: 0, a: 0.503}
   levels:
   - {fileID: 11400000, guid: 1dbaab0a3c36cdf4a8610dd7faa5526b, type: 2}
   - {fileID: 11400000, guid: 495806f2ee7503d4a9296c51c6de3d8e, type: 2}
@@ -1619,23 +1604,6 @@ MonoBehaviour:
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
   asSelectSource: {fileID: 2068553034}
---- !u!95 &1772069729
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1772069702}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 16dbfa40fbefe0e41b05c1d0129815cd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1801523499
 Prefab:
   m_ObjectHideFlags: 0
@@ -1698,6 +1666,10 @@ Prefab:
     - target: {fileID: 400000, guid: f6947e3b189dbfa4098b5c79b61c26b6, type: 3}
       propertyPath: m_LocalScale.z
       value: 7.9687867
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f6947e3b189dbfa4098b5c79b61c26b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6947e3b189dbfa4098b5c79b61c26b6, type: 3}
@@ -1884,7 +1856,6 @@ GameObject:
   m_Component:
   - component: {fileID: 407452115}
   - component: {fileID: 1864189828}
-  - component: {fileID: 1864189869}
   m_Layer: 0
   m_Name: AfricaMap_CentralAfrica
   m_TagString: Untagged
@@ -1904,6 +1875,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Central Africa
+  popupScale: 5
+  selectionColor: {r: 0.034482718, g: 1, b: 0, a: 0.503}
   levels:
   - {fileID: 11400000, guid: 427cbc73a8f0a6745adff85e4941458a, type: 2}
   - {fileID: 11400000, guid: 35ab4aa1d66074f409defd51090821b0, type: 2}
@@ -1914,23 +1887,6 @@ MonoBehaviour:
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
   asSelectSource: {fileID: 2068553034}
---- !u!95 &1864189869
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1864189827}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 16dbfa40fbefe0e41b05c1d0129815cd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1864788329 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4671248792206676, guid: 33eda0d1b438f4d42a6654afe45b51b1,
@@ -2077,7 +2033,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c907515aae36af441a0f8426ac6162ea, type: 2}
+  - {fileID: 2100000, guid: 0cd8ee4df5d38f3438af09959509eb79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2112,7 +2068,6 @@ GameObject:
   m_Component:
   - component: {fileID: 13871713}
   - component: {fileID: 2064405681}
-  - component: {fileID: 2064405717}
   m_Layer: 0
   m_Name: AfricaMap_NorthernAfrica
   m_TagString: Untagged
@@ -2132,6 +2087,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: North Africa
+  popupScale: 5
+  selectionColor: {r: 0.034482718, g: 1, b: 0, a: 0.503}
   levels:
   - {fileID: 11400000, guid: 766d14efe420bd548aacf1bc62f2f568, type: 2}
   - {fileID: 11400000, guid: 37a7628caed2d964e8c307f009fba6de, type: 2}
@@ -2139,23 +2096,6 @@ MonoBehaviour:
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
   asSelectSource: {fileID: 2068553034}
---- !u!95 &2064405717
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2064405680}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 16dbfa40fbefe0e41b05c1d0129815cd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2068553032
 GameObject:
   m_ObjectHideFlags: 0

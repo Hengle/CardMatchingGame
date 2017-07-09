@@ -7,28 +7,23 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_Puku_F
-  m_Shader: {fileID: 4800000, guid: 938558f303573a348815b41667cdbaf6, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6c7167d259f997c4c9cdc8ab784decd4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: b9a86f72c2446d243abdb1f0a2cb0471, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    - first:
-        name: _Cutoff
-      second: 0.9
+    - PixelSnap: 0
+    - _Cutoff: 0.9
+    - _Illum: 1
     m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
