@@ -12,7 +12,7 @@ public class Game:MonoBehaviour
 	{
 		get
 		{
-			return _current ?? (_current = FindObjectOfType<Game>());
+			return _current ? _current : _current = FindObjectOfType<Game>();
 		}
 	}
 
@@ -22,7 +22,6 @@ public class Game:MonoBehaviour
 	public Difficulty difficulty = Difficulty.Medium;
 
 	public Level testLevel;
-	public GameUIManager uiManger;
 	public Background currentBackground;
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
@@ -38,7 +37,7 @@ public class Game:MonoBehaviour
 		set
 		{
 			_failCount = value;
-			uiManger.UpdateFailCounter();
+			GameUIManager.current.UpdateFailCounter();
 		}
 	}
 
@@ -118,10 +117,10 @@ public class Game:MonoBehaviour
 			counter += 1;
 		}
 
-		StartCoroutine(CardShuffle());
+		StartCoroutine(PreGameSequence());
 	}
 
-	IEnumerator CardShuffle()
+	IEnumerator PreGameSequence()
 	{
 		yield return new WaitForSeconds(3);
 
@@ -163,6 +162,8 @@ public class Game:MonoBehaviour
 		}
 
 		gameIsStarted = true;
+
+		GameUIManager.current.OnGameStart();
 	}
 
 	void Update() {
@@ -232,7 +233,7 @@ public class Game:MonoBehaviour
 		//Debug.Log("You Win!");
 
 		CanvasGroup endGameGroup = Instantiate(Resources.Load<CanvasGroup>("UI/EndGameUI"));
-		endGameGroup.transform.SetParent(uiManger.canvas.transform, false);
+		endGameGroup.transform.SetParent(GameUIManager.current.canvas.transform, false);
 
 		Text endGameText = endGameGroup.transform.Find("Text").gameObject.GetComponent<Text>();
 		endGameText.text = "You\n"+(didWin ? "Win" : "Lose");
