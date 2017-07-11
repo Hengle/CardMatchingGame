@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using KeenTween;
 
 public class Game:MonoBehaviour
 {
@@ -110,9 +111,6 @@ public class Game:MonoBehaviour
 			
 			cardGrid[card0.tilePositionX, card0.tilePositionY] = card0;
 			cardGrid[card1.tilePositionX, card1.tilePositionY] = card1;
-			
-			card0.isFlipped = true;
-			card1.isFlipped = true;
 
 			counter += 1;
 		}
@@ -122,13 +120,55 @@ public class Game:MonoBehaviour
 
 	IEnumerator PreGameSequence()
 	{
-		yield return new WaitForSeconds(3);
-
 		Card[] cards = GetAllCards();
 
+		Vector3 targetCardScale = cardGrid[0, 0].transform.localScale;
 		foreach (var card in cards)
 		{
-			card.isFlipped = false;
+			card.transform.localScale = Vector3.zero;
+		}
+
+		yield return new WaitForSeconds(0.5f);
+
+		float waveDelay = 0.1f;
+
+		for (int y = 0; y < currentLevel.cardCountY; y++)
+		{
+			for (int x = 0; x < currentLevel.cardCountX; x++)
+			{
+				Card card = cardGrid[x, currentLevel.cardCountY-y-1];
+				card.transform.localScale = Vector3.zero;
+				new Tween(null, 0, 1, 1.0f, new CurveElastic(TweenCurveMode.Out), t =>
+				{
+					card.transform.localScale = Vector3.LerpUnclamped(Vector3.zero, targetCardScale, t.currentValue);
+				});
+				
+				yield return new WaitForSeconds(waveDelay); 
+			}
+		}
+
+		yield return new WaitForSeconds(0.25f);
+
+		for (int y = 0; y < currentLevel.cardCountY; y++)
+		{
+			for (int x = 0; x < currentLevel.cardCountX; x++)
+			{
+				Card card = cardGrid[x, currentLevel.cardCountY-y-1];
+				card.isFlipped = true;
+				yield return new WaitForSeconds(waveDelay);
+			}
+		}
+
+		yield return new WaitForSeconds(3);
+		
+		for (int y = 0; y < currentLevel.cardCountY; y++)
+		{
+			for (int x = 0; x < currentLevel.cardCountX; x++)
+			{
+				Card card = cardGrid[x, currentLevel.cardCountY-y-1];
+				card.isFlipped = false;
+				yield return new WaitForSeconds(waveDelay);
+			}
 		}
 
 		yield return new WaitForSeconds(1.0f);
@@ -298,8 +338,8 @@ public class Game:MonoBehaviour
 		if (cardGrid == null) {
 			return allCards.ToArray();
 		}
-		for (int x = 0; x < currentLevel.cardCountX; x++) {
-			for (int y = 0; y < currentLevel.cardCountY; y++) {
+		for (int y = 0; y < currentLevel.cardCountY; y++) {
+			for (int x = 0; x < currentLevel.cardCountX; x++) {
 				allCards.Add(cardGrid[x,y]);
 			}
 		}

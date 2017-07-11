@@ -19,6 +19,11 @@ public class Card:MonoBehaviour {
 			return _isFlipped;
 		}
 		set {
+			if (value == _isFlipped)
+			{
+				return;
+			}
+
 			_isFlipped = value;
 			
 			if (_isFlipped) {
@@ -49,14 +54,9 @@ public class Card:MonoBehaviour {
 		}
 	}
 
-	private Animation _scaleAnimation;
-	public Animation scaleAnimation {
-		get {
-			if (!_scaleAnimation) {
-				_scaleAnimation = gameObject.GetComponent<Animation>();
-			}
-			return _scaleAnimation;
-		}
+	void Awake()
+	{
+		isFlipped = false;
 	}
 
 	public void OnMatch(Card other)
@@ -107,10 +107,5 @@ public class Card:MonoBehaviour {
 
 	public void AnimateDance() {
 		animalAnimator.SetTrigger("Dance");
-	}
-	
-
-	void Awake() {
-		isFlipped = false;
 	}
 }

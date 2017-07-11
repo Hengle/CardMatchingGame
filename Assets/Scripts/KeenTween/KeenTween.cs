@@ -121,6 +121,8 @@ namespace KeenTween
 		public float from { get; set; }
 		public float to { get; set; }
 		public float length { get; set; }
+		public float delay { get; set; }
+		private float delayCounter = 0;
 		public TweenCurve curve { get; set; }
 
 		public List<Tween> childList = new List<Tween>();
@@ -213,6 +215,15 @@ namespace KeenTween
 			if (isDone)
 			{
 				return;
+			}
+
+			if (delay > 0)
+			{
+				delayCounter += deltaTime;
+				if (delayCounter < delay)
+				{
+					return;
+				}
 			}
 
 			currentTime += deltaTime;
