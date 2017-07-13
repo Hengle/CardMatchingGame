@@ -59,6 +59,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
+    - _Cull: 2
     - _Cutoff: 0.9
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -69,6 +70,8 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Offset: 0
+    - _OffsetFalloff: 0
     - _Parallax: 0.02
     - _ShakeBending: 0.1
     - _ShakeDisplacement: 0.461
@@ -78,6 +81,7 @@ Material:
     - _SpecularHighlights: 0
     - _SrcBlend: 1
     - _UVSec: 0
+    - _ZTestFunc: 4
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 0.99188644, b: 0.9705882, a: 1}

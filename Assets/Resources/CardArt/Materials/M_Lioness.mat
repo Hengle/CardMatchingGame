@@ -7,49 +7,39 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_Lioness
-  m_Shader: {fileID: 4800000, guid: 938558f303573a348815b41667cdbaf6, type: 3}
+  m_Shader: {fileID: 4800000, guid: b7dfe88e6c8d3f04e8f56a261772a1c7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
+  m_EnableInstancingVariants: 0
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: 09c9260783fde5f45ad5a40e7bbbee66, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Cutoff
-      second: 0.9
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
-      second: 0
+    - PixelSnap: 0
+    - _ColorMask: 15
+    - _Cull: 2
+    - _Cutoff: 0.9
+    - _DstBlend: 10
+    - _Offset: 0
+    - _OffsetFalloff: 0
+    - _Rotation: 0
+    - _ScrollXSpeed: 0
+    - _ScrollYSpeed: 0
+    - _SrcBlend: 5
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    - _ZTestFunc: 4
+    - _ZWrite: 0
     m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}

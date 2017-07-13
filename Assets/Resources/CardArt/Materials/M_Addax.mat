@@ -7,11 +7,11 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: M_Addax
-  m_Shader: {fileID: 4800000, guid: 938558f303573a348815b41667cdbaf6, type: 3}
+  m_Shader: {fileID: 4800000, guid: b7dfe88e6c8d3f04e8f56a261772a1c7, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -64,9 +64,10 @@ Material:
     m_Floats:
     - PixelSnap: 0
     - _BumpScale: 1
+    - _Cull: 2
     - _Cutoff: 0.9
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EnableExternalAlpha: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -75,14 +76,18 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Offset: 0
+    - _OffsetFalloff: 0
     - _Parallax: 0.02
-    - _ScrollXSpeed: 2
-    - _ScrollYSpeed: 2
+    - _Rotation: 0
+    - _ScrollXSpeed: 0
+    - _ScrollYSpeed: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZTestFunc: 4
+    - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
