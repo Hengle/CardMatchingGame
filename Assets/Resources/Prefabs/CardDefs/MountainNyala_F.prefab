@@ -42,7 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshPrefab: {fileID: 1000013202871714, guid: ecf7cd63d432edc4582b72d174fd3564, type: 2}
   animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
-  material: {fileID: 2100000, guid: 18d92219dfeab104385d43a5c997e2ba, type: 2}
+  material: {fileID: 2100000, guid: 96d9eeb44dae0bc4c9e77da03987ca29, type: 2}
   animalScaler: 1.2
 --- !u!1001 &100100000
 Prefab:
