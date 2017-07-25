@@ -371,6 +371,18 @@ public class Game:MonoBehaviour
 
 		card.transform.localScale = Vector3.one*GetCardScaler();
 
+		MaterialPropertyBlock block = new MaterialPropertyBlock();
+
+		if (currentLevel.timeOfDay)
+		{
+			foreach (Renderer r in card.gameObject.GetComponentsInChildren<Renderer>())
+			{
+				r.GetPropertyBlock(block);
+				block.SetColor("_Color", currentLevel.timeOfDay.cardTint);
+				r.SetPropertyBlock(block);
+			}
+		}
+
 		GameObject meshObject = Instantiate(cardDef.meshPrefab);
 		meshObject.transform.parent = card.transform.Find("RotationPivot/AnimalPivot");
 		meshObject.transform.localPosition = Vector3.zero;
@@ -383,6 +395,13 @@ public class Game:MonoBehaviour
 		Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
 		foreach (Renderer r in renderers) {
 			r.sharedMaterial = cardDef.material;
+
+			if (currentLevel.timeOfDay)
+			{
+				r.GetPropertyBlock(block);
+				block.SetColor("_Color", currentLevel.timeOfDay.cardTint);
+				r.SetPropertyBlock(block);
+			}
 		}
 
 		return card;

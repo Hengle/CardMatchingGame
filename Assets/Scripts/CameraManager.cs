@@ -10,10 +10,25 @@ public class CameraManager : MonoBehaviour
 	public PostProcessingProfile defaultProfile;
 
 	private Material compositMaterial;
+	private PostProcessingProfile profile;
 
 	private void Awake()
 	{
 		compositMaterial = new Material(Shader.Find("Hidden/CompositCameras"));
+		profile = Instantiate(defaultProfile);
+		PostProcessingBehaviour ppb = backgroundCamera.gameObject.GetComponent<PostProcessingBehaviour>();
+		ppb.profile = profile;
+	}
+
+	private void Start()
+	{
+		UserLutModel.Settings settings = profile.userLut.settings;
+		settings.lut = null;
+		if (Game.current.currentLevel.timeOfDay)
+		{
+			settings.lut = Game.current.currentLevel.timeOfDay.lut;
+		}
+		profile.userLut.settings = settings;
 	}
 
 	/*

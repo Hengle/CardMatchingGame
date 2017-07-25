@@ -50,6 +50,7 @@ MonoBehaviour:
   maxFailCount: 24
   background: {fileID: 114269455696899728, guid: e2c15cc12766b4a44b90ffeefe689a01,
     type: 2}
+  timeOfDay: {fileID: 11400000, guid: 79a9f7b8787a8b54e97b92f084292a2f, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

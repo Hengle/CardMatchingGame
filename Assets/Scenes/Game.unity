@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameCamera: {fileID: 1518173841}
   backgroundCamera: {fileID: 445268191}
-  defaultProfile: {fileID: 0}
+  defaultProfile: {fileID: 11400000, guid: 301a847fe3464ad4d8cdc58c2761b321, type: 2}
 --- !u!1 &1747507769
 GameObject:
   m_ObjectHideFlags: 0
