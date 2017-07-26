@@ -44,11 +44,11 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
   material: {fileID: 2100000, guid: d5d032d14b02bf349b7814ae3a57a55e, type: 2}
   animalScaler: 1.3
-  displayName: 
-  gender: 0
+  displayName: Sable Antelope
+  gender: 1
   conservation: 0
   infoMapTexture: {fileID: 2800000, guid: 3d8ac6fa9114dd64db8429ae21dbfcfd, type: 3}
-  maxCount: 0
+  maxCount: 10
   spokenName: {fileID: 8300000, guid: fcd9923a44f88f04b82bb731abee0ce2, type: 3}
 --- !u!1001 &100100000
 Prefab:

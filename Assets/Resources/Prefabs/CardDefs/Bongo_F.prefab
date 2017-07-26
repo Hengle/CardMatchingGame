@@ -42,13 +42,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshPrefab: {fileID: 1000013202871714, guid: ecf7cd63d432edc4582b72d174fd3564, type: 2}
   animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
-  material: {fileID: 2100000, guid: 6d32637f25387b242b401fd2b2ab0da7, type: 2}
+  material: {fileID: 2100000, guid: e8a73ee5de9899a4d96ce78994c0df0d, type: 2}
   animalScaler: 1.3
-  displayName: 
-  gender: 0
-  conservation: 0
+  displayName: Bongo
+  gender: 1
+  conservation: 1
   infoMapTexture: {fileID: 2800000, guid: 3d8ac6fa9114dd64db8429ae21dbfcfd, type: 3}
-  maxCount: 0
+  maxCount: 9
   spokenName: {fileID: 8300000, guid: 45f76526193b95645a070e80e1a0cb84, type: 3}
 --- !u!1001 &100100000
 Prefab:
