@@ -123,10 +123,6 @@ public class InfoCardManager : MonoBehaviour
 		animalGender.texture = cardDef.gender == CardDef.Gender.Male ? genderTextureMale : genderTextureFemale;
         animalConservationText.text = conservationTextDict[cardDef.conservation];
         animalMap.texture = cardDef.infoMapTexture;
-
-        //@TODO need to hook up the unlock counter 
-        int counter = 1;
-        animalPercentage.text = "Unlocked: " + counter + "/" + cardDef.maxCount + " Percentage: " + ((float)counter / cardDef.maxCount) * 100 + "%";
     }
 
     private void Arrow(string direction)
