@@ -43,8 +43,15 @@ MonoBehaviour:
   cardDefs:
   - {fileID: 11400000, guid: 7ef70de2dc236bd4f893afe10b4688bf, type: 2}
   - {fileID: 11400000, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 2}
-  - {fileID: 11400000, guid: f29e283c34cdbaa49bead7f68321bd51, type: 2}
-  - {fileID: 11400000, guid: 7dbeac273fd5f80469f11f761475e0c5, type: 2}
+  - {fileID: 11400000, guid: cba3ed27fd89b6a4482d4ebcc43f09bc, type: 2}
+  - {fileID: 11400000, guid: a4a1a9d3179505f40a1b9f811d7e2eda, type: 2}
+  - {fileID: 11400000, guid: d38594f9699678d46a9b093604a5df35, type: 2}
+  - {fileID: 11400000, guid: 34ba72d1b8cf2824093b2345ac9edf22, type: 2}
+  - {fileID: 11400000, guid: f85d5ce2d16447740b03e93042dcece8, type: 2}
+  - {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882, type: 2}
+  - {fileID: 11400000, guid: 60ad3506f94a3c146afd9fc54cf3209b, type: 2}
+  - {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3, type: 2}
+  - {fileID: 11400000, guid: ed228cabbce92b643a4d84cdeb48e33f, type: 2}
   cardCountX: 3
   cardCountY: 2
   maxFailCount: 24

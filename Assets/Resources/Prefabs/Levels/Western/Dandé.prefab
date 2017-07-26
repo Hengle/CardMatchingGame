@@ -41,9 +41,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardDefs:
-  - {fileID: 11400000, guid: f29e283c34cdbaa49bead7f68321bd51, type: 2}
-  - {fileID: 11400000, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 2}
-  - {fileID: 11400000, guid: 9282a182e080b914aa0c8127285391da, type: 2}
+  - {fileID: 11400000, guid: db7f060f3f0d1e946a2e68790382c828, type: 2}
+  - {fileID: 11400000, guid: f5f57cd1427cf284d86343732f533c7b, type: 2}
+  - {fileID: 11400000, guid: d38594f9699678d46a9b093604a5df35, type: 2}
+  - {fileID: 11400000, guid: f85d5ce2d16447740b03e93042dcece8, type: 2}
+  - {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882, type: 2}
+  - {fileID: 11400000, guid: ed228cabbce92b643a4d84cdeb48e33f, type: 2}
   cardCountX: 3
   cardCountY: 2
   maxFailCount: 24
