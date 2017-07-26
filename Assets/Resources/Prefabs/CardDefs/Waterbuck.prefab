@@ -44,6 +44,11 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
   material: {fileID: 2100000, guid: 6c6168e01be34d54394d579bda537ecf, type: 2}
   animalScaler: 1.2
+  displayName: Waterbuck
+  gender: 0
+  conservation: 0
+  infoMapTexture: {fileID: 2800000, guid: 3d8ac6fa9114dd64db8429ae21dbfcfd, type: 3}
+  maxCount: 51
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

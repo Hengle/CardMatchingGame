@@ -22,6 +22,9 @@ public class InfoCardManager : MonoBehaviour
     public RawImage animalMap;
     public Text animalPercentage;
 
+	public Texture2D genderTextureMale;
+	public Texture2D genderTextureFemale;
+
     private int currentPlace = 0;
     private bool isFlipping = false;
     private bool isEnd = false;
@@ -95,51 +98,35 @@ public class InfoCardManager : MonoBehaviour
         if (animalSlot.Find("RotationPivot/AnimalPivot").childCount > 0)
             Destroy(animalSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
 
-        FillFactSheet(animal.goUnlocked.name);
+        FillFactSheet(animal.goUnlocked);
         Fill(animalSlot.gameObject, animal);
         animalSlot.GetComponent<Animator>().Play("FlipToFront");
         //Flip(animalSlot.GetComponent<Animator>(), true);
     }
 
-    private void FillFactSheet(string animalName)
+	Dictionary<CardDef.Conservation, string> conservationTextDict = new Dictionary<CardDef.Conservation, string>()
+	{
+		{ CardDef.Conservation.LeastConcern, "Least Concern" },
+		{ CardDef.Conservation.NearThreatened, "Near Threatened" },
+		{ CardDef.Conservation.Vulnerable, "Vulnerable" },
+		{ CardDef.Conservation.Endangered, "Endangered" },
+		{ CardDef.Conservation.CriticallyEndangered, "Critically Endangered" }
+	};
+	private void FillFactSheet(CardDef cardDef)
     {
-        // Name to display
-        string name = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.displayName).First();
-
-        if (name == "")
-            name = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.name).First();
-
-        string gender = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.gender).First();
-
-        // Description to display
-        string conservation = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.conservation).First();
-
-        // String of map name
-        string image = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.map).First();
-
-        // Max number of each animal in game
-        float maxCount = (from animal in InfoText.getDescriptions() where animal.name == animalName select animal.maxCount).First();
-
-        // Sets name
-        animalNameText.text = name;
-
-        // Seperator / in linux/mac and \ in windows
-        char seperator = Path.DirectorySeparatorChar;
-
-        // Sets gender
-        string GenderPath = "UI" + seperator + "Gender" + seperator + gender;
-        animalGender.texture = (Texture)Resources.Load(GenderPath);
-
-        // Sets consrvation
-        animalConservationText.text = conservation;
-
-        // Creates path to texture
-        string path = "Map" + seperator + "InfoMaps" + seperator +"Textures" + seperator + image;
-        animalMap.texture = (Texture)Resources.Load(path);
+        string name = cardDef.displayName;
+		if (string.IsNullOrEmpty(name))
+		{
+			name = cardDef.name;
+		}
+		animalNameText.text = name;
+		animalGender.texture = cardDef.gender == CardDef.Gender.Male ? genderTextureMale : genderTextureFemale;
+        animalConservationText.text = conservationTextDict[cardDef.conservation];
+        animalMap.texture = cardDef.infoMapTexture;
 
         //@TODO need to hook up the unlock counter 
         int counter = 1;
-        animalPercentage.text = "Unlocked: 1/" + maxCount + " Percentage: " + (counter / maxCount) * 100 + "%";
+        animalPercentage.text = "Unlocked: " + counter + "/" + cardDef.maxCount + " Percentage: " + ((float)counter / cardDef.maxCount) * 100 + "%";
     }
 
     private void Arrow(string direction)

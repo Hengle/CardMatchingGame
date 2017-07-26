@@ -44,6 +44,11 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
   material: {fileID: 2100000, guid: c6aa4c9d111fbdb43a961c00526cb157, type: 2}
   animalScaler: 0.7
+  displayName: Klipspringer
+  gender: 1
+  conservation: 0
+  infoMapTexture: {fileID: 2800000, guid: 3d8ac6fa9114dd64db8429ae21dbfcfd, type: 3}
+  maxCount: 30
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

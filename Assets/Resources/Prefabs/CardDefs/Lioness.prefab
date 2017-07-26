@@ -43,6 +43,12 @@ MonoBehaviour:
   meshPrefab: {fileID: 1785916870256794, guid: 3f38a578c756475428068ed086b5dfc6, type: 2}
   animatorController: {fileID: 9100000, guid: 7d2be1ec223b17d47a7922956d300bd8, type: 2}
   material: {fileID: 2100000, guid: 7286af345f6d11e4382cdc6212f6b271, type: 2}
+  animalScaler: 1
+  displayName: 
+  gender: 0
+  conservation: 0
+  infoMapTexture: {fileID: 2800000, guid: 3d8ac6fa9114dd64db8429ae21dbfcfd, type: 3}
+  maxCount: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
