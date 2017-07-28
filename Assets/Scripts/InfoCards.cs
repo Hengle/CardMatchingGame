@@ -6,7 +6,9 @@ public class InfoCards : MonoBehaviour
 {
     public CardDef goUnlocked;
     public Transform animalAnimator;
+    public RuntimeAnimatorController animatorController;
     public GameObject meshObject;
+    public AudioClip spokenName;
 
     public GameObject cards;
     public GameObject background;

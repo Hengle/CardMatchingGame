@@ -14,6 +14,7 @@ public class InfoCardManager : MonoBehaviour
     public CardDef[] goUnlocked;
     public GameObject[] goSlots;
     public GameObject goBackground;
+    public GameObject goMenuBackground;
     public GameObject goBackButton;
 
     public Text animalNameText;
@@ -21,6 +22,7 @@ public class InfoCardManager : MonoBehaviour
     public Text animalConservationText;
     public RawImage animalMap;
     public Text animalPercentage;
+    public AudioSource antilopeAS;
 
 	public Texture2D genderTextureMale;
 	public Texture2D genderTextureFemale;
@@ -28,6 +30,16 @@ public class InfoCardManager : MonoBehaviour
     private int currentPlace = 0;
     private bool isFlipping = false;
     private bool isEnd = false;
+    private GameObject newMesh;
+    private bool animationEnd = true;
+    private AudioClip nameAudio;
+
+    public void AntilopeClicked()
+    {
+        newMesh.GetComponent<Animator>().SetTrigger("AudioDance");
+        antilopeAS.clip = nameAudio;
+        antilopeAS.Play();
+    }
 
     private void Awake()
     {
@@ -72,13 +84,12 @@ public class InfoCardManager : MonoBehaviour
 
         if(!goBackButton.GetComponent<Info>().factSheet)
         {
-            foreach (GameObject slot in goSlots)
+            if (animationEnd && newMesh)
             {
-                slot.SetActive(true);
+                animationEnd = false;
+                newMesh.GetComponent<Animator>().SetTrigger("Run");
+                StartCoroutine(AnimateWalkToAndAway(newMesh, true));
             }
-            goBackground.SetActive(false);
-            goLeftArrow.SetActive(true);
-            goRightArrow.SetActive(true);
         }
     }
 
@@ -89,6 +100,8 @@ public class InfoCardManager : MonoBehaviour
         {
             slot.SetActive(false);
         }
+
+        goMenuBackground.SetActive(false);
         goBackground.SetActive(true);
         goLeftArrow.SetActive(false);
         goRightArrow.SetActive(false);
@@ -97,14 +110,57 @@ public class InfoCardManager : MonoBehaviour
 
         if (animalSlot.Find("RotationPivot/AnimalPivot").childCount > 0)
             Destroy(animalSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
-
         FillFactSheet(animal.goUnlocked);
-        Fill(animalSlot.gameObject, animal);
+        newMesh = Fill(animalSlot.gameObject, animal);
+
         animalSlot.GetComponent<Animator>().Play("FlipToFront");
+        newMesh.GetComponent<Animator>().SetTrigger("Run");
+        StartCoroutine(AnimateWalkToAndAway(newMesh, false));
+        
         //Flip(animalSlot.GetComponent<Animator>(), true);
     }
 
-	Dictionary<CardDef.Conservation, string> conservationTextDict = new Dictionary<CardDef.Conservation, string>()
+    private IEnumerator AnimateWalkToAndAway(GameObject animalPivot, bool away)
+    {
+        yield return new WaitForSeconds(0.1f);
+        float counter = 0;
+
+        if (away)
+        {
+            goMenuBackground.SetActive(false);
+            while (counter < 2)
+            {
+                counter += Time.deltaTime;
+                float ratio = counter / 2;
+                animalPivot.transform.localPosition = new Vector3(Mathf.Lerp(2.5f, 6, ratio), 0, Mathf.Lerp(0, 0.225f, ratio * 5));
+                yield return 0;
+            }
+            Destroy(animalPivot.gameObject);
+
+            foreach (GameObject slot in goSlots)
+            {
+                slot.SetActive(true);
+            }
+            goBackground.SetActive(false);
+            goLeftArrow.SetActive(true);
+            goRightArrow.SetActive(true);
+            animationEnd = true;
+        }
+        else
+        {
+            while (counter < 2)
+            {
+                counter += Time.deltaTime;
+                float ratio = counter / 2;
+                animalPivot.transform.localPosition = new Vector3(Mathf.Lerp(-2, 2.5f, ratio), 0, Mathf.Lerp(0, 0.225f, ratio * 5));
+                yield return 0;
+            }
+            goMenuBackground.SetActive(true);
+            animalPivot.GetComponent<Animator>().SetTrigger("Idle");
+        }
+    }
+
+    Dictionary<CardDef.Conservation, string> conservationTextDict = new Dictionary<CardDef.Conservation, string>()
 	{
 		{ CardDef.Conservation.LeastConcern, "Least Concern" },
 		{ CardDef.Conservation.NearThreatened, "Near Threatened" },
@@ -152,20 +208,22 @@ public class InfoCardManager : MonoBehaviour
                 currentPlace = goUnlocked.Length - 8;
 
             ic.goUnlocked = goUnlocked[currentPlace];
+            ic.animatorController = goUnlocked[currentPlace].animatorController;
+            ic.spokenName = goUnlocked[currentPlace].spokenName;
 
             Fill(slot, ic);
 
             if (!PlayerPrefs.HasKey(ic.goUnlocked.ToString()))
             {
                 StartCoroutine(CardFlip(slot.GetComponent<Animator>(), true));
-                }
+            }
 
             currentPlace++;
         }
         isFlipping = false;
     }
 
-    private void Fill(GameObject slot, InfoCards ic)
+    private GameObject Fill(GameObject slot, InfoCards ic)
     {
         //slot.name = ic.goUnlocked.ToString();
 
@@ -176,11 +234,16 @@ public class InfoCardManager : MonoBehaviour
         meshObject.transform.localRotation = Quaternion.identity;
         meshObject.transform.localScale = Vector3.one;
 
+        meshObject.GetComponent<Animator>().runtimeAnimatorController = ic.animatorController;
+        nameAudio = ic.spokenName;
+
         Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
         foreach (Renderer r in renderers)
         {
             r.sharedMaterial = ic.goUnlocked.material;
         }
+
+        return meshObject;
     }
 
     private IEnumerator CardFlip(Animator animator, bool isFlipped)
