@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d3bb4dc740aba49a1ff20be876d618, type: 3}
   m_Name: Morning
   m_EditorClassIdentifier: 
-  lut: {fileID: 2800000, guid: d15c445d6ea442b439d2163737a82632, type: 3}
+  lut: {fileID: 2800000, guid: 3fd7c6c2b18f27c42a33683c8d3b590c, type: 3}
   cardTint: {r: 1, g: 0.92209, b: 0.841, a: 1}

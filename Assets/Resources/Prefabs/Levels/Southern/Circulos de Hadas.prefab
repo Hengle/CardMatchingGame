@@ -48,9 +48,9 @@ MonoBehaviour:
   cardCountX: 3
   cardCountY: 2
   maxFailCount: 24
-  background: {fileID: 114269455696899728, guid: e2c15cc12766b4a44b90ffeefe689a01,
+  background: {fileID: 114269455696899728, guid: 3251856c8fe1fbe459c13868402984d8,
     type: 2}
-  timeOfDay: {fileID: 11400000, guid: 36e8263ebb881684ba51c8a6f7f49768, type: 2}
+  timeOfDay: {fileID: 11400000, guid: a6a0381023baa984d81256dc867488d0, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -53,7 +53,7 @@ MonoBehaviour:
   cardCountX: 3
   cardCountY: 2
   maxFailCount: 24
-  background: {fileID: 114269455696899728, guid: e2c15cc12766b4a44b90ffeefe689a01,
+  background: {fileID: 114269455696899728, guid: d0e760108265b9943ba229c863ea9a52,
     type: 2}
   timeOfDay: {fileID: 11400000, guid: 3d9d981a5cf085d428c321de2d8ce958, type: 2}
 --- !u!1001 &100100000
