@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 22237440}
   - component: {fileID: 11476448}
   - component: {fileID: 22597704}
+  - component: {fileID: 114011947709434736}
   m_Layer: 5
   m_Name: EndGameUI
   m_TagString: Untagged
@@ -187,3 +188,17 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 101818}
   m_IsPrefabParent: 1
+--- !u!114 &114011947709434736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.275}
+  m_EffectDistance: {x: 6, y: -15}
+  m_UseGraphicAlpha: 1
