@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 550079164}
   - component: {fileID: 550079163}
   - component: {fileID: 550079162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,6 +502,7 @@ Transform:
   - {fileID: 1848331256}
   - {fileID: 72664574}
   - {fileID: 2068553033}
+  - {fileID: 1058208491}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -923,7 +924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 10102134}
   - component: {fileID: 947800423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AfricaMap_EasternAfrica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,6 +1041,71 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969998719}
   m_Mesh: {fileID: 4300030, guid: e79ac0fecc471c2499c45c849eed2ca5, type: 3}
+--- !u!1 &1058208490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1058208491}
+  - component: {fileID: 1058208492}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058208491
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058208490}
+  m_LocalRotation: {x: 0.41775984, y: 0.13702865, z: -0.06389754, w: 0.895889}
+  m_LocalPosition: {x: 2.3216138, y: -0.86246836, z: 2.3800683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 562941787}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 50.000004, y: 17.392, z: 0}
+--- !u!108 &1058208492
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058208490}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1070748641
 Prefab:
   m_ObjectHideFlags: 0
@@ -1226,7 +1292,7 @@ GameObject:
   - component: {fileID: 1454010402}
   - component: {fileID: 1454010401}
   - component: {fileID: 1454010400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1713,6 +1779,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1771124400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1771124402}
+  - component: {fileID: 1771124401}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1771124401
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1771124400}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1771124402
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1771124400}
+  m_LocalRotation: {x: 0.22376722, y: 0.139753, z: -0.009666221, w: 0.96452266}
+  m_LocalPosition: {x: 0.764, y: 4.261, z: -2.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 25.745, y: 17.127, z: 2.7930002}
 --- !u!1 &1772069702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,22 +1932,22 @@ Prefab:
     - target: {fileID: 2300102, guid: f6947e3b189dbfa4098b5c79b61c26b6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0cd8ee4df5d38f3438af09959509eb79, type: 2}
+      objectReference: {fileID: 2100000, guid: 8d50d215239e68a44b3d6db5cc018639, type: 2}
     - target: {fileID: 400000, guid: f6947e3b189dbfa4098b5c79b61c26b6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7.968788
+      value: 7.98
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6947e3b189dbfa4098b5c79b61c26b6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.9687867
+      value: 7.98
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6947e3b189dbfa4098b5c79b61c26b6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7.9687867
+      value: 7.98
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f6947e3b189dbfa4098b5c79b61c26b6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6947e3b189dbfa4098b5c79b61c26b6, type: 3}
@@ -2045,7 +2176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 407452115}
   - component: {fileID: 1864189828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AfricaMap_CentralAfrica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2175,7 +2306,7 @@ GameObject:
   - component: {fileID: 2056384122}
   - component: {fileID: 2056384121}
   - component: {fileID: 2056384120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2257,7 +2388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 13871713}
   - component: {fileID: 2064405681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AfricaMap_NorthernAfrica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
