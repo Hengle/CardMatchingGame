@@ -8,7 +8,6 @@ public class MapRegion:MonoBehaviour
 {
 	public string regionName = "Region";
 	public float popupScale = 5;
-	public Color selectionColor = Color.white;
 	public List<Level> levels = new List<Level>();
 
     public AudioClip acSelectAudio;
@@ -26,13 +25,12 @@ public class MapRegion:MonoBehaviour
 
 	private float popupValue = 0;
 	private MeshRenderer meshRenderer;
-	private Color originalMaterialColor;
 	Tween tween;
+	Tween blendTween;
 
 	private void Start()
 	{
 		meshRenderer = gameObject.GetComponentInChildren<MeshRenderer>();
-		originalMaterialColor = meshRenderer.material.color;
 	}
 
 	public void OnLevelOverlayOpened(LevelOverlay levelOverlay)
@@ -45,6 +43,11 @@ public class MapRegion:MonoBehaviour
 			tween.Cancel();
 		}
 		tween = new Tween(null, popupValue, 1, 1.0f, new CurveElastic(TweenCurveMode.Out), UpdateTween);
+
+		if (blendTween != null && !blendTween.isDone) {
+			blendTween.Cancel();
+		}
+		blendTween = new Tween(null, popupValue, 1, 0.5f, new CurveCubic(TweenCurveMode.Out), UpdateBlendTween);
 	}
 
 	public void OnLevelOverlayClosed(LevelOverlay levelOverlay)
@@ -57,6 +60,12 @@ public class MapRegion:MonoBehaviour
 			tween.Cancel();
 		}
 		tween = new Tween(null, popupValue, 0, 1.0f, new CurveBounce(TweenCurveMode.Out), UpdateTween);
+
+		if (blendTween != null && !blendTween.isDone) {
+			blendTween.Cancel();
+		}
+		blendTween = new Tween(null, popupValue, 0, 0.5f, new CurveCubic(TweenCurveMode.Out), UpdateBlendTween);
+		blendTween.delay = 0.25f;
 	}
 
 	private void UpdateTween(Tween t)
@@ -69,7 +78,14 @@ public class MapRegion:MonoBehaviour
 		Vector3 scale = transform.localScale;
 		scale.y = popupValue*popupScale+1;
 		transform.localScale = scale;
+	}
 
-		meshRenderer.material.color = Color.Lerp(originalMaterialColor, selectionColor, t.currentValue);
+	private void UpdateBlendTween(Tween t)
+	{
+		if (!this)
+		{
+			return;
+		}
+		meshRenderer.material.SetFloat("_MainTexBlendFactor", t.currentValue);
 	}
 }

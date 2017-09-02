@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.82063156, g: 0.9411765, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelOverlayItemTemplate: {fileID: 11417822, guid: b50ab32d10a0b26409dc623204e0c2ce,
     type: 2}
-  itemParent: {fileID: 22485488}
+  gridLayout: {fileID: 11482928}
   backgroundButton: {fileID: 11431474}
   titleText: {fileID: 11422732}
 --- !u!114 &11459434
@@ -221,8 +221,8 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
   m_Spacing: {x: 5, y: 5}
-  m_Constraint: 2
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 4
 --- !u!222 &22226076
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -287,8 +287,8 @@ RectTransform:
   m_Father: {fileID: 22484792}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.25, y: 0}
+  m_AnchorMax: {x: 0.25, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.1}
@@ -360,6 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.275}
-  m_EffectDistance: {x: 6, y: -15}
+  m_EffectColor: {r: 0.008001738, g: 0.019666528, b: 0.029411793, a: 0.49803922}
+  m_EffectDistance: {x: 4, y: -8}
   m_UseGraphicAlpha: 1

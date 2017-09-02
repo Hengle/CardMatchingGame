@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class LevelOverlay:MonoBehaviour
 {
 	public LevelOverlayItem levelOverlayItemTemplate;
-	public Transform itemParent;
+	public GridLayoutGroup gridLayout;
 	public Button backgroundButton;
 	public Text titleText;
 
@@ -25,6 +25,13 @@ public class LevelOverlay:MonoBehaviour
 	
 	void Start()
 	{
+		if (mapRegion.levels.Count > 4) {
+			gridLayout.constraintCount = mapRegion.levels.Count / 2;
+		}
+		else {
+			gridLayout.constraintCount = 4;
+		}
+
 		for (int i = 0; i < mapRegion.levels.Count; i++)
 		{
 			AddLevelItem(mapRegion.levels[i], i+1);
@@ -46,7 +53,7 @@ public class LevelOverlay:MonoBehaviour
 	void AddLevelItem(Level level, int number)
 	{
 		LevelOverlayItem levelOverlayItem = Instantiate(levelOverlayItemTemplate);
-		levelOverlayItem.transform.SetParent(itemParent, false);
+		levelOverlayItem.transform.SetParent(gridLayout.transform, false);
 		levelOverlayItem.level = level;
 		levelOverlayItem.number = number;
 		//levelOverlayItem.transform.localScale = Vector3.zero;

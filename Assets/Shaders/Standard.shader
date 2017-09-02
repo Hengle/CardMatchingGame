@@ -15,7 +15,10 @@ Shader "AUP/Standard" {
 	Properties {
 		[HDR]
 		_Color ("Main Color", Color) = (1,1,1,1)
-		_MainTex ("Base (RGB)", 2D) = "white" {}
+		_MainTex ("MainTex", 2D) = "white" {}
+		[Toggle(ENABLE_BLEND_TEXTURE)] _EnableBlendTexture ("Enable Blend Texture", Float) = 0
+		_MainTex2 ("MainTex2", 2D) = "white" {}
+		_MainTexBlendFactor("Texture2Blend", Range(0, 1)) = 0
 
 		_ScrollXSpeed("X Scroll Speed", Range(-10, 10)) = 0.0
 		_ScrollYSpeed("Y Scroll Speed", Range(-10, 10)) = 0.0
@@ -51,10 +54,13 @@ Shader "AUP/Standard" {
 #pragma vertex Vert
 #pragma fragment Frag
 #pragma multi_compile_fog
+#pragma shader_feature ENABLE_BLEND_TEXTURE
 
 #include "UnityCG.cginc"
 
 			sampler2D _MainTex;
+			sampler2D _MainTex2;
+			float _MainTexBlendFactor;
 			float4 _MainTex_ST;
 			float4 _Color;
 			float _ScrollXSpeed;
@@ -105,11 +111,21 @@ Shader "AUP/Standard" {
 				return o;
 			}
 
+			float4 SampleMainTextures(float2 uv)
+			{
+				float4 color = tex2D(_MainTex, uv);
+				#if defined(ENABLE_BLEND_TEXTURE)
+				float4 color2 = tex2D(_MainTex2, uv);
+				color = lerp(color, color2, _MainTexBlendFactor);
+				#endif
+				return color;
+			}
+
 			float4 Frag(V2F IN) : SV_Target
 			{
 				float2 uv = IN.uv;
 				uv += float2(_ScrollXSpeed * _Time.y, _ScrollYSpeed * _Time.y);
-				float4 color = tex2D(_MainTex, uv);
+				float4 color = SampleMainTextures(uv);
 				color.rgb *= _Color;
 
 				UNITY_APPLY_FOG(IN.fogCoord, color);

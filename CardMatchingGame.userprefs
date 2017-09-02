@@ -1,14 +1,13 @@
-﻿<Properties StartupItem="CardMatchingGame.Plugins.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InfoText.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\Standard.shader">
     <Files>
       <File FileName="Assets\Scripts\Game.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Level.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameUIManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\TreeWind.shader" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\Character_SoftEdgeUnlit.shader" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Info.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\InfoText.cs" Line="1" Column="1" />
+      <File FileName="Assets\Shaders\Standard.shader" Line="19" Column="3" />
+      <File FileName="Assets\Scripts\MapRegion.cs" Line="88" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

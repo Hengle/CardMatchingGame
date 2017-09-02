@@ -1,9 +1,24 @@
 fileFormatVersion: 2
 guid: ac4079e330a29fd44ac16c0e494d7a97
-timeCreated: 1498109967
+timeCreated: 1504202051
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SplashHyena_1 IDLE
+    21300002: SplashHyena_1
+    21300004: SplashHyena_2
+    21300006: SplashHyena_3
+    21300008: SplashHyena_4
+    21300010: SplashHyena_5
+    21300012: SplashHyena_6
+    21300014: SplashHyena_7
+    21300016: SplashHyena_2 TURN IN
+    21300018: SplashHyena_3 TURN IN
+    21300020: SplashHyena_4 LAUGH
+    21300022: SplashHyena_5 LAUGH
+    21300024: SplashHyena_6 LAUGH
+    21300026: SplashHyena_7 TURN OUT
+    21300028: SplashHyena_8 TURN OUT
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -34,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,7 +66,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -59,7 +74,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -67,7 +82,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -75,7 +90,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -83,7 +98,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -92,7 +107,208 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SplashHyena_1 IDLE
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -396, y: 256}
+        - {x: -460, y: 236}
+        - {x: -460, y: -204}
+        - {x: -306, y: -256}
+        - {x: 492, y: -256}
+        - {x: 492, y: -60}
+        - {x: 302, y: 256}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SplashHyena_2 TURN IN
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -200, y: 256}
+        - {x: -430, y: 216}
+        - {x: -460, y: 158}
+        - {x: -460, y: -140}
+        - {x: -450, y: -224}
+        - {x: -86, y: -256}
+        - {x: 494, y: -256}
+        - {x: 494, y: -24}
+        - {x: 198, y: 256}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SplashHyena_3 TURN IN
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -460, y: 256}
+        - {x: -460, y: -176}
+        - {x: -444, y: -230}
+        - {x: -262, y: -256}
+        - {x: 494, y: -256}
+        - {x: 494, y: 256}
+      - - {x: -30, y: 250}
+        - {x: -32, y: 248}
+        - {x: -42, y: 248}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SplashHyena_4 LAUGH
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70, y: 256}
+        - {x: -352, y: 256}
+        - {x: -460, y: 208}
+        - {x: -460, y: -182}
+        - {x: -358, y: -256}
+        - {x: 498, y: -256}
+        - {x: 498, y: 190}
+        - {x: 494, y: 256}
+        - {x: -68, y: 256}
+        - {x: -66, y: 250}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SplashHyena_5 LAUGH
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70, y: 250}
+        - {x: 30, y: 248}
+        - {x: -10, y: 250}
+        - {x: 490, y: 250}
+        - {x: 496, y: 256}
+        - {x: -380, y: 256}
+        - {x: -438, y: 252}
+        - {x: -460, y: 206}
+        - {x: -460, y: -134}
+        - {x: -456, y: -170}
+        - {x: -206, y: -256}
+        - {x: 500, y: -256}
+        - {x: 500, y: -186}
+        - {x: 462, y: 4}
+        - {x: 294, y: 122}
+        - {x: 112, y: 244}
+      - - {x: -60, y: 250}
+        - {x: -48, y: 250}
+        - {x: -52, y: 246}
+        - {x: -52, y: 248}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SplashHyena_6 LAUGH
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70, y: 250}
+        - {x: 30, y: 248}
+        - {x: -10, y: 250}
+        - {x: 484, y: 250}
+        - {x: 490, y: 256}
+        - {x: -232, y: 256}
+        - {x: -406, y: 184}
+        - {x: -460, y: 156}
+        - {x: -460, y: -134}
+        - {x: -456, y: -170}
+        - {x: -208, y: -256}
+        - {x: 500, y: -256}
+        - {x: 500, y: -186}
+        - {x: 462, y: 4}
+        - {x: 294, y: 122}
+        - {x: 112, y: 244}
+      - - {x: -60, y: 250}
+        - {x: -48, y: 250}
+        - {x: -52, y: 246}
+        - {x: -52, y: 248}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SplashHyena_7 TURN OUT
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -228, y: 256}
+        - {x: -414, y: 190}
+        - {x: -460, y: 136}
+        - {x: -460, y: -136}
+        - {x: -450, y: -224}
+        - {x: -332, y: -256}
+        - {x: 500, y: -256}
+        - {x: 500, y: 256}
+      - - {x: -30, y: 250}
+        - {x: -32, y: 248}
+        - {x: -42, y: 248}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SplashHyena_8 TURN OUT
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -228, y: 256}
+        - {x: -414, y: 190}
+        - {x: -460, y: 136}
+        - {x: -460, y: -136}
+        - {x: -450, y: -224}
+        - {x: -332, y: -256}
+        - {x: 500, y: -256}
+        - {x: 500, y: 256}
+      - - {x: -30, y: 250}
+        - {x: -32, y: 248}
+        - {x: -42, y: 248}
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
