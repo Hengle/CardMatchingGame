@@ -8,13 +8,12 @@ public class CameraManager : MonoBehaviour
 	public Camera gameCamera;
 	public Camera backgroundCamera;
 	public PostProcessingProfile defaultProfile;
-
-	private Material compositMaterial;
+	
 	private PostProcessingProfile profile;
 
 	private void Awake()
 	{
-		compositMaterial = new Material(Shader.Find("Hidden/CompositCameras"));
+		//compositMaterial = new Material(Shader.Find("Hidden/CompositCameras"));
 		profile = Instantiate(defaultProfile);
 		PostProcessingBehaviour ppb = backgroundCamera.gameObject.GetComponent<PostProcessingBehaviour>();
 		ppb.profile = profile;

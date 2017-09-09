@@ -12,7 +12,6 @@ public class MapRegion:MonoBehaviour
 
     public AudioClip acSelectAudio;
     public AudioClip acDeselectAudio;
-    public AudioSource asSelectSource;
 
 	private LevelSelect _levelSelect;
 	public LevelSelect levelSelect
@@ -35,8 +34,7 @@ public class MapRegion:MonoBehaviour
 
 	public void OnLevelOverlayOpened(LevelOverlay levelOverlay)
 	{
-        asSelectSource.clip = acSelectAudio;
-        asSelectSource.Play();
+		OneShotAudio.Play(acSelectAudio, 0, 1);
 
 		if (tween != null && !tween.isDone)
 		{
@@ -52,8 +50,7 @@ public class MapRegion:MonoBehaviour
 
 	public void OnLevelOverlayClosed(LevelOverlay levelOverlay)
 	{
-        asSelectSource.clip = acDeselectAudio;
-        asSelectSource.Play();
+		OneShotAudio.Play(acDeselectAudio, 0, 1);
 
 		if (tween != null && !tween.isDone)
 		{

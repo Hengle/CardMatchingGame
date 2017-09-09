@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 11470340}
+  tapSound: {fileID: 8300000, guid: 27aa53bbb6729494db3578f914037b9a, type: 3}
 --- !u!114 &11420042
 MonoBehaviour:
   m_ObjectHideFlags: 1

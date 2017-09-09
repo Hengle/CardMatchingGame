@@ -9,6 +9,8 @@ public class LevelOverlay:MonoBehaviour
 	public Button backgroundButton;
 	public Text titleText;
 
+	private bool selectedLevel;
+
 	private MapRegion _mapRegion;
 	public MapRegion mapRegion
 	{
@@ -45,9 +47,24 @@ public class LevelOverlay:MonoBehaviour
 		mapRegion.OnLevelOverlayOpened(this);
 	}
 
+	private void OnDisable()
+	{
+		if (!selectedLevel)
+		{
+			mapRegion.OnLevelOverlayClosed(this);
+		}
+
+		Destroy(gameObject);
+	}
+
 	void OnClickBackgroundButton()
 	{
 		Destroy(gameObject);
+	}
+
+	public void OnSelectedLevel(Level level)
+	{
+		selectedLevel = true;
 	}
 
 	void AddLevelItem(Level level, int number)
@@ -58,13 +75,5 @@ public class LevelOverlay:MonoBehaviour
 		levelOverlayItem.number = number;
 		//levelOverlayItem.transform.localScale = Vector3.zero;
 		//LeanTween.scale(levelOverlayItem.gameObject, Vector3.one, 1.0f).setEase(LeanTweenType.easeOutElastic).setDelay(number*0.1f);
-	}
-
-	void OnDestroy()
-	{
-		if (mapRegion)
-		{
-			mapRegion.OnLevelOverlayClosed(this);
-		}
 	}
 }

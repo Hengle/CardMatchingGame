@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelOverlayItem:MonoBehaviour
 {
 	public Text text;
+	public AudioClip tapSound;
 
 	private Button _button;
 	public Button button
@@ -60,7 +61,16 @@ public class LevelOverlayItem:MonoBehaviour
 	void OnClickButton()
 	{
 		LevelSelect.currentlySelectedLevelTemplate = level;
-		Debug.Log(level);
-		SceneManager.LoadScene("Game");
+
+		OneShotAudio.Play(tapSound, 0, 1);
+
+		Transition transition = Transition.CreateTransition();
+		transition.onMidTransition += () =>
+		{
+			OneShotAudio.Play(null, 1, 1);
+			SceneManager.LoadScene("Game");
+		};
+
+		levelOverlay.OnSelectedLevel(level);
 	}
 }
