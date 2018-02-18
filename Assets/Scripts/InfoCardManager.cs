@@ -72,12 +72,15 @@ public class InfoCardManager : MonoBehaviour
                 }
                 else if(hit.collider.gameObject.name == goRightArrow.name)
                 {
+					if (currentPlace >= goUnlocked.Length) {
+						currentPlace = 0;
+					}
+					Arrow("Right");
                     if (isEnd)
                     {
                         currentPlace = 0;
                         isEnd = false;
                     }
-                    Arrow("Right");
                 }
             }
         }
@@ -110,8 +113,9 @@ public class InfoCardManager : MonoBehaviour
 
         if (animalSlot.Find("RotationPivot/AnimalPivot").childCount > 0)
             Destroy(animalSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
+		
         FillFactSheet(animal.goUnlocked);
-        newMesh = Fill(animalSlot.gameObject, animal);
+		newMesh = Fill(animalSlot.gameObject, animal);
 
         animalSlot.GetComponent<Animator>().Play("FlipToFront");
         newMesh.GetComponent<Animator>().SetTrigger("Run");
@@ -195,8 +199,13 @@ public class InfoCardManager : MonoBehaviour
         {
             InfoCards ic = slot.GetComponent<InfoCards>();
 
-            if (ic.meshObject != null)
-                GameObject.Destroy(ic.meshObject);
+			Transform animalPivot = ic.gameObject.transform.Find("RotationPivot/AnimalPivot");
+			while (animalPivot.childCount > 0) {
+				DestroyImmediate (animalPivot.GetChild(0).gameObject);
+			}
+
+            //if (ic.meshObject != null)
+            //    GameObject.Destroy(ic.meshObject);
 
             if (currentPlace >= goUnlocked.Length)
             {
@@ -211,7 +220,7 @@ public class InfoCardManager : MonoBehaviour
             ic.animatorController = goUnlocked[currentPlace].animatorController;
             ic.spokenName = goUnlocked[currentPlace].spokenName;
 
-            Fill(slot, ic);
+            Fill(ic.gameObject, ic);
 
             if (!PlayerPrefs.HasKey(ic.goUnlocked.ToString()))
             {
@@ -227,9 +236,11 @@ public class InfoCardManager : MonoBehaviour
     {
         //slot.name = ic.goUnlocked.ToString();
 
+		Transform animalPivot = slot.transform.Find("RotationPivot/AnimalPivot");
+
         GameObject meshObject = (GameObject)Instantiate(ic.goUnlocked.meshPrefab);
         ic.meshObject = meshObject;
-        meshObject.transform.parent = slot.transform.Find("RotationPivot/AnimalPivot");
+		meshObject.transform.parent = animalPivot;
         meshObject.transform.localPosition = Vector3.zero;
         meshObject.transform.localRotation = Quaternion.identity;
         meshObject.transform.localScale = Vector3.one;
