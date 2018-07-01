@@ -187,9 +187,14 @@ public class InfoCardManager : MonoBehaviour
 
     private void Arrow(string direction)
     {
-        Debug.Log(direction);
         isFlipping = true;
         Flip(false);
+        StartCoroutine(WaitFillSlots(0.5f));
+    }
+
+    private IEnumerator WaitFillSlots(float sec)
+    {
+        yield return new WaitForSeconds(sec);
         FillSlots();
     }
 
@@ -297,7 +302,7 @@ public class InfoCardManager : MonoBehaviour
             currentPlace = 0;
             isEnd = false;
             Animator animator = slot.GetComponent<Animator>();
-            animator.Play("New State", 0, 0);
+            animator.Play("FlipToFront", 0, 0);
         }
     }
 }

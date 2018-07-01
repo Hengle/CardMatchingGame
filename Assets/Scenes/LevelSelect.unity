@@ -1172,7 +1172,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2e0a3fdcea3132140bbfd4df78041fb9, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
-  asSelectSource: {fileID: 2068553034}
 --- !u!1 &969998719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1404,10 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1154727262492262, guid: b641b01d919a7254cb3de34e91692115, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b641b01d919a7254cb3de34e91692115, type: 2}
@@ -1914,7 +1917,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b60606f4cd0cfdb40b090cee49ed3ae0, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
-  asSelectSource: {fileID: 2068553034}
 --- !u!4 &1686399027
 Transform:
   m_ObjectHideFlags: 0
@@ -2119,7 +2121,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e351dfb7bbaa3e45a3fe24b578fccf0, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
-  asSelectSource: {fileID: 2068553034}
 --- !u!1001 &1801523499
 Prefab:
   m_ObjectHideFlags: 0
@@ -2383,7 +2384,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 16048d8220e57d84c9586ceb11d469c7, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
-  asSelectSource: {fileID: 2068553034}
 --- !u!1 &1865697511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,7 +2780,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 45a1528e32094844e9068c4ace1f21e4, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
-  asSelectSource: {fileID: 2068553034}
 --- !u!1 &2068553032
 GameObject:
   m_ObjectHideFlags: 0
