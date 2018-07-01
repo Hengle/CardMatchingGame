@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Giant Eland
   gender: 0
   conservation: 0
-  infoMapTexture: {fileID: 2800000, guid: 3d8ac6fa9114dd64db8429ae21dbfcfd, type: 3}
+  infoMapTexture: {fileID: 0}
   maxCount: 10
   spokenName: {fileID: 8300000, guid: 46a3ccb212cca4146a9b2a57ba1bbe66, type: 3}
 --- !u!1001 &100100000

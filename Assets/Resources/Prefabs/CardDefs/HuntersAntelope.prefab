@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Hunter's Antelope
   gender: 0
   conservation: 4
-  infoMapTexture: {fileID: 2800000, guid: 3d8ac6fa9114dd64db8429ae21dbfcfd, type: 3}
+  infoMapTexture: {fileID: 0}
   maxCount: 3
   spokenName: {fileID: 8300000, guid: b45991f39f9040641b21c952199fa2a4, type: 3}
 --- !u!1001 &100100000
