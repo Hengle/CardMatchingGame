@@ -368,11 +368,145 @@ Transform:
   m_Father: {fileID: 640502054}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &305836849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: c1c4d5d79d3c92043b9870fdf75edbb5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 305836850}
+  - component: {fileID: 305836851}
+  m_Layer: 0
+  m_Name: AfricaMap_SouthernAfrica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &305836850
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: c1c4d5d79d3c92043b9870fdf75edbb5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 305836849}
+  m_LocalRotation: {x: -0.00000017881395, y: 0.7071068, z: -0.70710677, w: -0.000000029802326}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2133368528}
+  m_Father: {fileID: 1171210786}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305836851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 305836849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f0b2c2c88af344e93c786c6e8faae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regionName: Southern Africa
+  popupScale: 5
+  levels:
+  - {fileID: 11400000, guid: 1dbaab0a3c36cdf4a8610dd7faa5526b, type: 2}
+  - {fileID: 11400000, guid: 495806f2ee7503d4a9296c51c6de3d8e, type: 2}
+  - {fileID: 11400000, guid: ce00b628ce47d32479f362d2d07c48cf, type: 2}
+  - {fileID: 11400000, guid: 4e351dfb7bbaa3e45a3fe24b578fccf0, type: 2}
+  acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
+  acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!4 &328485462 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4506092626486978, guid: b641b01d919a7254cb3de34e91692115,
     type: 2}
   m_PrefabInternal: {fileID: 1070748641}
+--- !u!1 &379150642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 379150643}
+  - component: {fileID: 379150646}
+  - component: {fileID: 379150645}
+  - component: {fileID: 379150644}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &379150643
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379150642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1086066944}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &379150644
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379150642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300030, guid: e79ac0fecc471c2499c45c849eed2ca5, type: 3}
+--- !u!23 &379150645
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379150642}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 8d50d215239e68a44b3d6db5cc018639, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &379150646
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379150642}
+  m_Mesh: {fileID: 4300030, guid: e79ac0fecc471c2499c45c849eed2ca5, type: 3}
 --- !u!4 &407452115
 Transform:
   m_ObjectHideFlags: 0
@@ -613,9 +747,59 @@ Transform:
   - {fileID: 72664574}
   - {fileID: 2068553033}
   - {fileID: 1058208491}
+  - {fileID: 1171210786}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &576182398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: bcb521255361c5e408efb77d0a099db7, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 576182399}
+  - component: {fileID: 576182400}
+  m_Layer: 8
+  m_Name: AfricaMap_NorthernAfrica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &576182399
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: bcb521255361c5e408efb77d0a099db7, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 576182398}
+  m_LocalRotation: {x: 0.00000041723254, y: -0.7071068, z: 0.70710677, w: 0.00000026822093}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1929830666}
+  m_Father: {fileID: 1171210786}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &576182400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 576182398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f0b2c2c88af344e93c786c6e8faae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regionName: Northern Africa
+  popupScale: 5
+  levels:
+  - {fileID: 11400000, guid: 766d14efe420bd548aacf1bc62f2f568, type: 2}
+  - {fileID: 11400000, guid: 37a7628caed2d964e8c307f009fba6de, type: 2}
+  - {fileID: 11400000, guid: 45a1528e32094844e9068c4ace1f21e4, type: 2}
+  acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
+  acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &640502052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,14 +1346,9 @@ MonoBehaviour:
   regionName: Eastern Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 2eda5d8e95eeede409963d58ea1c0718, type: 2}
-  - {fileID: 11400000, guid: e0787dcf9e7d5bc4a9d4f97ae2a592d9, type: 2}
-  - {fileID: 11400000, guid: 67c253117592c254eae7a0a62d0ef698, type: 2}
-  - {fileID: 11400000, guid: ad4a7deb876704143934de153f658dbe, type: 2}
-  - {fileID: 11400000, guid: 34104c2c6c95d1d4394ef14e5f13a093, type: 2}
-  - {fileID: 11400000, guid: fa7d097ec5dfa8f4482a8b1b06011232, type: 2}
-  - {fileID: 11400000, guid: bdb4a3b8742830b4eb8fd4cfbd9eb59d, type: 2}
-  - {fileID: 11400000, guid: 2e0a3fdcea3132140bbfd4df78041fb9, type: 2}
+  - {fileID: 11400000, guid: 333f8e5cc8a6f674ebbc1df1151bd899, type: 2}
+  - {fileID: 11400000, guid: 42772128b964a9147acf343bc39c56c4, type: 2}
+  - {fileID: 11400000, guid: 1b94f89e3b055c94abf41a24fc627b90, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &969998719
@@ -1256,6 +1435,60 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969998719}
   m_Mesh: {fileID: 4300030, guid: e79ac0fecc471c2499c45c849eed2ca5, type: 3}
+--- !u!1 &1010677664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: e23d89f89acf902469327c9ec2a38032, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1010677665}
+  - component: {fileID: 1010677666}
+  m_Layer: 8
+  m_Name: AfricaMap_EasternAfrica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1010677665
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: e23d89f89acf902469327c9ec2a38032, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010677664}
+  m_LocalRotation: {x: -0.00000017881398, y: 0.7071068, z: -0.7071068, w: -0.00000008940699}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2069442754}
+  m_Father: {fileID: 1171210786}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1010677666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010677664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f0b2c2c88af344e93c786c6e8faae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regionName: Eastern Africa
+  popupScale: 5
+  levels:
+  - {fileID: 11400000, guid: 2eda5d8e95eeede409963d58ea1c0718, type: 2}
+  - {fileID: 11400000, guid: e0787dcf9e7d5bc4a9d4f97ae2a592d9, type: 2}
+  - {fileID: 11400000, guid: 67c253117592c254eae7a0a62d0ef698, type: 2}
+  - {fileID: 11400000, guid: ad4a7deb876704143934de153f658dbe, type: 2}
+  - {fileID: 11400000, guid: 34104c2c6c95d1d4394ef14e5f13a093, type: 2}
+  - {fileID: 11400000, guid: fa7d097ec5dfa8f4482a8b1b06011232, type: 2}
+  - {fileID: 11400000, guid: bdb4a3b8742830b4eb8fd4cfbd9eb59d, type: 2}
+  - {fileID: 11400000, guid: 2e0a3fdcea3132140bbfd4df78041fb9, type: 2}
+  acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
+  acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &1058208490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,43 +1642,164 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 82773977004052598, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224671678833910394, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224671678833910394, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224671678833910394, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224671678833910394, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224671678833910394, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -150
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b641b01d919a7254cb3de34e91692115, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1086066943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: e79ac0fecc471c2499c45c849eed2ca5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1086066944}
+  - component: {fileID: 1086066945}
+  m_Layer: 0
+  m_Name: AfricaMap_WesternAfrica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1086066944
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: e79ac0fecc471c2499c45c849eed2ca5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1086066943}
+  m_LocalRotation: {x: 0.00000041723254, y: -0.7071068, z: 0.70710677, w: 0.00000026822093}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 379150643}
+  m_Father: {fileID: 1171210786}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1086066945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1086066943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f0b2c2c88af344e93c786c6e8faae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regionName: Western Africa
+  popupScale: 5
+  levels:
+  - {fileID: 11400000, guid: dc6ef901ee83dc24387c9ddf87502e17, type: 2}
+  - {fileID: 11400000, guid: dcc4e6ed0032aa44fa3612a4f3ec7856, type: 2}
+  - {fileID: 11400000, guid: 42ff14fc65aad8d459c6c3e879d1bfc3, type: 2}
+  - {fileID: 11400000, guid: b60606f4cd0cfdb40b090cee49ed3ae0, type: 2}
+  acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
+  acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
+--- !u!1 &1105923789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 339091e891f7dcb408c09722b942b962, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1105923790}
+  - component: {fileID: 1105923791}
+  m_Layer: 8
+  m_Name: AfricaMap_CentralAfrica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1105923790
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 339091e891f7dcb408c09722b942b962, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1105923789}
+  m_LocalRotation: {x: 0.00000041723254, y: -0.7071068, z: 0.70710677, w: 0.00000026822093}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1643172325}
+  m_Father: {fileID: 1171210786}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1105923791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1105923789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f0b2c2c88af344e93c786c6e8faae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regionName: Central Africa
+  popupScale: 5
+  levels:
+  - {fileID: 11400000, guid: 427cbc73a8f0a6745adff85e4941458a, type: 2}
+  - {fileID: 11400000, guid: 35ab4aa1d66074f409defd51090821b0, type: 2}
+  - {fileID: 11400000, guid: a08fcf403c8672c429e727ae9556819d, type: 2}
+  - {fileID: 11400000, guid: cc2c7cc4de755f24b8a5afe49d8e9335, type: 2}
+  - {fileID: 11400000, guid: b9a45ea4f3eb53e40a601812e7809fec, type: 2}
+  - {fileID: 11400000, guid: 16048d8220e57d84c9586ceb11d469c7, type: 2}
+  acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
+  acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!4 &1145538382 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
   m_PrefabInternal: {fileID: 1939481836}
+--- !u!1 &1171210785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1171210786}
+  - component: {fileID: 1171210787}
+  m_Layer: 0
+  m_Name: (MATT_NOT_for_Demo_Levels)  LevelSelect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1171210786
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171210785}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_Children:
+  - {fileID: 576182399}
+  - {fileID: 1105923790}
+  - {fileID: 1010677665}
+  - {fileID: 1086066944}
+  - {fileID: 305836850}
+  - {fileID: 1299406863}
+  m_Father: {fileID: 562941787}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1171210787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171210785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970fee0e807023f4e90af139ec40bb7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOverlayCanvas: {fileID: 1848331255}
+  levelOverlayTemplate: {fileID: 11458722, guid: d706be3051b5ce144bb3ece466c7ad65,
+    type: 2}
 --- !u!1 &1263105431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1832,10 @@ Transform:
   m_Father: {fileID: 1562367964}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1299406863 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+  m_PrefabInternal: {fileID: 1465544627}
 --- !u!1 &1311931205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,6 +2063,84 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1454010398}
   m_Mesh: {fileID: 4300030, guid: e23d89f89acf902469327c9ec2a38032, type: 3}
+--- !u!1001 &1465544627
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1171210786}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 81.92731
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 81.9273
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 81.9273
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23215cf51cfcc0c45bff8cc554b1d960, type: 2}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 15836bf98a0ba9a4cac6f302ddbda66c, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1562367963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,6 +2282,90 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1643172324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1643172325}
+  - component: {fileID: 1643172328}
+  - component: {fileID: 1643172327}
+  - component: {fileID: 1643172326}
+  m_Layer: 8
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643172325
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643172324}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1105923790}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1643172326
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643172324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300016, guid: 339091e891f7dcb408c09722b942b962, type: 3}
+--- !u!23 &1643172327
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643172324}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 8d50d215239e68a44b3d6db5cc018639, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1643172328
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643172324}
+  m_Mesh: {fileID: 4300016, guid: 339091e891f7dcb408c09722b942b962, type: 3}
 --- !u!1 &1653627365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,10 +2461,9 @@ MonoBehaviour:
   regionName: Western Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: dc6ef901ee83dc24387c9ddf87502e17, type: 2}
-  - {fileID: 11400000, guid: dcc4e6ed0032aa44fa3612a4f3ec7856, type: 2}
-  - {fileID: 11400000, guid: 42ff14fc65aad8d459c6c3e879d1bfc3, type: 2}
-  - {fileID: 11400000, guid: b60606f4cd0cfdb40b090cee49ed3ae0, type: 2}
+  - {fileID: 11400000, guid: 1b1b0a995a0590048bac4db381f37c40, type: 2}
+  - {fileID: 11400000, guid: 3885143162e421c44a10b24a4e37b92e, type: 2}
+  - {fileID: 11400000, guid: f4568f6a4a6de5b47884a4325210a16e, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!4 &1686399027
@@ -2145,10 +2664,9 @@ MonoBehaviour:
   regionName: Southern Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 1dbaab0a3c36cdf4a8610dd7faa5526b, type: 2}
-  - {fileID: 11400000, guid: 495806f2ee7503d4a9296c51c6de3d8e, type: 2}
-  - {fileID: 11400000, guid: ce00b628ce47d32479f362d2d07c48cf, type: 2}
-  - {fileID: 11400000, guid: 4e351dfb7bbaa3e45a3fe24b578fccf0, type: 2}
+  - {fileID: 11400000, guid: de44a916fc6b7804e9cfe62198d8c6c6, type: 2}
+  - {fileID: 11400000, guid: 1505decd3fea7d3418da09ca0bf7e55f, type: 2}
+  - {fileID: 11400000, guid: 4987b0f7bce53954084951ca621823f3, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1001 &1801523499
@@ -2406,12 +2924,9 @@ MonoBehaviour:
   regionName: Central Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 427cbc73a8f0a6745adff85e4941458a, type: 2}
-  - {fileID: 11400000, guid: 35ab4aa1d66074f409defd51090821b0, type: 2}
-  - {fileID: 11400000, guid: a08fcf403c8672c429e727ae9556819d, type: 2}
-  - {fileID: 11400000, guid: cc2c7cc4de755f24b8a5afe49d8e9335, type: 2}
-  - {fileID: 11400000, guid: b9a45ea4f3eb53e40a601812e7809fec, type: 2}
-  - {fileID: 11400000, guid: 16048d8220e57d84c9586ceb11d469c7, type: 2}
+  - {fileID: 11400000, guid: 7eafa7a7dd1f4c1408a7fe63ad71387e, type: 2}
+  - {fileID: 11400000, guid: 441a94156909f834099e6ae1f6f3f822, type: 2}
+  - {fileID: 11400000, guid: de48b52688757d443a8abfd4e932e037, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &1865697511
@@ -2523,6 +3038,90 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1929830665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1929830666}
+  - component: {fileID: 1929830669}
+  - component: {fileID: 1929830668}
+  - component: {fileID: 1929830667}
+  m_Layer: 8
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1929830666
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929830665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 576182399}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1929830667
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929830665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300014, guid: bcb521255361c5e408efb77d0a099db7, type: 3}
+--- !u!23 &1929830668
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929830665}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 8d50d215239e68a44b3d6db5cc018639, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1929830669
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929830665}
+  m_Mesh: {fileID: 4300014, guid: bcb521255361c5e408efb77d0a099db7, type: 3}
 --- !u!1001 &1939481836
 Prefab:
   m_ObjectHideFlags: 0
@@ -2805,9 +3404,9 @@ MonoBehaviour:
   regionName: Northern Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 766d14efe420bd548aacf1bc62f2f568, type: 2}
-  - {fileID: 11400000, guid: 37a7628caed2d964e8c307f009fba6de, type: 2}
-  - {fileID: 11400000, guid: 45a1528e32094844e9068c4ace1f21e4, type: 2}
+  - {fileID: 11400000, guid: f410750cc794f8d4fbb20c980b39a6f0, type: 2}
+  - {fileID: 11400000, guid: d3aaf48eda6858b48b56e33b3153a3ac, type: 2}
+  - {fileID: 11400000, guid: c6822aa520fb52142973d15eb837ee7c, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &2068553032
@@ -2919,3 +3518,171 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &2069442753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2069442754}
+  - component: {fileID: 2069442757}
+  - component: {fileID: 2069442756}
+  - component: {fileID: 2069442755}
+  m_Layer: 8
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2069442754
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069442753}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1010677665}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &2069442755
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069442753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300030, guid: e23d89f89acf902469327c9ec2a38032, type: 3}
+--- !u!23 &2069442756
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069442753}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 8d50d215239e68a44b3d6db5cc018639, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2069442757
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069442753}
+  m_Mesh: {fileID: 4300030, guid: e23d89f89acf902469327c9ec2a38032, type: 3}
+--- !u!1 &2133368527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2133368528}
+  - component: {fileID: 2133368531}
+  - component: {fileID: 2133368530}
+  - component: {fileID: 2133368529}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2133368528
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133368527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305836850}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &2133368529
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133368527}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300010, guid: c1c4d5d79d3c92043b9870fdf75edbb5, type: 3}
+--- !u!23 &2133368530
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133368527}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 8d50d215239e68a44b3d6db5cc018639, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2133368531
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133368527}
+  m_Mesh: {fileID: 4300010, guid: c1c4d5d79d3c92043b9870fdf75edbb5, type: 3}
