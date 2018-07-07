@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelOverlayItem:MonoBehaviour
 {
 	public Text text;
+	public Image thumbnailImage;
 	public AudioClip tapSound;
 
 	private Button _button;
@@ -39,23 +40,13 @@ public class LevelOverlayItem:MonoBehaviour
 		}
 	}
 
-	private int _number;
-	public int number
-	{
-		get
-		{
-			return _number;
-        }
-		set
-		{
-			_number = value;
-			text.text = _number.ToString();
-		}
-	}
-
 	void Start()
 	{
 		button.onClick.AddListener(OnClickButton);
+		if (level.thumbnail)
+		{
+			thumbnailImage.sprite = level.thumbnail;
+		}
 	}
 
 	void OnClickButton()

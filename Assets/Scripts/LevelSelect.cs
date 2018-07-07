@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using KeenTween;
+using System.Linq;
 
 public class LevelSelect:MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class LevelSelect:MonoBehaviour
 	public Canvas levelOverlayCanvas;
 	public LevelOverlay levelOverlayTemplate;
 	public LevelOverlay levelOverlay { get; private set; }
+	private static string lastRegionName = "";
 
 	private Vector3 targetScale;
 
@@ -31,6 +33,20 @@ public class LevelSelect:MonoBehaviour
 
 			transform.localScale = targetScale*t.currentValue;
 		});
+	}
+
+	private void Start()
+	{
+		if (!string.IsNullOrEmpty(lastRegionName))
+		{
+			var regions = gameObject.GetComponentsInChildren<MapRegion>();
+			var region = regions.FirstOrDefault(v => v.regionName == lastRegionName);
+			Debug.Log(lastRegionName);
+			if (region)
+			{
+				OnClickRegion(region);
+			}
+		}
 	}
 
 	void Update()
@@ -61,6 +77,7 @@ public class LevelSelect:MonoBehaviour
 
 	public void OnClickRegion(MapRegion region)
 	{
+		lastRegionName = region.regionName;
 		CreateLevelOverlay(region);
 	}
 

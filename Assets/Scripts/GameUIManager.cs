@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameUIManager:MonoBehaviour {
 	static private GameUIManager _current;
@@ -17,8 +18,8 @@ public class GameUIManager:MonoBehaviour {
 	public Canvas canvas;
 	public RectTransform failIconLayout;
 	public FailIcon failIconTemplate;
-
 	public BeginPlayUI beginPlayUI;
+	public Button quitButton;
 
 	private FailIcon[] failIcons = new FailIcon[0];
 
@@ -38,6 +39,8 @@ public class GameUIManager:MonoBehaviour {
 		}
 
 		beginPlayUI.gameObject.SetActive(false);
+		quitButton.onClick.AddListener(OnClickQuit);
+		quitButton.gameObject.SetActive(false);
 	}
 
 	public void UpdateFailCounter()
@@ -54,5 +57,11 @@ public class GameUIManager:MonoBehaviour {
 	public void OnGameStart()
 	{
 		beginPlayUI.gameObject.SetActive(true);
+		quitButton.gameObject.SetActive(true);
+	}
+
+	private void OnClickQuit()
+	{
+		SceneManager.LoadScene("LevelSelect");
 	}
 }

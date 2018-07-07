@@ -86,6 +86,10 @@ public class Card:MonoBehaviour {
 		});
 		tween.onFinish += t =>
 		{
+			if (!transform)
+			{
+				return;
+			}
 			transform.position = position;
 		};
 	}

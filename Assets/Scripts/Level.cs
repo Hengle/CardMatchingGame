@@ -10,5 +10,6 @@ public class Level:MonoBehaviour
 	public int cardCountY = 4;
 	public int maxFailCount = 3;
 	public Background background;
+	public Sprite thumbnail;
 	public TimeOfDay timeOfDay;
 }

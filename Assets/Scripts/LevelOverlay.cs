@@ -72,7 +72,6 @@ public class LevelOverlay:MonoBehaviour
 		LevelOverlayItem levelOverlayItem = Instantiate(levelOverlayItemTemplate);
 		levelOverlayItem.transform.SetParent(gridLayout.transform, false);
 		levelOverlayItem.level = level;
-		levelOverlayItem.number = number;
 		//levelOverlayItem.transform.localScale = Vector3.zero;
 		//LeanTween.scale(levelOverlayItem.gameObject, Vector3.one, 1.0f).setEase(LeanTweenType.easeOutElastic).setDelay(number*0.1f);
 	}

@@ -26,7 +26,7 @@ public class MenuManager : MonoBehaviour
 	public Transform levelSelectTransform;
     public Transform infoTransform;
 
-	private MenuType currentMenuType = MenuType.Splash;
+	private static MenuType currentMenuType = MenuType.Splash;
 	private List<MenuInfo> menuInfos = new List<MenuInfo>();
 
 	private void Start()
