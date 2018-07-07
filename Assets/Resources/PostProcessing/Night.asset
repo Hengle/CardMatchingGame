@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Night
   m_EditorClassIdentifier: 
   lut: {fileID: 2800000, guid: 31364107ecdca0243bf8b9c6648ec56b, type: 3}
-  cardTint: {r: 0.71323526, g: 0.8064029, b: 1, a: 1}
+  cardTint: {r: 0.82817906, g: 0.8887802, b: 1.0147059, a: 1}

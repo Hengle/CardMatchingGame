@@ -1346,9 +1346,9 @@ MonoBehaviour:
   regionName: Eastern Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 2eda5d8e95eeede409963d58ea1c0718, type: 2}
-  - {fileID: 11400000, guid: e0787dcf9e7d5bc4a9d4f97ae2a592d9, type: 2}
-  - {fileID: 11400000, guid: 67c253117592c254eae7a0a62d0ef698, type: 2}
+  - {fileID: 11400000, guid: 333f8e5cc8a6f674ebbc1df1151bd899, type: 2}
+  - {fileID: 11400000, guid: 42772128b964a9147acf343bc39c56c4, type: 2}
+  - {fileID: 11400000, guid: 1b94f89e3b055c94abf41a24fc627b90, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &969998719
@@ -2461,9 +2461,9 @@ MonoBehaviour:
   regionName: Western Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: dc6ef901ee83dc24387c9ddf87502e17, type: 2}
-  - {fileID: 11400000, guid: dcc4e6ed0032aa44fa3612a4f3ec7856, type: 2}
-  - {fileID: 11400000, guid: 42ff14fc65aad8d459c6c3e879d1bfc3, type: 2}
+  - {fileID: 11400000, guid: 1b1b0a995a0590048bac4db381f37c40, type: 2}
+  - {fileID: 11400000, guid: 3885143162e421c44a10b24a4e37b92e, type: 2}
+  - {fileID: 11400000, guid: f4568f6a4a6de5b47884a4325210a16e, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!4 &1686399027
@@ -2664,9 +2664,9 @@ MonoBehaviour:
   regionName: Southern Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 1dbaab0a3c36cdf4a8610dd7faa5526b, type: 2}
-  - {fileID: 11400000, guid: 495806f2ee7503d4a9296c51c6de3d8e, type: 2}
-  - {fileID: 11400000, guid: ce00b628ce47d32479f362d2d07c48cf, type: 2}
+  - {fileID: 11400000, guid: de44a916fc6b7804e9cfe62198d8c6c6, type: 2}
+  - {fileID: 11400000, guid: 1505decd3fea7d3418da09ca0bf7e55f, type: 2}
+  - {fileID: 11400000, guid: 4987b0f7bce53954084951ca621823f3, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1001 &1801523499
@@ -2924,9 +2924,9 @@ MonoBehaviour:
   regionName: Central Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 427cbc73a8f0a6745adff85e4941458a, type: 2}
-  - {fileID: 11400000, guid: 35ab4aa1d66074f409defd51090821b0, type: 2}
-  - {fileID: 11400000, guid: a08fcf403c8672c429e727ae9556819d, type: 2}
+  - {fileID: 11400000, guid: 7eafa7a7dd1f4c1408a7fe63ad71387e, type: 2}
+  - {fileID: 11400000, guid: 441a94156909f834099e6ae1f6f3f822, type: 2}
+  - {fileID: 11400000, guid: de48b52688757d443a8abfd4e932e037, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &1865697511
@@ -3404,9 +3404,9 @@ MonoBehaviour:
   regionName: Northern Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 766d14efe420bd548aacf1bc62f2f568, type: 2}
-  - {fileID: 11400000, guid: 37a7628caed2d964e8c307f009fba6de, type: 2}
-  - {fileID: 11400000, guid: 45a1528e32094844e9068c4ace1f21e4, type: 2}
+  - {fileID: 11400000, guid: f410750cc794f8d4fbb20c980b39a6f0, type: 2}
+  - {fileID: 11400000, guid: d3aaf48eda6858b48b56e33b3153a3ac, type: 2}
+  - {fileID: 11400000, guid: c6822aa520fb52142973d15eb837ee7c, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &2068553032
