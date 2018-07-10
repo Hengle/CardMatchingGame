@@ -41,13 +41,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardDefs:
-  - {fileID: 11400000, guid: 8703d1cfcebe44444aa936e324c6a4de, type: 2}
-  - {fileID: 11400000, guid: 8bb933317dc47ae48ae538b5589a0c08, type: 2}
+  - {fileID: 11400000, guid: 185f02cf287519744981665022ee57f7, type: 2}
+  - {fileID: 11400000, guid: d1a7a5466d0c9be4e887d6eb8be94cbf, type: 2}
+  - {fileID: 11400000, guid: 74375359769fce44c977f8f1b15e5816, type: 2}
   cardCountX: 3
   cardCountY: 2
   maxFailCount: 12
-  background: {fileID: 114561615771841928, guid: 94c8bbdcca58b7243a24d70d798191dd,
+  background: {fileID: 114269455696899728, guid: 39a0991a35be651418a51b38a57026de,
     type: 2}
+  thumbnail: {fileID: 21300000, guid: 371830602be34914dbc071b68eaeed10, type: 3}
   timeOfDay: {fileID: 11400000, guid: 79a9f7b8787a8b54e97b92f084292a2f, type: 2}
 --- !u!1001 &100100000
 Prefab:
