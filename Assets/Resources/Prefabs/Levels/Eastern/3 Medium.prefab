@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: 3 Medium
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f842b964e6d264185f44b4740cc5ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardDefs:
+  - {fileID: 11400000, guid: 7ef70de2dc236bd4f893afe10b4688bf, type: 2}
+  - {fileID: 11400000, guid: 01072f1140da67b499f7fc1a0ee6e962, type: 2}
+  - {fileID: 11400000, guid: 1a8ce6b95550b364b9afeda0237eb14e, type: 2}
+  - {fileID: 11400000, guid: 34ba72d1b8cf2824093b2345ac9edf22, type: 2}
+  cardCountX: 4
+  cardCountY: 3
+  maxFailCount: 12
+  background: {fileID: 114269455696899728, guid: 0a513db3eb9876c498db8394c3b21957,
+    type: 2}
+  thumbnail: {fileID: 21300000, guid: 371830602be34914dbc071b68eaeed10, type: 3}
+  timeOfDay: {fileID: 11400000, guid: 3d9d981a5cf085d428c321de2d8ce958, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: targetScore
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 11481976, guid: 51db49a87aa06114da1ff46d38a13c30,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: cardCountY
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cardCountX
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 14a56e7c9f90ff144b68bf258e388f42,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: cardDefs.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882,
+        type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1

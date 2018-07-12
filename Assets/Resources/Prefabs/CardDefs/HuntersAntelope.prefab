@@ -49,7 +49,7 @@ MonoBehaviour:
   conservation: 4
   infoMapTexture: {fileID: 0}
   maxCount: 3
-  spokenName: {fileID: 8300000, guid: b45991f39f9040641b21c952199fa2a4, type: 3}
+  spokenName: {fileID: 8300000, guid: 43a63c3850d1ea84781fe6c030d2e725, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
