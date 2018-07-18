@@ -1405,6 +1405,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 333f8e5cc8a6f674ebbc1df1151bd899, type: 2}
   - {fileID: 11400000, guid: 42772128b964a9147acf343bc39c56c4, type: 2}
   - {fileID: 11400000, guid: 1b94f89e3b055c94abf41a24fc627b90, type: 2}
+  - {fileID: 11400000, guid: 8445b875b1ab15d4b8857f6c6dbeb0c4, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &969998719
@@ -1699,7 +1700,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1154727262492262, guid: b641b01d919a7254cb3de34e91692115, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b641b01d919a7254cb3de34e91692115, type: 2}
@@ -2550,6 +2551,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1b1b0a995a0590048bac4db381f37c40, type: 2}
   - {fileID: 11400000, guid: 3885143162e421c44a10b24a4e37b92e, type: 2}
   - {fileID: 11400000, guid: f4568f6a4a6de5b47884a4325210a16e, type: 2}
+  - {fileID: 11400000, guid: 3d200245cf7f9da4da84788734006e29, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!4 &1686399027
@@ -2753,6 +2755,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: de44a916fc6b7804e9cfe62198d8c6c6, type: 2}
   - {fileID: 11400000, guid: 1505decd3fea7d3418da09ca0bf7e55f, type: 2}
   - {fileID: 11400000, guid: 4987b0f7bce53954084951ca621823f3, type: 2}
+  - {fileID: 11400000, guid: abd7a337d287ffe439efb6bbc7816bf0, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1001 &1801523499
@@ -3013,6 +3016,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7eafa7a7dd1f4c1408a7fe63ad71387e, type: 2}
   - {fileID: 11400000, guid: 441a94156909f834099e6ae1f6f3f822, type: 2}
   - {fileID: 11400000, guid: de48b52688757d443a8abfd4e932e037, type: 2}
+  - {fileID: 11400000, guid: 0de2c5b13caea5d419d4da6f09d9f3e6, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &1865697511
@@ -3520,6 +3524,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f410750cc794f8d4fbb20c980b39a6f0, type: 2}
   - {fileID: 11400000, guid: d3aaf48eda6858b48b56e33b3153a3ac, type: 2}
   - {fileID: 11400000, guid: c6822aa520fb52142973d15eb837ee7c, type: 2}
+  - {fileID: 11400000, guid: 5cd6ddfa19fc7764691fef9d112b8370, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
 --- !u!1 &2068553032
