@@ -179,7 +179,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4403055488351086, guid: f1873c678964edd4ebf5f367d3cc4b59, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1873c678964edd4ebf5f367d3cc4b59, type: 2}
@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249589268}
   - component: {fileID: 249589267}
+  - component: {fileID: 249589269}
   m_Layer: 0
   m_Name: Menu_Music
   m_TagString: Untagged
@@ -277,7 +278,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 21f4d460ed072ca44983947fd5db20ef, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -374,6 +375,19 @@ Transform:
   m_Father: {fileID: 562941787}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &249589269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249589266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ac2bf262b834bb3b5f8537bdffa86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: 3
+  audioSource: {fileID: 0}
 --- !u!4 &291391601
 Transform:
   m_ObjectHideFlags: 0
@@ -553,6 +567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 423176461}
   - component: {fileID: 423176462}
+  - component: {fileID: 423176463}
   m_Layer: 0
   m_Name: Audio_SplashIntroSound
   m_TagString: Untagged
@@ -668,6 +683,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &423176463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423176460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ac2bf262b834bb3b5f8537bdffa86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: 4
+  audioSource: {fileID: 0}
 --- !u!1 &550079160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1111,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &748225145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 748225146}
+  m_Layer: 0
+  m_Name: SettingsMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748225146
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748225145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08148605, y: 0.2041254, z: 0.103206635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &814567909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,11 +1677,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114556867357070222, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4506092626486978, guid: b641b01d919a7254cb3de34e91692115, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1663,41 +1714,6 @@ Prefab:
       propertyPath: infoPage
       value: 
       objectReference: {fileID: 562941787}
-    - target: {fileID: 114556867357070222, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114556867357070222, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114556867357070222, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1412829795}
-    - target: {fileID: 114556867357070222, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114556867357070222, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114556867357070222, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AntilopeClicked
-      objectReference: {fileID: 0}
-    - target: {fileID: 114556867357070222, guid: b641b01d919a7254cb3de34e91692115,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1154727262492262, guid: b641b01d919a7254cb3de34e91692115, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -2022,6 +2038,7 @@ MonoBehaviour:
   splashScreenTransform: {fileID: 1562367964}
   levelSelectTransform: {fileID: 562941787}
   infoTransform: {fileID: 328485462}
+  settingsTransform: {fileID: 748225146}
 --- !u!4 &1322848402
 Transform:
   m_ObjectHideFlags: 0
@@ -2033,7 +2050,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1412829795 stripped
 MonoBehaviour:
@@ -2251,6 +2268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1630281806}
   - component: {fileID: 1630281807}
+  - component: {fileID: 1630281808}
   m_Layer: 0
   m_Name: Audio_SplashIntroMusic
   m_TagString: Untagged
@@ -2282,7 +2300,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a822f1b9238fccf448267f700c1a17e7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2366,6 +2384,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1630281808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1630281805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ac2bf262b834bb3b5f8537bdffa86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: 3
+  audioSource: {fileID: 0}
 --- !u!1 &1643172324
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,7 +2751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 25.745, y: 17.127, z: 2.7930002}
 --- !u!1 &1772069702
 GameObject:
@@ -3028,6 +3059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1865697512}
   - component: {fileID: 1865697513}
+  - component: {fileID: 1865697514}
   m_Layer: 0
   m_Name: Audio_FlyInSound
   m_TagString: Untagged
@@ -3143,6 +3175,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1865697514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865697511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ac2bf262b834bb3b5f8537bdffa86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: 4
+  audioSource: {fileID: 0}
 --- !u!1 &1929830665
 GameObject:
   m_ObjectHideFlags: 0

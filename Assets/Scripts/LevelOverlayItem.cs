@@ -53,12 +53,11 @@ public class LevelOverlayItem:MonoBehaviour
 	{
 		LevelSelect.currentlySelectedLevelTemplate = level;
 
-		OneShotAudio.Play(tapSound, 0, 1);
+		OneShotAudio.Play(tapSound, 0, GameSettings.Audio.sfxVolume);
 
 		Transition transition = Transition.CreateTransition();
 		transition.onMidTransition += () =>
 		{
-			OneShotAudio.Play(null, 1, 1);
 			SceneManager.LoadScene("Game");
 		};
 

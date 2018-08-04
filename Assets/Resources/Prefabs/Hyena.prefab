@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 495324}
   - component: {fileID: 11416322}
   - component: {fileID: 8223964}
+  - component: {fileID: 114955679886816902}
   m_Layer: 0
   m_Name: Hyena
   m_TagString: Untagged
@@ -856,6 +857,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114955679886816902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ac2bf262b834bb3b5f8537bdffa86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: 4
+  audioSource: {fileID: 0}
 --- !u!212 &212000010687442188
 SpriteRenderer:
   m_ObjectHideFlags: 1

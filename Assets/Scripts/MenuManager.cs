@@ -20,11 +20,12 @@ public class MenuManager : MonoBehaviour
 		}
 	}
 
-	private enum MenuType { Splash, LevelSelect, Info }
+	private enum MenuType { Splash, LevelSelect, Info, Settings }
 
 	public Transform splashScreenTransform;
 	public Transform levelSelectTransform;
-    public Transform infoTransform;
+	public Transform infoTransform;
+	public Transform settingsTransform;
 
 	private static MenuType currentMenuType = MenuType.Splash;
 	private List<MenuInfo> menuInfos = new List<MenuInfo>();
@@ -34,6 +35,7 @@ public class MenuManager : MonoBehaviour
 		menuInfos.Add(new MenuInfo() { type = MenuType.Splash, rootTransform = splashScreenTransform });
 		menuInfos.Add(new MenuInfo() { type = MenuType.LevelSelect, rootTransform = levelSelectTransform });
 		menuInfos.Add(new MenuInfo() { type = MenuType.Info, rootTransform = infoTransform });
+		menuInfos.Add(new MenuInfo() { type = MenuType.Settings, rootTransform = settingsTransform });
 
 		SetMenuType(currentMenuType);
 	}

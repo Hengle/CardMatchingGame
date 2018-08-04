@@ -17,4 +17,25 @@ public class CardDef:MonoBehaviour {
 	public Texture2D infoMapTexture;
 	public int maxCount;
     public AudioClip spokenName;
+	public bool neverSkip;
+	public float probability
+	{
+		get
+		{
+			return GetProbability(conservation);
+		}
+	}
+
+	private static float[] probabilityLookup = new float[]
+	{
+		0.95f,
+		0.25f,
+		0.5f,
+		0.75f,
+		0.05f,
+	};
+	public static float GetProbability(Conservation conservation)
+	{
+		return probabilityLookup[(int)conservation];
+	}
 }

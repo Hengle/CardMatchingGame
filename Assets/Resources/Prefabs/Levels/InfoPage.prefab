@@ -4406,6 +4406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4289455026926332}
   - component: {fileID: 82855571624363806}
+  - component: {fileID: 114974189343596668}
   m_Layer: 0
   m_Name: Info_Music
   m_TagString: Untagged
@@ -5634,6 +5635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4885666867796658}
   - component: {fileID: 82773977004052598}
+  - component: {fileID: 114948948596182302}
   m_Layer: 9
   m_Name: SpokenNameAS
   m_TagString: Untagged
@@ -14191,7 +14193,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 21f4d460ed072ca44983947fd5db20ef, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -15267,6 +15269,32 @@ MonoBehaviour:
   cards: {fileID: 1032284923799642}
   background: {fileID: 1815409910970354}
   backButton: {fileID: 114876719762147670}
+--- !u!114 &114948948596182302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1825022529959200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ac2bf262b834bb3b5f8537bdffa86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: 2
+  audioSource: {fileID: 0}
+--- !u!114 &114974189343596668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606912395427490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ac2bf262b834bb3b5f8537bdffa86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: 3
+  audioSource: {fileID: 0}
 --- !u!137 &137031697426735814
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

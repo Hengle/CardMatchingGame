@@ -34,7 +34,7 @@ public class MapRegion:MonoBehaviour
 
 	public void OnLevelOverlayOpened(LevelOverlay levelOverlay)
 	{
-		OneShotAudio.Play(acSelectAudio, 0, 1);
+		OneShotAudio.Play(acSelectAudio, 0, GameSettings.Audio.sfxVolume);
 
 		if (tween != null && !tween.isDone)
 		{
@@ -50,7 +50,7 @@ public class MapRegion:MonoBehaviour
 
 	public void OnLevelOverlayClosed(LevelOverlay levelOverlay)
 	{
-		OneShotAudio.Play(acDeselectAudio, 0, 1);
+		OneShotAudio.Play(acDeselectAudio, 0, GameSettings.Audio.sfxVolume);
 
 		if (tween != null && !tween.isDone)
 		{

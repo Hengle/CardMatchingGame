@@ -85,10 +85,17 @@ public class Game:MonoBehaviour
 			}
 		}
 
+		HashSet<CardDef> onlyOnceLookup = new HashSet<CardDef>();
+
 		int counter = 0;
 		while(availableCardSlots.Count > 0) {
 			CardDef carddef = currentLevel.cardDefs[counter%currentLevel.cardDefs.Count];
-			
+
+			if (!carddef.neverSkip && Random.value <= carddef.probability)
+			{
+				continue;
+			}
+
 			int slot0Index = Random.Range(0, availableCardSlots.Count);
 			Vector2 slot0 = availableCardSlots[slot0Index];
 			availableCardSlots.RemoveAt(slot0Index);
@@ -140,6 +147,10 @@ public class Game:MonoBehaviour
 				card.transform.localScale = Vector3.zero;
 				new Tween(null, 0, 1, 1.0f, new CurveElastic(TweenCurveMode.Out), t =>
 				{
+					if (!card)
+					{
+						return;
+					}
 					card.transform.localScale = Vector3.LerpUnclamped(Vector3.zero, targetCardScale, t.currentValue);
 				});
 				
