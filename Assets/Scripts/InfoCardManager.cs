@@ -37,8 +37,12 @@ public class InfoCardManager : MonoBehaviour
     public void AntilopeClicked()
     {
         newMesh.GetComponent<Animator>().SetTrigger("AudioDance");
-        antilopeAS.clip = nameAudio;
-        antilopeAS.Play();
+
+        if (!antilopeAS.isPlaying)
+        {
+            antilopeAS.clip = nameAudio;
+            antilopeAS.Play();
+        }
     }
 
     private void Awake()
@@ -224,6 +228,7 @@ public class InfoCardManager : MonoBehaviour
             ic.goUnlocked = goUnlocked[currentPlace];
             ic.animatorController = goUnlocked[currentPlace].animatorController;
             ic.spokenName = goUnlocked[currentPlace].spokenName;
+            ic.gender = goUnlocked[currentPlace].gender.ToString();
 
             Fill(ic.gameObject, ic);
 
@@ -252,6 +257,22 @@ public class InfoCardManager : MonoBehaviour
 
         meshObject.GetComponent<Animator>().runtimeAnimatorController = ic.animatorController;
         nameAudio = ic.spokenName;
+
+        if (ic.gender == "Female")
+        {
+            ic.genderTextureMale.SetActive(false);
+            ic.genderTextureFemale.SetActive(true);
+        }
+        else if (ic.gender == "Male")
+        {
+            ic.genderTextureMale.SetActive(true);
+            ic.genderTextureFemale.SetActive(false);
+        }
+        else
+        {
+            ic.genderTextureFemale.SetActive(false);
+            ic.genderTextureMale.SetActive(false);
+        }
 
         Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
         foreach (Renderer r in renderers)

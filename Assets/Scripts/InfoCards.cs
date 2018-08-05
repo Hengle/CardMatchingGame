@@ -9,6 +9,9 @@ public class InfoCards : MonoBehaviour
     public RuntimeAnimatorController animatorController;
     public GameObject meshObject;
     public AudioClip spokenName;
+    public string gender;
+    public GameObject genderTextureMale;
+    public GameObject genderTextureFemale;
 
     public GameObject cards;
     public GameObject background;
