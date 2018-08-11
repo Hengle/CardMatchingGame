@@ -237,21 +237,6 @@ Prefab:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 562941787}
-    - target: {fileID: 114977786607653854, guid: 3313cbc4f7ceada4a904039db402f61c,
-        type: 2}
-      propertyPath: infoCardManager
-      value: 
-      objectReference: {fileID: 1412829795}
-    - target: {fileID: 33037070328907230, guid: 3313cbc4f7ceada4a904039db402f61c,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 9c06d659c5b1c02479134ad164a01cae, type: 3}
-    - target: {fileID: 64456284668920018, guid: 3313cbc4f7ceada4a904039db402f61c,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 9c06d659c5b1c02479134ad164a01cae, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3313cbc4f7ceada4a904039db402f61c, type: 2}
   m_IsPrefabParent: 0
@@ -2062,12 +2047,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b641b01d919a7254cb3de34e91692115, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1412829795 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114296122208291900, guid: b641b01d919a7254cb3de34e91692115,
-    type: 2}
-  m_PrefabInternal: {fileID: 1390942393}
-  m_Script: {fileID: 11500000, guid: bffbf9a168dd0404fb743cdbf58b2ef8, type: 3}
 --- !u!4 &1453115364 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400018, guid: 1c3efbd061940a0498cd9c3d29ecd07c, type: 3}

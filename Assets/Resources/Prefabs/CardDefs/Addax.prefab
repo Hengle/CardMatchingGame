@@ -47,9 +47,10 @@ MonoBehaviour:
   displayName: Addax
   gender: 0
   conservation: 4
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: f9651f3579417db449c204260acb3064, type: 3}
   maxCount: 3
   spokenName: {fileID: 8300000, guid: 8b477599d373f414999d89e45d04cbb3, type: 3}
+  neverSkip: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
