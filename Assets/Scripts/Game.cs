@@ -95,8 +95,12 @@ public class Game:MonoBehaviour
 		}
 
 		counter = 0;
+
+		var shuffledCardDefs = new List<CardDef>(currentLevel.cardDefs);
+		Shuffle(shuffledCardDefs);
+
 		while(availableCardSlots.Count > 0) {
-			CardDef cardDef = currentLevel.cardDefs[counter%currentLevel.cardDefs.Count];
+			CardDef cardDef = shuffledCardDefs[counter%shuffledCardDefs.Count];
 			if (!cardDef || Random.value >= cardDef.probability)
 			{
 				counter++;
@@ -109,6 +113,20 @@ public class Game:MonoBehaviour
 		}
 
 		StartCoroutine(PreGameSequence());
+	}
+
+	public static void Shuffle<T>(List<T> list)
+	{
+		var rng = new System.Random();
+		int n = list.Count;
+		while (n > 1)
+		{
+			n--;
+			int k = Random.Range(0, n+1);
+			T value = list[k];
+			list[k] = list[n];
+			list[n] = value;
+		}
 	}
 
 	private void AddCard(List<Vector2Int> availableCardSlots, CardDef cardDef)
