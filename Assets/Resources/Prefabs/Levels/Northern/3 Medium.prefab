@@ -45,7 +45,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4495310ae157244c937d69a6de71659, type: 2}
   - {fileID: 11400000, guid: 0c84b7214654bed49ba05e25cf046130, type: 2}
   - {fileID: 11400000, guid: d38594f9699678d46a9b093604a5df35, type: 2}
-  - {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
+  lionCardDefs:
+  - {fileID: 114613868331506148, guid: f9a0c25e48e18594d89f32abb0152921, type: 2}
   cardCountX: 4
   cardCountY: 3
   maxFailCount: 12
@@ -94,8 +95,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: cardDefs.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: f9a0c25e48e18594d89f32abb0152921,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cardDefs.Array.data[2]
       value: 

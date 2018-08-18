@@ -77,52 +77,64 @@ public class Game:MonoBehaviour
 		ClearCards();
 		cardGrid = new Card[currentLevel.cardCountX, currentLevel.cardCountY];
 		
-		List<Vector2> availableCardSlots = new List<Vector2>();
+		List<Vector2Int> availableCardSlots = new List<Vector2Int>();
 		
 		for (int x = 0; x < currentLevel.cardCountX; x++) {
 			for (int y = 0; y < currentLevel.cardCountY; y++) {
-				availableCardSlots.Add(new Vector2(x, y));
+				availableCardSlots.Add(new Vector2Int(x, y));
 			}
 		}
 
-		HashSet<CardDef> onlyOnceLookup = new HashSet<CardDef>();
-
 		int counter = 0;
-		while(availableCardSlots.Count > 0) {
-			CardDef carddef = currentLevel.cardDefs[counter%currentLevel.cardDefs.Count];
+		int lionCount = currentLevel.lionCardDefs.Count;
+		while (availableCardSlots.Count > 0 && lionCount > 0)
+		{
+			CardDef cardDef = currentLevel.lionCardDefs[counter];
+			AddCard(availableCardSlots, cardDef);
+			lionCount--;
+		}
 
-			if (!carddef.neverSkip && Random.value <= carddef.probability)
+		counter = 0;
+		while(availableCardSlots.Count > 0) {
+			CardDef cardDef = currentLevel.cardDefs[counter%currentLevel.cardDefs.Count];
+			if (!cardDef || Random.value >= cardDef.probability)
 			{
+				counter++;
 				continue;
 			}
 
-			int slot0Index = Random.Range(0, availableCardSlots.Count);
-			Vector2 slot0 = availableCardSlots[slot0Index];
-			availableCardSlots.RemoveAt(slot0Index);
-			
-			int slot1Index = Random.Range(0, availableCardSlots.Count);
-			Vector2 slot1 = availableCardSlots[slot1Index];
-			availableCardSlots.RemoveAt(slot1Index);
-			
-			Card card0 = CreateCardInstance(carddef);
-			Card card1 = CreateCardInstance(carddef);
-			
-			card0.tilePositionX = (int)slot0.x;
-			card0.tilePositionY = (int)slot0.y;
-			
-			card1.tilePositionX = (int)slot1.x;
-			card1.tilePositionY = (int)slot1.y;
-			
-			card0.transform.position = GetCardGridPosition(card0.tilePositionX, card0.tilePositionY);
-			card1.transform.position = GetCardGridPosition(card1.tilePositionX, card1.tilePositionY);
-			
-			cardGrid[card0.tilePositionX, card0.tilePositionY] = card0;
-			cardGrid[card1.tilePositionX, card1.tilePositionY] = card1;
+			AddCard(availableCardSlots, cardDef);
 
 			counter += 1;
 		}
 
 		StartCoroutine(PreGameSequence());
+	}
+
+	private void AddCard(List<Vector2Int> availableCardSlots, CardDef cardDef)
+	{
+		int slot0Index = Random.Range(0, availableCardSlots.Count);
+		Vector2 slot0 = availableCardSlots[slot0Index];
+		availableCardSlots.RemoveAt(slot0Index);
+
+		int slot1Index = Random.Range(0, availableCardSlots.Count);
+		Vector2 slot1 = availableCardSlots[slot1Index];
+		availableCardSlots.RemoveAt(slot1Index);
+
+		Card card0 = CreateCardInstance(cardDef);
+		Card card1 = CreateCardInstance(cardDef);
+
+		card0.tilePositionX = (int)slot0.x;
+		card0.tilePositionY = (int)slot0.y;
+
+		card1.tilePositionX = (int)slot1.x;
+		card1.tilePositionY = (int)slot1.y;
+
+		card0.transform.position = GetCardGridPosition(card0.tilePositionX, card0.tilePositionY);
+		card1.transform.position = GetCardGridPosition(card1.tilePositionX, card1.tilePositionY);
+
+		cardGrid[card0.tilePositionX, card0.tilePositionY] = card0;
+		cardGrid[card1.tilePositionX, card1.tilePositionY] = card1;
 	}
 
 	IEnumerator PreGameSequence()
@@ -236,9 +248,6 @@ public class Game:MonoBehaviour
 		if (card.isMatched) {
 			return;
 		}
-		if (card == flippedCard) {
-			return;
-		}
 
 		if (card.isFlipped) {
 			return;
@@ -252,30 +261,46 @@ public class Game:MonoBehaviour
 		
 		yield return new WaitForSeconds(0.35f);
 
-		if (flippedCard) {
-			if (flippedCard.cardDef == card.cardDef) {
-				card.OnMatch(flippedCard);
-				flippedCard.OnMatch(card);
-				currentBackground.hyena.SausageFall();
-			}
-			else {
-				card.isFlipped = false;
-				flippedCard.isFlipped = false;
-				failCount++;
-				if (failCount > currentLevel.maxFailCount)
-				{
-					StartCoroutine(EndGame());
-				}
-				currentBackground.hyena.Laugh();
-			}
-			flippedCard = null;
-			
-			if (GetMatchedCards().Length == GetAllCards().Length) {
+		if (card.cardDef is LionCardDef)
+		{
+			var flippedLionCards = GetFlippedLionCards();
+			if (flippedLionCards.Length >= 2)
+			{
 				StartCoroutine(EndGame());
 			}
 		}
-		else {
-			flippedCard = card;
+		else
+		{
+			if (flippedCard)
+			{
+				if (flippedCard.cardDef == card.cardDef)
+				{
+					card.OnMatch(flippedCard);
+					flippedCard.OnMatch(card);
+					currentBackground.hyena.SausageFall();
+				}
+				else
+				{
+					card.isFlipped = false;
+					flippedCard.isFlipped = false;
+					failCount++;
+					if (failCount > currentLevel.maxFailCount)
+					{
+						StartCoroutine(EndGame());
+					}
+					currentBackground.hyena.Laugh();
+				}
+				flippedCard = null;
+
+				if (GetMatchedCards().Length >= GetNonLionCards().Length)
+				{
+					StartCoroutine(EndGame());
+				}
+			}
+			else
+			{
+				flippedCard = card;
+			}
 		}
 	}
 
@@ -355,6 +380,40 @@ public class Game:MonoBehaviour
 			}
 		}
 		return allCards.ToArray();
+	}
+
+	Card[] GetNonLionCards()
+	{
+		List<Card> cards = new List<Card>();
+		for (int y = 0; y < currentLevel.cardCountY; y++)
+		{
+			for (int x = 0; x < currentLevel.cardCountX; x++)
+			{
+				var card = cardGrid[x, y];
+				if (!(card.cardDef is LionCardDef))
+				{
+					cards.Add(card);
+				}
+			}
+		}
+		return cards.ToArray();
+	}
+
+	Card[] GetFlippedLionCards()
+	{
+		var cards = new List<Card>();
+		for (int y = 0; y < currentLevel.cardCountY; y++)
+		{
+			for (int x = 0; x < currentLevel.cardCountX; x++)
+			{
+				var card = cardGrid[x, y];
+				if (card.cardDef is LionCardDef && card.isFlipped)
+				{
+					cards.Add(cardGrid[x, y]);
+				}
+			}
+		}
+		return cards.ToArray();
 	}
 
 	float GetCardScaler() {
