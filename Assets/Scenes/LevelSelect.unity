@@ -839,11 +839,11 @@ Transform:
   m_Children:
   - {fileID: 249589268}
   - {fileID: 1865697512}
-  - {fileID: 61478549}
   - {fileID: 640502054}
+  - {fileID: 61478549}
   - {fileID: 1848331256}
-  - {fileID: 72664574}
   - {fileID: 2068553033}
+  - {fileID: 72664574}
   - {fileID: 1058208491}
   - {fileID: 1171210786}
   m_Father: {fileID: 0}
@@ -979,7 +979,7 @@ Transform:
   - {fileID: 291391601}
   - {fileID: 1145538382}
   m_Father: {fileID: 562941787}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &653208119
 GameObject:
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   regionName: Eastern Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 333f8e5cc8a6f674ebbc1df1151bd899, type: 2}
+  - {fileID: 11400000, guid: 29afa3acc18c38c4f93790a2262c4852, type: 2}
   - {fileID: 11400000, guid: 42772128b964a9147acf343bc39c56c4, type: 2}
   - {fileID: 11400000, guid: 1b94f89e3b055c94abf41a24fc627b90, type: 2}
   - {fileID: 11400000, guid: 8445b875b1ab15d4b8857f6c6dbeb0c4, type: 2}
@@ -3061,7 +3061,7 @@ MonoBehaviour:
   regionName: Western Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: 1b1b0a995a0590048bac4db381f37c40, type: 2}
+  - {fileID: 11400000, guid: 2461715325738a1479b1c8d9f67a2a1b, type: 2}
   - {fileID: 11400000, guid: 3885143162e421c44a10b24a4e37b92e, type: 2}
   - {fileID: 11400000, guid: f4568f6a4a6de5b47884a4325210a16e, type: 2}
   - {fileID: 11400000, guid: 3d200245cf7f9da4da84788734006e29, type: 2}
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   regionName: Southern Africa
   popupScale: 5
   levels:
-  - {fileID: 11400000, guid: de44a916fc6b7804e9cfe62198d8c6c6, type: 2}
+  - {fileID: 11400000, guid: 153e042764b85454389b61f3e032dcc5, type: 2}
   - {fileID: 11400000, guid: 1505decd3fea7d3418da09ca0bf7e55f, type: 2}
   - {fileID: 11400000, guid: 4987b0f7bce53954084951ca621823f3, type: 2}
   - {fileID: 11400000, guid: abd7a337d287ffe439efb6bbc7816bf0, type: 2}
@@ -3596,7 +3596,7 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: 7eafa7a7dd1f4c1408a7fe63ad71387e, type: 2}
   - {fileID: 11400000, guid: 441a94156909f834099e6ae1f6f3f822, type: 2}
-  - {fileID: 11400000, guid: de48b52688757d443a8abfd4e932e037, type: 2}
+  - {fileID: 114548342610525706, guid: de48b52688757d443a8abfd4e932e037, type: 2}
   - {fileID: 11400000, guid: 0de2c5b13caea5d419d4da6f09d9f3e6, type: 2}
   acSelectAudio: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   acDeselectAudio: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
@@ -4311,7 +4311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 562941787}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2068553034
 AudioSource:
