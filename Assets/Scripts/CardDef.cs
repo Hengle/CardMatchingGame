@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 //using UnityEditor;
 
-public class CardDef:MonoBehaviour {
+public class CardDef:MonoBehaviour
+{
 	public enum Gender { Male, Female }
 	public enum Conservation { LeastConcern, NearThreatened, Vulnerable, Endangered, CriticallyEndangered }
 	public GameObject meshPrefab;
@@ -17,7 +18,6 @@ public class CardDef:MonoBehaviour {
 	public Texture2D infoMapTexture;
 	public int maxCount;
     public AudioClip spokenName;
-	public bool neverSkip;
 	public float probability
 	{
 		get
@@ -28,11 +28,11 @@ public class CardDef:MonoBehaviour {
 
 	private static float[] probabilityLookup = new float[]
 	{
-		0.95f,
-		0.25f,
+		0.85f,
+		0.7f,
 		0.5f,
-		0.75f,
-		0.05f,
+		0.3f,
+		0.15f,
 	};
 	public static float GetProbability(Conservation conservation)
 	{
