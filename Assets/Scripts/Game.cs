@@ -299,6 +299,7 @@ public class Game:MonoBehaviour
 				}
 				else
 				{
+                    yield return new WaitForSeconds(0.5f);
 					card.isFlipped = false;
 					flippedCard.isFlipped = false;
 					failCount++;
