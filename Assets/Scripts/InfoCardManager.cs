@@ -30,13 +30,15 @@ public class InfoCardManager : MonoBehaviour
     private int currentPlace = 0;
     private bool isFlipping = false;
     private bool isEnd = false;
-    private GameObject newMesh;
+    private GameObject newMaleMesh;
+    private GameObject newFemaleMesh;
     private bool animationEnd = true;
     private AudioClip nameAudio;
 
     public void AntilopeClicked()
     {
-        newMesh.GetComponent<Animator>().SetTrigger("AudioDance");
+        newMaleMesh.GetComponent<Animator>().SetTrigger("AudioDance");
+        newFemaleMesh.GetComponent<Animator>().SetTrigger("AudioDance");
 
         if (!antilopeAS.isPlaying)
         {
@@ -91,11 +93,14 @@ public class InfoCardManager : MonoBehaviour
 
         if(!goBackButton.GetComponent<Info>().factSheet)
         {
-            if (animationEnd && newMesh)
+            if (animationEnd && newMaleMesh && newFemaleMesh)
             {
                 animationEnd = false;
-                newMesh.GetComponent<Animator>().SetTrigger("Run");
-                StartCoroutine(AnimateWalkToAndAway(newMesh, true));
+                newMaleMesh.GetComponent<Animator>().SetTrigger("Run");
+                StartCoroutine(AnimateWalkToAndAway(newMaleMesh, true));
+
+                newFemaleMesh.GetComponent<Animator>().SetTrigger("Run");
+                StartCoroutine(AnimateWalkToAndAway(newFemaleMesh, true));
             }
         }
     }
@@ -113,18 +118,30 @@ public class InfoCardManager : MonoBehaviour
         goLeftArrow.SetActive(false);
         goRightArrow.SetActive(false);
 
-        var animalSlot = goBackground.transform.Find("animal");
+        var animalMaleSlot = goBackground.transform.Find("animal Male");
 
-        if (animalSlot.Find("RotationPivot/AnimalPivot").childCount > 0)
-            Destroy(animalSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
+        if (animalMaleSlot.Find("RotationPivot/AnimalPivot").childCount > 0)
+            Destroy(animalMaleSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
 		
         FillFactSheet(animal.goUnlocked);
-		newMesh = Fill(animalSlot.gameObject, animal);
+		newMaleMesh = Fill(animalMaleSlot.gameObject, animal);
 
-        animalSlot.GetComponent<Animator>().Play("FlipToFront");
-        newMesh.GetComponent<Animator>().SetTrigger("Run");
-        StartCoroutine(AnimateWalkToAndAway(newMesh, false));
-        
+        animalMaleSlot.GetComponent<Animator>().Play("FlipToFront");
+        newMaleMesh.GetComponent<Animator>().SetTrigger("Run");
+        StartCoroutine(AnimateWalkToAndAway(newMaleMesh, false));
+
+        var animalFemaleSlot = goBackground.transform.Find("animal Female");
+
+        if (animalFemaleSlot.Find("RotationPivot/AnimalPivot").childCount > 0)
+            Destroy(animalFemaleSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
+
+        FillFactSheet(animal.goUnlocked);
+        newFemaleMesh = FillFemale(animalFemaleSlot.gameObject, animal);
+
+        animalFemaleSlot.GetComponent<Animator>().Play("FlipToFront");
+        newFemaleMesh.GetComponent<Animator>().SetTrigger("Run");
+        StartCoroutine(AnimateWalkToAndAway(newFemaleMesh, false));
+
         //Flip(animalSlot.GetComponent<Animator>(), true);
     }
 
@@ -184,7 +201,7 @@ public class InfoCardManager : MonoBehaviour
 			name = cardDef.name;
 		}
 		animalNameText.text = name;
-		animalGender.texture = cardDef.gender == CardDef.Gender.Male ? genderTextureMale : genderTextureFemale;
+		// animalGender.texture = cardDef.gender == CardDef.Gender.Male ? genderTextureMale : genderTextureFemale;
         animalConservationText.text = conservationTextDict[cardDef.conservation];
         animalMap.texture = cardDef.infoMapTexture;
     }
@@ -258,7 +275,7 @@ public class InfoCardManager : MonoBehaviour
         meshObject.GetComponent<Animator>().runtimeAnimatorController = ic.animatorController;
         nameAudio = ic.spokenName;
 
-        if (ic.gender == "Female")
+        /*if (ic.gender == "Female")
         {
             ic.genderTextureMale.SetActive(false);
             ic.genderTextureFemale.SetActive(true);
@@ -270,14 +287,42 @@ public class InfoCardManager : MonoBehaviour
         }
         else
         {
+        */
             ic.genderTextureFemale.SetActive(false);
             ic.genderTextureMale.SetActive(false);
-        }
+        //}
 
         Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
         foreach (Renderer r in renderers)
         {
             r.sharedMaterial = ic.goUnlocked.material;
+        }
+
+        return meshObject;
+    }
+
+    private GameObject FillFemale(GameObject slot, InfoCards ic)
+    {
+        //slot.name = ic.goUnlocked.ToString();
+
+        Transform animalPivot = slot.transform.Find("RotationPivot/AnimalPivot");
+
+        GameObject meshObject = (GameObject)Instantiate(ic.goUnlocked.meshPrefab);
+        ic.meshObject = meshObject;
+        meshObject.transform.parent = animalPivot;
+        meshObject.transform.localPosition = Vector3.zero;
+        meshObject.transform.localRotation = Quaternion.identity;
+        meshObject.transform.localScale = Vector3.one;
+
+        meshObject.GetComponent<Animator>().runtimeAnimatorController = ic.goUnlocked.femaleEquivalent.GetComponent<CardDef>().animatorController;
+
+        ic.genderTextureFemale.SetActive(false);
+        ic.genderTextureMale.SetActive(false);
+
+        Renderer[] renderers = meshObject.GetComponentsInChildren<Renderer>();
+        foreach (Renderer r in renderers)
+        {
+            r.sharedMaterial = ic.goUnlocked.femaleEquivalent.GetComponent<CardDef>().material;
         }
 
         return meshObject;

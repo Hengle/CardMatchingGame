@@ -18,6 +18,7 @@ public class CardDef:MonoBehaviour
 	public Texture2D infoMapTexture;
 	public int maxCount;
     public AudioClip spokenName;
+    public GameObject femaleEquivalent;
 	public float probability
 	{
 		get

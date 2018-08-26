@@ -50,6 +50,7 @@ MonoBehaviour:
   infoMapTexture: {fileID: 0}
   maxCount: 21
   spokenName: {fileID: 8300000, guid: 44f5c784e6d8672488cdf5733de0a28e, type: 3}
+  femaleEquivalent: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
