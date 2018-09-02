@@ -2533,6 +2533,14 @@ Prefab:
       propertyPath: infoPage
       value: 
       objectReference: {fileID: 562941787}
+    - target: {fileID: 1718437303288218, guid: b641b01d919a7254cb3de34e91692115, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523490936037540, guid: b641b01d919a7254cb3de34e91692115, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b641b01d919a7254cb3de34e91692115, type: 2}
   m_IsPrefabParent: 0
