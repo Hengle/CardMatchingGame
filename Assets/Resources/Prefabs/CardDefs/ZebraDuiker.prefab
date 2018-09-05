@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Zebra Duiker
   gender: 0
   conservation: 2
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 67d02155e92e3d74786112abbf506721, type: 3}
   maxCount: 3
   spokenName: {fileID: 8300000, guid: 4b17c642d9318d44d8fa42eb65ee7eff, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 071ebed2e2c8ed04d9e63c2b482c2240, type: 2}

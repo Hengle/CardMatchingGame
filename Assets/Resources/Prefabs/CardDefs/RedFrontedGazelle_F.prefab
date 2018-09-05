@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Red-fronted Gazelle
   gender: 1
   conservation: 2
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 3135df4aa018da844af43b8bf9d81ee0, type: 3}
   maxCount: 9
   spokenName: {fileID: 8300000, guid: 452e5c03854ea7949b68d1e586b01ebd, type: 3}
   femaleEquivalent: {fileID: 0}

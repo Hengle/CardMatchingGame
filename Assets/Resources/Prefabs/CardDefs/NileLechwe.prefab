@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Nile Lechwe
   gender: 0
   conservation: 3
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: b95107026e3972640aa7afaa67af7ca2, type: 3}
   maxCount: 3
   spokenName: {fileID: 8300000, guid: 9a26a1acb5c37a34ba14cb4be3a311c1, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 7785447bd394cd3478b6c123a465a2bf, type: 2}

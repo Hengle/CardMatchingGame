@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Mountain Nyala
   gender: 1
   conservation: 3
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 5fa417f263cbdb340b318b775fc85ff1, type: 3}
   maxCount: 3
   spokenName: {fileID: 8300000, guid: ea03ff2f909f7904ba03569a79c43fbe, type: 3}
   femaleEquivalent: {fileID: 0}

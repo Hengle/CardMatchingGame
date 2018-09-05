@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Bohor Reedbuck
   gender: 0
   conservation: 0
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 18a4b1a4fc4a41944ab4f908f719535e, type: 3}
   maxCount: 36
   spokenName: {fileID: 8300000, guid: e1413f2138d4a4c4d87d45d8099c74c6, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 7dbeac273fd5f80469f11f761475e0c5, type: 2}

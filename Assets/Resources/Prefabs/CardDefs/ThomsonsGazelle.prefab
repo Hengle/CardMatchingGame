@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Thomson's Gazelle
   gender: 0
   conservation: 1
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 5dff796d7f8443446991567c1fff9177, type: 3}
   maxCount: 9
   spokenName: {fileID: 8300000, guid: 8eb0eb379aeaa1548ad8894f7c8e49a2, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 1b1de0b5487e7bf41b2c3b040c96794d, type: 2}

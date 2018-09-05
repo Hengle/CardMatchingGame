@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Waterbuck
   gender: 0
   conservation: 0
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 1610dff9b962b09429d28a95bae83a87, type: 3}
   maxCount: 51
   spokenName: {fileID: 8300000, guid: 54b8e62cbf1652e4d9daaa54202f3e47, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 0c84b7214654bed49ba05e25cf046130, type: 2}

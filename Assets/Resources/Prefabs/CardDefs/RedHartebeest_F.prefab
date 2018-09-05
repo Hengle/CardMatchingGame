@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Red Hartebeest
   gender: 1
   conservation: 0
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: a30e9801255bd24428ce220f003093d9, type: 3}
   maxCount: 9
   spokenName: {fileID: 8300000, guid: 01026153deb1de14e82bbcf05fa3343d, type: 3}
   femaleEquivalent: {fileID: 0}

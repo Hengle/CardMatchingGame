@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Dama Gazelle
   gender: 0
   conservation: 4
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: e6137446a899c6a40bf9e09101b08326, type: 3}
   maxCount: 9
   spokenName: {fileID: 8300000, guid: 795778e8e750f264f8a3174a021a8744, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 136a70562632de0488bd965a3977f9db, type: 2}

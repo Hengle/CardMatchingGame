@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Roan Antelope
   gender: 0
   conservation: 0
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 190c1508b81504d4190a9ed06040668d, type: 3}
   maxCount: 36
   spokenName: {fileID: 8300000, guid: e24f24589bc214b4289b4aa5a3c88163, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 3c251d8e31ff25645b4d8f4c7d4a7aca, type: 2}

@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Bongo
   gender: 1
   conservation: 1
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 7168fd07644e03f43823616a8ac42142, type: 3}
   maxCount: 9
   spokenName: {fileID: 8300000, guid: 45f76526193b95645a070e80e1a0cb84, type: 3}
   femaleEquivalent: {fileID: 0}

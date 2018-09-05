@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Sable Antelope
   gender: 1
   conservation: 0
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 4ea9af410b786434abc2f73945087f85, type: 3}
   maxCount: 10
   spokenName: {fileID: 8300000, guid: fcd9923a44f88f04b82bb731abee0ce2, type: 3}
   femaleEquivalent: {fileID: 0}

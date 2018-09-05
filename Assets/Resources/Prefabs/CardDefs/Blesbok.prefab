@@ -47,7 +47,7 @@ MonoBehaviour:
   displayName: Blesbok
   gender: 0
   conservation: 0
-  infoMapTexture: {fileID: 0}
+  infoMapTexture: {fileID: 2800000, guid: 29f87b03afd3b3544b2f12ac44e3664a, type: 3}
   maxCount: 6
   spokenName: {fileID: 8300000, guid: 43a63c3850d1ea84781fe6c030d2e725, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 5b17523b5d703744caa5b1081a1d2b29, type: 2}
