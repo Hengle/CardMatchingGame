@@ -214,7 +214,7 @@ public class Game:MonoBehaviour
 
 		yield return new WaitForSeconds(1.0f);
 
-		int shuffleCount = cards.Length/2;
+		int shuffleCount = Mathf.FloorToInt((currentLevel.cardCountX+currentLevel.cardCountY)/2.0f); 
 
 		if (difficulty <= Difficulty.Easy)
 		{
@@ -281,11 +281,16 @@ public class Game:MonoBehaviour
 
 		if (card.cardDef is LionCardDef)
 		{
+			if (flippedCard)
+			{
+				flippedCard.isFlipped = false;
+			}
 			var flippedLionCards = GetFlippedLionCards();
 			if (flippedLionCards.Length >= 2)
 			{
-				StartCoroutine(EndGame());
+				StartCoroutine(EndGame(false));
 			}
+			currentBackground.hyena.Laugh();
 		}
 		else
 		{
@@ -305,7 +310,7 @@ public class Game:MonoBehaviour
 					failCount++;
 					if (failCount > currentLevel.maxFailCount)
 					{
-						StartCoroutine(EndGame());
+						StartCoroutine(EndGame(!(failCount > currentLevel.maxFailCount)));
 					}
 					currentBackground.hyena.Laugh();
 				}
@@ -313,7 +318,7 @@ public class Game:MonoBehaviour
 
 				if (GetMatchedCards().Length >= GetNonLionCards().Length)
 				{
-					StartCoroutine(EndGame());
+					StartCoroutine(EndGame(!(failCount > currentLevel.maxFailCount)));
 				}
 			}
 			else
@@ -323,10 +328,7 @@ public class Game:MonoBehaviour
 		}
 	}
 
-	IEnumerator EndGame() {
-		bool didWin = !(failCount > currentLevel.maxFailCount);
-		//Debug.Log("You Win!");
-
+	IEnumerator EndGame(bool didWin) {
 		CanvasGroup endGameGroup = Instantiate(Resources.Load<CanvasGroup>("UI/EndGameUI"));
 		endGameGroup.transform.SetParent(GameUIManager.current.canvas.transform, false);
 

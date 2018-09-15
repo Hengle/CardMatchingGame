@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732a852ec267d3546b61243faf39ee74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 0
+  difficulty: 1
   testLevel: {fileID: 11400000, guid: 3d200245cf7f9da4da84788734006e29, type: 2}
   currentBackground: {fileID: 0}
   cardPrefab: {fileID: 11400000, guid: 69ffc6bf72417094ebffe7ce5c9e93c0, type: 2}

@@ -14,8 +14,14 @@ public class SettingsMenu:MonoBehaviour
 	private void Start()
 	{
 		propertySliderTemplate.gameObject.SetActive(false);
-		Debug.Log(GameSettings.Audio.masterVolume);
-		CreateSlider("Master Volume", v => GameSettings.Audio.masterVolume = v).value = GameSettings.Audio.masterVolume;
+
+		//CreateSlider("Master Volume", v => GameSettings.Audio.masterVolume = v).value = GameSettings.Audio.masterVolume;
+		CreateSlider("Music Volume", v => GameSettings.Audio.musicVolume = v).value = GameSettings.Audio.musicVolume;
+		CreateSlider("SFX Volume", v => GameSettings.Audio.sfxVolume = v).value = GameSettings.Audio.sfxVolume;
+		CreateSlider("Voice Volume", v => GameSettings.Audio.voiceVolume = v).value = GameSettings.Audio.voiceVolume;
+
+		gameObject.SetActive(false);
+		gameObject.SetActive(true);
 	}
 
 	private Slider CreateSlider(string title, UnityAction<float> onChanged)

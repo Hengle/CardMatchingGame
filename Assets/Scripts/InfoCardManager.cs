@@ -16,6 +16,7 @@ public class InfoCardManager : MonoBehaviour
     public GameObject goBackground;
     public GameObject goMenuBackground;
     public GameObject goBackButton;
+	public Button backButton;
 
     public Text animalNameText;
     public RawImage animalGender;
@@ -113,7 +114,8 @@ public class InfoCardManager : MonoBehaviour
             slot.SetActive(false);
         }
 
-        goBackButton.SetActive(false);
+		backButton.gameObject.SetActive(false);
+		goBackButton.SetActive(false);
         goMenuBackground.SetActive(false);
         goBackground.SetActive(true);
         goLeftArrow.SetActive(false);
@@ -155,7 +157,8 @@ public class InfoCardManager : MonoBehaviour
 
         if (away)
         {
-            goBackButton.SetActive(false);
+			backButton.gameObject.SetActive(false);
+			goBackButton.SetActive(false);
             goMenuBackground.SetActive(false);
             while (counter < 2)
             {
@@ -170,7 +173,8 @@ public class InfoCardManager : MonoBehaviour
             {
                 slot.SetActive(true);
             }
-            goBackButton.SetActive(true);
+			//backButton.gameObject.SetActive(true);
+			goBackButton.SetActive(true);
             goBackground.SetActive(false);
             goLeftArrow.SetActive(true);
             goRightArrow.SetActive(true);
@@ -185,7 +189,8 @@ public class InfoCardManager : MonoBehaviour
                 animalPivot.transform.localPosition = new Vector3(Mathf.Lerp(-2, 2.5f, ratio), 0, Mathf.Lerp(0, 0.225f, ratio * 5));
                 yield return 0;
             }
-            goBackButton.SetActive(true);
+			backButton.gameObject.SetActive(false);
+			goBackButton.SetActive(true);
             goMenuBackground.SetActive(true);
             animalPivot.GetComponent<Animator>().SetTrigger("Idle");
         }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class MenuManager : MonoBehaviour
 {
@@ -20,15 +21,16 @@ public class MenuManager : MonoBehaviour
 		}
 	}
 
-	private enum MenuType { Splash, LevelSelect, Info, Settings }
+	public enum MenuType { None, Splash, LevelSelect, Info, Settings }
 
 	public Transform splashScreenTransform;
 	public Transform levelSelectTransform;
 	public Transform infoTransform;
 	public Transform settingsTransform;
 
-	private static MenuType currentMenuType = MenuType.Splash;
 	private List<MenuInfo> menuInfos = new List<MenuInfo>();
+	private static MenuType currentMenuType => menuTypeStack.LastOrDefault();
+	private static List<MenuType> menuTypeStack = new List<MenuType>();
 
 	private void Start()
 	{
@@ -37,20 +39,53 @@ public class MenuManager : MonoBehaviour
 		menuInfos.Add(new MenuInfo() { type = MenuType.Info, rootTransform = infoTransform });
 		menuInfos.Add(new MenuInfo() { type = MenuType.Settings, rootTransform = settingsTransform });
 
-		SetMenuType(currentMenuType);
+		var menuType = currentMenuType;
+		menuTypeStack.Clear();
+
+		if (menuType == MenuType.None)
+		{
+			menuType = MenuType.Splash;
+		}
+		PushMenuType(menuType);
 	}
 
-	private void SetMenuType(MenuType menuType)
+	public void PushMenuTypeInt(int menuTypeInt)
+	{
+		PushMenuType((MenuType)menuTypeInt);
+	}
+
+	public void PushMenuType(MenuType menuType)
 	{
 		foreach (var menuInfo in menuInfos)
 		{
 			menuInfo.Close();
 		}
+		Debug.Log(menuType);
+		if (currentMenuType != menuType)
+		{
+			menuTypeStack.Add(menuType);
+		}
 
-		currentMenuType = menuType;
+		MenuInfo menu = menuInfos.First(v => v.type == menuType);
+		menu.Open();
+	}
 
-		MenuInfo newMenu = menuInfos[(int)currentMenuType];
-		newMenu.Open();
+	public void PopMenuType()
+	{
+		if (menuTypeStack.Count <= 1)
+		{
+			return;
+		}
+
+		foreach (var menuInfo in menuInfos)
+		{
+			menuInfo.Close();
+		}
+
+		menuTypeStack.RemoveAt(menuTypeStack.Count-1);
+
+		MenuInfo menu = menuInfos.First(v => v.type == currentMenuType);
+		menu.Open();
 	}
 
 	private void Update()
@@ -58,22 +93,14 @@ public class MenuManager : MonoBehaviour
 		//TODO: Create menu classes and move this logic into those.
 		if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
 		{
-			
 			if (currentMenuType == MenuType.Splash)
 			{
-				SetMenuType(MenuType.LevelSelect);
+				PushMenuType(MenuType.LevelSelect);
 			}
 		}
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-			if (currentMenuType == MenuType.LevelSelect)
-			{
-				SetMenuType(MenuType.Splash);
-			}
-            else if (currentMenuType == MenuType.Info)
-            {
-				SetMenuType(MenuType.LevelSelect);
-			}
+			PopMenuType();
         }
     }
 }
