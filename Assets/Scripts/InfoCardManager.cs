@@ -35,6 +35,7 @@ public class InfoCardManager : MonoBehaviour
     private GameObject newFemaleMesh;
     private bool animationEnd = true;
     private AudioClip nameAudio;
+    public AudioClip[] uiAC;
 
     public void AntilopeClicked()
     {
@@ -74,7 +75,7 @@ public class InfoCardManager : MonoBehaviour
             {
                 if(hit.collider.gameObject.name == goLeftArrow.name)
                 {
-                    currentPlace -= 16;
+                    currentPlace -= 8;
                     Arrow("Left");
                 }
                 else if(hit.collider.gameObject.name == goRightArrow.name)
@@ -221,6 +222,7 @@ public class InfoCardManager : MonoBehaviour
     {
         isFlipping = true;
         Flip(false);
+        OneShotAudio.Play(uiAC[UnityEngine.Random.Range(0, uiAC.Length)], 0, GameSettings.Audio.sfxVolume);
         StartCoroutine(WaitFillSlots(0.5f));
     }
 
@@ -251,7 +253,7 @@ public class InfoCardManager : MonoBehaviour
             }
 
             if (currentPlace < 0)
-                currentPlace = goUnlocked.Length - 8;
+                currentPlace = goUnlocked.Length - 4;
 
             ic.goUnlocked = goUnlocked[currentPlace];
             ic.animatorController = goUnlocked[currentPlace].animatorController;

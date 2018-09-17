@@ -227,6 +227,7 @@ MonoBehaviour:
   failIconTemplate: {fileID: 1747507771}
   beginPlayUI: {fileID: 2114323944}
   quitButton: {fileID: 1795738441}
+  clip: {fileID: 8300000, guid: d915c2c9ba4e43f4287041918125f30f, type: 3}
 --- !u!1 &307712654
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +728,10 @@ MonoBehaviour:
   cardPrefab: {fileID: 11400000, guid: 69ffc6bf72417094ebffe7ce5c9e93c0, type: 2}
   cardSpacing: 1.25
   cardScaling: 1.5
+  clip: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
+  clipStart: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
+  clipFruitFall: {fileID: 8300000, guid: c5d987fb8463a3b47bdaa4ad8bc545c4, type: 3}
+  clipLion: {fileID: 8300000, guid: f9e3330199da3c046abfb073d1dbe817, type: 3}
 --- !u!4 &1186209384
 Transform:
   m_ObjectHideFlags: 0

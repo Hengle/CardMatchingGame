@@ -5,6 +5,8 @@ public class Hyena:MonoBehaviour
 {
 	public Animator animator;
 	public Animator sausageAnimator;
+    public AudioClip clipLaugh;
+    public AudioClip clipFall;
 	private AudioSource audioSource;
 
 	void Awake()
@@ -15,6 +17,7 @@ public class Hyena:MonoBehaviour
 	public void Laugh()
 	{
 		animator.SetTrigger("Laugh");
+        audioSource.clip = clipLaugh;
 		audioSource.Play();
     }
 	
@@ -27,6 +30,8 @@ public class Hyena:MonoBehaviour
 	{
 		sausageAnimator.SetTrigger("Fall");
 		yield return new WaitForSeconds(0.5f);
-		animator.SetTrigger("Fall");
+        audioSource.clip = clipFall;
+        audioSource.Play();
+        animator.SetTrigger("Fall");
 	}
 }

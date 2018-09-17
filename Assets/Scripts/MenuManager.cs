@@ -29,10 +29,10 @@ public class MenuManager : MonoBehaviour
 	public Transform settingsTransform;
 
 	private List<MenuInfo> menuInfos = new List<MenuInfo>();
-	private static MenuType currentMenuType => menuTypeStack.LastOrDefault();
 	private static List<MenuType> menuTypeStack = new List<MenuType>();
+    private static MenuType currentMenuType => menuTypeStack.LastOrDefault();
 
-	private void Start()
+    private void Start()
 	{
 		menuInfos.Add(new MenuInfo() { type = MenuType.Splash, rootTransform = splashScreenTransform });
 		menuInfos.Add(new MenuInfo() { type = MenuType.LevelSelect, rootTransform = levelSelectTransform });
@@ -102,5 +102,10 @@ public class MenuManager : MonoBehaviour
 		{
 			PopMenuType();
         }
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        OneShotAudio.Play(clip, 0, GameSettings.Audio.sfxVolume);
     }
 }

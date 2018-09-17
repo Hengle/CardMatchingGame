@@ -152,6 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95000012926079730}
   sausageAnimator: {fileID: 95348820583692660}
+  clipLaugh: {fileID: 8300000, guid: b17b4ad19ebc23c4f9b0a065b6d8cc7c, type: 3}
+  clipFall: {fileID: 8300000, guid: d5b551a7979065648b8a1c53aadf1b97, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

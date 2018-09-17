@@ -27,6 +27,10 @@ public class Game:MonoBehaviour
 	public Card cardPrefab;
 	public float cardSpacing = 1.25f;
 	public float cardScaling = 1.0f;
+    public AudioClip clip;
+    public AudioClip clipStart;
+    public AudioClip clipFruitFall;
+    public AudioClip clipLion;
 
 	private int _failCount = 0;
 	public int failCount
@@ -97,7 +101,7 @@ public class Game:MonoBehaviour
 		counter = 0;
 
 		var shuffledCardDefs = new List<CardDef>(currentLevel.cardDefs);
-		Shuffle(shuffledCardDefs);
+        Shuffle(shuffledCardDefs);
 
 		while(availableCardSlots.Count > 0) {
 			CardDef cardDef = shuffledCardDefs[counter%shuffledCardDefs.Count];
@@ -117,7 +121,7 @@ public class Game:MonoBehaviour
 
 	public static void Shuffle<T>(List<T> list)
 	{
-		var rng = new System.Random();
+        var rng = new System.Random();
 		int n = list.Count;
 		while (n > 1)
 		{
@@ -173,7 +177,9 @@ public class Game:MonoBehaviour
 		{
 			for (int x = 0; x < currentLevel.cardCountX; x++)
 			{
-				Card card = cardGrid[x, currentLevel.cardCountY-y-1];
+                OneShotAudio.Play(clipStart, 0, GameSettings.Audio.sfxVolume);
+
+                Card card = cardGrid[x, currentLevel.cardCountY-y-1];
 				card.transform.localScale = Vector3.zero;
 				new Tween(null, 0, 1, 1.0f, new CurveElastic(TweenCurveMode.Out), t =>
 				{
@@ -194,7 +200,7 @@ public class Game:MonoBehaviour
 		{
 			for (int x = 0; x < currentLevel.cardCountX; x++)
 			{
-				Card card = cardGrid[x, currentLevel.cardCountY-y-1];
+                Card card = cardGrid[x, currentLevel.cardCountY-y-1];
 				card.isFlipped = true;
 				yield return new WaitForSeconds(waveDelay);
 			}
@@ -206,7 +212,9 @@ public class Game:MonoBehaviour
 		{
 			for (int x = 0; x < currentLevel.cardCountX; x++)
 			{
-				Card card = cardGrid[x, currentLevel.cardCountY-y-1];
+                OneShotAudio.Play(clip, 0, GameSettings.Audio.sfxVolume);
+
+                Card card = cardGrid[x, currentLevel.cardCountY-y-1];
 				card.isFlipped = false;
 				yield return new WaitForSeconds(waveDelay);
 			}
@@ -223,7 +231,7 @@ public class Game:MonoBehaviour
 
 		for (int i = 0; i < shuffleCount; i++)
 		{
-			int card0Index = Random.Range(0, cards.Length);
+            int card0Index = Random.Range(0, cards.Length);
 			int card1Index = card0Index;
 			while (card1Index == card0Index)
 			{
@@ -301,8 +309,9 @@ public class Game:MonoBehaviour
 					card.OnMatch(flippedCard);
 					flippedCard.OnMatch(card);
 					currentBackground.hyena.SausageFall();
-				}
-				else
+                    OneShotAudio.Play(clipFruitFall, 0, GameSettings.Audio.sfxVolume);
+                }
+                else
 				{
                     yield return new WaitForSeconds(0.5f);
 					card.isFlipped = false;
@@ -430,7 +439,8 @@ public class Game:MonoBehaviour
 				var card = cardGrid[x, y];
 				if (card.cardDef is LionCardDef && card.isFlipped)
 				{
-					cards.Add(cardGrid[x, y]);
+                    OneShotAudio.Play(clipLion, 0, GameSettings.Audio.sfxVolume);
+                    cards.Add(cardGrid[x, y]);
 				}
 			}
 		}

@@ -9,6 +9,8 @@ public class Card:MonoBehaviour {
 	public Transform animalPivot;
 	public int tilePositionX = -1;
 	public int tilePositionY = -1;
+    public AudioClip clipRear;
+    public AudioClip clipRun;
 
 	public bool _isMatched;
 	public bool isMatched { get; private set; }
@@ -62,8 +64,10 @@ public class Card:MonoBehaviour {
 	public void OnMatch(Card other)
 	{
 		isMatched = true;
-		AnimateDance();
-		animator.CrossFade("Match", 0.5f);
+        AnimateDance();
+        OneShotAudio.Play(clipRear, 0, GameSettings.Audio.sfxVolume);
+
+        animator.CrossFade("Match", 0.5f);
 		
 		StartCoroutine(AnimateAway());
 	}
@@ -97,8 +101,9 @@ public class Card:MonoBehaviour {
 	private IEnumerator AnimateAway()
 	{
 		yield return new WaitForSeconds(2);
-		float counter = 0;
-		while (counter < 3)
+        float counter = 0;
+        OneShotAudio.Play(clipRun, 0, GameSettings.Audio.sfxVolume);
+        while (counter < 3)
 		{
 			counter += Time.deltaTime;
 			float ratio = counter/3;

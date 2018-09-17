@@ -7,6 +7,7 @@ public class Info : MonoBehaviour
     public Transform infoPage;
     public Transform startPoint;
     public bool factSheet = false;
+    public AudioClip clip;
 
     void Update()
     {
@@ -41,6 +42,7 @@ public class Info : MonoBehaviour
 
     private void LoadInfo(Transform infoPage, Transform startPoint)
     {
+        OneShotAudio.Play(clip, 0, GameSettings.Audio.sfxVolume);
         if (!factSheet)
         {
             infoPage.gameObject.SetActive(true);

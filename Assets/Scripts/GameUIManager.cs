@@ -20,6 +20,7 @@ public class GameUIManager:MonoBehaviour {
 	public FailIcon failIconTemplate;
 	public BeginPlayUI beginPlayUI;
 	public Button quitButton;
+    public AudioClip clip;
 
 	private FailIcon[] failIcons = new FailIcon[0];
 
@@ -62,6 +63,7 @@ public class GameUIManager:MonoBehaviour {
 
 	private void OnClickQuit()
 	{
-		SceneManager.LoadScene("LevelSelect");
+        OneShotAudio.Play(clip, 0, GameSettings.Audio.sfxVolume);
+        SceneManager.LoadScene("LevelSelect");
 	}
 }
