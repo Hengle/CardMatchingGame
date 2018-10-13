@@ -312,6 +312,7 @@ public class Game:MonoBehaviour
 				StartCoroutine(EndGame(false));
 			}
 			currentBackground.hyena.Laugh();
+			flippedCard = null;
 		}
 		else
 		{
