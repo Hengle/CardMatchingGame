@@ -6,6 +6,7 @@ using System.Linq;
 public class Level:MonoBehaviour
 {
 	public List<CardDef> cardDefs = new List<CardDef>();
+	public List<CardDefGroup> cardDefGroups = new List<CardDefGroup>();
 	public List<LionCardDef> lionCardDefs = new List<LionCardDef>();
 	public int cardCountX = 4;
 	public int cardCountY = 4;

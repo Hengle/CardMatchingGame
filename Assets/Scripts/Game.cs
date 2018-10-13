@@ -90,20 +90,34 @@ public class Game:MonoBehaviour
 		}
 
 		int counter = 0;
-		int lionCount = currentLevel.lionCardDefs.Count;
-		while (availableCardSlots.Count > 0 && lionCount > 0)
+		while (availableCardSlots.Count > 0 && counter < currentLevel.lionCardDefs.Count)
 		{
 			CardDef cardDef = currentLevel.lionCardDefs[counter];
 			AddCard(availableCardSlots, cardDef);
-			lionCount--;
+			counter++;
 		}
 
 		counter = 0;
 
-		var shuffledCardDefs = new List<CardDef>(currentLevel.cardDefs);
+		//TODO: Remove Level.cardDefs path when all data has been migrated.
+		List<CardDef> shuffledCardDefs = null;
+		if (currentLevel.cardDefGroups.Count > 0)
+		{
+			shuffledCardDefs = new List<CardDef>();
+			foreach (var cardDefGroup in currentLevel.cardDefGroups)
+			{
+				shuffledCardDefs.Add(cardDefGroup.GetRandomCard());
+			}
+		}
+		else
+		{
+			shuffledCardDefs = new List<CardDef>(currentLevel.cardDefs);
+		}
+	
+
         Shuffle(shuffledCardDefs);
 
-		while(availableCardSlots.Count > 0) {
+		while (availableCardSlots.Count > 0) {
 			CardDef cardDef = shuffledCardDefs[counter%shuffledCardDefs.Count];
 			if (!cardDef || Random.value >= cardDef.probability)
 			{
@@ -113,7 +127,7 @@ public class Game:MonoBehaviour
 
 			AddCard(availableCardSlots, cardDef);
 
-			counter += 1;
+			counter++;
 		}
 
 		StartCoroutine(PreGameSequence());
@@ -121,7 +135,6 @@ public class Game:MonoBehaviour
 
 	public static void Shuffle<T>(List<T> list)
 	{
-        var rng = new System.Random();
 		int n = list.Count;
 		while (n > 1)
 		{

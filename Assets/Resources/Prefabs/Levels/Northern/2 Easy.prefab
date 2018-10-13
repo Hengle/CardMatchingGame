@@ -51,6 +51,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00449649ec26b054a848596a7fda9b79, type: 2}
   - {fileID: 11400000, guid: ed228cabbce92b643a4d84cdeb48e33f, type: 2}
   - {fileID: 11400000, guid: 0c84b7214654bed49ba05e25cf046130, type: 2}
+  cardDefGroups: []
   lionCardDefs: []
   cardCountX: 3
   cardCountY: 2
