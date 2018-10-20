@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: Addax_M
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11409664, y: 0.17315832, z: 0.16820186}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e7330b607e8ac4b81ea2257a8763a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshPrefab: {fileID: 1000013202871714, guid: ecf7cd63d432edc4582b72d174fd3564, type: 2}
+  animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
+  material: {fileID: 2100000, guid: 5db49c0b130960542a04ec4342ae3a26, type: 2}
+  animalScaler: 0.8
+  displayName: Addax
+  gender: 0
+  conservation: 4
+  infoMapTexture: {fileID: 2800000, guid: 522e80b71bde8ca458bc3132bd1d8330, type: 3}
+  maxCount: 3
+  spokenName: {fileID: 8300000, guid: 8b477599d373f414999d89e45d04cbb3, type: 3}
+  femaleEquivalent: {fileID: 100000, guid: 538a7f3b307f1ad479404309bee104d6, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1

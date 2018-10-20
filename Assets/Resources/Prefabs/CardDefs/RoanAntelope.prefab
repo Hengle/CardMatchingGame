@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400000}
-  - component: {fileID: 11400000}
+  - component: {fileID: 114693808043699434}
   m_Layer: 0
   m_Name: RoanAntelope
   m_TagString: Untagged
@@ -29,28 +29,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32e7330b607e8ac4b81ea2257a8763a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshPrefab: {fileID: 1000013202871714, guid: ecf7cd63d432edc4582b72d174fd3564, type: 2}
-  animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
-  material: {fileID: 2100000, guid: 26e2ffc8b794feb4e9064b7ae3217560, type: 2}
-  animalScaler: 1.4
-  displayName: Roan Antelope
-  gender: 0
-  conservation: 0
-  infoMapTexture: {fileID: 2800000, guid: 190c1508b81504d4190a9ed06040668d, type: 3}
-  maxCount: 36
-  spokenName: {fileID: 8300000, guid: e24f24589bc214b4289b4aa5a3c88163, type: 3}
-  femaleEquivalent: {fileID: 100000, guid: 3c251d8e31ff25645b4d8f4c7d4a7aca, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -62,3 +40,17 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114693808043699434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57bec2314b01740c78314bf4348d5485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardDefs:
+  - {fileID: 11400000, guid: 3c251d8e31ff25645b4d8f4c7d4a7aca, type: 2}
+  - {fileID: 11400000, guid: 698dc8cec92e0f44e9e7a19ecd2395cf, type: 2}

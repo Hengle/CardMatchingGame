@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400000}
-  - component: {fileID: 11400000}
+  - component: {fileID: 114940618893375628}
   m_Layer: 0
   m_Name: GreaterKudu
   m_TagString: Untagged
@@ -29,28 +29,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32e7330b607e8ac4b81ea2257a8763a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshPrefab: {fileID: 1000013202871714, guid: ecf7cd63d432edc4582b72d174fd3564, type: 2}
-  animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
-  material: {fileID: 2100000, guid: 1541256d8fe124946a9e00826fce40aa, type: 2}
-  animalScaler: 1.3
-  displayName: Greater Kudu
-  gender: 0
-  conservation: 0
-  infoMapTexture: {fileID: 2800000, guid: fa7f755533934d243b5c47e67e60a95d, type: 3}
-  maxCount: 27
-  spokenName: {fileID: 8300000, guid: 8d3e0e20ec09c5a4180a5b4955f2d54a, type: 3}
-  femaleEquivalent: {fileID: 100000, guid: 13c5859c363e81c47adb20ffaf82b26c, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -62,3 +40,17 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114940618893375628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57bec2314b01740c78314bf4348d5485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardDefs:
+  - {fileID: 11400000, guid: 13c5859c363e81c47adb20ffaf82b26c, type: 2}
+  - {fileID: 11400000, guid: e23cc794190f43e49ac7c9f454d45655, type: 2}

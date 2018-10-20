@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400000}
-  - component: {fileID: 11400000}
+  - component: {fileID: 114047588185774556}
   m_Layer: 0
   m_Name: 1 Baby
   m_TagString: Untagged
@@ -29,50 +29,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f842b964e6d264185f44b4740cc5ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardDefs:
-  - {fileID: 11400000, guid: 7dbeac273fd5f80469f11f761475e0c5, type: 2}
-  - {fileID: 11400000, guid: db7f060f3f0d1e946a2e68790382c828, type: 2}
-  - {fileID: 11400000, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 2}
-  - {fileID: 11400000, guid: 8c78f0fbcd0e11044b2ca74812a9f801, type: 2}
-  - {fileID: 11400000, guid: f4495310ae157244c937d69a6de71659, type: 2}
-  - {fileID: 11400000, guid: 00449649ec26b054a848596a7fda9b79, type: 2}
-  - {fileID: 11400000, guid: cba3ed27fd89b6a4482d4ebcc43f09bc, type: 2}
-  - {fileID: 11400000, guid: 13c5859c363e81c47adb20ffaf82b26c, type: 2}
-  - {fileID: 11400000, guid: 7ef70de2dc236bd4f893afe10b4688bf, type: 2}
-  - {fileID: 11400000, guid: 43fac26eee7409d47a2ecdb26505bb02, type: 2}
-  - {fileID: 11400000, guid: a4a1a9d3179505f40a1b9f811d7e2eda, type: 2}
-  - {fileID: 11400000, guid: 2debff25e25b9da4582b06e205ebc04e, type: 2}
-  - {fileID: 11400000, guid: d38594f9699678d46a9b093604a5df35, type: 2}
-  - {fileID: 11400000, guid: 74375359769fce44c977f8f1b15e5816, type: 2}
-  - {fileID: 11400000, guid: 60ad3506f94a3c146afd9fc54cf3209b, type: 2}
-  - {fileID: 11400000, guid: 01072f1140da67b499f7fc1a0ee6e962, type: 2}
-  - {fileID: 11400000, guid: def07cdea0d07a34c8c24f479069e882, type: 2}
-  - {fileID: 11400000, guid: 3c251d8e31ff25645b4d8f4c7d4a7aca, type: 2}
-  - {fileID: 11400000, guid: 3c31ac48544544d44940db494d491dc3, type: 2}
-  - {fileID: 11400000, guid: 1a8ce6b95550b364b9afeda0237eb14e, type: 2}
-  - {fileID: 11400000, guid: ed228cabbce92b643a4d84cdeb48e33f, type: 2}
-  - {fileID: 11400000, guid: 0c84b7214654bed49ba05e25cf046130, type: 2}
-  - {fileID: 11400000, guid: 6571e5f40b528944bad0f4f2ad889998, type: 2}
-  - {fileID: 11400000, guid: 35d7aa0a1dba183498952186a974adb6, type: 2}
-  lionCardDefs: []
-  cardCountX: 2
-  cardCountY: 1
-  maxFailCount: 0
-  background: {fileID: 114269455696899728, guid: 3251856c8fe1fbe459c13868402984d8,
-    type: 2}
-  thumbnail: {fileID: 21300000, guid: 1ccdeba799d49a840b420fdf1a0c6e80, type: 3}
-  timeOfDay: {fileID: 11400000, guid: a6a0381023baa984d81256dc867488d0, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -125,3 +81,36 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114047588185774556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f842b964e6d264185f44b4740cc5ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardDefs: []
+  cardDefGroups:
+  - {fileID: 114666305265633264, guid: db7f060f3f0d1e946a2e68790382c828, type: 2}
+  - {fileID: 114411226844359398, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 2}
+  - {fileID: 114145351647593630, guid: f4495310ae157244c937d69a6de71659, type: 2}
+  - {fileID: 114940618893375628, guid: cba3ed27fd89b6a4482d4ebcc43f09bc, type: 2}
+  - {fileID: 114720794115246586, guid: 7ef70de2dc236bd4f893afe10b4688bf, type: 2}
+  - {fileID: 114928466004912420, guid: a4a1a9d3179505f40a1b9f811d7e2eda, type: 2}
+  - {fileID: 114583122862003910, guid: d38594f9699678d46a9b093604a5df35, type: 2}
+  - {fileID: 114267717428996126, guid: 60ad3506f94a3c146afd9fc54cf3209b, type: 2}
+  - {fileID: 114693808043699434, guid: def07cdea0d07a34c8c24f479069e882, type: 2}
+  - {fileID: 114739342474985066, guid: 3c31ac48544544d44940db494d491dc3, type: 2}
+  - {fileID: 114029867942576716, guid: ed228cabbce92b643a4d84cdeb48e33f, type: 2}
+  - {fileID: 114139508578168960, guid: c5c84c45ff31d4c9fbb9670b9de7ad7a, type: 2}
+  lionCardDefs: []
+  cardCountX: 2
+  cardCountY: 1
+  maxFailCount: 0
+  background: {fileID: 114269455696899728, guid: 3251856c8fe1fbe459c13868402984d8,
+    type: 2}
+  thumbnail: {fileID: 21300000, guid: 1ccdeba799d49a840b420fdf1a0c6e80, type: 3}
+  timeOfDay: {fileID: 11400000, guid: a6a0381023baa984d81256dc867488d0, type: 2}
