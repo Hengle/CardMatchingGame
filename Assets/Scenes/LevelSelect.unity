@@ -9988,34 +9988,34 @@ MonoBehaviour:
   goLeftArrow: {fileID: 1646393940}
   goRightArrow: {fileID: 888028328}
   goUnlocked:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d60389891dcd36e40a6f5023304ba941, type: 2}
+  - {fileID: 11400000, guid: b78a5b87698b40a40a13e4f5c04ebf61, type: 2}
+  - {fileID: 11400000, guid: 4b6b425a67414eb43b7b1689ee2387ad, type: 2}
+  - {fileID: 11400000, guid: 42b078de500511e44a5a23605ce6a579, type: 2}
+  - {fileID: 11400000, guid: f72a243cb1419904c89dece37578ebd4, type: 2}
+  - {fileID: 11400000, guid: bc134ba0bafa8b94a8e4363b9d44c3ea, type: 2}
+  - {fileID: 11400000, guid: 35f6e9edfc9ceb64f98235527ac56266, type: 2}
+  - {fileID: 11400000, guid: 20da6b43ad30b51488df5e45ce61333d, type: 2}
+  - {fileID: 11400000, guid: 41859b16bd5055441ba5c2f00227d4fa, type: 2}
+  - {fileID: 11400000, guid: d1199862628dec54a8bc342bf5c79fa7, type: 2}
+  - {fileID: 11400000, guid: e23cc794190f43e49ac7c9f454d45655, type: 2}
+  - {fileID: 11400000, guid: a9d08a542e08a284db9169b752801b94, type: 2}
+  - {fileID: 11400000, guid: bece72846b9d26749b8c28b3760a80ac, type: 2}
+  - {fileID: 11400000, guid: c80f2206dac5a9b4393ebb8373ca8663, type: 2}
+  - {fileID: 11400000, guid: ac359ab8a48466b49928ea54bb43b110, type: 2}
   - {fileID: 11400000, guid: 4b06bf7e8c752ce4ebac727b54446e68, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 27ab14695885c9449a1db808928928df, type: 2}
+  - {fileID: 11400000, guid: f4074b7f42e609d4b8d3727e694c9c13, type: 2}
+  - {fileID: 11400000, guid: decf7a841aeb06b44a7514774a07296b, type: 2}
+  - {fileID: 11400000, guid: c1eade90c7b90ab4bbdda13d1c1f42be, type: 2}
+  - {fileID: 11400000, guid: 698dc8cec92e0f44e9e7a19ecd2395cf, type: 2}
+  - {fileID: 11400000, guid: 60d6b57ffe1fd354fadc0ed060ff8ca4, type: 2}
+  - {fileID: 11400000, guid: b7a4d54c71c03cd49a9eea4c5472697f, type: 2}
   - {fileID: 11400000, guid: 6571e5f40b528944bad0f4f2ad889998, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 6f7c502c40a1e514d8365f362d00924b, type: 2}
+  - {fileID: 11400000, guid: 61234a63c16a3004bb04cc2f71773b1b, type: 2}
+  - {fileID: 11400000, guid: a41a7269487617842afbc3838eba0e29, type: 2}
+  - {fileID: 11400000, guid: 0be2a4a835af8d24dabcef2f5e11df32, type: 2}
   goSlots:
   - {fileID: 1236634419}
   - {fileID: 702413494}
