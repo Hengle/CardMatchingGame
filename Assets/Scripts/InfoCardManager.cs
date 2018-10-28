@@ -17,8 +17,9 @@ public class InfoCardManager : MonoBehaviour
     public GameObject goMenuBackground;
     public GameObject goBackButton;
 	public Button backButton;
+	public Button factSheetBackButton;
 
-    public Text animalNameText;
+	public Text animalNameText;
     public RawImage animalGender;
     public Text animalConservationText;
     public RawImage animalMap;
@@ -56,13 +57,13 @@ public class InfoCardManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Reset();
+		ResetState();
         FillSlots();
     }
 
     private void OnDisable()
     {
-        Reset();
+		ResetState();
     }
 
     private void Update()
@@ -93,31 +94,41 @@ public class InfoCardManager : MonoBehaviour
             }
         }
 
+		/*
         if(!goBackButton.GetComponent<Info>().factSheet)
         {
             if (animationEnd && newMaleMesh && newFemaleMesh)
             {
-                animationEnd = false;
-                newMaleMesh.GetComponent<Animator>().SetTrigger("Run");
-                StartCoroutine(AnimateWalkToAndAway(newMaleMesh, true));
-
-                newFemaleMesh.GetComponent<Animator>().SetTrigger("Run");
-                StartCoroutine(AnimateWalkToAndAway(newFemaleMesh, true));
+                
             }
         }
+		*/
     }
+
+	public void BackFromInfoSheet()
+	{
+		factSheetBackButton.gameObject.SetActive(false);
+
+		animationEnd = false;
+		newMaleMesh.GetComponent<Animator>().SetTrigger("Run");
+		StartCoroutine(AnimateWalkToAndAway(newMaleMesh, true));
+
+		newFemaleMesh.GetComponent<Animator>().SetTrigger("Run");
+		StartCoroutine(AnimateWalkToAndAway(newFemaleMesh, true));
+	}
 
     public void ShowFactSheet(InfoCards animal)
     {
-        goBackButton.GetComponent<Info>().factSheet = true;
+        //goBackButton.GetComponent<Info>().factSheet = true;
         foreach(GameObject slot in goSlots)
         {
             slot.SetActive(false);
         }
 
 		backButton.gameObject.SetActive(false);
-		goBackButton.SetActive(false);
-        goMenuBackground.SetActive(false);
+		
+		//goBackButton.SetActive(false);
+		goMenuBackground.SetActive(false);
         goBackground.SetActive(true);
         goLeftArrow.SetActive(false);
         goRightArrow.SetActive(false);
@@ -158,8 +169,7 @@ public class InfoCardManager : MonoBehaviour
 
         if (away)
         {
-			backButton.gameObject.SetActive(false);
-			goBackButton.SetActive(false);
+			//goBackButton.SetActive(false);
             goMenuBackground.SetActive(false);
             while (counter < 2)
             {
@@ -175,7 +185,7 @@ public class InfoCardManager : MonoBehaviour
                 slot.SetActive(true);
             }
 			//backButton.gameObject.SetActive(true);
-			goBackButton.SetActive(true);
+			//goBackButton.SetActive(true);
             goBackground.SetActive(false);
             goLeftArrow.SetActive(true);
             goRightArrow.SetActive(true);
@@ -191,11 +201,14 @@ public class InfoCardManager : MonoBehaviour
                 yield return 0;
             }
 			backButton.gameObject.SetActive(false);
-			goBackButton.SetActive(true);
+			//goBackButton.SetActive(true);
             goMenuBackground.SetActive(true);
             animalPivot.GetComponent<Animator>().SetTrigger("Idle");
         }
-    }
+
+		backButton.gameObject.SetActive(away);
+		factSheetBackButton.gameObject.SetActive(!away);
+	}
 
     Dictionary<CardDef.Conservation, string> conservationTextDict = new Dictionary<CardDef.Conservation, string>()
 	{
@@ -374,9 +387,12 @@ public class InfoCardManager : MonoBehaviour
         }
     }
 
-    private void Reset()
+    private void ResetState()
     {
-        foreach (GameObject slot in goSlots)
+		backButton.gameObject.SetActive(true);
+		factSheetBackButton.gameObject.SetActive(false);
+
+		foreach (GameObject slot in goSlots)
         {
             currentPlace = 0;
             isEnd = false;

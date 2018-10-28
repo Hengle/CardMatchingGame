@@ -23,6 +23,10 @@ public class BeginPlayUI : MonoBehaviour
 
 		Tween tween = new Tween(null, 0, 1, 1.0f, new CurveElastic(TweenCurveMode.Out), t =>
 		{
+			if (!goTransform)
+			{
+				return;
+			}
 			goTransform.localScale = Vector3.one*t.currentValue;
 		});
 
@@ -33,6 +37,10 @@ public class BeginPlayUI : MonoBehaviour
 
 		tween = new Tween(null, 0, 1, 0.5f, new CurveCubic(TweenCurveMode.Out), t =>
 		{
+			if (!goTransform)
+			{
+				return;
+			}
 			goTransform.localPosition = Vector3.Lerp(goCenterTarget.localPosition, goOffScreenTarget.localPosition, t.currentValue);
 		});
 

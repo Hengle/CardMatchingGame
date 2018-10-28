@@ -60,7 +60,7 @@ public class MenuManager : MonoBehaviour
 		{
 			menuInfo.Close();
 		}
-		Debug.Log(menuType);
+
 		if (currentMenuType != menuType)
 		{
 			menuTypeStack.Add(menuType);

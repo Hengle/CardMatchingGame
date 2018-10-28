@@ -48,7 +48,7 @@ public static class GameSettings
 			}
 			set
 			{
-				PlayerPrefs.SetFloat("Audio.VoiceVolume", value);
+				PlayerPrefs.SetFloat("Audio.MusicVolume", value);
 			}
 		}
 

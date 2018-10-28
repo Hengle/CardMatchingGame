@@ -5,10 +5,15 @@ public class AudioSourceChannelMultiplyer : MonoBehaviour
 {
 	public GameSettings.Audio.Channel channel;
 	public AudioSource audioSource;
+	private float baseVolume = Mathf.NegativeInfinity;
 
-	private void Start()
+	private void OnEnable()
 	{
 		var audioSource = this.audioSource ? this.audioSource : gameObject.GetComponent<AudioSource>();
-		audioSource.volume *= GameSettings.Audio.GetVolume(channel);
+		if (baseVolume == Mathf.NegativeInfinity)
+		{
+			baseVolume = audioSource.volume;
+		}
+		audioSource.volume = baseVolume*GameSettings.Audio.GetVolume(channel);
 	}
 }
