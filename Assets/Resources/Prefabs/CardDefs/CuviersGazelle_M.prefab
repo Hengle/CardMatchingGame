@@ -47,7 +47,10 @@ MonoBehaviour:
   displayName: Cuvier's Gazelle
   gender: 0
   conservation: 2
-  infoMapTexture: {fileID: 2800000, guid: b46f74f57bdba6d4c9b21d3063a8b324, type: 3}
+  infoTextures:
+  - {fileID: 2800000, guid: b46f74f57bdba6d4c9b21d3063a8b324, type: 3}
+  - {fileID: 2800000, guid: 46de8589f67b0c7448876e68e74e30ee, type: 3}
+  - {fileID: 2800000, guid: ce4f4607f78db3549aa6fd5e936fc57c, type: 3}
   maxCount: 6
   spokenName: {fileID: 8300000, guid: 27f54f31209ba534eba228b8a0f6882d, type: 3}
   femaleEquivalent: {fileID: 100000, guid: ae6d55c4523e48e48b7eb820bf32423e, type: 2}

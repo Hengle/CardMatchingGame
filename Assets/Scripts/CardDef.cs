@@ -15,7 +15,7 @@ public class CardDef:MonoBehaviour
 	public string displayName;
 	public Gender gender = Gender.Male;
 	public Conservation conservation = Conservation.LeastConcern;
-	public Texture2D infoMapTexture;
+	public Texture2D[] infoTextures;
 	public int maxCount;
     public AudioClip spokenName;
     public GameObject femaleEquivalent;

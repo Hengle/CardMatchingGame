@@ -47,7 +47,10 @@ MonoBehaviour:
   displayName: Addax
   gender: 0
   conservation: 4
-  infoMapTexture: {fileID: 2800000, guid: 522e80b71bde8ca458bc3132bd1d8330, type: 3}
+  infoTextures:
+  - {fileID: 2800000, guid: 522e80b71bde8ca458bc3132bd1d8330, type: 3}
+  - {fileID: 2800000, guid: 67f5c6e52d806c1479b7116f6027e1fc, type: 3}
+  - {fileID: 2800000, guid: 8584131697bb2b04299ad3ac99a9e664, type: 3}
   maxCount: 3
   spokenName: {fileID: 8300000, guid: 8b477599d373f414999d89e45d04cbb3, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 538a7f3b307f1ad479404309bee104d6, type: 2}

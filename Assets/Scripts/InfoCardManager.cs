@@ -29,7 +29,9 @@ public class InfoCardManager : MonoBehaviour
 	public Texture2D genderTextureMale;
 	public Texture2D genderTextureFemale;
 
+    public Texture2D[] backgroundInfoTextures;
     private int currentPlace = 0;
+    private int currentInfoBackground = 0;
     private bool isFlipping = false;
     private bool isEnd = false;
     private GameObject newMaleMesh;
@@ -137,6 +139,8 @@ public class InfoCardManager : MonoBehaviour
 
         if (animalMaleSlot.Find("RotationPivot/AnimalPivot").childCount > 0)
             Destroy(animalMaleSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
+
+        backgroundInfoTextures = animal.infoTextures;
 		
         FillFactSheet(animal.goUnlocked);
 		newMaleMesh = Fill(animalMaleSlot.gameObject, animal);
@@ -160,6 +164,16 @@ public class InfoCardManager : MonoBehaviour
         StartCoroutine(AnimateWalkToAndAway(newFemaleMesh, false));
 
         //Flip(animalSlot.GetComponent<Animator>(), true);
+    }
+
+    public void FlipInfoBackgroundChange()
+    {
+        currentInfoBackground++;
+
+        if (currentInfoBackground > backgroundInfoTextures.Length - 1)
+            currentInfoBackground = 0;
+
+        animalMap.texture = backgroundInfoTextures[currentInfoBackground];
     }
 
     private IEnumerator AnimateWalkToAndAway(GameObject animalPivot, bool away)
@@ -228,7 +242,8 @@ public class InfoCardManager : MonoBehaviour
 		animalNameText.text = name;
 		// animalGender.texture = cardDef.gender == CardDef.Gender.Male ? genderTextureMale : genderTextureFemale;
         animalConservationText.text = conservationTextDict[cardDef.conservation];
-        animalMap.texture = cardDef.infoMapTexture;
+        currentInfoBackground = 0;
+        animalMap.texture = backgroundInfoTextures[0];
     }
 
     private void Arrow(string direction)
@@ -272,6 +287,7 @@ public class InfoCardManager : MonoBehaviour
             ic.animatorController = goUnlocked[currentPlace].animatorController;
             ic.spokenName = goUnlocked[currentPlace].spokenName;
             ic.gender = goUnlocked[currentPlace].gender.ToString();
+            ic.infoTextures = goUnlocked[currentPlace].infoTextures;
 
             Fill(ic.gameObject, ic);
 
@@ -394,6 +410,7 @@ public class InfoCardManager : MonoBehaviour
 
 		foreach (GameObject slot in goSlots)
         {
+            currentInfoBackground = 0;
             currentPlace = 0;
             isEnd = false;
             Animator animator = slot.GetComponent<Animator>();

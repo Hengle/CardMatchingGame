@@ -47,7 +47,10 @@ MonoBehaviour:
   displayName: Blue Wildebeest
   gender: 0
   conservation: 0
-  infoMapTexture: {fileID: 2800000, guid: ba225f2a977227046a4bc44d48a68a35, type: 3}
+  infoTextures:
+  - {fileID: 2800000, guid: ba225f2a977227046a4bc44d48a68a35, type: 3}
+  - {fileID: 2800000, guid: 486bfcc1ed72e5543aeda5ca09391c2c, type: 3}
+  - {fileID: 2800000, guid: 0d6e7ed351edfac43b36cfd78312369a, type: 3}
   maxCount: 21
   spokenName: {fileID: 8300000, guid: 44f5c784e6d8672488cdf5733de0a28e, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 8c78f0fbcd0e11044b2ca74812a9f801, type: 2}

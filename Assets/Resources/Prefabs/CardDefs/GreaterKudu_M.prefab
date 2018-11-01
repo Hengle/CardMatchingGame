@@ -47,7 +47,10 @@ MonoBehaviour:
   displayName: Greater Kudu
   gender: 0
   conservation: 0
-  infoMapTexture: {fileID: 2800000, guid: fa7f755533934d243b5c47e67e60a95d, type: 3}
+  infoTextures:
+  - {fileID: 2800000, guid: fa7f755533934d243b5c47e67e60a95d, type: 3}
+  - {fileID: 2800000, guid: b2fcb75a10fcb3847afa664dbdaaa502, type: 3}
+  - {fileID: 2800000, guid: dd390a675717c414bb0ba9044d27c09a, type: 3}
   maxCount: 27
   spokenName: {fileID: 8300000, guid: 8d3e0e20ec09c5a4180a5b4955f2d54a, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 13c5859c363e81c47adb20ffaf82b26c, type: 2}

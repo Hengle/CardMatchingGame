@@ -47,7 +47,10 @@ MonoBehaviour:
   displayName: Puku
   gender: 0
   conservation: 1
-  infoMapTexture: {fileID: 2800000, guid: bbacd58ee7723d14aafb88bf3f0be053, type: 3}
+  infoTextures:
+  - {fileID: 2800000, guid: bbacd58ee7723d14aafb88bf3f0be053, type: 3}
+  - {fileID: 2800000, guid: b06735f78e9261a4696891d79d0541be, type: 3}
+  - {fileID: 2800000, guid: 34e15634f13313d4a86d7cf3bfc52bb5, type: 3}
   maxCount: 9
   spokenName: {fileID: 8300000, guid: fde239f72f4c88f4d9c15f2abeacce14, type: 3}
   femaleEquivalent: {fileID: 100000, guid: 29bc27cdd00d49347b7265fd8a492257, type: 2}

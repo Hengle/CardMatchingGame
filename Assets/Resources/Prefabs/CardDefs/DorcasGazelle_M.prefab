@@ -47,7 +47,10 @@ MonoBehaviour:
   displayName: Dorcas Gazelle
   gender: 0
   conservation: 2
-  infoMapTexture: {fileID: 2800000, guid: 1017bb2b91b11024fb5f9b0d3cf451ae, type: 3}
+  infoTextures:
+  - {fileID: 2800000, guid: 1017bb2b91b11024fb5f9b0d3cf451ae, type: 3}
+  - {fileID: 2800000, guid: 8de5bdddfda6967429b8665c280fa7f5, type: 3}
+  - {fileID: 2800000, guid: 2eb4c5ea3bd4ad847acb41b4274210d7, type: 3}
   maxCount: 9
   spokenName: {fileID: 8300000, guid: 145b265c8f320654da720625f1a47d7b, type: 3}
   femaleEquivalent: {fileID: 100000, guid: e48d83757354ba44bb2f9e80d8000393, type: 2}

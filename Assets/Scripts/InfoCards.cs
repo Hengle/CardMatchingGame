@@ -12,6 +12,7 @@ public class InfoCards : MonoBehaviour
     public string gender;
     public GameObject genderTextureMale;
     public GameObject genderTextureFemale;
+    public Texture2D[] infoTextures;
 
     public GameObject cards;
     public GameObject background;
