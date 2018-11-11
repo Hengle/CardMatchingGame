@@ -284,6 +284,11 @@ public class Game:MonoBehaviour
 	}
 
 	void TapCard(Card card) {
+		if (!gameIsStarted)
+		{
+			return;
+		}
+
 		if (card.isMatched) {
 			return;
 		}
@@ -352,6 +357,8 @@ public class Game:MonoBehaviour
 	}
 
 	IEnumerator EndGame(bool didWin) {
+		gameIsStarted = false;
+
 		CanvasGroup endGameGroup = Instantiate(Resources.Load<CanvasGroup>("UI/EndGameUI"));
 		endGameGroup.transform.SetParent(GameUIManager.current.canvas.transform, false);
 
@@ -369,32 +376,18 @@ public class Game:MonoBehaviour
 
 		yield return new WaitForSeconds(2.0f);
 
-		if (!didWin)
+		Transition transition = Transition.CreateTransition();
+		transition.onMidTransition += () =>
 		{
-			SetupNewGame();
-		}
-
-		Card[] cards = GetAllCards();
-
-		for (int i = 0; i < cards.Length; i++) {
-			cards[i].isFlipped = false;
-		}
-
-		//LeanTween.value(endGameGroup.gameObject, (v) => { endGameGroup.alpha = v; }, 1.0f, 0.0f, 0.5f).setEase(LeanTweenType.easeOutCubic);
-		endGameGroup.alpha = 0;
-		while (endGameGroup.alpha > 0)
-		{
-			endGameGroup.alpha -= Time.deltaTime*2;
-			yield return 0;
-		}
-		endGameGroup.alpha = 0;
-		
-		Destroy(endGameGroup.gameObject);
-		
-		if (didWin)
-		{
-			SceneManager.LoadScene("LevelSelect");
-		}
+			if (didWin)
+			{
+				SceneManager.LoadScene("LevelSelect");
+			}
+			else
+			{
+				SceneManager.LoadScene("Game");
+			}
+		};
 	}
 	
 	void ClearCards() {
