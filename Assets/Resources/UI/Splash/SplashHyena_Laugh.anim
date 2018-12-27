@@ -23,7 +23,7 @@ AnimationClip:
     - time: 0.1
       value: {fileID: 21300022, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
     - time: 0.3
-      value: {fileID: 21300024, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
+      value: {fileID: 21300020, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
     - time: 0.5
       value: {fileID: 21300022, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
     - time: 0.6
@@ -49,7 +49,7 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: 21300020, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
     - {fileID: 21300022, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
-    - {fileID: 21300024, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
+    - {fileID: 21300020, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
     - {fileID: 21300022, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
     - {fileID: 21300020, guid: ac4079e330a29fd44ac16c0e494d7a97, type: 3}
   m_AnimationClipSettings:
@@ -77,4 +77,11 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: PlayHyenaLaugh
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

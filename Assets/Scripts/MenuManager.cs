@@ -21,12 +21,14 @@ public class MenuManager : MonoBehaviour
 		}
 	}
 
-	public enum MenuType { None, Splash, LevelSelect, Info, Settings }
+	public enum MenuType { None, Splash, LevelSelect, Info, Settings, Credits, Directions }
 
 	public Transform splashScreenTransform;
 	public Transform levelSelectTransform;
 	public Transform infoTransform;
 	public Transform settingsTransform;
+    public Transform creditsTransform;
+    public Transform directionsTransform;
 
 	private List<MenuInfo> menuInfos = new List<MenuInfo>();
 	private static List<MenuType> menuTypeStack = new List<MenuType>();
@@ -38,8 +40,10 @@ public class MenuManager : MonoBehaviour
 		menuInfos.Add(new MenuInfo() { type = MenuType.LevelSelect, rootTransform = levelSelectTransform });
 		menuInfos.Add(new MenuInfo() { type = MenuType.Info, rootTransform = infoTransform });
 		menuInfos.Add(new MenuInfo() { type = MenuType.Settings, rootTransform = settingsTransform });
+        menuInfos.Add(new MenuInfo() { type = MenuType.Credits, rootTransform = creditsTransform });
+        menuInfos.Add(new MenuInfo() { type = MenuType.Directions, rootTransform = directionsTransform });
 
-		var menuType = currentMenuType;
+        var menuType = currentMenuType;
 		menuTypeStack.Clear();
 
 		if (menuType == MenuType.None)
