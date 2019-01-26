@@ -8,12 +8,12 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 2
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: CardMatchingGame
+  companyName: rhizomebooks
+  productName: AntelopeUP
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -150,12 +150,12 @@ PlayerSettings:
   useHDRDisplay: 0
   m_ColorGamuts: 00000000
   targetPixelDensity: 200
-  resolutionScalingMode: 1
+  resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Company.CardMatchingGame
-    Standalone: unity.DefaultCompany.CardMatchingGame
+    Android: com.rhizomebooks.AntelopeUP
+    Standalone: unity.rhizomebooks.AntelopeUP
     Tizen: com.Company.CardMatchingGame
     iOS: com.Company.CardMatchingGame
     tvOS: com.Company.CardMatchingGame
@@ -249,8 +249,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/kurtl/Documents/GitProjects/CardMatchingGame/user.keystore
+  AndroidKeyaliasName: antelopeup
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
@@ -266,7 +266,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: d24927598b93ea442a23c9f6b1ca44fb, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
