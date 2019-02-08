@@ -11,6 +11,7 @@ Material:
   m_ShaderKeywords: ENABLE_BLEND_TEXTURE ENABLE_BLEND_TEXTURE_ON _EMISSION _SPECGLOSSMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
