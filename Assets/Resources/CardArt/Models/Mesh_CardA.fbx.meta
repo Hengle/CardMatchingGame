@@ -1,56 +1,40 @@
 fileFormatVersion: 2
 guid: 2d3d4e0d46cc7174b8f96d6a6a8f5769
-timeCreated: 1489917910
-licenseType: Free
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 22
   fileIDToRecycleName:
-    100000: CardBeadsA
-    100002: CardBeadsB
-    100004: CardBeadsC
-    100006: CardPaper
-    100008: CardQuestionSymbol
-    100010: //RootNode
-    100012: Plane
-    100014: CardQuestionSymbol_001
-    400000: CardBeadsA
-    400002: CardBeadsB
-    400004: CardBeadsC
-    400006: CardPaper
-    400008: CardQuestionSymbol
-    400010: //RootNode
-    400012: Plane
-    400014: CardQuestionSymbol_001
-    2300000: CardBeadsA
-    2300002: CardBeadsB
-    2300004: CardBeadsC
-    2300006: CardPaper
-    2300008: CardQuestionSymbol
-    2300010: Plane
-    2300012: CardQuestionSymbol_001
-    3300000: CardBeadsA
-    3300002: CardBeadsB
-    3300004: CardBeadsC
-    3300006: CardPaper
-    3300008: CardQuestionSymbol
-    3300010: Plane
-    3300012: CardQuestionSymbol_001
-    4300000: CardBeadsC
-    4300002: CardBeadsB
-    4300004: CardQuestionSymbol
-    4300006: CardPaper
-    4300008: CardBeadsA
-    4300010: Plane
-    4300012: CardQuestionSymbol_001
-    7400000: Bounce
-    9500000: //RootNode
+    100000: CardPaper
+    100002: CardQuestionShadow
+    100004: CardQuestionSymbol
+    100006: //RootNode
+    400000: CardPaper
+    400002: CardQuestionShadow
+    400004: CardQuestionSymbol
+    400006: //RootNode
+    2100000: M_CardQuestion
+    2100002: M_UICardQuestionShadow
+    2100004: M_CardJungle
+    2300000: CardPaper
+    2300002: CardQuestionShadow
+    2300004: CardQuestionSymbol
+    3300000: CardPaper
+    3300002: CardQuestionShadow
+    3300004: CardQuestionSymbol
+    4300000: CardQuestionSymbol
+    4300002: CardQuestionShadow
+    4300004: CardPaper
     11100000: //RootNode
+    11100002: CardPaper
+    11100004: CardQuestionShadow
+    11100006: CardQuestionSymbol
+  externalObjects: {}
   materials:
     importMaterials: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 1
   animations:
-    legacyGenerateAnimations: 4
+    legacyGenerateAnimations: 1
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
@@ -61,66 +45,34 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
-    animationWrapMode: 2
+    animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Bounce
-      takeName: Default Take
-      firstFrame: 0
-      lastFrame: 40
-      wrapMode: 2
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: CardBeadsA
-        weight: 1
-      - path: CardBeadsB
-        weight: 1
-      - path: CardBeadsC
-        weight: 1
-      - path: CardPaper
-        weight: 1
-      - path: CardQuestionSymbol
-        weight: 1
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    extraUserProperties: []
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importBlendShapes: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     keepQuads: 0
-    weldVertices: 1
+    weldVertices: 0
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -130,6 +82,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
