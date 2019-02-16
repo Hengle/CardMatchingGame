@@ -23,9 +23,6 @@ public class CreditsDirectionsMenu : MonoBehaviour {
     void Update()
     {
         int index = System.Array.IndexOf(images, mainImage);
-
-        Debug.Log(index);
-
         gameObject.GetComponent<Image>().sprite = mainImage;
     }
 
