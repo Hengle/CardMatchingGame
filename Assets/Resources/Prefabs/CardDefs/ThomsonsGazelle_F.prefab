@@ -42,12 +42,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshPrefab: {fileID: 1000013202871714, guid: ecf7cd63d432edc4582b72d174fd3564, type: 2}
   animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
-  material: {fileID: 2100000, guid: e375e670694975b4a89ebd920688fd39, type: 2}
+  material: {fileID: 2100000, guid: 10d69f8b1d395554185544b89df44d9e, type: 2}
   animalScaler: 0.7
   displayName: Thomson's Gazelle
   gender: 1
   conservation: 1
-  infoMapTexture: {fileID: 2800000, guid: 5dff796d7f8443446991567c1fff9177, type: 3}
+  infoTextures: []
   maxCount: 9
   spokenName: {fileID: 8300000, guid: 8eb0eb379aeaa1548ad8894f7c8e49a2, type: 3}
   femaleEquivalent: {fileID: 0}

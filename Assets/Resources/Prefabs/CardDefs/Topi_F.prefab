@@ -42,12 +42,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshPrefab: {fileID: 1000013202871714, guid: ecf7cd63d432edc4582b72d174fd3564, type: 2}
   animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
-  material: {fileID: 2100000, guid: f685335491556f847b1dcaf624659a44, type: 2}
+  material: {fileID: 2100000, guid: a4149008213957648ba9f691b9940649, type: 2}
   animalScaler: 1.1
   displayName: Topi
   gender: 1
   conservation: 0
-  infoMapTexture: {fileID: 2800000, guid: e9a03843ed453d042bb4ef8d28db1666, type: 3}
+  infoTextures: []
   maxCount: 21
   spokenName: {fileID: 8300000, guid: e07305ae6dea9054192eb917856bf0a9, type: 3}
   femaleEquivalent: {fileID: 0}

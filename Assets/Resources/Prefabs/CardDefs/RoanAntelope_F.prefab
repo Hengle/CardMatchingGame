@@ -42,12 +42,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshPrefab: {fileID: 1000013202871714, guid: ecf7cd63d432edc4582b72d174fd3564, type: 2}
   animatorController: {fileID: 9100000, guid: bf3b153daa66281498047b4d349b982b, type: 2}
-  material: {fileID: 2100000, guid: 26e2ffc8b794feb4e9064b7ae3217560, type: 2}
-  animalScaler: 1.4
+  material: {fileID: 2100000, guid: aa6eaca88269be54b8a6f22f45ccbf3a, type: 2}
+  animalScaler: 1.2
   displayName: Roan Antelope
   gender: 1
   conservation: 0
-  infoMapTexture: {fileID: 2800000, guid: 190c1508b81504d4190a9ed06040668d, type: 3}
+  infoTextures: []
   maxCount: 36
   spokenName: {fileID: 8300000, guid: e24f24589bc214b4289b4aa5a3c88163, type: 3}
   femaleEquivalent: {fileID: 0}
