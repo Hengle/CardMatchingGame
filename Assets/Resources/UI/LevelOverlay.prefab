@@ -8,8 +8,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 22485488}
-  - component: {fileID: 11482928}
   - component: {fileID: 11448754}
+  - component: {fileID: 114957934635430140}
   m_Layer: 5
   m_Name: ItemLayout
   m_TagString: Untagged
@@ -172,9 +172,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelOverlayItemTemplate: {fileID: 11417822, guid: b50ab32d10a0b26409dc623204e0c2ce,
     type: 2}
-  gridLayout: {fileID: 11482928}
+  layoutTransform: {fileID: 22485488}
   backgroundButton: {fileID: 11431474}
   titleText: {fileID: 11422732}
+  canvasGroup: {fileID: 0}
 --- !u!114 &11459434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,29 +203,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11482928
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -2095666955, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 16, y: 16}
-  m_Constraint: 0
-  m_ConstraintCount: 8
 --- !u!222 &22226076
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -393,3 +371,25 @@ MonoBehaviour:
   m_EffectColor: {r: 0.008001738, g: 0.019666528, b: 0.029411793, a: 0.011764706}
   m_EffectDistance: {x: 5, y: -7}
   m_UseGraphicAlpha: 0
+--- !u!114 &114957934635430140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1297475563, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 4
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
