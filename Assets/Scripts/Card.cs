@@ -11,9 +11,13 @@ public class Card:MonoBehaviour {
 	public int tilePositionY = -1;
     public AudioClip clipRear;
     public AudioClip clipRun;
+	public Sprite exposedLionCardSprite;
+	public SpriteRenderer cardBackSpriteRenderer;
 
 	public bool _isMatched;
 	public bool isMatched { get; private set; }
+
+	public bool hasBeenExposed { get; private set; }
 
 	private bool _isFlipped;
 	public bool isFlipped {
@@ -27,7 +31,7 @@ public class Card:MonoBehaviour {
 			}
 
 			_isFlipped = value;
-			
+
 			if (_isFlipped) {
 				animator.CrossFade("FlipToFront", 0.5f);
 			}
@@ -116,5 +120,20 @@ public class Card:MonoBehaviour {
 
 	public void AnimateDance() {
 		animalAnimator.SetTrigger("Dance");
+	}
+
+	public void Expose()
+	{
+		if (!hasBeenExposed)
+		{
+			hasBeenExposed = true;
+			StartCoroutine(OnExposedAsync(0.5f));
+		}
+	}
+
+	private IEnumerator OnExposedAsync(float delay)
+	{
+		yield return new WaitForSeconds(delay);
+		cardDef.OnExposed(this);
 	}
 }

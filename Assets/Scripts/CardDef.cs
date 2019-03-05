@@ -35,8 +35,14 @@ public class CardDef:MonoBehaviour
 		0.3f,
 		0.15f,
 	};
+
 	public static float GetProbability(Conservation conservation)
 	{
 		return probabilityLookup[(int)conservation];
+	}
+
+	public virtual void OnExposed(Card card)
+	{
+		
 	}
 }

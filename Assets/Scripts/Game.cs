@@ -51,6 +51,7 @@ public class Game:MonoBehaviour
 	private Card[,] cardGrid = null;
 	private Card flippedCard = null;
 	private bool gameIsStarted = false;
+	private Coroutine flipCardCoroutine;
 
 	void Awake() {
 		currentLevel = testLevel;
@@ -69,6 +70,7 @@ public class Game:MonoBehaviour
 		failCount = 0;
 		flippedCard = null;
 		gameIsStarted = false;
+		flipCardCoroutine = null;
 
 		if (currentBackground)
 		{
@@ -289,6 +291,11 @@ public class Game:MonoBehaviour
 			return;
 		}
 
+		if (flipCardCoroutine != null)
+		{
+			return;
+		}
+
 		if (card.isMatched) {
 			return;
 		}
@@ -297,24 +304,40 @@ public class Game:MonoBehaviour
 			return;
 		}
 
-		StartCoroutine(FlipCard(card));
+		flipCardCoroutine = StartCoroutine(FlipCard(card));
 	}
 
 	IEnumerator FlipCard(Card card) {
 		card.isFlipped = true;
-		
+		card.Expose();
+
 		yield return new WaitForSeconds(0.35f);
 
 		if (card.cardDef is LionCardDef)
 		{
-			if (flippedCard)
+			OneShotAudio.Play(clipLion, 0, GameSettings.Audio.sfxVolume);
+
+			var exposedLionCards = GetExposedLionCards();
+			if (exposedLionCards.Length >= 2)
 			{
-				flippedCard.isFlipped = false;
-			}
-			var flippedLionCards = GetFlippedLionCards();
-			if (flippedLionCards.Length >= 2)
-			{
+				foreach (var exposedCard in exposedLionCards)
+				{
+					exposedCard.isFlipped = true;
+				}
+
+				yield return new WaitForSeconds(1);
+
 				StartCoroutine(EndGame(false));
+			}
+			else
+			{
+				yield return new WaitForSeconds(0.5f);
+				if (flippedCard)
+				{
+					flippedCard.isFlipped = false;
+				}
+				card.isFlipped = false;
+				yield return new WaitForSeconds(0.5f);
 			}
 			currentBackground.hyena.Laugh();
 			flippedCard = null;
@@ -354,6 +377,8 @@ public class Game:MonoBehaviour
 				flippedCard = card;
 			}
 		}
+
+		flipCardCoroutine = null;
 	}
 
 	IEnumerator EndGame(bool didWin) {
@@ -436,7 +461,7 @@ public class Game:MonoBehaviour
 		return cards.ToArray();
 	}
 
-	Card[] GetFlippedLionCards()
+	Card[] GetExposedLionCards()
 	{
 		var cards = new List<Card>();
 		for (int y = 0; y < currentLevel.cardCountY; y++)
@@ -444,9 +469,8 @@ public class Game:MonoBehaviour
 			for (int x = 0; x < currentLevel.cardCountX; x++)
 			{
 				var card = cardGrid[x, y];
-				if (card.cardDef is LionCardDef && card.isFlipped)
+				if (card.cardDef is LionCardDef && card.hasBeenExposed)
 				{
-                    OneShotAudio.Play(clipLion, 0, GameSettings.Audio.sfxVolume);
                     cards.Add(cardGrid[x, y]);
 				}
 			}

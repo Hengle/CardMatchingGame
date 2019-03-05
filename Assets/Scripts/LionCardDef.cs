@@ -5,5 +5,9 @@ using System.Linq;
 
 public class LionCardDef:CardDef
 {
-	
+	public override void OnExposed(Card card)
+	{
+		base.OnExposed(card);
+		card.cardBackSpriteRenderer.sprite = card.exposedLionCardSprite;
+	}
 }
