@@ -17,7 +17,8 @@ public class Card:MonoBehaviour {
 	public bool _isMatched;
 	public bool isMatched { get; private set; }
 
-	public bool hasBeenExposed { get; private set; }
+	public int exposedTurn = -1;
+	public bool hasBeenExposed => exposedTurn >= 0;
 
 	private bool _isFlipped;
 	public bool isFlipped {
@@ -122,11 +123,11 @@ public class Card:MonoBehaviour {
 		animalAnimator.SetTrigger("Dance");
 	}
 
-	public void Expose()
+	public void Expose(int turn)
 	{
 		if (!hasBeenExposed)
 		{
-			hasBeenExposed = true;
+			exposedTurn = turn;
 			StartCoroutine(OnExposedAsync(0.5f));
 		}
 	}

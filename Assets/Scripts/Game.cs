@@ -32,19 +32,7 @@ public class Game:MonoBehaviour
     public AudioClip clipFruitFall;
     public AudioClip clipLion;
 
-	private int _failCount = 0;
-	public int failCount
-	{
-		get
-		{
-			return _failCount;
-		}
-		set
-		{
-			_failCount = value;
-			GameUIManager.current.UpdateFailCounter();
-		}
-	}
+	public GameStats gameStats;
 
 	public Level currentLevel {get; private set;}
 
@@ -67,10 +55,11 @@ public class Game:MonoBehaviour
 	}
 
 	void SetupNewGame() {
-		failCount = 0;
 		flippedCard = null;
 		gameIsStarted = false;
 		flipCardCoroutine = null;
+
+		gameStats = new GameStats();
 
 		if (currentBackground)
 		{
@@ -309,7 +298,7 @@ public class Game:MonoBehaviour
 
 	IEnumerator FlipCard(Card card) {
 		card.isFlipped = true;
-		card.Expose();
+		card.Expose(gameStats.currentTurn);
 
 		yield return new WaitForSeconds(0.35f);
 
@@ -327,7 +316,7 @@ public class Game:MonoBehaviour
 
 				yield return new WaitForSeconds(1);
 
-				StartCoroutine(EndGame(false));
+				EndGame();
 			}
 			else
 			{
@@ -341,6 +330,7 @@ public class Game:MonoBehaviour
 			}
 			currentBackground.hyena.Laugh();
 			flippedCard = null;
+			gameStats.currentTurn++;
 		}
 		else
 		{
@@ -352,25 +342,27 @@ public class Game:MonoBehaviour
 					flippedCard.OnMatch(card);
 					currentBackground.hyena.SausageFall();
                     OneShotAudio.Play(clipFruitFall, 0, GameSettings.Audio.sfxVolume);
+					gameStats.matches++;
                 }
                 else
 				{
                     yield return new WaitForSeconds(0.5f);
 					card.isFlipped = false;
 					flippedCard.isFlipped = false;
-					failCount++;
-					if (failCount > currentLevel.maxFailCount)
+					if (flippedCard.exposedTurn < gameStats.currentTurn && card.exposedTurn < gameStats.currentTurn)
 					{
-						StartCoroutine(EndGame(!(failCount > currentLevel.maxFailCount)));
+						currentBackground.hyena.Laugh();
+						gameStats.misses++;
 					}
-					currentBackground.hyena.Laugh();
 				}
 				flippedCard = null;
 
 				if (GetMatchedCards().Length >= GetNonLionCards().Length)
 				{
-					StartCoroutine(EndGame(!(failCount > currentLevel.maxFailCount)));
+					yield return new WaitForSeconds(1);
+					EndGame();
 				}
+				gameStats.currentTurn++;
 			}
 			else
 			{
@@ -381,9 +373,11 @@ public class Game:MonoBehaviour
 		flipCardCoroutine = null;
 	}
 
-	IEnumerator EndGame(bool didWin) {
+	void EndGame() {
 		gameIsStarted = false;
+		GameUIManager.current.ShowEndScreen();
 
+		/*
 		CanvasGroup endGameGroup = Instantiate(Resources.Load<CanvasGroup>("UI/EndGameUI"));
 		endGameGroup.transform.SetParent(GameUIManager.current.canvas.transform, false);
 
@@ -413,6 +407,7 @@ public class Game:MonoBehaviour
 				SceneManager.LoadScene("Game");
 			}
 		};
+		*/
 	}
 	
 	void ClearCards() {
@@ -421,7 +416,7 @@ public class Game:MonoBehaviour
 		}
 	}
 
-	Card[] GetMatchedCards() {
+	public Card[] GetMatchedCards() {
 		List<Card> matchedCards = new List<Card>();
 		foreach (Card card in GetAllCards()) {
 			if (card.isMatched) {
@@ -431,7 +426,7 @@ public class Game:MonoBehaviour
 		return matchedCards.ToArray();
 	}
 
-	Card[] GetAllCards() {
+	public Card[] GetAllCards() {
 		List<Card> allCards = new List<Card>();
 		if (cardGrid == null) {
 			return allCards.ToArray();
@@ -444,7 +439,7 @@ public class Game:MonoBehaviour
 		return allCards.ToArray();
 	}
 
-	Card[] GetNonLionCards()
+	public Card[] GetNonLionCards()
 	{
 		List<Card> cards = new List<Card>();
 		for (int y = 0; y < currentLevel.cardCountY; y++)
@@ -461,7 +456,7 @@ public class Game:MonoBehaviour
 		return cards.ToArray();
 	}
 
-	Card[] GetExposedLionCards()
+	public Card[] GetExposedLionCards()
 	{
 		var cards = new List<Card>();
 		for (int y = 0; y < currentLevel.cardCountY; y++)
