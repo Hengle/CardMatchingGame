@@ -20,10 +20,11 @@ public static class GameSettings
 		{
 			get
 			{
-				return AudioListener.volume;
+				return PlayerPrefs.GetFloat("Audio.MasterVolume", AudioListener.volume);
 			}
 			set
 			{
+				PlayerPrefs.SetFloat("Audio.MasterVolume", value);
 				AudioListener.volume = value;
 			}
 		}
@@ -104,6 +105,11 @@ public static class GameSettings
 			{
 				sfxVolume = value;
 			}
+		}
+
+		public static void InitializeMasterVolume()
+		{
+			AudioListener.volume = PlayerPrefs.GetFloat("Audio.MasterVolume", AudioListener.volume);
 		}
 	}
 }
