@@ -906,7 +906,6 @@ GameObject:
   - component: {fileID: 386959978}
   - component: {fileID: 386959977}
   - component: {fileID: 386959976}
-  - component: {fileID: 386959975}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -914,19 +913,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &386959975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386959974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ForceModuleActive: 0
 --- !u!114 &386959976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2523,8 +2509,8 @@ MonoBehaviour:
   testLevel: {fileID: 11400000, guid: c6822aa520fb52142973d15eb837ee7c, type: 3}
   currentBackground: {fileID: 0}
   cardPrefab: {fileID: 11400000, guid: 69ffc6bf72417094ebffe7ce5c9e93c0, type: 3}
+  cardSafeBounds: 7
   cardSpacing: 1.25
-  cardScaling: 1.5
   clip: {fileID: 8300000, guid: 6ccffc54448c45f45a05397c67d1179c, type: 3}
   clipStart: {fileID: 8300000, guid: 7c470a20e9fe13c4ea29a075823f556d, type: 3}
   clipFruitFall: {fileID: 8300000, guid: c5d987fb8463a3b47bdaa4ad8bc545c4, type: 3}
@@ -2748,7 +2734,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518173837}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.03, y: 0, z: -8.2}
+  m_LocalPosition: {x: -1, y: 0, z: -8.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 445268187}

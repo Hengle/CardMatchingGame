@@ -25,8 +25,8 @@ public class Game:MonoBehaviour
 	public Level testLevel;
 	public Background currentBackground;
 	public Card cardPrefab;
+	public float cardSafeBounds = 4;
 	public float cardSpacing = 1.25f;
-	public float cardScaling = 1.0f;
     public AudioClip clip;
     public AudioClip clipStart;
     public AudioClip clipFruitFall;
@@ -156,8 +156,8 @@ public class Game:MonoBehaviour
 		card1.tilePositionX = (int)slot1.x;
 		card1.tilePositionY = (int)slot1.y;
 
-		card0.transform.position = GetCardGridPosition(card0.tilePositionX, card0.tilePositionY);
-		card1.transform.position = GetCardGridPosition(card1.tilePositionX, card1.tilePositionY);
+		(card0.transform.position, card0.transform.localScale) = GetCardGridTransformation(card0.tilePositionX, card0.tilePositionY);
+		(card1.transform.position, card1.transform.localScale) = GetCardGridTransformation(card1.tilePositionX, card1.tilePositionY);
 
 		cardGrid[card0.tilePositionX, card0.tilePositionY] = card0;
 		cardGrid[card1.tilePositionX, card1.tilePositionY] = card1;
@@ -473,30 +473,28 @@ public class Game:MonoBehaviour
 		return cards.ToArray();
 	}
 
-	float GetCardScaler() {
-		float scaler = 1.0f/Mathf.Max(currentLevel.cardCountX/4.0f, currentLevel.cardCountY/4.0f);
-		scaler *= cardScaling;
-		return scaler;
-	}
+	(Vector3 position, Vector3 scale) GetCardGridTransformation(int x, int y) {
+		float targetAspect = 16.0f/9;
+		float deltaAspect = Mathf.Clamp01(Camera.main.aspect/targetAspect);
 
-	Vector3 GetCardGridPosition(int x, int y) {
-		float scaler = GetCardScaler();
-		float totalWidth = currentLevel.cardCountX*cardSpacing-cardSpacing;
-		float totalHeight = currentLevel.cardCountY*cardSpacing-cardSpacing;
-		Vector3 pos = new Vector3(x,y,0)*cardSpacing;
+		var safeBox = new Vector2(cardSafeBounds*deltaAspect, cardSafeBounds);
+
+		float totalWidth = currentLevel.cardCountX*cardSpacing;
+		float totalHeight = currentLevel.cardCountY*cardSpacing;
+		float scaler = Mathf.Min(safeBox.x/totalWidth, safeBox.y/totalHeight);
+
+		Vector3 pos = new Vector3(x+0.5f,y+0.5f,0)*cardSpacing;
 		pos.x -= totalWidth/2.0f;
 		pos.y -= totalHeight/2.0f;
 		pos *= scaler;
 
-		return pos;
+		return (pos, Vector3.one*scaler);
 	}
 
 	Card CreateCardInstance(CardDef cardDef) {
 		Card card = Instantiate(cardPrefab);
 		card.name = cardDef.name;
 		card.cardDef = cardDef;
-
-		card.transform.localScale = Vector3.one*GetCardScaler();
 
 		MaterialPropertyBlock block = new MaterialPropertyBlock();
 
