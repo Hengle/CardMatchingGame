@@ -5,13 +5,18 @@ using System.Linq;
 
 public class Level:MonoBehaviour
 {
-	public List<CardDef> cardDefs = new List<CardDef>();
 	public List<CardDefGroup> cardDefGroups = new List<CardDefGroup>();
 	public List<LionCardDef> lionCardDefs = new List<LionCardDef>();
+
+	public Game.GameMode gameMode = Game.GameMode.Standard;
+
 	public int cardCountX = 4;
 	public int cardCountY = 4;
-	public int maxFailCount = 3;
+
 	public Background background;
+
 	public Sprite thumbnail;
+	public Sprite lionThumbnail;
+
 	public TimeOfDay timeOfDay;
 }

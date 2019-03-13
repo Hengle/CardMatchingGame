@@ -17,12 +17,15 @@ public class Game:MonoBehaviour
 		}
 	}
 
+	public enum GameMode { Standard, MateMatch }
+
 	//This difficulty stuff should probably exist somewhere else?
 	//Im not sure what the UI for this is going to be.
 	public enum Difficulty { Easy, Medium, Hard };
 	public Difficulty difficulty = Difficulty.Medium;
 
 	public Level testLevel;
+	public bool includeLions = true;
 	public Background currentBackground;
 	public Card cardPrefab;
 	public float cardSafeBounds = 4;
@@ -43,9 +46,10 @@ public class Game:MonoBehaviour
 
 	void Awake() {
 		currentLevel = testLevel;
-		if (LevelSelect.currentlySelectedLevelTemplate)
+		if (LevelSelect.gameInfo.selectedLevel)
 		{
-			currentLevel = LevelSelect.currentlySelectedLevelTemplate;
+			currentLevel = LevelSelect.gameInfo.selectedLevel;
+			includeLions = LevelSelect.gameInfo.lionMode;
 		}
     }
 
@@ -81,32 +85,26 @@ public class Game:MonoBehaviour
 		}
 
 		int counter = 0;
-		while (availableCardSlots.Count > 0 && counter < currentLevel.lionCardDefs.Count)
-		{
-			CardDef cardDef = currentLevel.lionCardDefs[counter];
-			AddCard(availableCardSlots, cardDef);
-			counter++;
-		}
 
-		counter = 0;
-
-		//TODO: Remove Level.cardDefs path when all data has been migrated.
-		List<CardDef> shuffledCardDefs = null;
-		if (currentLevel.cardDefGroups.Count > 0)
+		if (includeLions)
 		{
-			shuffledCardDefs = new List<CardDef>();
-			foreach (var cardDefGroup in currentLevel.cardDefGroups)
+			while (availableCardSlots.Count > 0 && counter < currentLevel.lionCardDefs.Count)
 			{
-				shuffledCardDefs.Add(cardDefGroup.GetRandomCard());
+				CardDef cardDef = currentLevel.lionCardDefs[counter];
+				AddCard(availableCardSlots, cardDef);
+				counter++;
 			}
-		}
-		else
-		{
-			shuffledCardDefs = new List<CardDef>(currentLevel.cardDefs);
-		}
-	
 
-        Shuffle(shuffledCardDefs);
+			counter = 0;
+		}
+
+		List<CardDef> shuffledCardDefs = new List<CardDef>();
+		foreach (var cardDefGroup in currentLevel.cardDefGroups)
+		{
+			shuffledCardDefs.Add(cardDefGroup.GetRandomCard());
+		}
+
+		Shuffle(shuffledCardDefs);
 
 		while (availableCardSlots.Count > 0) {
 			CardDef cardDef = shuffledCardDefs[counter%shuffledCardDefs.Count];

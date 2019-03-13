@@ -5,7 +5,13 @@ using System.Linq;
 
 public class LevelSelect:MonoBehaviour
 {
-	static public Level currentlySelectedLevelTemplate;
+	public struct GameInfo
+	{
+		public Level selectedLevel;
+		public bool lionMode;
+	}
+
+	public static GameInfo gameInfo;
 
 	public Canvas levelOverlayCanvas;
 	public LevelOverlay levelOverlayTemplate;
@@ -21,7 +27,7 @@ public class LevelSelect:MonoBehaviour
 
 	private void OnEnable()
 	{
-		currentlySelectedLevelTemplate = null;
+		gameInfo = default;
 		transform.localScale = Vector3.zero;
 
 		new Tween(null, 0, 1, 1.0f, new CurveCubic(TweenCurveMode.Out), t =>

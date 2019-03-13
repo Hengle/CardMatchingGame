@@ -6,21 +6,14 @@ using KeenTween;
 
 public class LevelOverlayItem:MonoBehaviour
 {
-	public Text text;
 	public Image thumbnailImage;
+	public Image lionThumbnailImage;
+	public Button primaryButton;
+	public Button lionButton;
 	public AudioClip tapSound;
 	public CanvasGroup canvasGroup;
 
 	private Tween appearTween;
-
-	private Button _button;
-	public Button button
-	{
-		get
-		{
-			return _button ? _button : _button = gameObject.GetComponent<Button>();
-		}
-	}
 	
 	private LevelOverlay _levelOverlay;
 	public LevelOverlay levelOverlay
@@ -46,10 +39,27 @@ public class LevelOverlayItem:MonoBehaviour
 
 	void Start()
 	{
-		button.onClick.AddListener(OnClickButton);
+		primaryButton.onClick.AddListener(() => OnClickButton(false));
+		lionButton.onClick.AddListener(() => OnClickButton(true));
+
 		if (level.thumbnail)
 		{
 			thumbnailImage.sprite = level.thumbnail;
+		}
+		if (level.lionCardDefs.Count > 0)
+		{
+			if (level.lionThumbnail)
+			{
+				lionThumbnailImage.sprite = level.lionThumbnail;
+			}
+			else
+			{
+				Debug.LogWarning($"Level \"{level.name}\" has {nameof(level.lionCardDefs)} but no {nameof(level.lionThumbnail)}.", level);
+			}
+		}
+		else
+		{
+			lionButton.gameObject.SetActive(false);
 		}
 	}
 
@@ -61,9 +71,10 @@ public class LevelOverlayItem:MonoBehaviour
 		}
 	}
 
-	void OnClickButton()
+	void OnClickButton(bool lionMode)
 	{
-		LevelSelect.currentlySelectedLevelTemplate = level;
+		LevelSelect.gameInfo.selectedLevel = level;
+		LevelSelect.gameInfo.lionMode = lionMode;
 
 		OneShotAudio.Play(tapSound, 0, GameSettings.Audio.sfxVolume);
 

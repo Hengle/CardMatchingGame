@@ -21,6 +21,9 @@ public class SettingsMenu:MonoBehaviour
 		CreateSlider("Voice Volume", v => GameSettings.Audio.voiceVolume = v).value = GameSettings.Audio.voiceVolume;
 
 		Canvas.ForceUpdateCanvases();
+
+		gameObject.SetActive(false);
+		gameObject.SetActive(true);
 	}
 
 	private Slider CreateSlider(string title, UnityAction<float> onChanged)
