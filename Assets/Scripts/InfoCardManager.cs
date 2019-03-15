@@ -20,6 +20,7 @@ public class InfoCardManager : MonoBehaviour
 	public Button factSheetBackButton;
 
 	public Text animalNameText;
+	public Text nameText;
     public RawImage animalGender;
     public Text animalConservationText;
     public RawImage animalMap;
@@ -78,20 +79,13 @@ public class InfoCardManager : MonoBehaviour
             {
                 if(hit.collider.gameObject.name == goLeftArrow.name)
                 {
-                    currentPlace -= 8;
                     Arrow("Left");
+                    currentPlace--;
                 }
                 else if(hit.collider.gameObject.name == goRightArrow.name)
                 {
-					if (currentPlace >= goUnlocked.Length) {
-						currentPlace = 0;
-					}
 					Arrow("Right");
-                    if (isEnd)
-                    {
-                        currentPlace = 0;
-                        isEnd = false;
-                    }
+                    currentPlace++;
                 }
             }
         }
@@ -106,7 +100,7 @@ public class InfoCardManager : MonoBehaviour
         }
 		*/
     }
-
+    
 	public void BackFromInfoSheet()
 	{
 		factSheetBackButton.gameObject.SetActive(false);
@@ -122,6 +116,7 @@ public class InfoCardManager : MonoBehaviour
     public void ShowFactSheet(InfoCards animal)
     {
         //goBackButton.GetComponent<Info>().factSheet = true;
+        nameText.gameObject.SetActive(false);
         foreach(GameObject slot in goSlots)
         {
             slot.SetActive(false);
@@ -249,6 +244,7 @@ public class InfoCardManager : MonoBehaviour
     private void Arrow(string direction)
     {
         isFlipping = true;
+        nameText.gameObject.SetActive(false);
         Flip(false);
         OneShotAudio.Play(uiAC[UnityEngine.Random.Range(0, uiAC.Length)], 0, GameSettings.Audio.sfxVolume);
         StartCoroutine(WaitFillSlots(0.5f));
@@ -262,42 +258,131 @@ public class InfoCardManager : MonoBehaviour
 
     private  void FillSlots()
     {
-        foreach (GameObject slot in goSlots)
+        int slot1Pos = currentPlace - 1;
+        int slot2Pos = currentPlace;
+        int slot3Pos = currentPlace + 1;
+
+        if(slot1Pos >= goUnlocked.Length)
+            slot1Pos = 0;
+
+        if (slot1Pos < 0)
+            slot1Pos = goUnlocked.Length - 1;
+
+        if(slot2Pos >= goUnlocked.Length)
+            slot2Pos = 0;
+
+        if (slot2Pos < 0)
+            slot2Pos = goUnlocked.Length - 1;
+
+        if(slot3Pos >= goUnlocked.Length)
+            slot3Pos = 0;
+
+        if (slot3Pos < 0)
+            slot3Pos = goUnlocked.Length - 1;
+
+        // Debug.Log("Slot 1 is == to " + slot1Pos);
+        // Debug.Log("Slot 2 is == to " + slot2Pos);
+        // Debug.Log("Slot 3 is == to " + slot3Pos);
+
+        InfoCards ic = goSlots[0].GetComponent<InfoCards>();
+        Transform animalPivot = ic.gameObject.transform.Find("RotationPivot/AnimalPivot");
+
+        InfoCards ic1 = goSlots[1].GetComponent<InfoCards>();
+        Transform animalPivot1 = ic1.gameObject.transform.Find("RotationPivot/AnimalPivot");
+
+        InfoCards ic2 = goSlots[2].GetComponent<InfoCards>();
+        Transform animalPivot2 = ic2.gameObject.transform.Find("RotationPivot/AnimalPivot");
+
+        while (animalPivot.childCount > 0) 
         {
-            InfoCards ic = slot.GetComponent<InfoCards>();
-
-			Transform animalPivot = ic.gameObject.transform.Find("RotationPivot/AnimalPivot");
-			while (animalPivot.childCount > 0) {
-				DestroyImmediate (animalPivot.GetChild(0).gameObject);
-			}
-
-            //if (ic.meshObject != null)
-            //    GameObject.Destroy(ic.meshObject);
-
-            if (currentPlace >= goUnlocked.Length)
-            {
-                isEnd = true;
-                continue;
-            }
-
-            if (currentPlace < 0)
-                currentPlace = goUnlocked.Length - 4;
-
-            ic.goUnlocked = goUnlocked[currentPlace];
-            ic.animatorController = goUnlocked[currentPlace].animatorController;
-            ic.spokenName = goUnlocked[currentPlace].spokenName;
-            ic.gender = goUnlocked[currentPlace].gender.ToString();
-            ic.infoTextures = goUnlocked[currentPlace].infoTextures;
-
-            Fill(ic.gameObject, ic);
-
-            if (!PlayerPrefs.HasKey(ic.goUnlocked.ToString()))
-            {
-                StartCoroutine(CardFlip(slot.GetComponent<Animator>(), true));
-            }
-
-            currentPlace++;
+            DestroyImmediate (animalPivot.GetChild(0).gameObject);
         }
+
+        while (animalPivot1.childCount > 0) 
+        {
+            DestroyImmediate (animalPivot1.GetChild(0).gameObject);
+        }
+
+        while (animalPivot2.childCount > 0) 
+        {
+            DestroyImmediate (animalPivot2.GetChild(0).gameObject);
+        }
+
+        ic.goUnlocked = goUnlocked[slot1Pos];
+        ic.animatorController = goUnlocked[slot1Pos].animatorController;
+        ic.spokenName = goUnlocked[slot1Pos].spokenName;
+        ic.gender = goUnlocked[slot1Pos].gender.ToString();
+        ic.infoTextures = goUnlocked[slot1Pos].infoTextures;
+        ic.displayName = goUnlocked[slot1Pos].displayName;
+
+        ic1.goUnlocked = goUnlocked[slot2Pos];
+        ic1.animatorController = goUnlocked[slot2Pos].animatorController;
+        ic1.spokenName = goUnlocked[slot2Pos].spokenName;
+        ic1.gender = goUnlocked[slot2Pos].gender.ToString();
+        ic1.infoTextures = goUnlocked[slot2Pos].infoTextures;
+        ic1.displayName = goUnlocked[slot2Pos].displayName;
+        nameText.text = ic1.displayName;
+
+        ic2.goUnlocked = goUnlocked[slot3Pos];
+        ic2.animatorController = goUnlocked[slot3Pos].animatorController;
+        ic2.spokenName = goUnlocked[slot3Pos].spokenName;
+        ic2.gender = goUnlocked[slot3Pos].gender.ToString();
+        ic2.infoTextures = goUnlocked[slot3Pos].infoTextures;
+        ic2.displayName = goUnlocked[slot3Pos].displayName;
+
+        Fill(ic.gameObject, ic);
+        Fill(ic1.gameObject, ic1);
+        Fill(ic2.gameObject, ic2);
+
+        if (!PlayerPrefs.HasKey(ic.goUnlocked.ToString()))
+        {
+            StartCoroutine(CardFlip(goSlots[0].GetComponent<Animator>(), true));
+        }
+
+        if (!PlayerPrefs.HasKey(ic1.goUnlocked.ToString()))
+        {
+            StartCoroutine(CardFlip(goSlots[1].GetComponent<Animator>(), true));
+        }
+
+        if (!PlayerPrefs.HasKey(ic2.goUnlocked.ToString()))
+        {
+            StartCoroutine(CardFlip(goSlots[2].GetComponent<Animator>(), true));
+        }
+
+        // currentPlace++;
+        // foreach (GameObject slot in goSlots)
+        // {
+        //     InfoCards ic = slot.GetComponent<InfoCards>();
+
+		// 	Transform animalPivot = ic.gameObject.transform.Find("RotationPivot/AnimalPivot");
+		// 	while (animalPivot.childCount > 0) {
+		// 		DestroyImmediate (animalPivot.GetChild(0).gameObject);
+		// 	}
+
+        //     if (currentPlace >= goUnlocked.Length)
+        //     {
+        //         isEnd = true;
+        //         continue;
+        //     }
+
+        //     if (currentPlace < 0)
+        //         currentPlace = goUnlocked.Length - 1;
+
+        //     ic.goUnlocked = goUnlocked[currentPlace];
+        //     ic.animatorController = goUnlocked[currentPlace].animatorController;
+        //     ic.spokenName = goUnlocked[currentPlace].spokenName;
+        //     ic.gender = goUnlocked[currentPlace].gender.ToString();
+        //     ic.infoTextures = goUnlocked[currentPlace].infoTextures;
+
+        //     Fill(ic.gameObject, ic);
+
+        //     if (!PlayerPrefs.HasKey(ic.goUnlocked.ToString()))
+        //     {
+        //         StartCoroutine(CardFlip(slot.GetComponent<Animator>(), true));
+        //     }
+
+        //     currentPlace++;
+        // }
         isFlipping = false;
     }
 
@@ -374,6 +459,8 @@ public class InfoCardManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Flip(animator, isFlipped);
+        yield return new WaitForSeconds(0.4f);
+        nameText.gameObject.SetActive(true);
     }
 
     private void Flip(Animator animator, bool isFlipped)

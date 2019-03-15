@@ -9,6 +9,7 @@ public class InfoCards : MonoBehaviour
     public RuntimeAnimatorController animatorController;
     public GameObject meshObject;
     public AudioClip spokenName;
+    public string displayName;
     public string gender;
     public GameObject genderTextureMale;
     public GameObject genderTextureFemale;
@@ -17,13 +18,14 @@ public class InfoCards : MonoBehaviour
     public GameObject cards;
     public GameObject background;
     public Info backButton;
+    public bool clickable;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             InfoCards region = TryClickRegion(Input.mousePosition);
-            if (region)
+            if (region && clickable)
             {
                 OnClickRegion(region);
             }
@@ -46,6 +48,7 @@ public class InfoCards : MonoBehaviour
 
     public void OnClickRegion(InfoCards region)
     {
-        gameObject.transform.parent.GetComponent<InfoCardManager>().ShowFactSheet(region);
+        if(region.gameObject.name == "Slot2")
+            gameObject.transform.parent.GetComponent<InfoCardManager>().ShowFactSheet(region);
     }
 }
