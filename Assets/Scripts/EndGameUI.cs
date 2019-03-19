@@ -55,7 +55,7 @@ public class EndGameUI : MonoBehaviour
 			yield return null;
 		}
 
-		tween = new Tween(null, 0, 1, 1, new CurveCubic(TweenCurveMode.Out), t =>
+		tween = new Tween(null, 0, 1, 0.25f, new CurveCubic(TweenCurveMode.Out), t =>
 		{
 			if (!scoreValueText)
 			{
@@ -69,7 +69,7 @@ public class EndGameUI : MonoBehaviour
 			yield return null;
 		}
 
-		tween = new Tween(null, 0, 1, 1, new CurveCubic(TweenCurveMode.Out), t =>
+		tween = new Tween(null, 0, 1, 0.25f, new CurveCubic(TweenCurveMode.Out), t =>
 		{
 			if (!scoreValueText)
 			{
