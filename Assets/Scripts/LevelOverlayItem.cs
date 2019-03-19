@@ -8,11 +8,12 @@ public class LevelOverlayItem:MonoBehaviour
 {
 	public Image thumbnailImage;
 	public Image lionThumbnailImage;
+	public Sprite lionThumbnailLockedSprite;
 	public Button primaryButton;
 	public Button lionButton;
 	public AudioClip tapSound;
 	public CanvasGroup canvasGroup;
-
+	
 	private Tween appearTween;
 	
 	private LevelOverlay _levelOverlay;
@@ -55,6 +56,16 @@ public class LevelOverlayItem:MonoBehaviour
 			else
 			{
 				Debug.LogWarning($"Level \"{level.name}\" has {nameof(level.lionCardDefs)} but no {nameof(level.lionThumbnail)}.", level);
+			}
+			if (string.IsNullOrEmpty(level.identifier))
+			{
+				Debug.LogWarning($"Level \"{level.name}\" has no {nameof(level.identifier)} set.", level);
+			}
+			var levelStats = GameData.GetLevelStats(level.identifier);
+			if (!levelStats.normalStats.beat)
+			{
+				lionButton.interactable = false;
+				lionThumbnailImage.sprite = lionThumbnailLockedSprite;
 			}
 		}
 		else

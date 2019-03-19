@@ -9,11 +9,20 @@ public class SettingsMenu:MonoBehaviour
 {
 	public GameObject propertySliderTemplate;
 
+	public RectTransform resetConfirmationDialog;
+	public Button resetProgressButton;
+	public Button resetConfirmationButton;
+	public Button resetConfirmationCancelButton;
+
 	private Slider masterVolumeSlider;
 
 	private void Start()
 	{
 		propertySliderTemplate.gameObject.SetActive(false);
+
+		resetProgressButton.onClick.AddListener(OpenResetConfirmation);
+		resetConfirmationButton.onClick.AddListener(OnClickConfirmResetProgressButton);
+		resetConfirmationCancelButton.onClick.AddListener(CloseResetConfirmation);
 
 		CreateSlider("Master Volume", v => GameSettings.Audio.masterVolume = v).value = GameSettings.Audio.masterVolume;
 		CreateSlider("Music Volume", v => GameSettings.Audio.musicVolume = v).value = GameSettings.Audio.musicVolume;
@@ -38,5 +47,22 @@ public class SettingsMenu:MonoBehaviour
 		text.text = title;
 		instance.gameObject.SetActive(true);
 		return slider;
+	}
+
+	private void OpenResetConfirmation()
+	{
+		resetConfirmationDialog.gameObject.SetActive(true);
+	}
+
+	private void CloseResetConfirmation()
+	{
+		resetConfirmationDialog.gameObject.SetActive(false);
+	}
+
+	private void OnClickConfirmResetProgressButton()
+	{
+		Debug.Log("Clearing game progress.");
+		GameData.Clear();
+		CloseResetConfirmation();
 	}
 }

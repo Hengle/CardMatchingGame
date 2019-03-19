@@ -375,6 +375,25 @@ public class Game:MonoBehaviour
 		gameIsStarted = false;
 		GameUIManager.current.ShowEndScreen();
 
+		if (!string.IsNullOrEmpty(currentLevel.identifier))
+		{
+			var didWin = GetExposedLionCards().Length < 2;
+
+			var levelStats = GameData.GetLevelStats(currentLevel.identifier);
+
+			ref var modeStats = ref (includeLions ? ref levelStats.lionStats : ref levelStats.normalStats);
+
+			if (didWin)
+			{
+				modeStats.beat = true;
+				modeStats.bestScore = Mathf.Max(gameStats.totalScore, modeStats.bestScore);
+			}
+			modeStats.playCount++;
+
+			GameData.SetLevelStats(currentLevel.identifier, levelStats);
+		}
+		
+
 		/*
 		CanvasGroup endGameGroup = Instantiate(Resources.Load<CanvasGroup>("UI/EndGameUI"));
 		endGameGroup.transform.SetParent(GameUIManager.current.canvas.transform, false);

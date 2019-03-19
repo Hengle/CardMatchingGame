@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f842b964e6d264185f44b4740cc5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identifier: central_2
   cardDefGroups:
   - {fileID: 114666305265633264, guid: db7f060f3f0d1e946a2e68790382c828, type: 3}
   - {fileID: 114411226844359398, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 3}

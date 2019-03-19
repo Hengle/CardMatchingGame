@@ -5,6 +5,7 @@ using System.Linq;
 
 public class Level:MonoBehaviour
 {
+	public string identifier = "";
 	public List<CardDefGroup> cardDefGroups = new List<CardDefGroup>();
 	public List<LionCardDef> lionCardDefs = new List<LionCardDef>();
 
