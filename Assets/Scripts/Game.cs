@@ -30,8 +30,7 @@ public class Game:MonoBehaviour
 	public Card cardPrefab;
 	public float cardSafeBounds = 4;
 	public float cardSpacing = 1.25f;
-    public AudioClip clip;
-    public AudioClip clipStart;
+    public AudioClip cardFlipClip;
     public AudioClip clipFruitFall;
     public AudioClip clipLion;
 
@@ -179,7 +178,7 @@ public class Game:MonoBehaviour
 		{
 			for (int x = 0; x < currentLevel.cardCountX; x++)
 			{
-                OneShotAudio.Play(clipStart, 0, GameSettings.Audio.sfxVolume);
+                OneShotAudio.Play(cardFlipClip, 0, GameSettings.Audio.sfxVolume);
 
                 Card card = cardGrid[x, currentLevel.cardCountY-y-1];
 				card.transform.localScale = Vector3.zero;
@@ -214,7 +213,7 @@ public class Game:MonoBehaviour
 		{
 			for (int x = 0; x < currentLevel.cardCountX; x++)
 			{
-                OneShotAudio.Play(clip, 0, GameSettings.Audio.sfxVolume);
+                OneShotAudio.Play(cardFlipClip, 0, GameSettings.Audio.sfxVolume*0.5f);
 
                 Card card = cardGrid[x, currentLevel.cardCountY-y-1];
 				card.isFlipped = false;
@@ -241,6 +240,18 @@ public class Game:MonoBehaviour
 			}
 			Card card0 = cards[card0Index];
 			Card card1 = cards[card1Index];
+
+			var card0TilePosX = card0.tilePositionX;
+			var card0TilePosY = card0.tilePositionY;
+
+			card0.tilePositionX = card1.tilePositionX;
+			card0.tilePositionY = card1.tilePositionY;
+
+			card1.tilePositionX = card0TilePosX;
+			card1.tilePositionY = card0TilePosY;
+
+			cardGrid[card0.tilePositionX, card0.tilePositionY] = card0;
+			cardGrid[card1.tilePositionX, card1.tilePositionY] = card1;
 
 			Vector3 card0Position = card0.transform.position;
 			Vector3 card1Position = card1.transform.position;
@@ -506,6 +517,31 @@ public class Game:MonoBehaviour
 		pos *= scaler;
 
 		return (pos, Vector3.one*scaler);
+	}
+
+	public IEnumerable<Card> GetAdjacentCards(int x, int y)
+	{
+		if (PositionIsValid(x-1, y))
+		{
+			yield return cardGrid[x-1, y];
+		}
+		if (PositionIsValid(x+1, y))
+		{
+			yield return cardGrid[x+1, y];
+		}
+		if (PositionIsValid(x, y-1))
+		{
+			yield return cardGrid[x, y-1];
+		}
+		if (PositionIsValid(x, y+1))
+		{
+			yield return cardGrid[x, y+1];
+		}
+	}
+
+	public bool PositionIsValid(int x, int y)
+	{
+		return x >= 0 && x < currentLevel.cardCountX && y >= 0 && y < currentLevel.cardCountY;
 	}
 
 	Card CreateCardInstance(CardDef cardDef) {

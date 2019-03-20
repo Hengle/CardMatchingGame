@@ -13,10 +13,13 @@ public class Card:MonoBehaviour {
     public AudioClip clipRun;
 	public Sprite exposedLionCardSprite;
 	public SpriteRenderer cardBackSpriteRenderer;
+	public Transform adjacentLionPivot;
 
+	[System.NonSerialized]
 	public bool _isMatched;
 	public bool isMatched { get; private set; }
 
+	[System.NonSerialized]
 	public int exposedTurn = -1;
 	public bool hasBeenExposed => exposedTurn >= 0;
 
@@ -106,17 +109,40 @@ public class Card:MonoBehaviour {
 	private IEnumerator AnimateAway()
 	{
 		yield return new WaitForSeconds(2);
-        float counter = 0;
-        OneShotAudio.Play(clipRun, 0, GameSettings.Audio.sfxVolume);
-        while (counter < 3)
-		{
-			counter += Time.deltaTime;
-			float ratio = counter/3;
-			animalPivot.transform.localPosition = new Vector3(Mathf.Lerp(0, 10, ratio), 0, Mathf.Lerp(0, 0.225f, ratio*5));
-			yield return 0;
-		}
 
-		Destroy(animalPivot.gameObject);
+        OneShotAudio.Play(clipRun, 0, GameSettings.Audio.sfxVolume);
+
+		Tween runTween = new Tween(null, 0, 1, 3, null, t =>
+		{
+			if (!adjacentLionPivot)
+			{
+				return;
+			}
+			animalPivot.transform.localPosition = new Vector3(Mathf.Lerp(0, 10, t.currentValue), 0, Mathf.Lerp(0, 0.225f, t.currentValue*5));
+		});
+		runTween.onFinish += t =>
+		{
+			if (animalPivot)
+			{
+				Destroy(animalPivot.gameObject);
+			}
+		};
+
+		yield return new WaitForSeconds(0.25f);
+
+		if (Game.current.GetAdjacentCards(tilePositionX, tilePositionY).Any(v => v.cardDef is LionCardDef))
+		{
+			adjacentLionPivot.localScale = Vector3.zero;
+			adjacentLionPivot.gameObject.SetActive(true);
+			Tween tween = new Tween(null, 0, 1, 0.25f, new CurveCubic(TweenCurveMode.Out), t =>
+			{
+				if (!adjacentLionPivot)
+				{
+					return;
+				}
+				adjacentLionPivot.localScale = Vector3.one*t.currentValue;
+			});
+		}
 	}
 
 	public void AnimateDance() {

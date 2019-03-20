@@ -61,7 +61,7 @@ public class EndGameUI : MonoBehaviour
 			{
 				return;
 			}
-			scoreValueText.text = Mathf.RoundToInt(t.currentValue*Game.current.gameStats.matches).ToString();
+			scoreValueText.text = Mathf.RoundToInt(t.currentValue*Game.current.gameStats.totalScore).ToString();
 		});
 
 		while (!tween.isDone)
@@ -69,22 +69,7 @@ public class EndGameUI : MonoBehaviour
 			yield return null;
 		}
 
-		tween = new Tween(null, 0, 1, 0.25f, new CurveCubic(TweenCurveMode.Out), t =>
-		{
-			if (!scoreValueText)
-			{
-				return;
-			}
-			var score = Mathf.Lerp(Game.current.gameStats.matches, Game.current.gameStats.totalScore, t.currentValue);
-			scoreValueText.text = Mathf.RoundToInt(score).ToString();
-		});
-
-		while (!tween.isDone)
-		{
-			yield return null;
-		}
-
-		yield return new WaitForSeconds(2.0f);
+		yield return new WaitForSeconds(3);
 
 		Transition transition = Transition.CreateTransition();
 		transition.onMidTransition += () =>
