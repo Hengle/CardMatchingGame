@@ -136,9 +136,16 @@ public class InfoCardManager : MonoBehaviour
             Destroy(animalMaleSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
 
         backgroundInfoTextures = animal.infoTextures;
-		
-        FillFactSheet(animal.goUnlocked);
-		newMaleMesh = Fill(animalMaleSlot.gameObject, animal);
+
+		float maleScale = animal.goUnlocked.animalScaler;
+		float femaleScale = animal.goUnlocked.femaleEquivalent.GetComponent<CardDef>().animalScaler;
+
+		float maxScale = Math.Max(maleScale, femaleScale);
+		maleScale /= maxScale;
+		femaleScale /= maxScale;
+
+		FillFactSheet(animal.goUnlocked);
+		newMaleMesh = Fill(animalMaleSlot.gameObject, animal, maleScale);
 
         animalMaleSlot.gameObject.SetActive(true);
         animalMaleSlot.GetComponent<Animator>().Play("FlipToFront");
@@ -151,7 +158,7 @@ public class InfoCardManager : MonoBehaviour
             Destroy(animalFemaleSlot.Find("RotationPivot/AnimalPivot").GetComponentInChildren<Animator>().gameObject);
 
         FillFactSheet(animal.goUnlocked);
-        newFemaleMesh = FillFemale(animalFemaleSlot.gameObject, animal);
+        newFemaleMesh = FillFemale(animalFemaleSlot.gameObject, animal, femaleScale);
 
         animalFemaleSlot.gameObject.SetActive(true);
         animalFemaleSlot.GetComponent<Animator>().Play("FlipToFront");
@@ -386,7 +393,7 @@ public class InfoCardManager : MonoBehaviour
         isFlipping = false;
     }
 
-    private GameObject Fill(GameObject slot, InfoCards ic)
+    private GameObject Fill(GameObject slot, InfoCards ic, float scale = 1)
     {
         //slot.name = ic.goUnlocked.ToString();
 
@@ -397,7 +404,7 @@ public class InfoCardManager : MonoBehaviour
 		meshObject.transform.parent = animalPivot;
         meshObject.transform.localPosition = Vector3.zero;
         meshObject.transform.localRotation = Quaternion.identity;
-        meshObject.transform.localScale = Vector3.one;
+        meshObject.transform.localScale = Vector3.one*scale;
 
         meshObject.GetComponent<Animator>().runtimeAnimatorController = ic.animatorController;
         nameAudio = ic.spokenName;
@@ -428,7 +435,7 @@ public class InfoCardManager : MonoBehaviour
         return meshObject;
     }
 
-    private GameObject FillFemale(GameObject slot, InfoCards ic)
+    private GameObject FillFemale(GameObject slot, InfoCards ic, float scale = 1)
     {
         //slot.name = ic.goUnlocked.ToString();
 
@@ -439,7 +446,7 @@ public class InfoCardManager : MonoBehaviour
         meshObject.transform.parent = animalPivot;
         meshObject.transform.localPosition = Vector3.zero;
         meshObject.transform.localRotation = Quaternion.identity;
-        meshObject.transform.localScale = Vector3.one;
+        meshObject.transform.localScale = Vector3.one*scale;
 
         meshObject.GetComponent<Animator>().runtimeAnimatorController = ic.goUnlocked.femaleEquivalent.GetComponent<CardDef>().animatorController;
 
