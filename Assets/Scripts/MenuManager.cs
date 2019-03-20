@@ -44,7 +44,6 @@ public class MenuManager : MonoBehaviour
         menuInfos.Add(new MenuInfo() { type = MenuType.Directions, rootTransform = directionsTransform });
 
         var menuType = currentMenuType;
-		menuTypeStack.Clear();
 
 		if (menuType == MenuType.None)
 		{
@@ -94,22 +93,22 @@ public class MenuManager : MonoBehaviour
 
 	private void Update()
 	{
-		//TODO: Create menu classes and move this logic into those.
-		if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			menuTypeStack.ForEach(v => Debug.Log(v));
+			if (currentMenuType == MenuType.Splash)
+			{
+				Application.Quit();
+			}
+			PopMenuType();
+		}
+		else if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
 		{
 			if (currentMenuType == MenuType.Splash)
 			{
 				PushMenuType(MenuType.LevelSelect);
 			}
 		}
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			if (currentMenuType == MenuType.Splash)
-			{
-				Application.Quit();
-			}
-			PopMenuType();
-        }
     }
 
     public void PlaySound(AudioClip clip)
