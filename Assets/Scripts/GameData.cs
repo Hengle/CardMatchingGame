@@ -57,9 +57,17 @@ public static class GameData
 
 	public static void RemoveLevelStats(string levelIdentifier)
 	{
+		RemoveLevelStats(levelIdentifier, true);
+	}
+
+	private static void RemoveLevelStats(string levelIdentifier, bool save)
+	{
 		var key = LevelIdentifierToKey(levelIdentifier);
 		PlayerPrefs.DeleteKey(key);
-		PlayerPrefs.Save();
+		if (save)
+		{
+			PlayerPrefs.Save();
+		}
 	}
 
 	public static void Clear()
@@ -71,7 +79,8 @@ public static class GameData
 			{
 				continue;
 			}
-			RemoveLevelStats(level.identifier);
+			RemoveLevelStats(level.identifier, false);
 		}
+		PlayerPrefs.Save();
 	}
 }
