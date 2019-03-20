@@ -27,6 +27,7 @@ public class Game:MonoBehaviour
 	public Level testLevel;
 	public bool includeLions = true;
 	public Background currentBackground;
+	public float backgroundAspectRationShiftAmount = 1;
 	public Card cardPrefab;
 	public float cardSafeBounds = 4;
 	public float cardSpacing = 1.25f;
@@ -64,13 +65,7 @@ public class Game:MonoBehaviour
 
 		gameStats = new GameStats();
 
-		if (currentBackground)
-		{
-			Destroy(currentBackground.gameObject);
-		}
-
-		currentBackground = Instantiate(currentLevel.background);
-		currentBackground.transform.SetParent(transform, false);
+		SetupBackground();
 
 		ClearCards();
 		cardGrid = new Card[currentLevel.cardCountX, currentLevel.cardCountY];
@@ -380,6 +375,24 @@ public class Game:MonoBehaviour
 		}
 
 		flipCardCoroutine = null;
+	}
+
+	private void SetupBackground()
+	{
+		if (currentBackground)
+		{
+			Destroy(currentBackground.gameObject);
+		}
+
+		currentBackground = Instantiate(currentLevel.background);
+		currentBackground.transform.SetParent(transform, false);
+
+		float deltaAspect = Camera.main.aspect/(1920.0f/1080);
+
+		if (deltaAspect < 1)
+		{
+			currentBackground.transform.Translate((1.0f-deltaAspect)*backgroundAspectRationShiftAmount, 0, 0);
+		}
 	}
 
 	void EndGame() {

@@ -2509,6 +2509,7 @@ MonoBehaviour:
   testLevel: {fileID: 11400000, guid: c6822aa520fb52142973d15eb837ee7c, type: 3}
   includeLions: 1
   currentBackground: {fileID: 0}
+  backgroundAspectRationShiftAmount: 3
   cardPrefab: {fileID: 11400000, guid: 69ffc6bf72417094ebffe7ce5c9e93c0, type: 3}
   cardSafeBounds: 7
   cardSpacing: 1.25
