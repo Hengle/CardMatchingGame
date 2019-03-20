@@ -52,12 +52,14 @@ public static class GameData
 		var key = LevelIdentifierToKey(levelIdentifier);
 		var json = JsonUtility.ToJson(stats);
 		PlayerPrefs.SetString(key, json);
+		PlayerPrefs.Save();
 	}
 
 	public static void RemoveLevelStats(string levelIdentifier)
 	{
 		var key = LevelIdentifierToKey(levelIdentifier);
 		PlayerPrefs.DeleteKey(key);
+		PlayerPrefs.Save();
 	}
 
 	public static void Clear()
