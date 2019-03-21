@@ -265,6 +265,12 @@ public class InfoCardManager : MonoBehaviour
 
     private  void FillSlots()
     {
+        if (currentPlace >= goUnlocked.Length)
+            currentPlace = 0;
+        
+        if (currentPlace < 0)
+            currentPlace = goUnlocked.Length - 1;
+
         int slot1Pos = currentPlace - 1;
         int slot2Pos = currentPlace;
         int slot3Pos = currentPlace + 1;
@@ -287,6 +293,7 @@ public class InfoCardManager : MonoBehaviour
         if (slot3Pos < 0)
             slot3Pos = goUnlocked.Length - 1;
 
+        // Debug.Log("CurrentPlace " + currentPlace);
         // Debug.Log("Slot 1 is == to " + slot1Pos);
         // Debug.Log("Slot 2 is == to " + slot2Pos);
         // Debug.Log("Slot 3 is == to " + slot3Pos);
