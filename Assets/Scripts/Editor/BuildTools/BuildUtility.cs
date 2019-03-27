@@ -40,7 +40,7 @@ public static class BuildUtility
 		switch (target)
 		{
 			case BuildTarget.StandaloneWindows:
-			path = $"{buildInfo.versionString}/AntelopeUp.exe";
+			path = $"{buildInfo.versionString}/AntelopeUp/AntelopeUp.exe";
 			break;
 			case BuildTarget.StandaloneOSX:
 			path = $"{buildInfo.versionString}/AntelopeUp.app";
