@@ -276,7 +276,7 @@ ModelImporter:
     4300098: mesh_text_ee.001
     4300100: mesh_text_o.001
     4300102: mesh_text_p.001
-    7400000: mesh_text_up|CardPaper_AAction.000
+    7400000: FlyInter
     7400002: mesh_text_up|CardPaper_AAction.002
     7400004: mesh_text_up|CardPaper_EAction.000
     7400006: mesh_text_up|CardPaper_EAction.002
@@ -1324,39 +1324,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: FlyInnn
-      takeName: Scene
+      name: FlyInter
+      takeName: mesh_text_up|CardPaper_AAction.000
       firstFrame: 1
       lastFrame: 90
       wrapMode: 1
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: flyinnnnnnn
-      takeName: Scene
-      firstFrame: 1
-      lastFrame: 250
-      wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
