@@ -87,7 +87,7 @@ MonoBehaviour:
   exposedLionCardSprite: {fileID: 21300000, guid: 06f3a82e446a65c40ae3b685ee23a10a,
     type: 3}
   cardBackSpriteRenderer: {fileID: 1053453949156059974}
-  adjacentLionPivot: {fileID: 3386956992620025152}
+  adjacentLionPivot: {fileID: 0}
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 0

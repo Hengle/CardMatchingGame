@@ -114,7 +114,7 @@ public class Card:MonoBehaviour {
 
 		Tween runTween = new Tween(null, 0, 1, 3, null, t =>
 		{
-			if (!adjacentLionPivot)
+			if (!animalPivot)
 			{
 				return;
 			}
@@ -128,20 +128,23 @@ public class Card:MonoBehaviour {
 			}
 		};
 
-		yield return new WaitForSeconds(0.25f);
-
-		if (Game.current.GetAdjacentCards(tilePositionX, tilePositionY).Any(v => v.cardDef is LionCardDef))
+		if (adjacentLionPivot)
 		{
-			adjacentLionPivot.localScale = Vector3.zero;
-			adjacentLionPivot.gameObject.SetActive(true);
-			Tween tween = new Tween(null, 0, 1, 0.25f, new CurveCubic(TweenCurveMode.Out), t =>
+			yield return new WaitForSeconds(0.25f);
+
+			if (Game.current.GetAdjacentCards(tilePositionX, tilePositionY).Any(v => v.cardDef is LionCardDef))
 			{
-				if (!adjacentLionPivot)
+				adjacentLionPivot.localScale = Vector3.zero;
+				adjacentLionPivot.gameObject.SetActive(true);
+				Tween tween = new Tween(null, 0, 1, 0.25f, new CurveCubic(TweenCurveMode.Out), t =>
 				{
-					return;
-				}
-				adjacentLionPivot.localScale = Vector3.one*t.currentValue;
-			});
+					if (!adjacentLionPivot)
+					{
+						return;
+					}
+					adjacentLionPivot.localScale = Vector3.one*t.currentValue;
+				});
+			}
 		}
 	}
 
