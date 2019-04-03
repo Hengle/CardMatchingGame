@@ -10,6 +10,7 @@ public class EndGameUI : MonoBehaviour
 	public CanvasGroup canvasGroup;
 	public RectTransform winRootTransform;
 	public RectTransform loseRootTransform;
+	public Text triesValueText;
 	public Text matchesValueText;
 	public Text missesValueText;
 	public Text scoreValueText;
@@ -34,6 +35,8 @@ public class EndGameUI : MonoBehaviour
 	private IEnumerator RunWinAsync()
 	{
 		var totalPossibleMatches = Game.current.GetNonLionCards().Length/2;
+
+		triesValueText.text = Game.current.gameStats.currentTurn.ToString();
 		matchesValueText.text = Game.current.gameStats.matches+"/"+totalPossibleMatches;
 
 		missesValueText.text = Game.current.gameStats.misses.ToString();
@@ -69,7 +72,7 @@ public class EndGameUI : MonoBehaviour
 			yield return null;
 		}
 
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(5);
 
 		Transition transition = Transition.CreateTransition();
 		transition.onMidTransition += () =>
