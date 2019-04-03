@@ -318,9 +318,7 @@ public class Game:MonoBehaviour
 					exposedCard.isFlipped = true;
 				}
 
-				yield return new WaitForSeconds(1);
-
-				EndGame();
+				StartCoroutine(EndGame());
 			}
 			else
 			{
@@ -332,7 +330,6 @@ public class Game:MonoBehaviour
 				card.isFlipped = false;
 				yield return new WaitForSeconds(0.5f);
 			}
-			currentBackground.hyena.Laugh();
 			flippedCard = null;
 			gameStats.currentTurn++;
 		}
@@ -353,9 +350,8 @@ public class Game:MonoBehaviour
                     yield return new WaitForSeconds(0.5f);
 					card.isFlipped = false;
 					flippedCard.isFlipped = false;
-					if (flippedCard.exposedTurn < gameStats.currentTurn && card.exposedTurn < gameStats.currentTurn)
+					if (card.exposedTurn < gameStats.currentTurn)
 					{
-						currentBackground.hyena.Laugh();
 						gameStats.misses++;
 					}
 				}
@@ -363,8 +359,7 @@ public class Game:MonoBehaviour
 
 				if (GetMatchedCards().Length >= GetNonLionCards().Length)
 				{
-					yield return new WaitForSeconds(1);
-					EndGame();
+					StartCoroutine(EndGame());
 				}
 				gameStats.currentTurn++;
 			}
@@ -395,18 +390,32 @@ public class Game:MonoBehaviour
 		}
 	}
 
-	void EndGame() {
+	IEnumerator EndGame() {
 		gameIsStarted = false;
-		GameUIManager.current.ShowEndScreen();
+		var didWin = GetExposedLionCards().Length < 2;
 
+		yield return new WaitForSeconds(1);
+
+		if (!didWin || gameStats.totalScore <= 0)
+		{
+			currentBackground.hyena.Laugh();
+		}
+
+		yield return new WaitForSeconds(1.5f);
+
+		UpdateStats(didWin);
+
+		GameUIManager.current.ShowEndScreen();
+	}
+
+	private void UpdateStats(bool didWin)
+	{
 		if (!string.IsNullOrEmpty(currentLevel.identifier))
 		{
-			var didWin = GetExposedLionCards().Length < 2;
-
 			var levelStats = GameData.GetLevelStats(currentLevel.identifier);
 
 			ref var modeStats = ref (includeLions ? ref levelStats.lionStats : ref levelStats.normalStats);
-
+			
 			if (didWin)
 			{
 				modeStats.beat = true;
@@ -416,41 +425,8 @@ public class Game:MonoBehaviour
 
 			GameData.SetLevelStats(currentLevel.identifier, levelStats);
 		}
-		
-
-		/*
-		CanvasGroup endGameGroup = Instantiate(Resources.Load<CanvasGroup>("UI/EndGameUI"));
-		endGameGroup.transform.SetParent(GameUIManager.current.canvas.transform, false);
-
-		Text endGameText = endGameGroup.transform.Find("Text").gameObject.GetComponent<Text>();
-		endGameText.text = "You\n"+(didWin ? "Win" : "Lose");
-
-		endGameGroup.alpha = 0;
-		
-		while (endGameGroup.alpha < 1)
-		{
-			endGameGroup.alpha += Time.deltaTime*2;
-			yield return 0;
-		}
-		endGameGroup.alpha = 1;
-
-		yield return new WaitForSeconds(2.0f);
-
-		Transition transition = Transition.CreateTransition();
-		transition.onMidTransition += () =>
-		{
-			if (didWin)
-			{
-				SceneManager.LoadScene("LevelSelect");
-			}
-			else
-			{
-				SceneManager.LoadScene("Game");
-			}
-		};
-		*/
 	}
-	
+
 	void ClearCards() {
 		foreach (Card card in GetAllCards()) {
 			Destroy(card.gameObject);
