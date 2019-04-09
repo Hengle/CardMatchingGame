@@ -456,6 +456,7 @@ MonoBehaviour:
   backButton: {fileID: 114870553226953164}
   factSheetBackButton: {fileID: 0}
   animalNameText: {fileID: 114537675731415108}
+  nameText: {fileID: 0}
   animalGender: {fileID: 114714845790475204}
   animalConservationText: {fileID: 114398060915087230}
   animalMap: {fileID: 114422256420811398}
@@ -548,6 +549,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 1117048850966068}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 1401512621185958}
   genderTextureFemale: {fileID: 1783543512198510}
@@ -1175,6 +1177,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 1775564438293592}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 1890083933305742}
   genderTextureFemale: {fileID: 1799029190682818}
@@ -2848,6 +2851,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 1262058607881106}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 1436993282366100}
   genderTextureFemale: {fileID: 1638116726218516}
@@ -2939,6 +2943,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 1157476596123814}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 1730974162815606}
   genderTextureFemale: {fileID: 1271379544926922}
@@ -4875,7 +4880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4887,8 +4892,8 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -10958,6 +10963,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 0}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 0}
   genderTextureFemale: {fileID: 0}
@@ -11778,6 +11784,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 1798998672386452}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 1026591749024052}
   genderTextureFemale: {fileID: 1165025815596418}
@@ -12339,6 +12346,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 1692759291800662}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 1378463849577700}
   genderTextureFemale: {fileID: 1619847494168754}
@@ -13383,6 +13391,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 1775451881086914}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 1092910260061728}
   genderTextureFemale: {fileID: 1229066605800900}
@@ -14405,6 +14414,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 0}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 0}
   genderTextureFemale: {fileID: 0}
@@ -14779,7 +14789,7 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -18094,6 +18104,7 @@ MonoBehaviour:
   animatorController: {fileID: 0}
   meshObject: {fileID: 1542401678407484}
   spokenName: {fileID: 0}
+  displayName: 
   gender: 
   genderTextureMale: {fileID: 1608260976273884}
   genderTextureFemale: {fileID: 1327451500861600}
