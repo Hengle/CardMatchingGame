@@ -11,8 +11,6 @@ public class Card:MonoBehaviour {
 	public int tilePositionY = -1;
     public AudioClip clipRear;
     public AudioClip clipRun;
-	public Sprite exposedLionCardSprite;
-	public SpriteRenderer cardBackSpriteRenderer;
 	public Transform adjacentLionPivot;
 
 	[System.NonSerialized]
