@@ -54,7 +54,7 @@ MonoBehaviour:
   gameMode: 0
   cardCountX: 3
   cardCountY: 2
-  background: {fileID: 114269455696899728, guid: 39a0991a35be651418a51b38a57026de,
+  background: {fileID: 114269455696899728, guid: dc7ee270b783afa4a989d04675045fa5,
     type: 3}
   thumbnail: {fileID: 21300000, guid: 9c3145d3ee36854409eeb35778fec702, type: 3}
   lionThumbnail: {fileID: 0}
