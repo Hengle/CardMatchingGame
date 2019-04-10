@@ -32,6 +32,16 @@ public class MapRegion:MonoBehaviour
 		meshRenderer = gameObject.GetComponentInChildren<MeshRenderer>();
 	}
 
+	public void DoIdlePop()
+	{
+		var inTween = new Tween(null, popupValue, 0.75f, 0.25f, new CurveCubic(TweenCurveMode.Out), UpdateTween);
+		var inBlendTween = new Tween(null, 0, 1, 0.25f, new CurveCubic(TweenCurveMode.Out), UpdateBlendTween);
+
+		var outTween = new Tween(inTween, 0.75f, 0, 0.75f, new CurveBounce(TweenCurveMode.Out), UpdateTween);
+		var outBlendTween = new Tween(inTween, 1, 0, 0.5f, new CurveCubic(TweenCurveMode.Out), UpdateBlendTween);
+		outBlendTween.delay = 0.25f;
+	}
+
 	public void OnLevelOverlayOpened(LevelOverlay levelOverlay)
 	{
 		OneShotAudio.Play(acSelectAudio, 0, GameSettings.Audio.sfxVolume);
