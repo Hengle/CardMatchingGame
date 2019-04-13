@@ -81,7 +81,7 @@ public class BuildToolEditor : EditorWindow
 
 		EditorGUILayout.Space();
 
-		buildWindows = GUILayout.Toggle(buildWindows, "Windows");
+		buildWindows = GUILayout.Toggle(buildWindows, "Windows x64");
 		buildMac = GUILayout.Toggle(buildMac, "Mac");
 		buildAndroid = GUILayout.Toggle(buildAndroid, "Android");
 		buildIOS = GUILayout.Toggle(buildIOS, "IOS");
@@ -94,7 +94,7 @@ public class BuildToolEditor : EditorWindow
 		{
 			if (buildWindows)
 			{
-				BuildUtility.MakeBuild(BuildTarget.StandaloneWindows, buildInfo);
+				BuildUtility.MakeBuild(BuildTarget.StandaloneWindows64, buildInfo);
 			}
 			if (buildMac)
 			{

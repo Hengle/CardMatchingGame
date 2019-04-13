@@ -39,6 +39,7 @@ public static class BuildUtility
 
 		switch (target)
 		{
+			case BuildTarget.StandaloneWindows64:
 			case BuildTarget.StandaloneWindows:
 			path = $"{buildInfo.versionString}/AntelopeUp/AntelopeUp.exe";
 			break;
