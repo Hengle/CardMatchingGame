@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f842b964e6d264185f44b4740cc5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: southern_
+  identifier: southern_1
   cardDefGroups:
   - {fileID: 114145351647593630, guid: f4495310ae157244c937d69a6de71659, type: 3}
   - {fileID: 114411226844359398, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 3}
@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 114739342474985066, guid: 3c31ac48544544d44940db494d491dc3, type: 3}
   - {fileID: 114717721242437768, guid: 18b11c50f3b5643408dbc969966bc721, type: 3}
   - {fileID: 114139508578168960, guid: c5c84c45ff31d4c9fbb9670b9de7ad7a, type: 3}
+  - {fileID: 114803834254149132, guid: c447f75d7776482478955e36d24e3109, type: 3}
   lionCardDefs: []
   gameMode: 0
   cardCountX: 2

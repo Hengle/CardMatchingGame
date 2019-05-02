@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 114739342474985066, guid: 3c31ac48544544d44940db494d491dc3, type: 3}
   - {fileID: 114717721242437768, guid: 18b11c50f3b5643408dbc969966bc721, type: 3}
   - {fileID: 114139508578168960, guid: c5c84c45ff31d4c9fbb9670b9de7ad7a, type: 3}
+  - {fileID: 114803834254149132, guid: c447f75d7776482478955e36d24e3109, type: 3}
   lionCardDefs:
   - {fileID: 114613868331506148, guid: f9a0c25e48e18594d89f32abb0152921, type: 3}
   gameMode: 0

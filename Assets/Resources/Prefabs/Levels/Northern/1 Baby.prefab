@@ -43,13 +43,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f842b964e6d264185f44b4740cc5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: northern_
+  identifier: northern_1
   cardDefGroups:
+  - {fileID: 114715956014526810, guid: 0414895f5bb314147a8e180256398371, type: 3}
+  - {fileID: 114414578213819156, guid: f3dd8b790ce77984e9fee9ce28c1cb59, type: 3}
+  - {fileID: 114715956014526810, guid: 8703d1cfcebe44444aa936e324c6a4de, type: 3}
+  - {fileID: 114357483569459866, guid: 166031cd73ecb6940a626a00e10ff36a, type: 3}
+  - {fileID: 114672186056526802, guid: b68d2de6ddc00e5439fad168c1ea7fab, type: 3}
+  - {fileID: 114693808043699434, guid: def07cdea0d07a34c8c24f479069e882, type: 3}
+  - {fileID: 114029867942576716, guid: ed228cabbce92b643a4d84cdeb48e33f, type: 3}
+  - {fileID: 114416446131813068, guid: 8bb933317dc47ae48ae538b5589a0c08, type: 3}
   - {fileID: 114666305265633264, guid: db7f060f3f0d1e946a2e68790382c828, type: 3}
   - {fileID: 114583122862003910, guid: d38594f9699678d46a9b093604a5df35, type: 3}
-  - {fileID: 114693808043699434, guid: def07cdea0d07a34c8c24f479069e882, type: 3}
-  - {fileID: 114145351647593630, guid: f4495310ae157244c937d69a6de71659, type: 3}
-  - {fileID: 114029867942576716, guid: ed228cabbce92b643a4d84cdeb48e33f, type: 3}
   lionCardDefs: []
   gameMode: 0
   cardCountX: 2
