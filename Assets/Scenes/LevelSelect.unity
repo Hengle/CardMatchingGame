@@ -8854,8 +8854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Eastern Africa
-  completedMaterial: {fileID: 0}
-  lockedMaterial: {fileID: 0}
+  completedMaterial: {fileID: 2100000, guid: 5eac27010530cdc4685f6bfaaf6f7d94, type: 2}
+  lockedMaterial: {fileID: 2100000, guid: 0c21e990495158b44ab7086cf44c52da, type: 2}
   popupScale: 5
   levels:
   - {fileID: 114047588185774556, guid: 29afa3acc18c38c4f93790a2262c4852, type: 3}
@@ -16209,8 +16209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Western Africa
-  completedMaterial: {fileID: 0}
-  lockedMaterial: {fileID: 0}
+  completedMaterial: {fileID: 2100000, guid: 5eac27010530cdc4685f6bfaaf6f7d94, type: 2}
+  lockedMaterial: {fileID: 2100000, guid: 0c21e990495158b44ab7086cf44c52da, type: 2}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: 2461715325738a1479b1c8d9f67a2a1b, type: 3}
@@ -17183,8 +17183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Southern Africa
-  completedMaterial: {fileID: 0}
-  lockedMaterial: {fileID: 0}
+  completedMaterial: {fileID: 2100000, guid: 5eac27010530cdc4685f6bfaaf6f7d94, type: 2}
+  lockedMaterial: {fileID: 2100000, guid: 0c21e990495158b44ab7086cf44c52da, type: 2}
   popupScale: 5
   levels:
   - {fileID: 114864830609674110, guid: 153e042764b85454389b61f3e032dcc5, type: 3}
@@ -18119,8 +18119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Central Africa
-  completedMaterial: {fileID: 0}
-  lockedMaterial: {fileID: 0}
+  completedMaterial: {fileID: 2100000, guid: 5eac27010530cdc4685f6bfaaf6f7d94, type: 2}
+  lockedMaterial: {fileID: 2100000, guid: 0c21e990495158b44ab7086cf44c52da, type: 2}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: 7eafa7a7dd1f4c1408a7fe63ad71387e, type: 3}
@@ -20304,8 +20304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Northern Africa
-  completedMaterial: {fileID: 0}
-  lockedMaterial: {fileID: 0}
+  completedMaterial: {fileID: 2100000, guid: 5eac27010530cdc4685f6bfaaf6f7d94, type: 2}
+  lockedMaterial: {fileID: 2100000, guid: 0c21e990495158b44ab7086cf44c52da, type: 2}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: f410750cc794f8d4fbb20c980b39a6f0, type: 3}
