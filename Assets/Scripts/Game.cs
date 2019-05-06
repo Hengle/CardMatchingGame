@@ -102,7 +102,14 @@ public class Game:MonoBehaviour
 
 		while (availableCardSlots.Count > 0) {
 			CardDef cardDef = shuffledCardDefs[counter%shuffledCardDefs.Count];
-			if (!cardDef || Random.value >= cardDef.probability)
+
+			bool skip = !cardDef;
+			if (currentLevel.useConservation)
+			{
+				skip |= Random.value >= cardDef.probability;
+			}
+
+			if (skip)
 			{
 				counter++;
 				continue;
