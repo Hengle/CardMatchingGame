@@ -20,6 +20,58 @@ public static class GameData
 		public ModeStats lionStats;
 	}
 
+
+	[System.Serializable]
+	public struct GlobalStats
+	{
+		[System.NonSerialized]
+		public bool hasData;
+		public int score;
+	}
+
+	private const string globalStatsKey = "game.globalStats";
+	public static GlobalStats GetGlobalStats()
+	{
+		GlobalStats globalStats = default;
+		bool hasData = false;
+		if (PlayerPrefs.HasKey(globalStatsKey))
+		{
+			try
+			{
+				globalStats = JsonUtility.FromJson<GlobalStats>(PlayerPrefs.GetString(globalStatsKey));
+				hasData = true;
+			}
+			catch (System.Exception)
+			{
+				Debug.LogError($"Error parsing {nameof(GlobalStats)}");
+				throw;
+			}
+		}
+		globalStats.hasData = hasData;
+		return globalStats;
+	}
+
+	public static void SetGlobalStats(GlobalStats stats)
+	{
+		var json = JsonUtility.ToJson(stats);
+		PlayerPrefs.SetString(globalStatsKey, json);
+		PlayerPrefs.Save();
+	}
+
+	public static void RemoveGlobalStats()
+	{
+		RemoveGlobalStats(true);
+	}
+
+	private static void RemoveGlobalStats(bool save)
+	{
+		PlayerPrefs.DeleteKey(globalStatsKey);
+		if (save)
+		{
+			PlayerPrefs.Save();
+		}
+	}
+
 	private static string LevelIdentifierToKey(string levelIdentifier)
 	{
 		return "game.levelStats."+levelIdentifier;
@@ -72,6 +124,7 @@ public static class GameData
 
 	public static void Clear()
 	{
+		RemoveGlobalStats(false);
 		var levels = Resources.FindObjectsOfTypeAll<Level>();
 		foreach (var level in levels)
 		{

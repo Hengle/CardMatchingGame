@@ -283,8 +283,7 @@ CanvasRenderer:
 --- !u!4 &10102134
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e23d89f89acf902469327c9ec2a38032,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947800422}
@@ -299,8 +298,7 @@ Transform:
 --- !u!4 &13871713
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: bcb521255361c5e408efb77d0a099db7,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064405680}
@@ -2309,8 +2307,7 @@ Transform:
 --- !u!4 &291391601
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: c1c4d5d79d3c92043b9870fdf75edbb5,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772069702}
@@ -2402,6 +2399,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Southern Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: 1dbaab0a3c36cdf4a8610dd7faa5526b, type: 3}
@@ -3230,8 +3229,7 @@ MeshFilter:
 --- !u!4 &407452115
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 339091e891f7dcb408c09722b942b962,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864189827}
@@ -4718,6 +4716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Northern Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: 766d14efe420bd548aacf1bc62f2f568, type: 3}
@@ -5159,6 +5159,8 @@ MonoBehaviour:
   levelOverlayCanvas: {fileID: 1848331255}
   levelOverlayTemplate: {fileID: 11458722, guid: d706be3051b5ce144bb3ece466c7ad65,
     type: 3}
+  idlePopDelay: 3
+  idlePopRate: 3
 --- !u!4 &640502054
 Transform:
   m_ObjectHideFlags: 0
@@ -8825,8 +8827,7 @@ MeshFilter:
 --- !u!1 &947800422
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: e23d89f89acf902469327c9ec2a38032,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -8853,6 +8854,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Eastern Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 114047588185774556, guid: 29afa3acc18c38c4f93790a2262c4852, type: 3}
@@ -9606,6 +9609,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Eastern Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: 2eda5d8e95eeede409963d58ea1c0718, type: 3}
@@ -10069,6 +10074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Western Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: dc6ef901ee83dc24387c9ddf87502e17, type: 3}
@@ -10238,6 +10245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Central Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: 427cbc73a8f0a6745adff85e4941458a, type: 3}
@@ -10761,6 +10770,8 @@ MonoBehaviour:
   levelOverlayCanvas: {fileID: 1848331255}
   levelOverlayTemplate: {fileID: 11458722, guid: d706be3051b5ce144bb3ece466c7ad65,
     type: 3}
+  idlePopDelay: 3
+  idlePopRate: 3
 --- !u!1 &1176299708
 GameObject:
   m_ObjectHideFlags: 0
@@ -16171,8 +16182,7 @@ Transform:
 --- !u!1 &1683820063
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: e79ac0fecc471c2499c45c849eed2ca5,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -16199,6 +16209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Western Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: 2461715325738a1479b1c8d9f67a2a1b, type: 3}
@@ -16210,8 +16222,7 @@ MonoBehaviour:
 --- !u!4 &1686399027
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e79ac0fecc471c2499c45c849eed2ca5,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683820063}
@@ -17145,8 +17156,7 @@ Transform:
 --- !u!1 &1772069702
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: c1c4d5d79d3c92043b9870fdf75edbb5,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -17173,6 +17183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Southern Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 114864830609674110, guid: 153e042764b85454389b61f3e032dcc5, type: 3}
@@ -18080,8 +18092,7 @@ Transform:
 --- !u!1 &1864189827
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 339091e891f7dcb408c09722b942b962,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -18108,6 +18119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Central Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: 7eafa7a7dd1f4c1408a7fe63ad71387e, type: 3}
@@ -20264,8 +20277,7 @@ MeshFilter:
 --- !u!1 &2064405680
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: bcb521255361c5e408efb77d0a099db7,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -20292,6 +20304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regionName: Northern Africa
+  completedMaterial: {fileID: 0}
+  lockedMaterial: {fileID: 0}
   popupScale: 5
   levels:
   - {fileID: 11400000, guid: f410750cc794f8d4fbb20c980b39a6f0, type: 3}

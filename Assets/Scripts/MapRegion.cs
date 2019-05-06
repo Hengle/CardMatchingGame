@@ -7,6 +7,8 @@ using KeenTween;
 public class MapRegion:MonoBehaviour
 {
 	public string regionName = "Region";
+	public Material completedMaterial;
+	public Material lockedMaterial;
 	public float popupScale = 5;
 	public List<Level> levels = new List<Level>();
 
@@ -30,6 +32,15 @@ public class MapRegion:MonoBehaviour
 	private void Start()
 	{
 		meshRenderer = gameObject.GetComponentInChildren<MeshRenderer>();
+
+		if (GetCompleted())
+		{
+			meshRenderer.sharedMaterial = completedMaterial;
+		}
+		else if (GetLocked())
+		{
+			meshRenderer.sharedMaterial = lockedMaterial;
+		}
 	}
 
 	public void DoIdlePop()
@@ -94,5 +105,25 @@ public class MapRegion:MonoBehaviour
 			return;
 		}
 		meshRenderer.material.SetFloat("_MainTexBlendFactor", t.currentValue);
+	}
+
+	public bool GetCompleted()
+	{
+		bool completed = true;
+		foreach (var level in levels)
+		{
+			var gameStats = GameData.GetLevelStats(level.identifier);
+			if (!gameStats.hasData || !gameStats.normalStats.beat || !gameStats.lionStats.beat)
+			{
+				completed = false;
+				break;
+			}
+		}
+		return completed;
+	}
+
+	public bool GetLocked()
+	{
+		return false;
 	}
 }

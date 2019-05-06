@@ -420,6 +420,7 @@ public class Game:MonoBehaviour
 		if (!string.IsNullOrEmpty(currentLevel.identifier))
 		{
 			var levelStats = GameData.GetLevelStats(currentLevel.identifier);
+			var globalStats = GameData.GetGlobalStats();
 
 			ref var modeStats = ref (includeLions ? ref levelStats.lionStats : ref levelStats.normalStats);
 			
@@ -427,10 +428,12 @@ public class Game:MonoBehaviour
 			{
 				modeStats.beat = true;
 				modeStats.bestScore = Mathf.Max(gameStats.totalScore, modeStats.bestScore);
+				globalStats.score += gameStats.totalScore;
 			}
 			modeStats.playCount++;
 
 			GameData.SetLevelStats(currentLevel.identifier, levelStats);
+			GameData.SetGlobalStats(globalStats);
 		}
 	}
 
