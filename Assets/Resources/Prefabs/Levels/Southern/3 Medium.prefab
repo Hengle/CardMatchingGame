@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   identifier: southern_3
+  bonusScore: 300
+  lionBonusScore: 500
   cardDefGroups:
   - {fileID: 114145351647593630, guid: f4495310ae157244c937d69a6de71659, type: 3}
   - {fileID: 114411226844359398, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 3}
@@ -63,6 +65,7 @@ MonoBehaviour:
   gameMode: 0
   cardCountX: 4
   cardCountY: 3
+  useConservation: 0
   background: {fileID: 114361624849765200, guid: 9101be537755c2c4691ec6ba1a51e17d,
     type: 3}
   thumbnail: {fileID: 21300000, guid: 371830602be34914dbc071b68eaeed10, type: 3}

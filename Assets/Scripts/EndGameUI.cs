@@ -10,10 +10,8 @@ public class EndGameUI : MonoBehaviour
 	public CanvasGroup canvasGroup;
 	public RectTransform winRootTransform;
 	public RectTransform loseRootTransform;
-	public Text triesValueText;
-	public Text matchesValueText;
-	public Text missesValueText;
-	public Text scoreValueText;
+	public Text scoreText;
+	public Text globalScoreText;
 
 	public void Start()
 	{
@@ -34,15 +32,17 @@ public class EndGameUI : MonoBehaviour
 
 	private IEnumerator RunWinAsync()
 	{
-		var totalPossibleMatches = Game.current.GetNonLionCards().Length/2;
-
-		triesValueText.text = Game.current.gameStats.currentTurn.ToString();
-		matchesValueText.text = Game.current.gameStats.matches+"/"+totalPossibleMatches;
-
-		missesValueText.text = Game.current.gameStats.misses.ToString();
-
 		canvasGroup.alpha = 0;
 		winRootTransform.gameObject.SetActive(true);
+
+		var game = Game.current;
+
+		var gameScore = Game.current.gameStats.GetTotalScore(game.currentLevel, game.includeLions);
+		var newGlobalScore = GameData.GetGlobalStats().score;
+		var previousGlobalScore = newGlobalScore-gameScore;
+
+		scoreText.text = gameScore.ToString();
+		globalScoreText.text = previousGlobalScore.ToString();
 
 		var tween = new Tween(null, 0, 1, 0.25f, new CurveCubic(TweenCurveMode.Out), t =>
 		{
@@ -58,13 +58,15 @@ public class EndGameUI : MonoBehaviour
 			yield return null;
 		}
 
-		tween = new Tween(null, 0, 1, 0.25f, new CurveCubic(TweenCurveMode.Out), t =>
+		
+		tween = new Tween(null, 0, 1, 1, new CurveCubic(TweenCurveMode.Out), t =>
 		{
-			if (!scoreValueText)
+			if (!globalScoreText)
 			{
 				return;
 			}
-			scoreValueText.text = Mathf.RoundToInt(t.currentValue*Game.current.gameStats.totalScore).ToString();
+			var score = Mathf.Lerp(previousGlobalScore, newGlobalScore, t.currentValue);
+			globalScoreText.text = Mathf.RoundToInt(score).ToString();
 		});
 
 		while (!tween.isDone)

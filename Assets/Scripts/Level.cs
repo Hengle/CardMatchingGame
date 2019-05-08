@@ -6,6 +6,8 @@ using System.Linq;
 public class Level:MonoBehaviour
 {
 	public string identifier = "";
+	public int bonusScore = 200;
+	public int lionBonusScore = 300;
 	public List<CardDefGroup> cardDefGroups = new List<CardDefGroup>();
 	public List<LionCardDef> lionCardDefs = new List<LionCardDef>();
 

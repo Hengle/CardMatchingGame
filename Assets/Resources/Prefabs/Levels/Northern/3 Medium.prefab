@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   identifier: northern_3
+  bonusScore: 300
+  lionBonusScore: 500
   cardDefGroups:
   - {fileID: 114715956014526810, guid: 0414895f5bb314147a8e180256398371, type: 3}
   - {fileID: 114414578213819156, guid: f3dd8b790ce77984e9fee9ce28c1cb59, type: 3}
@@ -60,6 +62,7 @@ MonoBehaviour:
   gameMode: 0
   cardCountX: 4
   cardCountY: 3
+  useConservation: 0
   background: {fileID: 114269455696899728, guid: 55f01459c211c9543b976e659a9fc1d3,
     type: 3}
   thumbnail: {fileID: 21300000, guid: 371830602be34914dbc071b68eaeed10, type: 3}

@@ -3,6 +3,7 @@ using System.Collections;
 using KeenTween;
 using System.Linq;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class LevelSelect:MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class LevelSelect:MonoBehaviour
 	}
 
 	public static GameInfo gameInfo;
-
+	public Text globalScoreText;
 	public Canvas levelOverlayCanvas;
 	public LevelOverlay levelOverlayTemplate;
 	public LevelOverlay levelOverlay { get; private set; }
@@ -36,6 +37,8 @@ public class LevelSelect:MonoBehaviour
 	{
 		gameInfo = default;
 		transform.localScale = Vector3.zero;
+
+		globalScoreText.text = GameData.GetGlobalStats().score.ToString();
 
 		regions = gameObject.GetComponentsInChildren<MapRegion>();
 

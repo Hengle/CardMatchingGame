@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class GameStats
 {
+	public enum CompletionState
+	{
+		None,
+		Win,
+		Lose
+	}
+	public CompletionState completionState;
+
 	public delegate void OnStatsChangedDelegate();
 	public event OnStatsChangedDelegate onStatsChanged;
 
@@ -18,27 +26,25 @@ public class GameStats
 		}
 	}
 
-	private int _matches;
-	public int matches
+	private int _score = 500;
+	public int score
 	{
-		get => _matches;
+		get => _score;
 		set
 		{
-			_matches = value;
+			_score = value;
 			onStatsChanged?.Invoke();
 		}
 	}
 
-	private int _misses;
-	public int misses
+	public int GetTotalScore(Level level, bool includeLions)
 	{
-		get => _misses;
-		set
+		if (completionState == CompletionState.Lose)
 		{
-			_misses = value;
-			onStatsChanged?.Invoke();
+			return 0;
 		}
+		var totalScore = score;
+		totalScore += includeLions ? level.lionBonusScore : level.bonusScore;
+		return totalScore;
 	}
-
-	public int totalScore => Mathf.Max(matches-misses, 0);
 }

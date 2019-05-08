@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   identifier: eastern_4
+  bonusScore: 400
+  lionBonusScore: 1000
   cardDefGroups:
   - {fileID: 114666305265633264, guid: db7f060f3f0d1e946a2e68790382c828, type: 3}
   - {fileID: 114411226844359398, guid: 14a56e7c9f90ff144b68bf258e388f42, type: 3}
@@ -68,6 +70,7 @@ MonoBehaviour:
   gameMode: 0
   cardCountX: 5
   cardCountY: 4
+  useConservation: 0
   background: {fileID: 114269455696899728, guid: 1b2e00c82ce75a5459463c81ff0d9a60,
     type: 3}
   thumbnail: {fileID: 21300000, guid: 35a9ed46d5e06414393f5d6624058e9a, type: 3}

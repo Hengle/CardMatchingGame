@@ -17,9 +17,7 @@ public class GameUIManager:MonoBehaviour {
 
 	public Canvas canvas;
 	public RectTransform scoreRoot;
-	public Text triesText;
-	public Text matchesText;
-	public Text missesText;
+	public Text scoreText;
 	public BeginPlayUI beginPlayUI;
 	public EndGameUI endGameUI;
 	public Button quitButton;
@@ -47,11 +45,7 @@ public class GameUIManager:MonoBehaviour {
 
 	private void OnGameStatsChanged()
 	{
-		var totalPossibleMatches = Game.current.GetNonLionCards().Length/2;
-		triesText.text = Game.current.gameStats.currentTurn.ToString();
-		matchesText.text = Game.current.gameStats.matches+"/"+totalPossibleMatches;
-
-		missesText.text = Game.current.gameStats.misses.ToString();
+		scoreText.text = Game.current.gameStats.score.ToString();
 	}
 
 	private void OnClickQuit()

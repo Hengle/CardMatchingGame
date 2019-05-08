@@ -313,6 +313,8 @@ public class Game:MonoBehaviour
 
 		yield return new WaitForSeconds(0.35f);
 
+		gameStats.score--;
+
 		if (card.cardDef is LionCardDef)
 		{
 			OneShotAudio.Play(clipLion, 0, GameSettings.Audio.sfxVolume);
@@ -324,7 +326,7 @@ public class Game:MonoBehaviour
 				{
 					exposedCard.isFlipped = true;
 				}
-
+				gameStats.completionState = GameStats.CompletionState.Lose;
 				StartCoroutine(EndGame());
 			}
 			else
@@ -350,22 +352,19 @@ public class Game:MonoBehaviour
 					flippedCard.OnMatch(card);
 					currentBackground.hyena.SausageFall();
                     OneShotAudio.Play(clipFruitFall, 0, GameSettings.Audio.sfxVolume);
-					gameStats.matches++;
-                }
+					gameStats.score += 100;
+				}
                 else
 				{
                     yield return new WaitForSeconds(0.5f);
 					card.isFlipped = false;
 					flippedCard.isFlipped = false;
-					if (card.exposedTurn < gameStats.currentTurn)
-					{
-						gameStats.misses++;
-					}
 				}
 				flippedCard = null;
 
 				if (GetMatchedCards().Length >= GetNonLionCards().Length)
 				{
+					gameStats.completionState = GameStats.CompletionState.Win;
 					StartCoroutine(EndGame());
 				}
 				gameStats.currentTurn++;
@@ -399,36 +398,37 @@ public class Game:MonoBehaviour
 
 	IEnumerator EndGame() {
 		gameIsStarted = false;
-		var didWin = GetExposedLionCards().Length < 2;
 
 		yield return new WaitForSeconds(1);
 
-		if (!didWin || gameStats.totalScore <= 0)
+		if (gameStats.completionState == GameStats.CompletionState.Lose)
 		{
 			currentBackground.hyena.Laugh();
 		}
 
 		yield return new WaitForSeconds(1.5f);
 
-		UpdateStats(didWin);
+		UpdateStats();
 
 		GameUIManager.current.ShowEndScreen();
 	}
 
-	private void UpdateStats(bool didWin)
+	private void UpdateStats()
 	{
 		if (!string.IsNullOrEmpty(currentLevel.identifier))
 		{
+			var totalScore = gameStats.GetTotalScore(currentLevel, includeLions);
+
 			var levelStats = GameData.GetLevelStats(currentLevel.identifier);
 			var globalStats = GameData.GetGlobalStats();
 
 			ref var modeStats = ref (includeLions ? ref levelStats.lionStats : ref levelStats.normalStats);
 			
-			if (didWin)
+			if (gameStats.completionState == GameStats.CompletionState.Win)
 			{
 				modeStats.beat = true;
-				modeStats.bestScore = Mathf.Max(gameStats.totalScore, modeStats.bestScore);
-				globalStats.score += gameStats.totalScore;
+				modeStats.bestScore = Mathf.Max(totalScore, modeStats.bestScore);
+				globalStats.score += totalScore;
 			}
 			modeStats.playCount++;
 
