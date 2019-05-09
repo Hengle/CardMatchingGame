@@ -69,18 +69,35 @@ public class EndGameUI : MonoBehaviour
 			globalScoreText.text = Mathf.RoundToInt(score).ToString();
 		});
 
-		while (!tween.isDone)
+		bool wantToSkip = TestSkip();
+
+		while (!wantToSkip && !tween.isDone)
 		{
 			yield return null;
+			wantToSkip |= TestSkip();
 		}
 
-		yield return new WaitForSeconds(5);
+		float counter = 0;
+		while (!wantToSkip && counter < 5)
+		{
+			wantToSkip |= TestSkip();
+			counter += Time.deltaTime;
+			if (!wantToSkip)
+			{
+				yield return null;
+			}
+		}
 
 		Transition transition = Transition.CreateTransition();
 		transition.onMidTransition += () =>
 		{
 			SceneManager.LoadScene("LevelSelect");
 		};
+	}
+
+	private bool TestSkip()
+	{
+		return Input.GetMouseButton(0);
 	}
 
 	private IEnumerator RunLoseAsync()
