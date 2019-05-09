@@ -67,7 +67,7 @@ MonoBehaviour:
   cardCountX: 4
   cardCountY: 3
   useConservation: 0
-  background: {fileID: 114269455696899728, guid: 0a513db3eb9876c498db8394c3b21957,
+  background: {fileID: 114269455696899728, guid: 383cace9bcb347441894bd067b75777d,
     type: 3}
   thumbnail: {fileID: 21300000, guid: 371830602be34914dbc071b68eaeed10, type: 3}
   lionThumbnail: {fileID: 0}

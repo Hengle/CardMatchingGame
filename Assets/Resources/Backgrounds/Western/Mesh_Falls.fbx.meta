@@ -6,21 +6,32 @@ ModelImporter:
     100000: //RootNode
     100002: River
     100004: SmallFall
+    100006: WesternFalls
+    100008: WesternFalls_002
     400000: //RootNode
     400002: River
     400004: SmallFall
+    400006: WesternFalls
+    400008: WesternFalls_002
     2100000: M_Fall
     2300000: River
     2300002: SmallFall
     2300004: //RootNode
+    2300006: WesternFalls
+    2300008: WesternFalls_002
     3300000: River
     3300002: SmallFall
     3300004: //RootNode
+    3300006: WesternFalls
+    3300008: WesternFalls_002
     4300000: River
     4300002: SmallFall
     4300004: SmallFall_002
     4300006: WesternFalls
     4300008: WesternFallsReflect
+    4300010: WesternFalls_001
+    4300012: WesternFalls_002
+    4300014: Mesh_Falls
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
