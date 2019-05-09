@@ -89,7 +89,7 @@ Material:
     - _ScrollYSpeed: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _UVSec: 0
     - _ZTestFunc: 2
     - _ZWrite: 0
