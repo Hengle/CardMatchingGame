@@ -18,6 +18,7 @@ public class GameUIManager:MonoBehaviour {
 	public Canvas canvas;
 	public RectTransform scoreRoot;
 	public Text scoreText;
+	public Text turnText;
 	public BeginPlayUI beginPlayUI;
 	public EndGameUI endGameUI;
 	public Button quitButton;
@@ -46,6 +47,7 @@ public class GameUIManager:MonoBehaviour {
 	private void OnGameStatsChanged()
 	{
 		scoreText.text = Game.current.gameStats.score.ToString();
+		turnText.text = (Game.current.gameStats.currentTurn+1).ToString();
 	}
 
 	private void OnClickQuit()

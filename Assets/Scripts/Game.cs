@@ -338,9 +338,9 @@ public class Game:MonoBehaviour
 				}
 				card.isFlipped = false;
 				yield return new WaitForSeconds(0.5f);
+				gameStats.currentTurn++;
 			}
 			flippedCard = null;
-			gameStats.currentTurn++;
 		}
 		else
 		{
@@ -367,7 +367,10 @@ public class Game:MonoBehaviour
 					gameStats.completionState = GameStats.CompletionState.Win;
 					StartCoroutine(EndGame());
 				}
-				gameStats.currentTurn++;
+				else
+				{
+					gameStats.currentTurn++;
+				}
 			}
 			else
 			{
