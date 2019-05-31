@@ -120,7 +120,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.9
+  bundleVersion: 0.10
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -161,9 +161,9 @@ PlayerSettings:
     iOS: com.Company.CardMatchingGame
     tvOS: com.Company.CardMatchingGame
   buildNumber:
-    Standalone: 9
-    iOS: 9
-  AndroidBundleVersionCode: 9
+    Standalone: 10
+    iOS: 10
+  AndroidBundleVersionCode: 10
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -249,7 +249,7 @@ PlayerSettings:
   clonedFromGUID: 00000000000000000000000000000000
   templatePackageId: 
   templateDefaultScene: 
-  AndroidTargetArchitectures: 5
+  AndroidTargetArchitectures: 7
   AndroidSplashScreenScale: 2
   androidSplashScreen: {fileID: 2800000, guid: 5841ed28520a1184ca28b28341407b1c, type: 3}
   AndroidKeystoreName: C:/Users/kurtl/Documents/GitProjects/CardMatchingGame/home.keystore
@@ -688,7 +688,7 @@ PlayerSettings:
   platformArchitecture:
     iOS: 2
   scriptingBackend:
-    Android: 0
+    Android: 1
     Metro: 2
     Standalone: 0
     WP8: 2
