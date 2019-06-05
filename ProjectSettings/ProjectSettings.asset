@@ -120,7 +120,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.10
+  bundleVersion: 0.11
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -161,9 +161,9 @@ PlayerSettings:
     iOS: com.Company.CardMatchingGame
     tvOS: com.Company.CardMatchingGame
   buildNumber:
-    Standalone: 10
-    iOS: 10
-  AndroidBundleVersionCode: 10
+    Standalone: 11
+    iOS: 11
+  AndroidBundleVersionCode: 11
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
