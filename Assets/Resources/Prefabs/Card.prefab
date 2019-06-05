@@ -84,10 +84,8 @@ MonoBehaviour:
   tilePositionY: -1
   clipRear: {fileID: 8300000, guid: 1d1e513f079b6c3429dd24fd43b5ffbc, type: 3}
   clipRun: {fileID: 8300000, guid: 638e323e488e38344a23702175692924, type: 3}
-  exposedLionCardSprite: {fileID: 21300000, guid: 06f3a82e446a65c40ae3b685ee23a10a,
-    type: 3}
-  cardBackSpriteRenderer: {fileID: 1053453949156059974}
   adjacentLionPivot: {fileID: 0}
+  backSpriteRenderer: {fileID: 1053453949156059974}
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 0

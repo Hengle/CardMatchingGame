@@ -12,6 +12,7 @@ public class Card:MonoBehaviour {
     public AudioClip clipRear;
     public AudioClip clipRun;
 	public Transform adjacentLionPivot;
+	public SpriteRenderer backSpriteRenderer;
 
 	[System.NonSerialized]
 	public bool _isMatched;
