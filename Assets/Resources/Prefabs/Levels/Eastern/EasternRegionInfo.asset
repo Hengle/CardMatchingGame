@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a51c334c78399a45a2a2ce26be7ba3c, type: 3}
+  m_Name: EasternRegionInfo
+  m_EditorClassIdentifier: 
+  regionName: Eastern Africa
+  levels:
+  - {fileID: 114047588185774556, guid: 29afa3acc18c38c4f93790a2262c4852, type: 3}
+  - {fileID: 11400000, guid: 42772128b964a9147acf343bc39c56c4, type: 3}
+  - {fileID: 114769204037154070, guid: 1b94f89e3b055c94abf41a24fc627b90, type: 3}
+  - {fileID: 11400000, guid: 8445b875b1ab15d4b8857f6c6dbeb0c4, type: 3}
+  backgrounds:
+  - {fileID: 114269455696899728, guid: 3251856c8fe1fbe459c13868402984d8, type: 3}
+  - {fileID: 114269455696899728, guid: 39a0991a35be651418a51b38a57026de, type: 3}
+  - {fileID: 114269455696899728, guid: 0a513db3eb9876c498db8394c3b21957, type: 3}
+  - {fileID: 114269455696899728, guid: 1b2e00c82ce75a5459463c81ff0d9a60, type: 3}

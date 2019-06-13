@@ -2798,6 +2798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186209384}
   - component: {fileID: 1186209383}
+  - component: {fileID: 1186209385}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -2817,11 +2818,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732a852ec267d3546b61243faf39ee74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundManager: {fileID: 1186209385}
   difficulty: 1
   testLevel: {fileID: 11400000, guid: c6822aa520fb52142973d15eb837ee7c, type: 3}
   includeLions: 1
-  currentBackground: {fileID: 0}
-  backgroundAspectRationShiftAmount: 3
   cardPrefab: {fileID: 11400000, guid: 69ffc6bf72417094ebffe7ce5c9e93c0, type: 3}
   cardSafeBounds: 7
   cardSpacing: 1.25
@@ -2842,6 +2842,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1186209385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186209382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f181dcfe262ce4469791348d93831a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundAspectRationShiftAmount: 3
 --- !u!1 &1246882771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,7 +3458,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1518173842}
   - component: {fileID: 1518173841}
-  - component: {fileID: 1518173840}
   - component: {fileID: 1518173839}
   - component: {fileID: 1518173838}
   - component: {fileID: 1518173843}
@@ -3465,14 +3477,6 @@ AudioListener:
   m_GameObject: {fileID: 1518173837}
   m_Enabled: 1
 --- !u!124 &1518173839
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518173837}
-  m_Enabled: 1
---- !u!92 &1518173840
 Behaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -22,15 +22,15 @@ public class LevelOverlay:MonoBehaviour
 		set
 		{
 			_mapRegion = value;
-			titleText.text = _mapRegion.regionName;
+			titleText.text = _mapRegion.regionInfo.regionName;
         }
 	}
 	
 	void Start()
 	{
-		for (int i = 0; i < mapRegion.levels.Count; i++)
+		for (int i = 0; i < mapRegion.regionInfo.levels.Count; i++)
 		{
-			AddLevelItem(mapRegion.levels[i], i+1);
+			AddLevelItem(mapRegion.regionInfo.levels[i], i+1);
 		}
 
 		backgroundButton.onClick.AddListener(OnClickBackgroundButton);

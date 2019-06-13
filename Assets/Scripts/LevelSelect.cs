@@ -59,7 +59,7 @@ public class LevelSelect:MonoBehaviour
 	{
 		if (!string.IsNullOrEmpty(lastRegionName))
 		{
-			var region = regions.FirstOrDefault(v => v.regionName == lastRegionName);
+			var region = regions.FirstOrDefault(v => v.regionInfo.regionName == lastRegionName);
 			if (region && !region.GetCompleted() && !region.GetLocked())
 			{
 				OnClickRegion(region);
@@ -117,7 +117,7 @@ public class LevelSelect:MonoBehaviour
 			return;
 		}
 
-		lastRegionName = region.regionName;
+		lastRegionName = region.regionInfo.regionName;
 		CreateLevelOverlay(region);
 		ResetIdleState();
 	}

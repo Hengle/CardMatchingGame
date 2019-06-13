@@ -69,6 +69,7 @@ MonoBehaviour:
   cardCountX: 2
   cardCountY: 1
   useConservation: 0
+  regionInfo: {fileID: 11400000, guid: cd74513df7507a446bb30b02035eb6d5, type: 2}
   background: {fileID: 114269455696899728, guid: 3251856c8fe1fbe459c13868402984d8,
     type: 3}
   thumbnail: {fileID: 21300000, guid: 1ccdeba799d49a840b420fdf1a0c6e80, type: 3}

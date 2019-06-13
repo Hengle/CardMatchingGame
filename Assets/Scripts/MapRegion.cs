@@ -6,11 +6,10 @@ using KeenTween;
 
 public class MapRegion:MonoBehaviour
 {
-	public string regionName = "Region";
+	public RegionInfo regionInfo;
 	public Material completedMaterial;
 	public Material lockedMaterial;
 	public float popupScale = 5;
-	public List<Level> levels = new List<Level>();
 
     public AudioClip acSelectAudio;
     public AudioClip acDeselectAudio;
@@ -110,7 +109,7 @@ public class MapRegion:MonoBehaviour
 	public bool GetCompleted()
 	{
 		bool completed = true;
-		foreach (var level in levels)
+		foreach (var level in regionInfo.levels)
 		{
 			var gameStats = GameData.GetLevelStats(level.identifier);
 			if (!gameStats.hasData || !gameStats.normalStats.beat || !gameStats.lionStats.beat)

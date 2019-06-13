@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Background:MonoBehaviour
 {
+	public TimeOfDay timeOfDay;
 	public Transform hyenaLocation;
 	public Hyena hyenaPrefab;
 	public Hyena hyena { get; private set; }

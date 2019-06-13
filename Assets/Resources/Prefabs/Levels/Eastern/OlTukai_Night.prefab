@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f08d61cda5197459f0f6552d2248d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeOfDay: {fileID: 11400000, guid: 36e8263ebb881684ba51c8a6f7f49768, type: 2}
   hyenaLocation: {fileID: 4141904465919936}
   hyenaPrefab: {fileID: 11416322, guid: 63336594a6657004cb4ed08bbb23d6b7, type: 3}
 --- !u!1 &1104889870966384

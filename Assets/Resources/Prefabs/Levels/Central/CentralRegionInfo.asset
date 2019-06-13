@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a51c334c78399a45a2a2ce26be7ba3c, type: 3}
+  m_Name: CentralRegionInfo
+  m_EditorClassIdentifier: 
+  regionName: Central Africa
+  levels:
+  - {fileID: 11400000, guid: 7eafa7a7dd1f4c1408a7fe63ad71387e, type: 3}
+  - {fileID: 114520233363734266, guid: 441a94156909f834099e6ae1f6f3f822, type: 3}
+  - {fileID: 114548342610525706, guid: de48b52688757d443a8abfd4e932e037, type: 3}
+  - {fileID: 11400000, guid: 0de2c5b13caea5d419d4da6f09d9f3e6, type: 3}
+  backgrounds:
+  - {fileID: 114269455696899728, guid: 9e3929f7a6156394ea6cf0e945663205, type: 3}
+  - {fileID: 114269455696899728, guid: c5a44b4283206ba4d870007eee2689d8, type: 3}
+  - {fileID: 114269455696899728, guid: b6e60a2e3952d8a4c9fb0c6ddf4181be, type: 3}
+  - {fileID: 114269455696899728, guid: 1a964035cab1c024a950966923b8da0e, type: 3}

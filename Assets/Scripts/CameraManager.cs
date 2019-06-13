@@ -12,9 +12,10 @@ public class CameraManager : MonoBehaviour
 
 	private void Start()
 	{
-		if (Game.current.currentLevel.timeOfDay)
+		var background = Game.current.backgroundManager.currentBackground;
+		if (background.timeOfDay)
 		{
-			lutEffect.LutTexture = Game.current.currentLevel.timeOfDay.lut;
+			lutEffect.LutTexture = background.timeOfDay.lut;
 		}
 	}
 }

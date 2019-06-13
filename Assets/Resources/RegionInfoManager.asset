@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78145a301bda65c4ca0eccd7de0d96f0, type: 3}
+  m_Name: RegionInfoManager
+  m_EditorClassIdentifier: 
+  regionInfos:
+  - {fileID: 11400000, guid: bf470c67349b2964a98af92002064f66, type: 2}
+  - {fileID: 11400000, guid: cd74513df7507a446bb30b02035eb6d5, type: 2}
+  - {fileID: 11400000, guid: 96a0ec11a20573741994f134bf452eea, type: 2}
+  - {fileID: 11400000, guid: 7ddf5b5377532cb458c41ebf52428caf, type: 2}
+  - {fileID: 11400000, guid: b1c5b954a16e03b48bc668ec85ebe555, type: 2}

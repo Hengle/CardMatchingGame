@@ -19,6 +19,8 @@ public class Game:MonoBehaviour
 
 	public enum GameMode { Standard, MateMatch }
 
+	public BackgroundManager backgroundManager;
+
 	//This difficulty stuff should probably exist somewhere else?
 	//Im not sure what the UI for this is going to be.
 	public enum Difficulty { Easy, Medium, Hard };
@@ -26,8 +28,6 @@ public class Game:MonoBehaviour
 
 	public Level testLevel;
 	public bool includeLions = true;
-	public Background currentBackground;
-	public float backgroundAspectRationShiftAmount = 1;
 	public Card cardPrefab;
 	public float cardSafeBounds = 4;
 	public float cardSpacing = 1.25f;
@@ -55,6 +55,7 @@ public class Game:MonoBehaviour
 
 	void Start()
 	{
+		backgroundManager.Setup();
 		SetupNewGame();
 	}
 
@@ -64,8 +65,6 @@ public class Game:MonoBehaviour
 		flipCardCoroutine = null;
 
 		gameStats = new GameStats();
-
-		SetupBackground();
 
 		ClearCards();
 		cardGrid = new Card[currentLevel.cardCountX, currentLevel.cardCountY];
@@ -350,7 +349,7 @@ public class Game:MonoBehaviour
 				{
 					card.OnMatch(flippedCard);
 					flippedCard.OnMatch(card);
-					currentBackground.hyena.SausageFall();
+					backgroundManager.currentBackground.hyena.SausageFall();
                     OneShotAudio.Play(clipFruitFall, 0, GameSettings.Audio.sfxVolume);
 					gameStats.score += 100;
 				}
@@ -381,24 +380,6 @@ public class Game:MonoBehaviour
 		flipCardCoroutine = null;
 	}
 
-	private void SetupBackground()
-	{
-		if (currentBackground)
-		{
-			Destroy(currentBackground.gameObject);
-		}
-
-		currentBackground = Instantiate(currentLevel.background);
-		currentBackground.transform.SetParent(transform, false);
-
-		float deltaAspect = Camera.main.aspect/(1920.0f/1080);
-
-		if (deltaAspect < 1)
-		{
-			currentBackground.transform.Translate((1.0f-deltaAspect)*backgroundAspectRationShiftAmount, 0, 0);
-		}
-	}
-
 	IEnumerator EndGame() {
 		gameIsStarted = false;
 
@@ -406,7 +387,7 @@ public class Game:MonoBehaviour
 
 		if (gameStats.completionState == GameStats.CompletionState.Lose)
 		{
-			currentBackground.hyena.Laugh();
+			backgroundManager.currentBackground.hyena.Laugh();
 		}
 
 		yield return new WaitForSeconds(1.5f);
@@ -553,12 +534,12 @@ public class Game:MonoBehaviour
 
 		MaterialPropertyBlock block = new MaterialPropertyBlock();
 
-		if (currentLevel.timeOfDay)
+		if (backgroundManager.currentBackground.timeOfDay)
 		{
 			foreach (Renderer r in card.gameObject.GetComponentsInChildren<Renderer>())
 			{
 				r.GetPropertyBlock(block);
-				block.SetColor("_Color", currentLevel.timeOfDay.cardTint);
+				block.SetColor("_Color", backgroundManager.currentBackground.timeOfDay.cardTint);
 				r.SetPropertyBlock(block);
 			}
 		}
@@ -576,10 +557,10 @@ public class Game:MonoBehaviour
 		foreach (Renderer r in renderers) {
 			r.sharedMaterial = cardDef.material;
 
-			if (currentLevel.timeOfDay)
+			if (backgroundManager.currentBackground.timeOfDay)
 			{
 				r.GetPropertyBlock(block);
-				block.SetColor("_Color", currentLevel.timeOfDay.cardTint);
+				block.SetColor("_Color", backgroundManager.currentBackground.timeOfDay.cardTint);
 				r.SetPropertyBlock(block);
 			}
 		}

@@ -21,6 +21,4 @@ public class Level:MonoBehaviour
 
 	public Sprite thumbnail;
 	public Sprite lionThumbnail;
-
-	public TimeOfDay timeOfDay;
 }
